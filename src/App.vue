@@ -1,13 +1,29 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+	<v-app>
+		<b-header></b-header>
+		<router-view></router-view>
+		<v-footer app></v-footer>
+	</v-app>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'app',
+  data() {
+    return {
+      drawer: false,
+      draweritems: [
+        {
+          title: 'Catégories',
+          icon: 'description'
+        },
+        {
+          title: 'Types',
+          icon: 'star'
+        }
+      ]
+    }
+  }
 }
 </script>
 

@@ -1,0 +1,19 @@
+div.v-parallax div.v-parallax__content div h1 {
+  font-size: 50px;
+}
+div.v-parallax div.v-parallax__content div h4 {
+  font-size: 30px;
+}
+div.v-parallax div.v-parallax__content div img {
+  text-align: center;
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+main > div.container {
+  padding: 0;
+}
