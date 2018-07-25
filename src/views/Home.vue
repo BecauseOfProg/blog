@@ -10,19 +10,23 @@
 							<v-flex xs12 sm12 md12 lg3 xl2>
 								<v-card>
 									<v-list>
-										<v-list-group v-for="pane in leftpane" :key="pane.title">
-											<v-list-tile slot="item">
-												<v-list-tile-action>
-													<v-icon>{{ pane.icon }}</v-icon>
-												</v-list-tile-action>
+										<v-list-group
+											v-for="pane in leftpane"
+											v-model="pane.active"
+											:key="pane.name"
+											:prepend-icon="pane.icon"
+											no-action
+										>
+											<v-list-tile slot="activator">
 												<v-list-tile-content>
 													<v-list-tile-title>{{ pane.name }}</v-list-tile-title>
 												</v-list-tile-content>
-												<v-list-tile-action>
-													<v-icon>keyboard_arrow_down</v-icon>
-												</v-list-tile-action>
 											</v-list-tile>
-											<v-list-tile v-for="item in pane.items" :key="item.name">
+											<v-list-tile
+												v-for="item in pane.items"
+												:key="item.name"
+												@click=""
+											>
 												<v-list-tile-content>
 													<v-list-tile-title>{{ item.name }}</v-list-tile-title>
 												</v-list-tile-content>
@@ -34,6 +38,9 @@
 
 							<!-- Contenu -->
 							<v-flex xs12 sm12 md9 lg10>
+								<v-layout>
+									<!--<b-article-card></b-article-card>-->
+								</v-layout>
 							</v-flex>
 						</v-layout>
 					</v-container>
@@ -51,11 +58,13 @@ export default {
         {
           name: 'Catégories',
           icon: 'description',
+          active: false,
           items: [{ name: 'Android' }, { name: 'Windows' }, { name: 'Linux' }]
         },
         {
           name: 'Types',
           icon: 'star',
+          active: false,
           items: [
             { name: 'Articles' },
             { name: 'Billets' },
