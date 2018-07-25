@@ -22,7 +22,7 @@
 				</v-list-tile>
 			</v-list>
 		</v-navigation-drawer>
-		<v-toolbar app dark color="primary" fixed>
+		<v-toolbar app dark color="primary" fixed dense>
 			<v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
 			<v-avatar to="/" tile size="45px">
 				<img src="https://cdn.becauseofprog.fr/logos/bop-transparent.png" alt="BOP">
@@ -34,10 +34,10 @@
 				<v-menu bottom offset-y transition="slide-y-transition">
 					<v-btn flat small slot="activator"><v-icon left>expand_more</v-icon>Sections</v-btn>
 					<v-list>
-						<v-list-tile>
+						<v-list-tile @click="">
 							<v-list-tile-title>Application</v-list-tile-title>
 						</v-list-tile>
-						<v-list-tile>
+						<v-list-tile to="/about" @click="">
 							<v-list-tile-title>A propos</v-list-tile-title>
 						</v-list-tile>
 					</v-list>
@@ -48,7 +48,23 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      drawer: false,
+      draweritems: [
+        {
+          title: 'Catégories',
+          icon: 'description'
+        },
+        {
+          title: 'Types',
+          icon: 'star'
+        }
+      ]
+    }
+  }
+}
 </script>
 
 <style>
