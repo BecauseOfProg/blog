@@ -1,7 +1,7 @@
 <template>
   <v-layout row>
     <v-flex xs12 sm12 md12 lg12 xl12>
-      <v-parallax src="https://cdn.becauseofprog.fr/syst-images/bg.jpg">
+      <v-parallax src="https://cdn.becauseofprog.fr/syst-images/bg.jpg" height="400">
         <v-layout column align-center justify-center>
           <img src="https://cdn.becauseofprog.fr/logos/bop-transparent.png" alt="Logo BOP" />
           <h1 class="white--text">{{ title }}</h1>
