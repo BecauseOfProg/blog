@@ -11,8 +11,8 @@ import BHeader from './components/BHeader.vue'
 import BIntroDiv from './components/BIntroDiv.vue'
 import BArticleCard from './components/BArticleCard.vue'
 
-import App from './App'
 import router from './router'
+import store from './store'
 
 Vue.component('b-header', BHeader)
 Vue.component('b-intro-div', BIntroDiv)
@@ -37,6 +37,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  store,
+  components: { App: require('./App.vue').default },
   template: '<App/>'
 })
