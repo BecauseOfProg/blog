@@ -1,7 +1,7 @@
 <template>
-  <v-parallax id="intro-div" src="https://cdn.becauseofprog.fr/syst-images/bg.jpg" height="400" class="mb-3">
+  <v-parallax id="intro-div" :src="banner" height="400" class="mb-3">
     <v-layout column align-center justify-center>
-      <img src="https://cdn.becauseofprog.fr/logos/bop-transparent.png" alt="Logo BOP" />
+      <img :src="icon" alt="Logo BOP" />
       <h1 class="white--text">{{ title }}</h1>
       <h4 class="white--text">{{ subtitle }}</h4>
     </v-layout>
@@ -10,7 +10,18 @@
 
 <script>
 export default {
-  props: ['title', 'subtitle']
+  props: {
+    title: String,
+    subtitle: String,
+    banner: {
+      type: String,
+      default: 'https://cdn.becauseofprog.fr/syst-images/bg.jpg'
+    },
+    icon: {
+      type: String,
+      default: 'https://cdn.becauseofprog.fr/logos/bop-transparent.png'
+    }
+  }
 }
 </script>
 
