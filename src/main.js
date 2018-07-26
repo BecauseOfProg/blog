@@ -9,12 +9,14 @@ import './css/style.css'
 
 import BHeader from './components/BHeader.vue'
 import BIntroDiv from './components/BIntroDiv.vue'
+import BArticleCard from './components/BArticleCard.vue'
 
 import App from './App'
 import router from './router'
 
 Vue.component('b-header', BHeader)
 Vue.component('b-intro-div', BIntroDiv)
+Vue.component('b-article-card', BArticleCard)
 
 Vue.use(Meta, {
   keyName: 'metaInfo', // the component option name that vue-meta looks for meta info on.

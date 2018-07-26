@@ -43,7 +43,14 @@
               <!-- Articles en vedette -->
               <v-flex xs12>
                 <v-layout row wrap>
-                  
+                  <b-article-card :article="testarticle"></b-article-card>
+                  <b-article-card :article="testarticle"></b-article-card>
+                  <b-article-card :article="testarticle"></b-article-card>
+                  <b-article-card :article="testarticle"></b-article-card>
+                  <b-article-card :article="testarticle"></b-article-card>
+                  <b-article-card :article="testarticle"></b-article-card>
+                  <b-article-card :article="testarticle"></b-article-card>
+                  <b-article-card :article="testarticle"></b-article-card>
                 </v-layout>
               </v-flex>
             </v-layout>
@@ -82,6 +89,10 @@ export default {
       ],
       testarticle: {
         title: 'Mes applis opensource blabla',
+        url: 'mes-applis-opensource-blabla',
+        type: 'article',
+        category: 'android',
+        distance_to_now: '5 minutes',
         banner:
           'https://cdn.becauseofprog.fr/articles/applis-open-source-juillet-2018.png',
         description:
