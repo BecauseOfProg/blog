@@ -4,10 +4,10 @@
       <b-intro-div title="BecauseOfProg" subtitle="Actualités et tutoriels sur le numérique et la programmation."></b-intro-div>
       <v-layout row>
         <v-flex xs12 sm12 md12 lg12 xl12>
-          <v-container grid-list-md>
+          <v-container fluid grid-list-md>
             <v-layout row wrap>
-              <!-- Accordéons -->
-              <v-flex xs12 sm12 md12 lg3 xl2>
+              <!-- Accordéons () -->
+              <v-flex xs12 sm12 md4 lg3 xl2>
                 <v-card>
                   <v-list>
                     <v-list-group
@@ -36,10 +36,14 @@
                 </v-card>
               </v-flex>
 
-              <!-- Contenu -->
-              <v-flex xs12 sm12 md9 lg10>
-                <v-layout>
-                  <!--<b-article-card></b-article-card>-->
+              <!-- Présentation -->
+              <v-flex xs12 sm12 md8 lg9 xl10>
+              </v-flex>
+
+              <!-- Articles en vedette -->
+              <v-flex xs12>
+                <v-layout row wrap>
+                  
                 </v-layout>
               </v-flex>
             </v-layout>
@@ -75,7 +79,20 @@ export default {
             { name: 'Autres' }
           ]
         }
-      ]
+      ],
+      testarticle: {
+        title: 'Mes applis opensource blabla',
+        banner:
+          'https://cdn.becauseofprog.fr/articles/applis-open-source-juillet-2018.png',
+        description:
+          "Liste non exhaustive des applications open-source que j'utilise en juillet 2018!",
+        tags: ['open-source', 'android'],
+        author: {
+          name: 'ornicarz',
+          avatar:
+            'https://cdn.discordapp.com/avatars/174812820116996096/0687044e9580296df67a27ec285d5b05.png'
+        }
+      }
     }
   }
 }
