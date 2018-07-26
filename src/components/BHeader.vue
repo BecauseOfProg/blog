@@ -34,7 +34,7 @@
         <v-menu bottom offset-y transition="slide-y-transition">
           <v-btn flat small slot="activator"><v-icon left>expand_more</v-icon>Sections</v-btn>
           <v-list>
-            <v-list-tile @click="">
+            <v-list-tile to="/about/application" @click="">
               <v-list-tile-title>Application</v-list-tile-title>
             </v-list-tile>
             <v-list-tile to="/about" @click="">
