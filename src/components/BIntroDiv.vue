@@ -1,5 +1,5 @@
 <template>
-  <v-parallax src="https://cdn.becauseofprog.fr/syst-images/bg.jpg" height="400" class="mb-3">
+  <v-parallax id="intro-div" src="https://cdn.becauseofprog.fr/syst-images/bg.jpg" height="400" class="mb-3">
     <v-layout column align-center justify-center>
       <img src="https://cdn.becauseofprog.fr/logos/bop-transparent.png" alt="Logo BOP" />
       <h1 class="white--text">{{ title }}</h1>
@@ -15,4 +15,19 @@ export default {
 </script>
 
 <style>
+#intro-div div.v-parallax__content div h1 {
+  font-size: 40px;
+}
+#intro-div div.v-parallax__content div h4 {
+  font-size: 25px;
+}
+#intro-div div.v-parallax__content div img {
+  text-align: center;
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
 </style>
