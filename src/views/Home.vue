@@ -1,61 +1,61 @@
 <template>
   <main>
-    <v-container fluid>
-      <b-intro-div title="BecauseOfProg" subtitle="Actualités et tutoriels sur le numérique et la programmation."></b-intro-div>
-      <v-layout row>
-        <v-flex xs12 sm12 md12 lg12 xl12>
-          <v-container fluid grid-list-md>
-            <v-layout row wrap>
-              <!-- Accordéons () -->
-              <v-flex xs12 sm12 md4 lg3 xl2>
-                <v-card>
-                  <v-list>
-                    <v-list-group
-                      v-for="pane in leftpane"
-                      v-model="pane.active"
-                      :key="pane.name"
-                      :prepend-icon="pane.icon"
-                      no-action
-                    >
-                      <v-list-tile slot="activator">
-                        <v-list-tile-content>
-                          <v-list-tile-title>{{ pane.name }}</v-list-tile-title>
-                        </v-list-tile-content>
-                      </v-list-tile>
-                      <v-list-tile
-                        v-for="item in pane.items"
-                        :key="item.name"
-                        @click=""
-                      >
-                        <v-list-tile-content>
-                          <v-list-tile-title>{{ item.name }}</v-list-tile-title>
-                        </v-list-tile-content>
-                      </v-list-tile>
-                    </v-list-group>
-                  </v-list>
-                </v-card>
-              </v-flex>
-
-              <!-- Présentation -->
-              <v-flex xs12 sm12 md8 lg9 xl10>
-              </v-flex>
-
-              <!-- Articles en vedette -->
-              <v-flex xs12>
-                <v-layout row wrap>
-                  <b-article-card :article="testarticle"></b-article-card>
-                  <b-article-card :article="testarticle"></b-article-card>
-                  <b-article-card :article="testarticle"></b-article-card>
-                  <b-article-card :article="testarticle"></b-article-card>
-                  <b-article-card :article="testarticle"></b-article-card>
-                  <b-article-card :article="testarticle"></b-article-card>
-                  <b-article-card :article="testarticle"></b-article-card>
-                  <b-article-card :article="testarticle"></b-article-card>
-                </v-layout>
-              </v-flex>
-            </v-layout>
-          </v-container>
+    <b-intro-div title="BecauseOfProg" subtitle="Actualités et tutoriels sur le numérique et la programmation."></b-intro-div>
+    
+    <v-container grid-list-md>
+      <v-layout row wrap>
+        <v-flex xs12 sm12 md4 lg3 xl2>
+          <v-card>
+            <v-list>
+              <v-list-group
+                v-for="pane in leftpane"
+                v-model="pane.active"
+                :key="pane.name"
+                :prepend-icon="pane.icon"
+                no-action
+              >
+                <v-list-tile slot="activator">
+                  <v-list-tile-content>
+                    <v-list-tile-title>{{ pane.name }}</v-list-tile-title>
+                  </v-list-tile-content>
+                </v-list-tile>
+                <v-list-tile
+                  v-for="item in pane.items"
+                  :key="item.name"
+                  @click=""
+                >
+                  <v-list-tile-content>
+                    <v-list-tile-title>{{ item.name }}</v-list-tile-title>
+                  </v-list-tile-content>
+                </v-list-tile>
+              </v-list-group>
+            </v-list>
+          </v-card>
         </v-flex>
+
+        <v-flex xs12 sm12 md8 lg9 xl10>
+        </v-flex>
+      </v-layout>
+    </v-container>
+
+    <v-container fluid grid-list-md>
+      <v-layout row>
+        <v-container fluid>
+          <v-layout row wrap>
+            <v-flex xs12>
+              <v-layout row wrap>
+                <b-article-card :article="testarticle"></b-article-card>
+                <b-article-card :article="testarticle"></b-article-card>
+                <b-article-card :article="testarticle"></b-article-card>
+                <b-article-card :article="testarticle"></b-article-card>
+                <b-article-card :article="testarticle"></b-article-card>
+                <b-article-card :article="testarticle"></b-article-card>
+                <b-article-card :article="testarticle"></b-article-card>
+                <b-article-card :article="testarticle"></b-article-card>
+              </v-layout>
+            </v-flex>
+          </v-layout>
+        </v-container>
       </v-layout>
     </v-container>
   </main>
