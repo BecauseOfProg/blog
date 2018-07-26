@@ -1,37 +1,37 @@
 const types = [
   {
     name: 'Article',
-    url: 'article',
+    url: 'articles',
     icon: 'description',
     banner: ''
   },
   {
     name: 'Billet',
-    url: 'ticket',
+    url: 'tickets',
     icon: 'label',
     banner: ''
   },
   {
     name: 'Devblog',
-    url: 'devblog',
+    url: 'devblogs',
     icon: 'code',
     banner: ''
   },
   {
     name: 'Cours',
-    url: 'course',
+    url: 'courses',
     icon: 'class',
     banner: ''
   },
   {
     name: 'Tutoriel',
-    url: 'tutorial',
+    url: 'tutorials',
     icon: 'explore',
     banner: ''
   },
   {
     name: 'Astuce',
-    url: 'trick',
+    url: 'tricks',
     icon: 'lightbulb_outline',
     banner: ''
   }

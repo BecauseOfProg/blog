@@ -13,30 +13,42 @@ export default new Router({
     {
       path: '/categories',
       name: 'Categories',
-      component: () => import('../views/Categories.vue')
+      component: () => import('../views/categories/Categories.vue')
+    },
+    {
+      path: '/category/:category',
+      name: 'Specific category',
+      component: () => import('../views/categories/Specific.vue')
     },
     {
       path: '/types',
       name: 'Types',
-      component: () => import('../views/Types.vue')
+      component: () => import('../views/types/Types.vue')
     },
     {
-      path: '/article',
-      name: 'Article',
-      component: () => import('../views/Article.vue')
+      path: '/type/:type',
+      name: 'Specific type',
+      component: () => import('../views/types/Specific.vue')
+    },
+    {
+      path: '/articles',
+      name: 'Articles',
+      component: () => import('../views/articles/Articles.vue')
+    },
+    {
+      path: '/article/:article',
+      name: 'Specific article',
+      component: () => import('../views/articles/Specific.vue')
     },
     {
       path: '/about',
-      children: [
-        {
-          path: '',
-          component: () => import('../views/about/About.vue')
-        },
-        {
-          path: 'application',
-          component: () => import('../views/about/Application.vue')
-        }
-      ]
+      name: 'About',
+      component: () => import('../views/about/About.vue')
+    },
+    {
+      path: '/about/application',
+      name: 'Application',
+      component: () => import('../views/about/Application.vue')
     }
   ]
 })
