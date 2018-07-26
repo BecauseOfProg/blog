@@ -22,6 +22,7 @@
                 <v-list-tile
                   v-for="item in pane.items"
                   :key="item.name"
+                  :to="item.url"
                   @click=""
                 >
                   <v-list-tile-content>
@@ -62,7 +63,12 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
+  methods: {
+    ...mapGetters(['getAllTypes'])
+  },
   data() {
     return {
       leftpane: [
@@ -76,15 +82,7 @@ export default {
           name: 'Types',
           icon: 'star',
           active: false,
-          items: [
-            { name: 'Articles' },
-            { name: 'Billets' },
-            { name: 'DevBlogs' },
-            { name: 'Cours' },
-            { name: 'Tutoriels' },
-            { name: 'Astuces' },
-            { name: 'Autres' }
-          ]
+          items: this.getAllTypes()
         }
       ],
       testarticle: {
