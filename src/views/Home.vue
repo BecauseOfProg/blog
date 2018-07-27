@@ -55,9 +55,6 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  methods: {
-    ...mapGetters(['getAllTypes'])
-  },
   data () {
     return {
       leftpane: [
@@ -71,7 +68,7 @@ export default {
           name: 'Types',
           icon: 'star',
           active: false,
-          items: this.getAllTypes()
+          items: []
         }
       ],
       testarticle: {
@@ -93,7 +90,13 @@ export default {
       }
     }
   },
-  metaInfo() {
+  computed: {
+    ...mapGetters(['getAllTypes'])
+  },
+  mounted () {
+    this.leftpane[1].items = this.getAllTypes
+  },
+  metaInfo () {
     return {
       title: 'Accueil',
       meta: [
