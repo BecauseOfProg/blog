@@ -1,30 +1,19 @@
 <template>
   <main>
     <b-intro-div title="BecauseOfProg" subtitle="Actualités et tutoriels sur le numérique et la programmation."></b-intro-div>
-    
+
     <v-container grid-list-md>
       <v-layout row wrap>
         <v-flex xs12 sm12 md4 lg3 xl2>
           <v-card>
             <v-list>
-              <v-list-group
-                v-for="pane in leftpane"
-                v-model="pane.active"
-                :key="pane.name"
-                :prepend-icon="pane.icon"
-                no-action
-              >
+              <v-list-group v-for="pane in leftpane" v-model="pane.active" :key="pane.name" :prepend-icon="pane.icon" no-action>
                 <v-list-tile slot="activator">
                   <v-list-tile-content>
                     <v-list-tile-title>{{ pane.name }}</v-list-tile-title>
                   </v-list-tile-content>
                 </v-list-tile>
-                <v-list-tile
-                  v-for="item in pane.items"
-                  :key="item.name"
-                  :to="item.url"
-                  @click=""
-                >
+                <v-list-tile v-for="item in pane.items" :key="item.name" :to="item.url" @click="">
                   <v-list-tile-content>
                     <v-list-tile-title>{{ item.name }}</v-list-tile-title>
                   </v-list-tile-content>
@@ -69,7 +58,7 @@ export default {
   methods: {
     ...mapGetters(['getAllTypes'])
   },
-  data() {
+  data () {
     return {
       leftpane: [
         {
