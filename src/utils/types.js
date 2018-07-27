@@ -3,37 +3,37 @@ const types = [
     name: 'Article',
     url: 'articles',
     icon: 'description',
-    banner: ''
+    banner: 'types/articles.png'
   },
   {
     name: 'Billet',
     url: 'tickets',
     icon: 'label',
-    banner: ''
+    banner: 'types/tickets.png'
   },
   {
     name: 'Devblog',
     url: 'devblogs',
     icon: 'code',
-    banner: ''
+    banner: 'types/devblogs.png'
   },
   {
     name: 'Cours',
     url: 'courses',
     icon: 'class',
-    banner: ''
+    banner: 'types/courses.png'
   },
   {
     name: 'Tutoriel',
     url: 'tutorials',
     icon: 'explore',
-    banner: ''
+    banner: 'types/tutorials.png'
   },
   {
     name: 'Astuce',
     url: 'tricks',
     icon: 'lightbulb_outline',
-    banner: ''
+    banner: 'types/tricks.png'
   }
 ]
 
