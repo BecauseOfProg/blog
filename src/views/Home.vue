@@ -13,7 +13,7 @@
                     <v-list-tile-title>{{ pane.name }}</v-list-tile-title>
                   </v-list-tile-content>
                 </v-list-tile>
-                <v-list-tile v-for="item in pane.items" :key="item.name" :to="item.url" @click="">
+                <v-list-tile v-for="item in pane.items" :key="item.name" :to="pane.url + '/' + item.url" @click="">
                   <v-list-tile-content>
                     <v-list-tile-title>{{ item.name }}</v-list-tile-title>
                   </v-list-tile-content>
@@ -60,12 +60,14 @@ export default {
       leftpane: [
         {
           name: 'Catégories',
+          url: 'category',
           icon: 'description',
           active: false,
           items: [{ name: 'Android' }, { name: 'Windows' }, { name: 'Linux' }]
         },
         {
           name: 'Types',
+          url: 'type',
           icon: 'star',
           active: false,
           items: []
