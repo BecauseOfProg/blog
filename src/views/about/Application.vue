@@ -5,7 +5,27 @@
 </template>
 
 <script>
-export default {}
+export default {
+  metaInfo() {
+    return {
+      title: 'Application',
+      meta: [
+        {
+          property: 'og:url',
+          content: 'https://becauseofprog.fr/about/application'
+        },
+        {
+          property: 'og:title',
+          content: 'Application | BecauseOfProg'
+        },
+        {
+          property: 'og:description',
+          content: 'Pour avoir la BOP en un clin d\'oeil.'
+        }
+      ]
+    }
+  }
+}
 </script>
 
 <style>

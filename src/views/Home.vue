@@ -92,6 +92,25 @@ export default {
         }
       }
     }
+  },
+  metaInfo() {
+    return {
+      title: 'Accueil',
+      meta: [
+        {
+          property: 'og:url',
+          content: 'https://becauseofprog.fr/'
+        },
+        {
+          property: 'og:title',
+          content: 'BecauseOfProg'
+        },
+        {
+          property: 'og:description',
+          content: 'Actualités et tutoriels sur le numérique et la programmation.'
+        }
+      ]
+    }
   }
 }
 </script>

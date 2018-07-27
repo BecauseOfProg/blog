@@ -16,5 +16,25 @@
 </template>
 
 <script>
-export default {}
+export default {
+  metaInfo() {
+    return {
+      title: 'Catégories',
+      meta: [
+        {
+          property: 'og:url',
+          content: 'https://becauseofprog.fr/categories'
+        },
+        {
+          property: 'og:title',
+          content: 'Catégories | BecauseOfProg'
+        },
+        {
+          property: 'og:description',
+          content: 'Choisissez parmis les différents sujets d\'informatique : OS, programmation...'
+        }
+      ]
+    }
+  }
+}
 </script>

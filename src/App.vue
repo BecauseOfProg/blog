@@ -39,6 +39,11 @@ export default {
         }
       ]
     }
+  },
+  metaInfo() {
+    return {
+      titleTemplate: '%s | BecauseOfProg'
+    }
   }
 }
 </script>
