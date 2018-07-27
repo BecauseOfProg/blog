@@ -1,7 +1,7 @@
 <template>
-  <v-parallax id="intro-div" :src="banner" height="400" class="mb-3">
+  <v-parallax id="intro-div" :src="require('../assets/' + banner)" height="400" class="mb-3">
     <v-layout column align-center justify-center>
-      <img :src="icon" alt="Logo BOP" />
+      <img :src="require('../assets/' + icon)" alt="Logo BOP" />
       <h1 class="white--text">{{ title }}</h1>
       <h4 class="white--text">{{ subtitle }}</h4>
     </v-layout>
@@ -15,11 +15,11 @@ export default {
     subtitle: String,
     banner: {
       type: String,
-      default: 'https://cdn.becauseofprog.fr/syst-images/bg.jpg'
+      default: 'background.jpg'
     },
     icon: {
       type: String,
-      default: 'https://cdn.becauseofprog.fr/logos/bop-transparent.png'
+      default: 'icon.png'
     }
   }
 }
