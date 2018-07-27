@@ -1,7 +1,8 @@
 <template>
   <v-parallax id="intro-div" :src="require('../assets/' + banner)" height="400" class="mb-3">
     <v-layout column align-center justify-center>
-      <img :src="require('../assets/' + icon)" alt="Logo BOP" />
+      <img v-if="iconType === 'image'" :src="require('../assets/' + image)" alt="Logo BOP" />
+      <v-icon color="white" size="150" v-if="iconType === 'icon'">{{ icon }}</v-icon>
       <h1 class="white--text">{{ title }}</h1>
       <h4 class="white--text">{{ subtitle }}</h4>
     </v-layout>
@@ -17,9 +18,17 @@ export default {
       type: String,
       default: 'background.jpg'
     },
-    icon: {
+    image: {
       type: String,
       default: 'icon.png'
+    },
+    icon: {
+      type: String,
+      default: 'description'
+    },
+    iconType: {
+      type: String,
+      default: 'image'
     }
   }
 }
