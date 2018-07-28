@@ -3,13 +3,13 @@ const categories = [
     name: 'Android',
     icon: 'android',
     url: 'android',
-    banner: ''
+    banner: 'categories/android.jpg'
   },
   {
     name: 'Windows',
     icon: 'dashboard',
     url: 'windows',
-    banner: ''
+    banner: 'categories/windows.jpg'
   },
   {
     name: 'Linux',
