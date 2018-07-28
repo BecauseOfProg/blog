@@ -6,6 +6,7 @@ import 'vuetify/dist/vuetify.min.css'
 import './css/style.css'
 
 import BHeader from './components/BHeader.vue'
+import BFooter from './components/BFooter.vue'
 import BIntroDiv from './components/BIntroDiv.vue'
 import BArticleCard from './components/BArticleCard.vue'
 
@@ -13,6 +14,7 @@ import router from './router'
 import store from './store'
 
 Vue.component('b-header', BHeader)
+Vue.component('b-footer', BFooter)
 Vue.component('b-intro-div', BIntroDiv)
 Vue.component('b-article-card', BArticleCard)
 
