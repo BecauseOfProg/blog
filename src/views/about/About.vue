@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  metaInfo() {
+  metaInfo () {
     return {
       title: 'A propos',
       meta: [

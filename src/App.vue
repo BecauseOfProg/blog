@@ -9,7 +9,7 @@
 <script>
 export default {
   name: 'app',
-  metaInfo() {
+  metaInfo () {
     return {
       titleTemplate: '%s | BecauseOfProg'
     }

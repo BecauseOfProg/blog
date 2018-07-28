@@ -8,7 +8,6 @@
           <v-layout row wrap>
             <v-flex xs12>
               <v-layout row wrap>
-                
               </v-layout>
             </v-flex>
           </v-layout>
@@ -20,7 +19,6 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import vuex from 'vuex'
 
 export default {
   data () {

@@ -81,8 +81,7 @@ export default {
               name: 'Application',
               icon: 'apps',
               url: 'about/application'
-            },            
-
+            }
           ]
         }
       },
@@ -105,7 +104,7 @@ export default {
   mounted () {
     this.dropdowns.types.items = this.getAllTypes
     this.dropdowns.categories.items = this.getAllCategories
-  },
+  }
 }
 </script>
 
