@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 import types from './modules/types'
+import categories from './modules/categories'
 
 Vue.use(Vuex)
 
@@ -14,7 +15,8 @@ const actions = {}
 const getters = {}
 
 const modules = {
-  types
+  types,
+  categories
 }
 
 const store = new Vuex.Store({
