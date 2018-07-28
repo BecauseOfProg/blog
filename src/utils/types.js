@@ -1,21 +1,15 @@
 const types = [
   {
-    name: 'Article',
+    name: 'Articles',
     url: 'articles',
     icon: 'description',
     banner: 'types/articles.png'
   },
   {
-    name: 'Billet',
-    url: 'tickets',
-    icon: 'label',
-    banner: 'types/tickets.png'
-  },
-  {
-    name: 'Devblog',
-    url: 'devblogs',
-    icon: 'code',
-    banner: 'types/devblogs.png'
+    name: 'Dépêches',
+    url: 'flash',
+    icon: 'new_releases',
+    banner: 'types/flash.png'
   },
   {
     name: 'Cours',
@@ -24,16 +18,16 @@ const types = [
     banner: 'types/courses.png'
   },
   {
-    name: 'Tutoriel',
+    name: 'Tutoriels',
     url: 'tutorials',
     icon: 'explore',
     banner: 'types/tutorials.png'
   },
   {
-    name: 'Astuce',
-    url: 'tricks',
-    icon: 'lightbulb_outline',
-    banner: 'types/tricks.png'
+    name: 'Devblogs',
+    url: 'devblogs',
+    icon: 'code',
+    banner: 'types/devblogs.png'
   }
 ]
 
