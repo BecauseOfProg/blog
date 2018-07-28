@@ -8,47 +8,37 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
+      name: 'home',
       component: () => import('../views/Home.vue')
     },
     {
-      path: '/categories',
-      name: 'Categories',
-      component: () => import('../views/categories/Categories.vue')
-    },
-    {
       path: '/category/:category',
-      name: 'Specific category',
-      component: () => import('../views/categories/Specific.vue')
-    },
-    {
-      path: '/types',
-      name: 'Types',
-      component: () => import('../views/types/Types.vue')
+      name: 'category',
+      component: () => import('../views/Category.vue')
     },
     {
       path: '/type/:type',
-      name: 'Specific type',
-      component: () => import('../views/types/Specific.vue')
+      name: 'type',
+      component: () => import('../views/Type.vue')
     },
     {
       path: '/articles',
-      name: 'Articles',
+      name: 'articles',
       component: () => import('../views/articles/Articles.vue')
     },
     {
       path: '/article/:article',
-      name: 'Specific article',
+      name: 'article',
       component: () => import('../views/articles/Specific.vue')
     },
     {
       path: '/about',
-      name: 'About',
+      name: 'about',
       component: () => import('../views/about/About.vue')
     },
     {
       path: '/about/application',
-      name: 'Application',
+      name: 'application',
       component: () => import('../views/about/Application.vue')
     }
   ]

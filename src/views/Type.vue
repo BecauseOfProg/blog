@@ -35,6 +35,11 @@ export default {
   mounted () {
     this.type = this.getOneType(this.$route.params.type)[0]
     this.loaded = true
+  },
+  metaInfo () {
+    return {
+      title: this.type.name
+    }
   }
 }
 </script>
