@@ -40,6 +40,10 @@ export default new Router({
       path: '/about/application',
       name: 'application',
       component: () => import('../views/about/Application.vue')
+    },
+    {
+      path: '*',
+      component: () => import('../views/error/PageNotFound.vue')
     }
   ]
 })
