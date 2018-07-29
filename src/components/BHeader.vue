@@ -26,7 +26,7 @@
       <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <router-link to="/">
         <v-avatar tile size="45px">
-          <img src="https://cdn.becauseofprog.fr/logos/bop-transparent.png" alt="BOP">
+          <img src="/img/icon.png" alt="BOP">
         </v-avatar>
       </router-link>
       <v-spacer></v-spacer>
@@ -55,7 +55,7 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  data () {
+  data() {
     return {
       dropdowns: {
         categories: {
@@ -101,7 +101,7 @@ export default {
   computed: {
     ...mapGetters(['getAllTypes', 'getAllCategories'])
   },
-  mounted () {
+  mounted() {
     this.dropdowns.types.items = this.getAllTypes
     this.dropdowns.categories.items = this.getAllCategories
   }
