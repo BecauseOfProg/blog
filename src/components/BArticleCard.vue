@@ -26,7 +26,7 @@
             <v-avatar>
               <v-icon>access_time</v-icon>
             </v-avatar>
-            Il y a {{ article.distance_to_now }}
+            {{ article.date }}
           </v-chip>
           <div v-for="tag in article.tags" :key="tag">
             <v-chip>{{ tag }}</v-chip>
