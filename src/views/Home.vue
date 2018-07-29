@@ -32,21 +32,14 @@
       <v-layout row>
         <v-container fluid class="pt-0">
           <v-layout row wrap>
-            <h1><v-icon left color="grey darken-4" size="27" class="pb-1 pt-1">history</v-icon>&nbsp;Derniers articles</h1>
+            <h1><v-icon left color="grey darken-4" size="27" class="pb-1 pt-1">mdi-history</v-icon>&nbsp;Derniers articles</h1>
             <v-flex xs12>
               <v-layout row wrap>
-                <b-article-card :article="testarticle"></b-article-card>
-                <b-article-card :article="testarticle"></b-article-card>
-                <b-article-card :article="testarticle"></b-article-card>
-                <b-article-card :article="testarticle"></b-article-card>
-                <b-article-card :article="testarticle"></b-article-card>
-                <b-article-card :article="testarticle"></b-article-card>
-                <b-article-card :article="testarticle"></b-article-card>
-                <b-article-card :article="testarticle"></b-article-card>
+                <b-article-card v-for="article in articles" :key="article.title" :article="article"></b-article-card>
               </v-layout>
             </v-flex>
             <v-flex xs6 offset-xs6 sm4 offset-sm8 md3 offset-md9 lg2 offset-lg10 xl1 offset-xl11>
-              <v-btn color="primary" to="/articles">Voir plus<v-icon right>arrow_right</v-icon></v-btn>
+              <v-btn color="primary" to="/articles">Voir plus<v-icon right>mdi-menu-right</v-icon></v-btn>
             </v-flex>
           </v-layout>
         </v-container>
@@ -57,10 +50,12 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import urls from '../utils/urls.js'
 
 export default {
   data () {
     return {
+      articles: [],
       leftpane: [
         {
           name: 'Catégories',
@@ -76,24 +71,7 @@ export default {
           active: false,
           items: []
         }
-      ],
-      testarticle: {
-        title: 'Mes applis opensource blabla',
-        url: 'mes-applis-opensource-blabla',
-        type: 'article',
-        category: 'android',
-        distance_to_now: '5 minutes',
-        banner:
-          'https://cdn.becauseofprog.fr/articles/applis-open-source-juillet-2018.png',
-        description:
-          "Liste non exhaustive des applications open-source que j'utilise en juillet 2018!",
-        tags: ['open-source', 'android'],
-        author: {
-          name: 'ornicarz',
-          avatar:
-            'https://cdn.discordapp.com/avatars/174812820116996096/0687044e9580296df67a27ec285d5b05.png'
-        }
-      }
+      ]
     }
   },
   computed: {
@@ -101,6 +79,15 @@ export default {
   },
   mounted () {
     this.leftpane[1].items = this.getAllTypes
+    const url = urls.article
+    this.$http.get(url).then(
+      data => {
+        this.articles = data.body.data
+      },
+      _ => {
+        console.log('erreur : pas possible de charger les articles')
+      }
+    )
   },
   metaInfo () {
     return {
@@ -119,7 +106,8 @@ export default {
         {
           property: 'og:description',
           vmid: 'og:description',
-          content: 'Actualités et tutoriels sur le numérique et la programmation.'
+          content:
+            'Actualités et tutoriels sur le numérique et la programmation.'
         }
       ]
     }
