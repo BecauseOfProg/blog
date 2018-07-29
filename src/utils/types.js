@@ -2,31 +2,31 @@ const types = [
   {
     name: 'Articles',
     url: 'articles',
-    icon: 'description',
+    icon: 'mdi-file-document-box',
     banner: 'types/articles.png'
   },
   {
     name: 'Dépêches',
     url: 'flash',
-    icon: 'new_releases',
+    icon: 'mdi-alert-decagram',
     banner: 'types/flash.png'
   },
   {
     name: 'Cours',
     url: 'courses',
-    icon: 'class',
+    icon: 'mdi-book',
     banner: 'types/courses.png'
   },
   {
     name: 'Tutoriels',
     url: 'tutorials',
-    icon: 'explore',
+    icon: 'mdi-compass',
     banner: 'types/tutorials.png'
   },
   {
     name: 'Devblogs',
     url: 'devblogs',
-    icon: 'code',
+    icon: 'mdi-code-braces',
     banner: 'types/devblogs.png'
   }
 ]
