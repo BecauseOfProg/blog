@@ -26,7 +26,7 @@
                 </v-chip>
                 <v-chip>
                   <v-avatar>
-                    <v-icon>access_time</v-icon>
+                    <v-icon>mdi-clock-outline</v-icon>
                   </v-avatar>
                   {{ article.date }}
                 </v-chip>
