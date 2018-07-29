@@ -2,9 +2,12 @@
   <v-flex xs12 sm6 md4 lg3>
     <v-card>
       <v-card-media :src="article.banner" height="200px">
-        <v-btn color="primary" dark small fab>
-          <v-icon>description</v-icon>
-        </v-btn>
+        <v-tooltip bottom>
+          <v-btn slot="activator" color="primary" dark small fab>
+            <v-icon>{{ article.type.icon }}</v-icon>
+          </v-btn>
+          <span>{{ article.type.name }}</span>
+        </v-tooltip>
       </v-card-media>
 
       <v-card-title primary-title>
@@ -24,13 +27,16 @@
           </v-chip>
           <v-chip>
             <v-avatar>
-              <v-icon>access_time</v-icon>
+              <v-icon>mdi-clock-outline</v-icon>
             </v-avatar>
             {{ article.date }}
           </v-chip>
-          <div v-for="tag in article.tags" :key="tag">
-            <v-chip>{{ tag }}</v-chip>
-          </div>
+          <v-chip :color="article.category.color + ' white--text'">
+            <v-avatar>
+              <v-icon>{{ article.category.icon }}</v-icon>
+            </v-avatar>
+            {{ article.category.name }}
+          </v-chip>
         </v-layout>
       </v-card-actions>
     </v-card>
@@ -38,8 +44,17 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
-  props: ['article']
+  props: ['article'],
+  computed: {
+    ...mapGetters(['getOneType', 'getOneCategory'])
+  },
+  mounted () {
+    this.article.type = this.getOneType(this.article.type)[0]
+    this.article.category = this.getOneCategory(this.article.category)[0]
+  }
 }
 </script>
 
