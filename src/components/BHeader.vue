@@ -1,29 +1,6 @@
 <template>
   <div>
-    <v-navigation-drawer temporary v-model="drawer" light absolute>
-      <v-toolbar flat dense>
-        <v-list>
-          <v-list-tile>
-            <v-list-tile-title class="title">
-              BecauseOfProg
-            </v-list-tile-title>
-          </v-list-tile>
-        </v-list>
-      </v-toolbar>
-      <v-divider></v-divider>
-      <v-list dense class="pt-0">
-        <v-list-tile v-for="item in draweritems" :key="item.title">
-          <v-list-tile-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
     <v-toolbar app dark color="primary" fixed dense>
-      <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <router-link to="/">
         <v-avatar tile size="45px">
           <img src="/img/icon.png" alt="BOP">
@@ -84,18 +61,7 @@ export default {
             }
           ]
         }
-      },
-      drawer: false,
-      draweritems: [
-        {
-          title: 'Catégories',
-          icon: 'description'
-        },
-        {
-          title: 'Types',
-          icon: 'star'
-        }
-      ]
+      }
     }
   },
   computed: {
