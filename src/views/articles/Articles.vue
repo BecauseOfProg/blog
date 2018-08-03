@@ -29,8 +29,7 @@ export default {
     }
   },
   mounted () {
-    const url = urls.article
-    this.$http.get(url).then(
+    this.$http.get(urls.article).then(
       data => {
         this.articles = data.body.data
       },

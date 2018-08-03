@@ -79,8 +79,7 @@ export default {
   },
   mounted () {
     this.leftpane[1].items = this.getAllTypes
-    const url = urls.article
-    this.$http.get(url).then(
+    this.$http.get(urls.article).then(
       data => {
         this.articles = data.body.data
       },
