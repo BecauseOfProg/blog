@@ -7,20 +7,15 @@ import './plugins/vuetify'
 import './registerServiceWorker'
 import './css/style.css'
 
-import BHeader from './components/BHeader.vue'
-import BFooter from './components/BFooter.vue'
-import BIntroDiv from './components/BIntroDiv.vue'
-import BArticleCard from './components/BArticleCard.vue'
-
 import App from './App.vue'
 
 import router from './router/index'
 import store from './store/index'
 
-Vue.component('b-header', BHeader)
-Vue.component('b-footer', BFooter)
-Vue.component('b-intro-div', BIntroDiv)
-Vue.component('b-article-card', BArticleCard)
+Vue.component('b-header', () => import('./components/BHeader.vue'))
+Vue.component('b-footer', () => import('./components/BFooter.vue'))
+Vue.component('b-intro-div', () => import('./components/BIntroDiv.vue'))
+Vue.component('b-article-card', () => import('./components/BArticleCard.vue'))
 
 Vue.use(Meta, {
   keyName: 'metaInfo',
