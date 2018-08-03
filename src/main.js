@@ -4,13 +4,12 @@ import Meta from 'vue-meta'
 
 import '@babel/polyfill'
 import './plugins/vuetify'
-import './registerServiceWorker'
-import './css/style.css'
+import './plugins/service-worker'
 
 import App from './App.vue'
 
-import router from './router/index'
-import store from './store/index'
+import router from './plugins/router'
+import store from './store'
 
 Vue.component('b-header', () => import('./components/BHeader.vue'))
 Vue.component('b-footer', () => import('./components/BFooter.vue'))
