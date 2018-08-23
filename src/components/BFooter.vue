@@ -30,7 +30,7 @@ export default {
         },
         {
           name: 'Application',
-          link: '/about/application'
+          link: '/application'
         }
       ]
     }
