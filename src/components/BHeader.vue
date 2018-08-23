@@ -9,7 +9,7 @@
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
         <v-menu v-for="drop in dropdowns" :key="drop.name" open-on-hover bottom offset-y transition="slide-y-transition">
-          <v-btn flat small slot="activator"><v-icon left>mdi-menu-down</v-icon>{{ drop.name }}</v-btn>
+          <v-btn flat small slot="activator">{{ drop.name }}<v-icon right>mdi-menu-down</v-icon></v-btn>
           <v-list>
             <v-list-tile v-for="item in drop.items" :key="item.name" :to="drop.url + '/' + item.url">
               <v-list-tile-action>

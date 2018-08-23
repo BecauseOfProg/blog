@@ -1,6 +1,6 @@
 module.exports = {
   pwa: {
-    name: 'BecauseOfgProg',
+    name: 'BecauseOfProg',
     themeColor: '#b71c1c',
     iconPaths: {
       favicon32: 'img/icon.png',

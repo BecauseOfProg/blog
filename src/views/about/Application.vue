@@ -1,6 +1,6 @@
 <template>
   <main>
-    <b-intro-div title="Application" subtitle="Pour avoir la BOP en un clin d'oeil."></b-intro-div>
+    <b-intro-div title="Application" subtitle="Le blog à portée de main!"></b-intro-div>
   </main>
 </template>
 
@@ -20,7 +20,7 @@ export default {
         },
         {
           property: 'og:description',
-          content: 'Pour avoir la BOP en un clin d\'oeil.'
+          content: 'Le blog à portée de main!'
         }
       ]
     }
