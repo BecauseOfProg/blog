@@ -37,7 +37,7 @@ const router = new Router({
       component: () => import('../views/about/About.vue')
     },
     {
-      path: '/about/application',
+      path: '/application',
       name: 'application',
       component: () => import('../views/about/Application.vue')
     },
