@@ -1,12 +1,11 @@
 <template>
   <main>
-    <b-intro-div title="lol"></b-intro-div>
+    <b-intro-div title="Tous les articles" banner="types/articles.png"></b-intro-div>
 
     <v-container fluid grid-list-md>
       <v-layout row>
         <v-container fluid class="pt-0">
           <v-layout row wrap>
-            <h1><v-icon left color="grey darken-4" size="27" class="pb-1 pt-1">library_books</v-icon>&nbsp;Tous les articles</h1>
             <v-flex xs12>
               <v-layout row wrap>
                 <b-article-card v-for="article in articles" :key="article.title" :article="article"></b-article-card>
