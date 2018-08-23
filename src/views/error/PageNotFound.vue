@@ -1,6 +1,6 @@
 <template>
   <main>
-    <b-intro-div iconType="icon" icon="error" title="Page inconnue"></b-intro-div>
+    <b-intro-div iconType="icon" icon="mdi-alert-circle" title="Page inconnue"></b-intro-div>
   </main>
 </template>
 
