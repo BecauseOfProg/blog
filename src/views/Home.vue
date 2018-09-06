@@ -60,14 +60,14 @@ export default {
         {
           name: 'Catégories',
           url: 'category',
-          icon: 'description',
+          icon: 'mdi-note-text',
           active: false,
           items: [{ name: 'Android' }, { name: 'Windows' }, { name: 'Linux' }]
         },
         {
           name: 'Types',
           url: 'type',
-          icon: 'star',
+          icon: 'mdi-star',
           active: false,
           items: []
         }
