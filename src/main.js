@@ -11,8 +11,6 @@ import App from './App.vue'
 import router from './plugins/router'
 import store from './store'
 
-Vue.component('b-header', () => import('./components/BHeader.vue'))
-Vue.component('b-footer', () => import('./components/BFooter.vue'))
 Vue.component('b-intro-div', () => import('./components/BIntroDiv.vue'))
 Vue.component('b-article-card', () => import('./components/BArticleCard.vue'))
 
