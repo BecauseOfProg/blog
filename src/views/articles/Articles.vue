@@ -1,14 +1,27 @@
 <template>
   <main>
-    <b-intro-div title="Tous les articles" banner="types/articles.png"></b-intro-div>
+    <b-intro-div 
+      title="Tous les articles" 
+      banner="types/articles.png"/>
 
-    <v-container fluid grid-list-md>
+    <v-container 
+      fluid 
+      grid-list-md>
       <v-layout row>
-        <v-container fluid class="pt-0">
-          <v-layout row wrap>
+        <v-container 
+          fluid 
+          class="pt-0">
+          <v-layout 
+            row 
+            wrap>
             <v-flex xs12>
-              <v-layout row wrap>
-                <b-article-card v-for="article in articles" :key="article.title" :article="article"></b-article-card>
+              <v-layout 
+                row 
+                wrap>
+                <b-article-card 
+                  v-for="article in articles" 
+                  :key="article.title" 
+                  :article="article"/>
               </v-layout>
             </v-flex>
           </v-layout>
@@ -32,8 +45,8 @@ export default {
       data => {
         this.articles = data.body.data
       },
-      _ => {
-        console.log('erreur : pas possible de charger les articles')
+      error => {
+        console.log('Erreur : ' + error)
       }
     )
   },

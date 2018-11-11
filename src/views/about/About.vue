@@ -1,6 +1,8 @@
 <template>
   <main>
-    <b-intro-div title="A propos" subtitle="Toutes les informations sur le site."></b-intro-div>
+    <b-intro-div 
+      title="A propos" 
+      subtitle="Toutes les informations sur le site."/>
   </main>
 </template>
 

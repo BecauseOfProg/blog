@@ -1,14 +1,23 @@
 <template>
   <main v-if="loaded">
-    <b-intro-div :title="category.name" :banner="category.banner" iconType="icon" :icon="category.icon"></b-intro-div>
+    <b-intro-div 
+      :title="category.name" 
+      :banner="category.banner" 
+      :icon="category.icon" 
+      iconType="icon"/>
 
-    <v-container fluid grid-list-md>
+    <v-container 
+      fluid 
+      grid-list-md>
       <v-layout row>
         <v-container fluid>
-          <v-layout row wrap>
+          <v-layout 
+            row 
+            wrap>
             <v-flex xs12>
-              <v-layout row wrap>
-              </v-layout>
+              <v-layout 
+                row 
+                wrap/>
             </v-flex>
           </v-layout>
         </v-container>

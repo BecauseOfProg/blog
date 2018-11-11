@@ -1,6 +1,8 @@
 <template>
   <main>
-    <b-intro-div title="Application" subtitle="Le blog à portée de main!"></b-intro-div>
+    <b-intro-div 
+      title="Application" 
+      subtitle="Le blog à portée de main!"/>
   </main>
 </template>
 

@@ -1,13 +1,18 @@
 <template>
   <main>
-    <v-container id="article" :key="article.title" grid-list-xl>
-      <v-layout row wrap>
+    <v-container 
+      id="article" 
+      :key="article.title" 
+      grid-list-xl>
+      <v-layout 
+        row 
+        wrap>
         <v-flex xs12>
           <v-card>
             <v-card-media
               :src="article.banner"
               height="200px"
-            ></v-card-media>
+            />
 
             <v-card-title primary-title>
               <div>
@@ -20,7 +25,7 @@
               <div>
                 <v-chip>
                   <v-avatar>
-                    <img :src="article.author.avatar" />
+                    <img :src="article.author.avatar">
                   </v-avatar>
                   {{ article.author.name }}
                 </v-chip>
@@ -44,8 +49,7 @@
         <v-flex xs12>
           <v-card>
             <v-card-title primary-title>
-              <div v-html="article.content">
-              </div>
+              <div v-html="article.content"/>
             </v-card-title>
           </v-card>
         </v-flex>
@@ -75,8 +79,8 @@ export default {
         this.article.type = this.getOneType(this.article.type)[0]
         this.article.category = this.getOneCategory(this.article.category)[0]
       },
-      _ => {
-        console.log('erreur : pas possible de charger les articles')
+      error => {
+        console.log('Erreur : ' + error)
       }
     )
   }
