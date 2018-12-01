@@ -7,6 +7,13 @@ const categories = [
     color: 'light-green'
   },
   {
+    name: 'Apple',
+    icon: 'mdi-apple',
+    url: 'apple',
+    banner: 'categories/apple.jpg',
+    color: 'grey lighten-1'
+  },
+  {
     name: 'Windows',
     icon: 'mdi-windows',
     url: 'windows',
