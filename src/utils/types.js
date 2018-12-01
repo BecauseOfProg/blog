@@ -1,7 +1,7 @@
 const types = [
   {
     name: 'Articles',
-    url: 'articles',
+    url: 'article',
     icon: 'mdi-file-document-box',
     banner: 'types/articles.png'
   },
@@ -12,20 +12,14 @@ const types = [
     banner: 'types/flash.png'
   },
   {
-    name: 'Cours',
-    url: 'courses',
-    icon: 'mdi-book',
-    banner: 'types/courses.png'
-  },
-  {
     name: 'Tutoriels',
-    url: 'tutorials',
+    url: 'tutorial',
     icon: 'mdi-compass',
     banner: 'types/tutorials.png'
   },
   {
     name: 'Devblogs',
-    url: 'devblogs',
+    url: 'devblog',
     icon: 'mdi-code-braces',
     banner: 'types/devblogs.png'
   }
