@@ -18,7 +18,7 @@
       <v-spacer/>
       <v-toolbar-items class="hidden-sm-and-down">
         <v-menu 
-          v-for="drop in header.dropdowns" 
+          v-for="drop in dropdowns"
           :key="drop.name" 
           open-on-hover 
           bottom 
@@ -78,6 +78,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'app',
   data () {
@@ -100,37 +102,42 @@ export default {
           link: '/application'
         }
       ],
-      header: {
-        dropdowns: {
-          categories: {
-            name: 'Catégories',
-            url: '/category',
-            items: []
-          },
-          types: {
-            name: 'Types',
-            url: '/type',
-            items: []
-          },
-          sections: {
-            name: 'Sections',
-            url: '',
-            items: [
-              {
-                name: 'A propos',
-                icon: 'mdi-information',
-                url: 'about'
-              },
-              {
-                name: 'Application',
-                icon: 'mdi-apps',
-                url: 'application'
-              }
-            ]
-          }
+      dropdowns: {
+        categories: {
+          name: 'Catégories',
+          url: '/category',
+          items: []
+        },
+        types: {
+          name: 'Types',
+          url: '/type',
+          items: []
+        },
+        sections: {
+          name: 'Sections',
+          url: '',
+          items: [
+            {
+              name: 'A propos',
+              icon: 'mdi-information',
+              url: 'about'
+            },
+            {
+              name: 'Application',
+              icon: 'mdi-apps',
+              url: 'application'
+            }
+          ]
         }
       }
     }
+  },
+  computed: {
+    ...mapGetters(['getAllTypes', 'getAllCategories'])
+  },
+  mounted() {
+    this.dropdowns.types.items = this.getAllTypes
+    this.dropdowns.categories.items = this.getAllCategories
   },
   metaInfo () {
     return {
