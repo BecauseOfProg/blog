@@ -1,26 +1,35 @@
-import Vue from 'vue';
-import Vuetify from 'vuetify';
-import 'vuetify/dist/vuetify.min.css';
-import fr from 'vuetify/es5/locale/fr';
+import Vue from 'vue'
+import Vuetify from 'vuetify'
 
-Vue.use(Vuetify);
+import fr from 'vuetify/es5/locale/fr'
+import colors from 'vuetify/lib/util/colors'
+import 'vuetify/dist/vuetify.min.css'
+
+Vue.use(Vuetify)
+
+const theme = {
+  light: '#ff9779',
+  dark: '#ff514c',
+  darker: '#e33733',
+  error: colors.red.darken4,
+  info: colors.blue.base,
+  success: colors.green.base,
+  warning: colors.amber.base
+}
 
 export default new Vuetify({
   theme: {
     themes: {
       light: {
-        primary: '#ee44aa',
-        secondary: '#424242',
-        accent: '#82B1FF',
-        error: '#FF5252',
-        info: '#2196F3',
-        success: '#4CAF50',
-        warning: '#FFC107'
+        ...theme
       },
+      dark: {
+        ...theme
+      }
     },
   },
     lang: {
       locales: { fr },
       current: 'fr',
     },
-});
+})
