@@ -27,6 +27,9 @@ export default new Vuetify({
         ...theme
       }
     },
+    options: {
+      customProperties: true,
+    },
   },
     lang: {
       locales: { fr },

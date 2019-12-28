@@ -12,12 +12,12 @@ export default new Router({
       component: () => import(/* webpackChunkName: "blog" */ '../views/blog/Home.vue')
     },
     {
-      path: '/blog',
-      name: 'all-articles',
-      component: () => import(/* webpackChunkName: "blog" */ '../views/blog/List.vue')
+      path: '/social',
+      name: 'social',
+      component: () => import(/* webpackChunkName: "blog" */ '../views/blog/Social.vue')
     },
     {
-      path: '/blog/:page',
+      path: '/blog',
       name: 'all-articles',
       component: () => import(/* webpackChunkName: "blog" */ '../views/blog/List.vue')
     },
@@ -47,6 +47,11 @@ export default new Router({
       name: 'create-article',
       component: () => import(/* webpackChunkName: "members" */ '../views/members/CreateArticle.vue'),
       meta: { requiresAuth: true }
+    },
+    {
+      path: '/pages',
+      name: 'pages',
+      component: () => import(/* webpackChunkName: "pages" */ '../views/page/Pages.vue')
     },
     {
       path: '/page/about',
