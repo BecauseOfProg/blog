@@ -1,5 +1,7 @@
 <template>
-
+  <b-card>
+    hey
+  </b-card>
 </template>
 
 <script>
@@ -9,10 +11,6 @@ export default {
     keyword: {
       type: String,
       default: null
-    },
-    page: {
-      type: Number,
-      default: 0
     }
   }
 }
