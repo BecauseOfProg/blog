@@ -3,6 +3,24 @@
     <b-top-banner
       title="Réseaux sociaux et liens"
       icon="mdi-rss"/>
+    <v-container>
+      <v-row>
+        <v-col cols="12">
+          <b-card>
+            <h1>Nos réseaux sociaux</h1>
+            <p>Nous postons régulièrement des nouvelles, des tips et des astuces. Suivez-nous!</p>
+            <br>
+            <v-btn
+              v-for="social in socials"
+              :key="social.name"
+              :href="social.link"
+              icon>
+              <v-icon color="black">{{ social.icon }}</v-icon>
+            </v-btn>
+          </b-card>
+        </v-col>
+      </v-row>
+    </v-container>
     <v-container class="px-0">
       <v-row
         class="ma-0"
@@ -18,7 +36,7 @@
                 :href="post.link"
                 target="_blank">
                 <v-list-item-icon>
-                  <v-icon :color="types[post.type].color">{{ types[post.type].icon }}</v-icon>
+                  <v-icon :color="feeds[post.type].color">{{ feeds[post.type].icon }}</v-icon>
                 </v-list-item-icon>
                 <v-list-item-content>
                   <v-list-item-title>{{ post.text }}</v-list-item-title>
@@ -29,7 +47,7 @@
                     max-width="600px"/>
                   <v-list-item-subtitle>{{ post.date }} -
                     <a
-                      :href="types[post.type].profile === null ? `https://${post.author}` : types[post.type].profile"
+                      :href="feeds[post.type].profile === null ? `https://${post.author}` : feeds[post.type].profile"
                       target="_blank">
                       {{ post.author }}
                     </a>
@@ -45,36 +63,12 @@
 </template>
 
 <script>
+import { feeds, socials } from '@/utils/data'
+
 export default {
   name: 'Social',
   data () {
     return {
-      types: {
-        twitter: {
-          name: 'Twitter',
-          icon: 'mdi-twitter',
-          color: 'light-blue',
-          profile: 'https://twitter.com/BecauseOfProg'
-        },
-        instagram: {
-          name: 'Instagram',
-          icon: 'mdi-instagram',
-          color: 'pink',
-          profile: 'https://instagram.com/BecauseOfProg'
-        },
-        mastodon: {
-          name: 'Mastodon',
-          icon: 'mdi-twitter',
-          color: 'teal',
-          profile: 'https://mstdn.io/@bop'
-        },
-        link: {
-          name: 'Lien BecauseOfProg',
-          icon: 'mdi-link-variant',
-          color: 'grey',
-          profile: null
-        },
-      },
       posts: [
         {
           type: 'twitter',
@@ -106,7 +100,10 @@ export default {
           ],
           link: 'https://www.instagram.com/p/B0psaqgAcZC/'
         }
-      ]
+      ],
+
+      feeds,
+      socials
     }
   }
 }
