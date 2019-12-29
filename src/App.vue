@@ -37,13 +37,6 @@
           Projets
         </v-btn>
         <v-btn
-          to="/page/links"
-          color="darker"
-          text>
-          <v-icon left>mdi-link</v-icon>
-          Liens
-        </v-btn>
-        <v-btn
           color="darker"
           icon
           @click="search">
