@@ -1,16 +1,19 @@
 <template>
   <v-card
+    :to="to"
+    :class="{ gradient }"
     class="b-card"
-    :class="classes"
     elevation="0">
     <slot name="image"/>
     <v-card-text>
       <slot/>
     </v-card-text>
-    <v-divider/>
-    <v-card-actions>
-      <slot name="actions"/>
-    </v-card-actions>
+    <template v-if="$slots.actions !== undefined">
+      <v-divider/>
+      <v-card-actions>
+        <slot name="actions"/>
+      </v-card-actions>
+    </template>
   </v-card>
 </template>
 
@@ -21,13 +24,10 @@ export default {
     gradient: {
       type: Boolean,
       default: false
-    }
-  },
-  data () {
-    return {
-      classes: {
-        gradient: this.gradient
-      }
+    },
+    to: {
+      type: String,
+      default: ''
     }
   }
 }
