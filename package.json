@@ -1,7 +1,21 @@
 {
-  "name": "blog-4.0.0",
-  "version": "0.1.0",
-  "private": true,
+  "name": "blog",
+  "version": "4.0.0",
+  "description": "💻 The BecauseOfProg's informatic blog.",
+  "homepage": "https://github.com/BecauseOfProg/blog",
+  "license": "GPLv3",
+  "author": "Exybore",
+  "keywords": [
+    "becauseofprog",
+    "blog"
+  ],
+  "main": "src/main.js",
+  "repositories": [
+    {
+      "type": "git",
+      "url": "git@github.com:BecauseOfProg/git"
+    }
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
