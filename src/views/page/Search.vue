@@ -1,7 +1,7 @@
 <template>
-  <b-card>
-    hey
-  </b-card>
+  <b-top-banner
+    title="Recherche"
+    icon="mdi-magnify"/>
 </template>
 
 <script>

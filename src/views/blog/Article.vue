@@ -1,5 +1,8 @@
 <template>
-
+  <b-top-banner
+    title="Article"
+    subtitle="Publié par random le mercredi 25 septembre 2019"
+    tall/>
 </template>
 
 <script>
