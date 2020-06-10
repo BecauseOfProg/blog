@@ -1,0 +1,16 @@
+@css {
+  .translucent, .blurred {
+    background-color: rgba(var(--v-background-base), 0.4) !important;
+  }
+  .translucent {
+    -webkit-backdrop-filter: saturate(50%) blur(30px);
+    backdrop-filter: saturate(50%) blur(30px);
+  }
+  .blurred {
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+  }
+}
+
+.darker-bg
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))
