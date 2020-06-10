@@ -4,4 +4,8 @@ const types = [
   { id: 'tutorial', name: 'Tutoriel', icon: 'mdi-play-circle-outline' }
 ]
 
-export { types }
+function getType(id) {
+  return types.find(type => type.id === id)
+}
+
+export { types, getType }

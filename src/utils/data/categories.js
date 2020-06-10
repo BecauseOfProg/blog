@@ -3,11 +3,15 @@ const categories = [
   { id: 'security', name: 'Sécurité', icon: 'mdi-lock-outline' },
   { id: 'web', name: 'Web', icon: 'mdi-earth' },
   { id: 'hardware', name: 'Hardware', icon: 'mdi-sim' },
-  { id: 'code', name: 'Programmation', icon: 'mdi-code-tags' },
+  { id: 'programming', name: 'Programmation', icon: 'mdi-code-tags' },
   { id: 'android', name: 'Android', icon: 'mdi-android' },
   { id: 'linux', name: 'Linux', icon: 'mdi-linux' },
-  { id: 'windows', name: 'Windows', icon: 'mdi-windows' },
+  { id: 'windows', name: 'Windows', icon: 'mdi-microsoft-windows' },
   { id: 'apple', name: 'Apple', icon: 'mdi-apple' }
 ]
 
-export { categories }
+function getCategory(id) {
+  return categories.find(category => category.id === id)
+}
+
+export { categories, getCategory }
