@@ -1,11 +1,9 @@
 <template>
   <v-card
     :to="to"
-    :class="{ gradient }"
-    class="b-card"
-    elevation="0">
+    :class="{ 'b-card': true, gradient }">
     <slot name="image"/>
-    <v-card-text>
+    <v-card-text :class="{ 'pa-0': fluid }">
       <slot/>
     </v-card-text>
     <template v-if="$slots.actions !== undefined">
@@ -21,6 +19,10 @@
 export default {
   name: 'BCard',
   props: {
+    fluid: {
+      type: Boolean,
+      default: false
+    },
     gradient: {
       type: Boolean,
       default: false
