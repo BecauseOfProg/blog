@@ -1,8 +1,9 @@
 <template>
-  <div
+  <v-parallax
     id="b-top-banner"
-    class="gradient"
-    :class="{ 'b-top-banner__tall': tall }">
+    :src="src"
+    :height="tall ? 300 : 150"
+    :class="{ gradient: src === undefined }">
     <v-icon
       v-if="$vuetify.breakpoint.mdAndUp && icon !== null"
       color="white"
@@ -13,27 +14,31 @@
       class="grey--text font-weight-regular">
       {{ subtitle }}
     </h3>
-  </div>
+  </v-parallax>
 </template>
 
 <script>
 export default {
   props: {
-    title: {
-      type: String,
-      required: true,
-    },
-    subtitle: {
+    icon: {
       type: String,
       default: null
     },
-    icon: {
+    src: {
+      type: String,
+      default: undefined
+    },
+    subtitle: {
       type: String,
       default: null
     },
     tall: {
       type: Boolean,
       default: false
+    },
+    title: {
+      type: String,
+      required: true,
     }
   }
 }
