@@ -5,7 +5,8 @@
         :src="article.banner"
         :alt="article.title"/>
     </template>
-    <span class="headline">{{ article.title }}</span>
+    <span class="headline lecture-title">{{ article.title }}</span>
+    <p class="lecture-text">{{ article.description }}</p>
     <v-row class="mx-0">
       <v-chip class="mr-2">
         <v-avatar left>

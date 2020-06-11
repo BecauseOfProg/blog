@@ -1,7 +1,7 @@
 <template>
   <v-card
     :to="to"
-    :class="{ 'b-card': true, gradient }">
+    :class="{ 'b-card': true, 'b-card--tile': tile, gradient }">
     <slot name="image"/>
     <v-card-text :class="{ 'pa-0': fluid }">
       <slot/>
@@ -24,6 +24,10 @@ export default {
       default: false
     },
     gradient: {
+      type: Boolean,
+      default: false
+    },
+    tile: {
       type: Boolean,
       default: false
     },
