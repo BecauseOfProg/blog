@@ -3,10 +3,10 @@
     <v-row class="mx-0">
       <a
         v-for="social in socials"
-        :key="social.link"
-        :href="social.link">
+        :key="social.value"
+        :href="social.value">
         <v-icon
-          :size="big ? 96 : undefined"
+          :size="big ? 64 : undefined"
           :color="big ? social.color : 'darker'">
           {{ social.icon }}
         </v-icon>
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { socials } from '@/utils/data'
+import { bopSocials } from '@/utils/data'
 
 export default {
   name: 'SocialIcons',
@@ -28,7 +28,7 @@ export default {
   },
   data() {
     return {
-      socials
+      socials: bopSocials
     }
   }
 }

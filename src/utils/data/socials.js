@@ -1,9 +1,22 @@
 const socials = [
-  { name: 'Twitter', icon: 'mdi-twitter', color: 'light-blue', link: 'https://twitter.com/BecauseOfProg'},
-  { name: 'Discord', icon: 'mdi-discord', color: 'teal', link: 'https://discord.becauseofprog.fr'},
-  { name: 'Mastodon', icon: 'mdi-mastodon', color: 'blue', link: 'https://mstdn.io/@bop'},
-  { name: 'GitHub', icon: 'mdi-github', color: 'darker', link: 'https://github.com/BecauseOfProg'},
-  { name: 'Instagram', icon: 'mdi-instagram', color: 'pink', link: 'https://instagram.com/BecauseOfProg'}
+  { id: 'website', name: 'Site web', icon: 'mdi-web', color: 'darker', },
+  { id: 'twitter', name: 'Twitter', icon: 'mdi-twitter', color: 'light-blue' },
+  { id: 'discord', name: 'Discord', icon: 'mdi-discord', color: 'teal' },
+  { id: 'mastodon', name: 'Mastodon', icon: 'mdi-mastodon', color: 'blue' },
+  { id: 'github', name: 'GitHub', icon: 'mdi-github', color: 'darker' },
+  { id: 'instagram', name: 'Instagram', icon: 'mdi-instagram', color: 'pink' }
 ]
 
-export { socials }
+const bopSocials = [
+  { ...getSocial('twitter'), value: 'https://twitter.com/BecauseOfProg' },
+  { ...getSocial('discord'), value: 'https://discord.becauseofprog.fr' },
+  { ...getSocial('mastodon'), value: 'https://mstdn.io/@bop' },
+  { ...getSocial('github'), value: 'https://github.com/BecauseOfProg' },
+  { ...getSocial('instagram'), value: 'https://instagram.com/BecauseOfProg' }
+]
+
+function getSocial(id) {
+  return socials.find(social => social.id === id)
+}
+
+export { socials, bopSocials, getSocial }
