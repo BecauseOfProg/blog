@@ -21,10 +21,14 @@ export default new Vuetify({
   theme: {
     themes: {
       light: {
-        ...theme
+        ...theme,
+        background: '#fafafa',
+        sheets: '#fff'
       },
       dark: {
-        ...theme
+        ...theme,
+        background: '#000',
+        sheets: '#2E2E2E',
       }
     },
     options: {
