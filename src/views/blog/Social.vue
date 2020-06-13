@@ -10,13 +10,7 @@
             <h1>Nos réseaux sociaux</h1>
             <p>Nous postons régulièrement des nouvelles, des tips et des astuces. Suivez-nous!</p>
             <br>
-            <v-btn
-              v-for="social in socials"
-              :key="social.name"
-              :href="social.link"
-              icon>
-              <v-icon color="black">{{ social.icon }}</v-icon>
-            </v-btn>
+            <social-icons/>
           </b-card>
         </v-col>
       </v-row>
@@ -64,9 +58,11 @@
 
 <script>
 import { feeds, socials } from '@/utils/data'
+import SocialIcons from '../parts/SocialIcons'
 
 export default {
   name: 'Social',
+  components: { SocialIcons },
   data () {
     return {
       posts: [
