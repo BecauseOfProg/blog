@@ -2,21 +2,19 @@
   <b-card :to="{ name: 'article', params: { url: article.url }}">
     <template #image>
       <v-img
-        :src="article.banner"
+        :src="imageProxy(article.banner, 617, 347)"
         :alt="article.title"/>
     </template>
     <span class="headline lecture-title">{{ article.title }}</span>
     <p class="lecture-text">{{ article.description }}</p>
     <v-row class="mx-0">
-      <v-chip class="mr-2">
+      <v-chip>
         <v-avatar left>
           <v-img :src="article.author.picture"/>
         </v-avatar>
         {{ article.author.displayname }}
       </v-chip>
-      <v-chip
-        :to="{ name: 'category', params: { category: category.id }}"
-        class="mr-2">
+      <v-chip :to="{ name: 'category', params: { category: category.id }}">
         <v-icon left>
           {{ category.icon }}
         </v-icon>
@@ -30,6 +28,7 @@
 </template>
 
 <script>
+import{ imageProxy } from '../../../utils/helpers'
 import { getCategory } from '../../../utils/data'
 import BCard from '../BCard'
 
@@ -46,6 +45,9 @@ export default {
     category() {
       return getCategory(this.article.category)
     }
+  },
+  methods: {
+    imageProxy
   }
 }
 </script>
