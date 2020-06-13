@@ -1,9 +1,29 @@
 <template>
   <main>
+    <v-app-bar
+      style="margin-top: 8px"
+      color="white"
+      dense
+      app>
+      <v-btn
+        color="darker"
+        to="/blog"
+        icon>
+        <v-icon>mdi-arrow-left</v-icon>
+      </v-btn>
+      <a href="/">
+        <v-img
+          alt="BecauseOfProg Logo"
+          class="shrink mr-2"
+          src="https://cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/assets/logos/bop.min.svg"
+          width="40"
+          contain/>
+      </a>
+    </v-app-bar>
     <template v-if="loaded">
       <v-parallax
+        :height="$vuetify.breakpoint.smAndDown ? 650 : 500"
         :src="article.banner"
-        height="500"
         dark>
         <v-row
           align="center"
@@ -12,42 +32,51 @@
           <v-col
             class="text-center"
             cols="12">
-            <span class="display-3 white--text">{{ article.title }}</span>
+            <span
+              id="title"
+              class="display-3 white--text">
+              {{ article.title }}
+            </span>
+          </v-col>
+          <v-col
+            cols="12"
+            lg="8">
+            <b-card class="bordered">
+              <span style="font-size: 22px">« {{ article.description }} »</span>
+              <template #actions>
+                <v-row>
+                  <v-col cols="6">
+                    <v-tooltip
+                      v-for="share in shares"
+                      :key="share.name + 'badge'"
+                      bottom>
+                      <template #activator="{ on }">
+                        <v-btn
+                          :color="share.color"
+                          :href="share.link"
+                          target="_blank"
+                          icon
+                          v-on="on">
+                          <v-icon>{{ share.icon }}</v-icon>
+                        </v-btn>
+                      </template>
+                      <span>{{ share.name }}</span>
+                    </v-tooltip>
+                  </v-col>
+                  <v-col
+                    cols="6"
+                    class="text-right">
+                    <v-icon left>mdi-clock-outline</v-icon>
+                    <span>Publié par <strong>{{ article.author.displayname }}</strong> le {{ dateToText(article.timestamp) }}</span>
+                  </v-col>
+                </v-row>
+              </template>
+            </b-card>
           </v-col>
         </v-row>
       </v-parallax>
       <v-container>
         <v-row>
-          <v-col
-            cols="12"
-            lg="8"
-            offset-lg="2"
-            class="upper-content">
-            <b-card class="bordered">
-              <span style="font-size: 22px">« {{ article.description }} »</span>
-              <template #actions>
-                <v-tooltip
-                  v-for="share in shares"
-                  :key="share.name + 'badge'"
-                  bottom>
-                  <template #activator="{ on }">
-                    <v-btn
-                      :color="share.color"
-                      :href="share.link"
-                      target="_blank"
-                      icon
-                      v-on="on">
-                      <v-icon>{{ share.icon }}</v-icon>
-                    </v-btn>
-                  </template>
-                  <span>{{ share.name }}</span>
-                </v-tooltip>
-                <v-spacer/>
-                <v-icon left>mdi-clock-outline</v-icon>
-                <span>Publié par <strong>{{ article.author.displayname }}</strong> le {{ dateToText(article.timestamp) }}</span>
-              </template>
-            </b-card>
-          </v-col>
           <v-col
             cols="12"
             lg="6"
@@ -96,9 +125,7 @@
                   <v-col
                     cols="12"
                     class="pt-0">
-                    <b-card>
-                      <h1>{{ article.author.displayname }}</h1>
-                    </b-card>
+                    <member-card :member="article.author"/>
                   </v-col>
                 </v-row>
               </v-col>
@@ -159,29 +186,11 @@
                     class="pt-0">
                     <b-card>
                       <h3 class="headline darker--text">Catégories</h3>
-                      <v-col>
-                        <v-chip
-                          v-for="category in categories"
-                          :key="category.id"
-                          :to="`/category/${category.id}`"
-                          class="mr-1 mb-1">
-                          <v-icon left>{{ category.icon }}</v-icon>
-                          {{ category.name }}
-                        </v-chip>
-                        <v-chip
-                          v-for="type in types"
-                          :key="type.id"
-                          :to="`/type/${type.id}`"
-                          class="mr-1 mb-1">
-                          <v-icon left>{{ type.icon }}</v-icon>
-                          {{ type.name }}
-                        </v-chip>
-                      </v-col>
+                      <categories-chips/>
                     </b-card>
                   </v-col>
                 </v-row>
               </v-col>
-
             </v-row>
           </v-col>
         </v-row>
@@ -196,12 +205,14 @@
 <script>
 import VueMarkdown from 'vue-markdown'
 import SocialIcons from '@/views/parts/SocialIcons'
+import MemberCard from '@/views/parts/MemberCard'
+import CategoriesChips from '@/views/parts/CategoriesChips'
 import { categories, types, getCategory, getType } from '@/utils/data'
 import { blogPosts } from '@/utils/api'
 
 export default {
   name: 'Article',
-  components: { VueMarkdown, SocialIcons },
+  components: { CategoriesChips, MemberCard, VueMarkdown, SocialIcons },
   data() {
     return {
       article: {},
@@ -253,3 +264,9 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus">
+@media screen and (max-width: 500px)
+  #title
+    font-size: 40px !important
+</style>

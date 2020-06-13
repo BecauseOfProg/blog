@@ -11,6 +11,10 @@
           cols="12"
           lg="7"
           offset-lg="1">
+          <b-card v-if="$vuetify.breakpoint.smAndDown">
+            <h3 class="headline darker--text">Explorez nos catégories</h3>
+            <categories-chips include-all/>
+          </b-card>
           <template v-if="loaded">
             <v-pagination
               v-model="page"
@@ -27,11 +31,9 @@
           </template>
           <template v-else>
             <v-row>
-              <v-spacer/>
-              <v-progress-circular
-                indeterminate
-                color="darker"/>
-              <v-spacer/>
+              <v-skeleton-loader
+                style="width: 100%"
+                type="image, card-heading, actions"/>
             </v-row>
           </template>
         </v-col>
@@ -40,6 +42,7 @@
           lg="3">
           <b-card
             fluid
+            tile
             class="bordered">
             <v-list
               class="round"
@@ -113,10 +116,11 @@
 import { blogPosts } from '@/utils/api'
 import { categories, types, getCategory, getType } from '@/utils/data'
 import SocialIcons from '@/views/parts/SocialIcons'
+import CategoriesChips from '@/views/parts/CategoriesChips'
 
 export default {
   name: 'ArticleList',
-  components: { SocialIcons },
+  components: { CategoriesChips, SocialIcons },
   data() {
     return {
       head: {
