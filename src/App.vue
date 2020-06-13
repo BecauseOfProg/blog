@@ -1,32 +1,36 @@
 <template>
   <v-app>
-    <template v-if="$vuetify.breakpoint.mdAndUp">
-      <v-app-bar
-        style="height: 8px"
-        class="top-bar gradient"
-        elevation="0"
-        app
-        dense/>
-      <v-app-bar
-        style="margin-top: 8px"
-        color="white"
-        app
-        dense>
-        <div class="d-flex align-center">
-          <v-img
-            alt="BecauseOfProg Logo"
-            class="shrink mr-2"
-            src="https://cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/assets/logos/bop.min.svg"
-            width="40"
-            contain/>
-          <v-toolbar-title class="darker--text">BecauseOfProg</v-toolbar-title>
-        </div>
-        <v-spacer/>
+    <div
+      style="height: 8px; width: 100%"
+      class="v-app-bar v-app-bar--fixed top-bar gradient"/>
+    <v-app-bar
+      v-if="$route.name !== 'article'"
+      style="margin-top: 8px"
+      color="white"
+      app
+      dense>
+      <v-spacer v-if="$vuetify.breakpoint.smAndDown"/>
+      <div class="d-flex align-center">
+        <v-img
+          alt="BecauseOfProg Logo"
+          class="shrink mr-2"
+          src="https://cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/assets/logos/bop.min.svg"
+          width="40"
+          contain/>
+        <v-toolbar-title>
+          <router-link
+            to="/"
+            class="darker--text">BecauseOfProg
+          </router-link>
+        </v-toolbar-title>
+      </div>
+      <v-spacer/>
+      <div class="hidden-sm-and-down">
         <v-btn
           to="/blog"
           color="darker"
           text>
-          <v-icon left>mdi-file-document-box-multiple-outline</v-icon>
+          <v-icon left>mdi-text-box-multiple-outline</v-icon>
           Articles
         </v-btn>
         <v-btn
@@ -37,10 +41,21 @@
           Projets
         </v-btn>
         <v-btn
+          to="/page/app"
           color="darker"
-          icon
-          @click="search">
+          text>
+          <v-icon left>mdi-cellphone-iphone</v-icon>
+          Application
+        </v-btn>
+        <v-btn
+          color="darker"
+          icon>
           <v-icon>mdi-magnify</v-icon>
+        </v-btn>
+        <v-btn
+          color="darker"
+          icon>
+          <v-icon>mdi-theme-light-dark</v-icon>
         </v-btn>
         <v-btn
           to="/account"
@@ -48,15 +63,15 @@
           icon>
           <v-icon>mdi-account-circle-outline</v-icon>
         </v-btn>
-      </v-app-bar>
-    </template>
+      </div>
+    </v-app-bar>
 
-    <v-content :style="$vuetify.breakpoint.mdAndUp ? 'padding-top: 56px' : ''">
-      <router-view/>
-    </v-content>
+    <v-main :style="$vuetify.breakpoint.mdAndUp ? 'padding-top: 56px' : ''">
+      <router-view :key="$route.fullPath"/>
+    </v-main>
 
     <v-bottom-navigation
-      v-if="$vuetify.breakpoint.smAndDown"
+      v-if="$vuetify.breakpoint.smAndDown && $route.name !== 'article'"
       v-model="bottomNav"
       color="darker"
       fixed
@@ -69,6 +84,29 @@
         <v-icon>{{ item.icon }}</v-icon>
       </v-btn>
     </v-bottom-navigation>
+
+    <v-footer class="gradient">
+      <v-row>
+        <v-col cols="6">
+          <a
+            class="white--text shadow"
+            href="https://github.com/BecauseOfProg/blog/blob/master/LICENSE"
+            target="_blank">
+            &copy; {{ new Date().getFullYear() }}, BecauseOfProg
+          </a>
+        </v-col>
+        <v-col
+          class="text-right"
+          cols="6">
+          <a
+            class="white--text shadow"
+            href="/page/about"
+            target="_blank">
+            À propos
+          </a>
+        </v-col>
+      </v-row>
+    </v-footer>
   </v-app>
 </template>
 
@@ -82,12 +120,12 @@ export default {
     mobileMenu: [
       {
         name: 'Social',
-        icon: 'mdi-rss',
+        icon: 'mdi-home',
         route: '/social'
       },
       {
         name: 'Articles',
-        icon: 'mdi-file-document-box-multiple-outline',
+        icon: 'mdi-text-box-multiple-outline',
         route: '/blog'
       },
       {
