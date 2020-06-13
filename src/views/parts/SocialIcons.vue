@@ -4,9 +4,9 @@
       <a
         v-for="social in socials"
         :key="social.value"
-        :href="social.value">
+        :href="social.link + social.value">
         <v-icon
-          :size="big ? 64 : undefined"
+          :size="big ? 64 : 32"
           :color="big ? social.color : 'darker'">
           {{ social.icon }}
         </v-icon>
