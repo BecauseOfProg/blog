@@ -1,5 +1,21 @@
 <template>
   <v-app>
+    <v-snackbar
+      v-model="snackbar.show"
+      timeout="5000"
+      top
+      right>
+      {{ snackbar.message }}
+      <template #action="{ attrs }">
+        <v-btn
+          color="darker"
+          text
+          v-bind="attrs"
+          @click="snackbar.show = false">
+          Fermer
+        </v-btn>
+      </template>
+    </v-snackbar>
     <div
       style="height: 8px; width: 100%"
       class="v-app-bar v-app-bar--fixed top-bar gradient"/>
@@ -100,8 +116,7 @@
           cols="6">
           <a
             class="white--text shadow"
-            href="/page/about"
-            target="_blank">
+            href="/page/about">
             À propos
           </a>
         </v-col>
@@ -111,10 +126,10 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 
 export default {
   name: 'App',
-
   data: () => ({
     bottomNav: '',
     mobileMenu: [
@@ -137,8 +152,11 @@ export default {
         name: 'Pages',
         icon: 'mdi-plus',
         route: '/pages'
-      },
+      }
     ]
   }),
+  computed: {
+    ...mapState(['snackbar'])
+  }
 }
 </script>

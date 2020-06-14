@@ -204,6 +204,7 @@
 
 <script>
 import VueMarkdown from 'vue-markdown'
+import { mapMutations } from 'vuex'
 import SocialIcons from '@/views/parts/SocialIcons'
 import MemberCard from '@/views/parts/MemberCard'
 import CategoriesChips from '@/views/parts/CategoriesChips'
@@ -226,6 +227,13 @@ export default {
     blogPosts.get({ id: this.$route.params.url }).then(response => {
       this.article = response.body.data
       this.loaded = true
+    }, error => {
+      console.log(error)
+      this.SHOW_SNACKBAR({
+        error: true,
+        message: "Erreur : l'article souhaité est inconnu."
+      })
+      this.$router.push({ name: 'all-articles' })
     })
   },
   computed: {
@@ -261,6 +269,9 @@ export default {
         ]
       } else return []
     }
+  },
+  methods: {
+    ...mapMutations(['SHOW_SNACKBAR'])
   }
 }
 </script>
