@@ -73,12 +73,7 @@
           icon>
           <v-icon>mdi-theme-light-dark</v-icon>
         </v-btn>
-        <v-btn
-          to="/account"
-          color="darker"
-          icon>
-          <v-icon>mdi-account-circle-outline</v-icon>
-        </v-btn>
+        <user-menu/>
       </div>
     </v-app-bar>
 
@@ -127,9 +122,11 @@
 
 <script>
 import { mapState } from 'vuex'
+import UserMenu from './views/members/UserMenu'
 
 export default {
   name: 'App',
+  components: { UserMenu },
   data: () => ({
     bottomNav: '',
     mobileMenu: [
@@ -155,8 +152,6 @@ export default {
       }
     ]
   }),
-  computed: {
-    ...mapState(['snackbar'])
-  }
+  computed: mapState(['snackbar'])
 }
 </script>
