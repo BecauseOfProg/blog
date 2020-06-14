@@ -3,7 +3,7 @@
     <v-row class="mx-0">
       <a
         v-for="social in socials"
-        :key="social.value"
+        :key="social.name + social.value"
         :href="social.link + social.value">
         <v-icon
           :size="big ? 64 : 32"

@@ -11,7 +11,7 @@
           cols="12"
           lg="7"
           offset-lg="1">
-          <b-card v-if="$vuetify.breakpoint.smAndDown">
+          <b-card v-if="$vuetify.breakpoint.mdAndDown">
             <h3 class="headline darker--text">Explorez nos catégories</h3>
             <categories-chips include-all/>
           </b-card>
@@ -138,6 +138,10 @@ export default {
   },
   mounted() {
     let page
+
+    // allArticles = [...]
+    // .filter(...)
+
     if (this.$route.params.category) {
       let category = getCategory(this.$route.params.category)
       this.head.title = `Catégorie — ${category.name}`

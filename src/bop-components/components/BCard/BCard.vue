@@ -32,8 +32,8 @@ export default {
       default: false
     },
     to: {
-      type: String,
-      default: ''
+      type: [String, Object],
+      default: undefined
     }
   }
 }
