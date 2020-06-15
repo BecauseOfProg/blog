@@ -1,26 +1,19 @@
 <template>
   <main>
     <v-app-bar
+      v-if="$vuetify.breakpoint.mdAndUp"
       style="margin-top: 56px"
-      class="semi-transparent"
+      class="translucent"
       app>
       <v-btn
         v-for="category in categories"
         :key="category.id"
-        :to="`/category/${category.id}`"
-        color="white"
+        :to="{ name: 'category', params: { category: category.id }}"
         text>
-        <v-icon left>{{ category.icon }}</v-icon>
+        <template v-if="$vuetify.breakpoint.lgAndUp">
+          <v-icon left>{{ category.icon }}</v-icon>
+        </template>
         {{ category.name }}
-      </v-btn>
-      <v-btn
-        v-for="type in types"
-        :key="type.id"
-        :to="`/type/${type.id}`"
-        color="white"
-        text>
-        <v-icon left>{{ type.icon }}</v-icon>
-        {{ type.name }}
       </v-btn>
     </v-app-bar>
     <v-carousel
@@ -51,32 +44,68 @@
       </v-carousel-item>
     </v-carousel>
     <v-container>
-      <b-card to="/article/activer-serveur-ssh-gitea-gogs">
-        <v-row>
+      <v-row>
+        <template v-if="articles.length">
+          <v-col cols="12">
+            <b-card :to="{ name: 'article', params: { url: articles[0].url }}">
+              <v-row>
+                <v-col
+                  cols="12"
+                  md="6">
+                  <v-img :src="imageProxy(articles[0].banner, 617.15, 0)"/>
+                </v-col>
+                <v-col
+                  cols="12"
+                  md="6">
+                  <v-btn
+                    color="white--text"
+                    class="gradient">
+                    <v-icon left>mdi-clock-outline</v-icon>
+                    Nouveau!
+                  </v-btn>
+                  <h1 class="display-3 black--text lecture-title">{{ articles[0].title }}</h1>
+                  <p class="lecture-text">{{ articles[0].description }}</p>
+                </v-col>
+              </v-row>
+            </b-card>
+          </v-col>
           <v-col
+            v-for="i in 2"
+            :key="`article-${i}`"
             cols="12"
             md="6">
-            <v-img src="https://i.cdn.becauseofprog.fr/cdn.becauseofprog.fr/articles/gitea-gogs-ssh.png?w=617.5"/>
+            <b-article-card :article="articles[i]"/>
+          </v-col>
+        </template>
+        <template v-else>
+          <v-col cols="12">
+            <v-skeleton-loader
+              style="width: 100%"
+              type="image, card-heading, actions"/>
           </v-col>
           <v-col
             cols="12"
             md="6">
-            <v-btn
-              color="white--text"
-              class="gradient">
-              <v-icon left>mdi-clock-outline</v-icon>
-              Nouveau!
-            </v-btn>
-            <h1 class="display-3 black--text">Comment activer le serveur SSH de Gitea ou de Gogs ?</h1>
-            <p>Voici comment configurer le serveur SSH intégré dans Gogs et Gitea, pour pouvoir gérer et mettre à jour vos dépôts en toute simplicité, comme sur GitHub.</p>
+            <v-skeleton-loader
+              style="width: 100%"
+              type="image, card-heading, actions"/>
           </v-col>
-        </v-row>
-      </b-card>
+          <v-col
+            cols="12"
+            md="6">
+            <v-skeleton-loader
+              style="width: 100%"
+              type="image, card-heading, actions"/>
+          </v-col>
+        </template>
+      </v-row>
     </v-container>
   </main>
 </template>
 
 <script>
+import { imageProxy } from '@/utils/helpers'
+import { blogPosts } from '@/utils/api'
 import { categories, types } from '@/utils/data'
 
 export default {
@@ -110,9 +139,19 @@ export default {
         },
       ],
 
+      articles: [],
+
       categories,
-      types,
+      types
     }
+  },
+  mounted() {
+    blogPosts.get().then(data => {
+      this.articles = data.body.data
+    })
+  },
+  methods: {
+    imageProxy
   }
 }
 </script>

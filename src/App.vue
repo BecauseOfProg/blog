@@ -68,11 +68,37 @@
           icon>
           <v-icon>mdi-magnify</v-icon>
         </v-btn>
-        <v-btn
-          color="darker"
-          icon>
-          <v-icon>mdi-theme-light-dark</v-icon>
-        </v-btn>
+        <v-menu offset-y>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              color="darker"
+              icon
+              v-bind="attrs"
+              v-on="on">
+              <v-icon>mdi-theme-light-dark</v-icon>
+            </v-btn>
+          </template>
+          <v-list>
+            <v-list-item @click="setTheme('auto')">
+              <v-list-item-icon>
+                <v-icon>mdi-theme-light-dark</v-icon>
+              </v-list-item-icon>
+              <v-list-item-title>Automatique</v-list-item-title>
+            </v-list-item>
+            <v-list-item @click="setTheme('light')">
+              <v-list-item-icon>
+                <v-icon>mdi-weather-sunny</v-icon>
+              </v-list-item-icon>
+              <v-list-item-title>Clair</v-list-item-title>
+            </v-list-item>
+            <v-list-item @click="setTheme('dark')">
+              <v-list-item-icon>
+                <v-icon>mdi-weather-night</v-icon>
+              </v-list-item-icon>
+              <v-list-item-title>Sombre</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
         <user-menu/>
       </div>
     </v-app-bar>
@@ -121,8 +147,8 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import UserMenu from './views/members/UserMenu'
+import { mapState, mapActions } from 'vuex'
+import UserMenu from '@/views/members/UserMenu'
 
 export default {
   name: 'App',
@@ -152,6 +178,22 @@ export default {
       }
     ]
   }),
-  computed: mapState(['snackbar'])
+  mounted() {
+    this.applyTheme()
+  },
+  computed: mapState(['snackbar', 'settings']),
+  methods: {
+    ...mapActions(['setTheme']),
+    applyTheme() {
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      if (prefersDark && this.settings.theme === 'auto') this.$vuetify.theme.dark = true
+      else this.$vuetify.theme.dark = this.settings.theme === 'dark'
+    },
+  },
+  watch: {
+    'settings.theme'() {
+      this.applyTheme()
+    }
+  }
 }
 </script>

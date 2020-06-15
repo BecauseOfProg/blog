@@ -3,14 +3,14 @@ const defaults = {
   theme: 'auto'
 }
 
-function loadFromStorage(category) {
+function loadFromStorage(category, json = false) {
   let data = localStorage.getItem(category)
   if (data === null) {
     data = JSON.stringify(defaults[category])
     localStorage.setItem(category, data)
   }
 
-  return JSON.parse(data)
+  return json ? JSON.parse(data) : data
 }
 
 function saveToStorage(category, data) {
