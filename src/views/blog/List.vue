@@ -15,14 +15,15 @@
             <h3 class="headline darker--text">Explorez nos catégories</h3>
             <categories-chips include-all/>
           </b-card>
+          <v-pagination
+            v-if="pages > 0"
+            v-model="page"
+            :length="pages"
+            color="darker"/>
           <template v-if="loaded">
-            <v-pagination
-              v-model="page"
-              :length="Math.ceil(articles.length / 10)"
-              color="darker"/>
             <v-row>
               <v-col
-                v-for="article in articles.slice((page - 1) * 10, (page - 1) * 10 + 10)"
+                v-for="article in articles"
                 :key="article.url"
                 cols="12">
                 <b-article-card :article="article"/>
@@ -131,59 +132,50 @@ export default {
       articles: [],
       loaded: false,
       page: 1,
+      pages: 0,
 
       categories,
       types
     }
   },
   mounted() {
-    let page
+    this.fetchArticles()
+  },
+  methods: {
+    fetchArticles() {
+      this.loaded = false
+      let params = {
+        page: this.page
+      }
 
-    // allArticles = [...]
-    // .filter(...)
+      if (this.$route.params.category) {
+        params['category'] = this.$route.params.category
+        let category = getCategory(this.$route.params.category)
+        this.head.title = `Catégorie — ${category.name}`
+        this.head.icon = category.icon
+        this.head.image = `/img/category/${category.id}.png`
+      } else if (this.$route.params.type) {
+        params['type'] = this.$route.params.type
+        let type = getType(this.$route.params.type)
+        this.head.title = `Type — ${type.name}`
+        this.head.icon = type.icon
+        this.head.image = `/img/type/${type.id}.png`
+      } else {
+        this.head.title = 'Tous les articles'
+        this.head.icon = 'mdi-text-box-multiple-outline'
+      }
 
-    if (this.$route.params.category) {
-      let category = getCategory(this.$route.params.category)
-      this.head.title = `Catégorie — ${category.name}`
-      this.head.icon = category.icon
-      this.head.image = `/img/category/${category.id}.png`
-      page = {
-        type: 'category',
-        data: category.id
-      }
-    } else if (this.$route.params.type) {
-      let type = getType(this.$route.params.type)
-      this.head.title = `Type — ${type.name}`
-      this.head.icon = type.icon
-      this.head.image = `/img/type/${type.id}.png`
-      page = {
-        type: 'type',
-        data: type.id
-      }
-    } else {
-      this.head.title = 'Tous les articles'
-      this.head.icon = 'mdi-text-box-multiple-outline'
-      page = {
-        type: 'all'
-      }
+      blogPosts.get(params).then(data => {
+        this.articles = data.body.data
+        this.pages = data.body.pages
+        this.loaded = true
+      })
     }
-
-    let articles
-    blogPosts.get().then(response => {
-      articles = response.body.data
-      switch (page.type) {
-      case 'category' :
-        this.articles = articles.filter(article => article.category === page.data)
-        break
-      case 'type' :
-        this.articles = articles.filter(article => article.type === page.data)
-        break
-      default :
-        this.articles = articles
-        break
-      }
-      this.loaded = true
-    })
+  },
+  watch: {
+    page() {
+      this.fetchArticles()
+    }
   }
 }
 </script>
