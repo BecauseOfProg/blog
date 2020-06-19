@@ -2,7 +2,6 @@
   <main>
     <v-app-bar
       style="margin-top: 8px"
-      color="white"
       dense
       app>
       <v-btn
@@ -19,6 +18,8 @@
           width="40"
           contain/>
       </a>
+      <v-spacer/>
+      <theme-switcher/>
     </v-app-bar>
     <template v-if="loaded">
       <v-parallax
@@ -79,8 +80,8 @@
         <v-row>
           <v-col
             cols="12"
-            lg="6"
-            offset-lg="3">
+            lg="8"
+            offset-lg="2">
             <b-card
               id="article-content"
               class="bordered">
@@ -210,10 +211,11 @@ import MemberCard from '@/views/parts/MemberCard'
 import CategoriesChips from '@/views/parts/CategoriesChips'
 import { categories, types, getCategory, getType } from '@/utils/data'
 import { blogPosts } from '@/utils/api'
+import ThemeSwitcher from '../parts/ThemeSwitcher'
 
 export default {
   name: 'Article',
-  components: { CategoriesChips, MemberCard, VueMarkdown, SocialIcons },
+  components: { ThemeSwitcher, CategoriesChips, MemberCard, VueMarkdown, SocialIcons },
   data() {
     return {
       article: {},
@@ -255,7 +257,7 @@ export default {
             link: `https://www.facebook.com/sharer/sharer.php?u=https://becauseofprog.fr/article/${this.article.url}`
           },
           {
-            name: 'Diaspora', icon: 'mdi-asterisk', color: 'grey darken-4',
+            name: 'Diaspora', icon: 'mdi-asterisk', color: 'purple darken-2',
             link: `https://share.diasporafoundation.org/?title=${this.article.title}&url=https://becauseofprog.fr/article/${this.article.url}`
           },
           {
