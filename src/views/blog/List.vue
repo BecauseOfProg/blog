@@ -19,7 +19,8 @@
             v-if="pages > 0"
             v-model="page"
             :length="pages"
-            color="darker"/>
+            color="darker"
+            class="mt-3 mb-2"/>
           <template v-if="loaded">
             <v-row>
               <v-col
@@ -31,7 +32,7 @@
             </v-row>
           </template>
           <template v-else>
-            <v-row>
+            <v-row class="mt-3">
               <v-skeleton-loader
                 style="width: 100%"
                 type="image, card-heading, actions"/>
@@ -91,7 +92,7 @@
             </v-list>
             <v-divider/>
             <div class="pa-3">
-              <span class="headline darker--text">Nous suivre</span>
+              <span class="headline darker--text mb-3">Nous suivre</span>
               <social-icons big/>
             </div>
             <v-divider/>
@@ -166,9 +167,11 @@ export default {
       }
 
       blogPosts.get(params).then(data => {
-        this.articles = data.body.data
-        this.pages = data.body.pages
-        this.loaded = true
+        if (params.page === this.page) {
+          this.articles = data.body.data
+          this.pages = data.body.pages
+          this.loaded = true
+        }
       })
     }
   },

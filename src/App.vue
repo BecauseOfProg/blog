@@ -91,7 +91,9 @@
       </v-btn>
     </v-bottom-navigation>
 
-    <v-footer class="gradient">
+    <v-footer
+      class="gradient"
+      style="margin-bottom: 56px">
       <v-row>
         <v-col cols="6">
           <a

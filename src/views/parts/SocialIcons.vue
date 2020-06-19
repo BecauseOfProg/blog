@@ -7,7 +7,8 @@
         :href="social.link + social.value">
         <v-icon
           :size="big ? 64 : 32"
-          :color="big ? social.color : 'darker'">
+          :color="big ? social.color : 'darker'"
+          class="social-icon">
           {{ social.icon }}
         </v-icon>
       </a>

@@ -6,7 +6,7 @@
         :alt="article.title"/>
     </template>
     <span class="headline lecture-title">{{ article.title }}</span>
-    <p class="lecture-text">{{ article.description }}</p>
+    <p class="lecture-text mb-3">{{ article.description }}</p>
     <v-row class="mx-0">
       <v-chip>
         <v-avatar left>

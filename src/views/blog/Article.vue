@@ -85,7 +85,8 @@
             <b-card
               id="article-content"
               class="bordered">
-              <vue-markdown class="markdown-body">{{ article.content }}</vue-markdown>
+              <vue-markdown class="markdown-body mb-3">{{ article.content }}</vue-markdown>
+              <v-divider/>
               <v-col class="text-center">
                 <span class="headline">Partager l'article</span><br>
                 <v-btn
@@ -98,7 +99,7 @@
                   outlined>
                   <v-icon left>{{ share.icon }}</v-icon>
                   {{ share.name }}
-                </v-btn><br>
+                </v-btn><br><br>
                 <span class="headline">Publié dans</span><br>
                 <v-chip>
                   <v-icon left>{{ type.icon }}</v-icon>
@@ -139,7 +140,7 @@
                     class="pt-0">
                     <b-card>
                       <h3 class="headline darker--text">Nos réseaux sociaux</h3>
-                      <p>Nous postons régulièrement des nouvelles, des tips et des astuces. Suivez-nous!</p>
+                      <p class="mb-3">Nous postons régulièrement des nouvelles, des tips et des astuces. Suivez-nous!</p>
                       <social-icons big/>
                     </b-card>
                   </v-col>

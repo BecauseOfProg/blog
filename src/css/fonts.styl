@@ -1,20 +1,26 @@
 .lecture-title
   font-family: 'Lora', serif
   color: var(--v-text-base)
-
-.lecture-text
-.markdown-body p
-  font-family: 'Merriweather', serif
-  font-size: 15px
+  line-height: 2.4rem !important
+  &.display-3
+    line-height: 4rem !important
 
 .markdown-body
   h1, h2, h3, h4, h5, h6
     @extend .lecture-title
+  p
+    text-align: justify
+    font-family: 'Merriweather', serif
+    font-size: 15px !important
   code
     color: inherit
     box-shadow: none
-  ol
+  ol, ul
     color: var(--v-text-base)
   pre
     background: var(--v-background-base) !important
     color: var(--v-text-base)
+
+.lecture-text
+  @extend .markdown-body p
+  line-height: 1.5rem !important
