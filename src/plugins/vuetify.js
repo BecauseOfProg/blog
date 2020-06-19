@@ -23,12 +23,14 @@ export default new Vuetify({
       light: {
         ...theme,
         background: '#fafafa',
-        sheets: '#fff'
+        sheets: '#fff',
+        text: '#000'
       },
       dark: {
         ...theme,
         background: '#000',
         sheets: '#2E2E2E',
+        text: '#fff'
       }
     },
     options: {

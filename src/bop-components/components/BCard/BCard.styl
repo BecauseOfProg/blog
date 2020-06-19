@@ -1,7 +1,9 @@
 .b-card
-  background-color: white !important
   border-radius: 20px !important
-  box-shadow: 0.25rem 0.25rem 1.25rem rgba(146,125,250,.1) !important
+  &.theme--light
+    box-shadow: 0.25rem 0.25rem 1.25rem rgba(146,125,160,0.2) !important
+  &.theme--dark
+    box-shadow: 0.25rem 0.25rem 1.25rem rgba(0,0,0,0.2) !important
   &.b-card--tile
     border-radius: 0 !important
   &.v-card--link:before
@@ -15,7 +17,7 @@
     font-weight: 300
   p
     margin: 0
-    color: #000
+    color: var(--v-text-base)
   .v-card__actions button
     font-weight: normal !important
     color: var(--v-darker-base) !important

@@ -24,7 +24,7 @@
       <v-carousel-item
         v-for="item in carousel"
         :key="item.title"
-        :src="item.background == null ? '' : item.background"
+        :src="item.background === null ? '' : item.background"
         class="gradient">
         <v-row
           style="flex-direction: column"
@@ -63,7 +63,7 @@
                     <v-icon left>mdi-clock-outline</v-icon>
                     Nouveau!
                   </v-btn>
-                  <h1 class="display-3 black--text lecture-title">{{ articles[0].title }}</h1>
+                  <h1 class="display-3 text--text lecture-title">{{ articles[0].title }}</h1>
                   <p class="lecture-text">{{ articles[0].description }}</p>
                 </v-col>
               </v-row>
