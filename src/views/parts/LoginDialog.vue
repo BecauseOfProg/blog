@@ -56,8 +56,7 @@
 </template>
 
 <script>
-import { settings } from '@/utils/data'
-import { mapMutations } from 'vuex'
+import { mapActions } from 'vuex'
 
 export default {
   name: 'LoginDialog',
@@ -71,30 +70,13 @@ export default {
       }
     }
   },
+  mounted() {
+    this.reconnect(this)
+  },
   methods: {
-    ...mapMutations(['LOGIN', 'SHOW_SNACKBAR']),
+    ...mapActions(['reconnect', 'login']),
     tryLogin() {
-      const credentials = {
-        email: this.form.email,
-        password: this.form.password
-      }
-
-      this.$http.post(settings.api + '/auth', credentials).then(response => {
-        this.LOGIN(response.data.data)
-        localStorage.setItem('token', response.data.data.token)
-        this.enabled = false
-        this.form.email = ''
-        this.error = ''
-
-        this.SHOW_SNACKBAR({
-          error: false,
-          message: 'Connexion à votre compte avec succès.'
-        })
-      }, error => {
-        console.log(error)
-        this.error = "Erreur : l'adresse email et/ou le mot de passe est incorrect."
-      })
-      this.form.password = ''
+      this.login(this)
     }
   }
 }
