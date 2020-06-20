@@ -47,7 +47,7 @@ let router = new Router({
       path: '/account/create-article',
       name: 'create-article',
       component: () => import(/* webpackChunkName: "members" */ '@/views/members/CreateArticle.vue'),
-      meta: { requiresAuth: true }
+      meta: { requiresAuth: true, requiredPermission: 'BLOG_WRITE' }
     },
     {
       path: '/pages',
@@ -80,12 +80,22 @@ let router = new Router({
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
     if (store.getters.isAuthenticated) {
-      next()
+      if (to.matched.some(record => record.meta.requiredPermission !== undefined && !store.state.user.data.permissions.includes(record.meta.requiredPermission))) {
+        console.log('no permission')
+        next({ name: 'home' })
+        store.commit('SHOW_SNACKBAR', {
+          error: true,
+          message: "Erreur : vous n'avez pas les permissions nécessaires pour consulter cette page."
+        })
+      } else {
+        console.log('permission')
+        next()
+      }
     } else {
       next({ name: 'home' })
       store.commit('SHOW_SNACKBAR', {
         error: true,
-        message: 'Erreur : vous devez être connecté pour voir cette page.'
+        message: 'Erreur : vous devez être connecté pour consulter cette page.'
       })
     }
   } else {
