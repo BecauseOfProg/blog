@@ -3,7 +3,7 @@
     id="b-top-banner"
     :src="src"
     :height="tall ? 300 : 150"
-    :class="{ gradient: src === undefined }">
+    :class="classes">
     <v-icon
       v-if="$vuetify.breakpoint.mdAndUp && icon !== null"
       color="white"
@@ -39,6 +39,14 @@ export default {
     title: {
       type: String,
       required: true,
+    }
+  },
+  computed: {
+    classes() {
+      return {
+        'remove-safe': true,
+        gradient: this.src === undefined
+      }
     }
   }
 }

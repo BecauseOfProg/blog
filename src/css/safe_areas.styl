@@ -1,0 +1,17 @@
+@css {
+  @supports(padding: max(0px)) {
+    .page-body, .v-footer, .safe {
+      padding-left: max(12px, env(safe-area-inset-left));
+      padding-right: max(12px, env(safe-area-inset-right));
+    }
+
+    .v-bottom-navigation {
+      height: min(56px, env(safe-area-inset-bottom)px) !important;
+    }
+    .v-bottom-navigation .v-btn {
+      margin-top: 15px;
+      margin-bottom: max(15px, env(safe-area-inset-bottom));
+      height: auto;
+    }
+  }
+}

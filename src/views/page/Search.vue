@@ -1,7 +1,10 @@
 <template>
-  <b-top-banner
-    title="Recherche"
-    icon="mdi-magnify"/>
+  <main>
+    <b-top-banner
+      title="Recherche"
+      icon="mdi-magnify"/>
+    <v-container class="page-body"/>
+  </main>
 </template>
 
 <script>

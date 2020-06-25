@@ -1,6 +1,6 @@
 <template>
   <main>
-    <v-container>
+    <v-container class="page-body">
       <v-row>
         <v-col cols="12">
           <b-card>

@@ -5,7 +5,7 @@
       :icon="head.icon"
       :src="head.image"
       tall/>
-    <v-container>
+    <v-container class="page-body">
       <v-row>
         <v-col
           cols="12"
@@ -32,11 +32,11 @@
             </v-row>
           </template>
           <template v-else>
-            <v-row class="mt-3">
+            <div class="mt-3">
               <v-skeleton-loader
                 style="width: 100%"
                 type="image, card-heading, actions"/>
-            </v-row>
+            </div>
           </template>
         </v-col>
         <v-col

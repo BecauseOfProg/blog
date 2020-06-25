@@ -3,7 +3,7 @@
     <b-top-banner
       title="Réseaux sociaux et liens"
       icon="mdi-rss"/>
-    <v-container>
+    <v-container class="page-body">
       <v-row>
         <v-col cols="12">
           <b-card>
@@ -14,15 +14,13 @@
           </b-card>
         </v-col>
       </v-row>
-    </v-container>
-    <v-container class="px-0">
       <v-row
         class="ma-0"
         wrap>
         <v-col
           class="px-0"
           cols="12">
-          <v-list style="background-color: inherit">
+          <v-list class="background">
             <template v-for="post in posts">
               <v-divider :key="post.text"/>
               <v-list-item

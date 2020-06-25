@@ -20,6 +20,7 @@
       height="400px"
       interval="4000"
       hide-delimiter-background
+      :show-arrows="false"
       cycle>
       <v-carousel-item
         v-for="item in carousel"
@@ -28,7 +29,7 @@
         class="gradient">
         <v-row
           style="flex-direction: column"
-          class="fill-height white--text"
+          class="fill-height white--text safe"
           align="center"
           justify="center">
           <span class="display-2">{{ item.title }}</span>
@@ -43,7 +44,7 @@
         </v-row>
       </v-carousel-item>
     </v-carousel>
-    <v-container>
+    <v-container class="page-body">
       <v-row>
         <template v-if="articles.length">
           <v-col cols="12">
