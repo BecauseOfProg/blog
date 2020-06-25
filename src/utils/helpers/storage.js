@@ -1,5 +1,6 @@
 const defaults = {
   token: '',
+  reconnection: false,
   theme: 'auto'
 }
 

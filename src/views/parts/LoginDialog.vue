@@ -8,8 +8,8 @@
         v-bind="{ on }"/>
     </template>
     <v-card>
-      <v-card-text>
-        <h2>Connexion</h2>
+      <v-card-text class="pt-2">
+        <span class="headline">Connexion</span>
         <p>Pour profiter de certaines fonctionnalités du site et empêcher le spam, vous devez vous connecter à votre compte BecauseOfProg.</p>
         <v-alert
           v-if="error !== ''"
@@ -18,24 +18,31 @@
           outlined>
           {{ error }}
         </v-alert>
-        <v-col cols="12">
+        <v-form v-model="valid">
           <v-text-field
             v-model="form.email"
-            type="email"
+            :rules="emailRules"
             prepend-inner-icon="mdi-email-outline"
             label="Adresse e-mail"
-            color="darker"
-            outlined/>
-        </v-col>
-        <v-col cols="12">
+            type="email"
+            color="light"
+            outlined
+            required/>
           <v-text-field
             v-model="form.password"
-            type="password"
+            :rules="passwordRules"
             prepend-inner-icon="mdi-key-variant"
             label="Mot de passe"
-            color="darker"
-            outlined/>
-        </v-col>
+            type="password"
+            color="light"
+            outlined
+            required/>
+          <v-switch
+            v-model="form.reconnection"
+            label="Se souvenir de moi"
+            color="light"
+            inset/>
+        </v-form>
       </v-card-text>
       <v-divider/>
       <v-card-actions>
@@ -46,7 +53,9 @@
           Annuler
         </v-btn>
         <v-btn
-          color="darker white--text"
+          :disabled="!valid"
+          color="light"
+          text
           @click="tryLogin">
           Valider
         </v-btn>
@@ -64,10 +73,20 @@ export default {
     return {
       enabled: false,
       error: '',
+      valid: false,
+
       form: {
         email: '',
-        password: ''
-      }
+        password: '',
+        reconnection: false
+      },
+      emailRules: [
+        v => !!v || "L'adresse e-mail est requise",
+        v => /.+@.+\..+/.test(v) || "L'adresse e-mail doit être valide",
+      ],
+      passwordRules: [
+        v => !!v || "Le mot de passe est requis",
+      ]
     }
   },
   mounted() {

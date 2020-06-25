@@ -30,6 +30,8 @@ const actions = {
     context.$http.post(settings.api + '/auth', credentials).then(response => {
       commit('LOGIN', response.data.data)
       localStorage.setItem('token', response.data.data.token)
+      if (context.form.reconnection) localStorage.setItem('doReconnection', 'true')
+
       context.enabled = false
       context.form.email = ''
       context.error = ''
@@ -45,9 +47,15 @@ const actions = {
     context.form.password = ''
   },
   reconnect({ commit }, context) {
-    let token = localStorage.getItem('token')
-    if (token === null)
+    let reconnection = localStorage.getItem('doReconnection')
+    if (reconnection === null) {
+      localStorage.removeItem('token')
       return
+    }
+
+    let token = localStorage.getItem('token')
+    if (token === null) return
+
     context.$http.get(
       settings.api + '/auth/data',
       {
@@ -70,6 +78,8 @@ const actions = {
     })
   },
   logout({ commit }) {
+    localStorage.removeItem('doReconnection')
+    localStorage.removeItem('token')
     commit('LOGOUT')
     commit('SHOW_SNACKBAR', {
       error: false,
