@@ -13,6 +13,7 @@ const mutations = {
   LOGIN(state, data) {
     state.token = data.token
     state.data = data.user
+    localStorage.setItem('token', data.token)
   },
   LOGOUT(state) {
     state.token = ''
@@ -27,13 +28,14 @@ const actions = {
       password: context.form.password
     }
 
+    context.waiting = true
     context.$http.post(settings.api + '/auth', credentials).then(response => {
       commit('LOGIN', response.data.data)
-      localStorage.setItem('token', response.data.data.token)
       if (context.form.reconnection) localStorage.setItem('doReconnection', 'true')
 
       context.enabled = false
-      context.form.email = ''
+      context.waiting = false
+      context.$refs.form.reset()
       context.error = ''
 
       commit('SHOW_SNACKBAR', {
@@ -41,10 +43,12 @@ const actions = {
         message: 'Connexion à votre compte avec succès.'
       })
     }, error => {
+      context.waiting = false
       console.log(error)
       context.error = "Erreur : l'adresse email et/ou le mot de passe est incorrect."
     })
     context.form.password = ''
+    context.$refs.form.resetValidation()
   },
   reconnect({ commit }, context) {
     let reconnection = localStorage.getItem('doReconnection')
@@ -57,7 +61,7 @@ const actions = {
     if (token === null) return
 
     context.$http.get(
-      settings.api + '/auth/data',
+      `${settings.api}/auth/data`,
       {
         headers: {
           'Authorization': token
@@ -80,6 +84,7 @@ const actions = {
   logout({ commit }) {
     localStorage.removeItem('doReconnection')
     localStorage.removeItem('token')
+
     commit('LOGOUT')
     commit('SHOW_SNACKBAR', {
       error: false,

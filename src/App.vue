@@ -25,7 +25,9 @@
       app
       dense>
       <v-spacer v-if="$vuetify.breakpoint.smAndDown"/>
-      <div class="d-flex align-center">
+      <router-link
+        to="/"
+        class="d-flex align-center darker--text">
         <v-img
           alt="BecauseOfProg Logo"
           class="shrink mr-2"
@@ -33,12 +35,9 @@
           width="40"
           contain/>
         <v-toolbar-title>
-          <router-link
-            to="/"
-            class="darker--text">BecauseOfProg
-          </router-link>
+          BecauseOfProg
         </v-toolbar-title>
-      </div>
+      </router-link>
       <v-spacer/>
       <div class="hidden-sm-and-down">
         <v-btn
@@ -62,22 +61,28 @@
           <v-icon left>mdi-cellphone-iphone</v-icon>
           Application
         </v-btn>
-        <v-btn
-          color="darker"
-          icon>
-          <v-icon>mdi-magnify</v-icon>
-        </v-btn>
+        <v-tooltip bottom>
+          <template #activator="{ on }">
+            <v-btn
+              color="darker"
+              icon
+              v-on="on">
+              <v-icon>mdi-magnify</v-icon>
+            </v-btn>
+          </template>
+          <span>Recherche</span>
+        </v-tooltip>
         <theme-switcher/>
         <user-menu/>
       </div>
     </v-app-bar>
 
-    <v-main :style="$vuetify.breakpoint.mdAndUp ? 'padding-top: 56px' : ''">
+    <v-main :style="isDesktop ? 'padding-top: 56px' : ''">
       <router-view :key="$route.fullPath"/>
     </v-main>
 
     <v-bottom-navigation
-      v-if="$vuetify.breakpoint.smAndDown && $route.name !== 'article'"
+      v-if="isMobile && $route.name !== 'article'"
       v-model="bottomNav"
       color="darker"
       fixed
@@ -93,7 +98,7 @@
 
     <v-footer
       class="gradient"
-      style="margin-bottom: 56px">
+      :style="isMobile ? 'margin-bottom: 56px' : ''">
       <v-row>
         <v-col cols="6">
           <a
@@ -108,7 +113,7 @@
           cols="6">
           <a
             class="white--text shadow"
-            href="/page/about">
+            to="/page/about">
             À propos
           </a>
         </v-col>
@@ -144,12 +149,20 @@ export default {
         route: '/page/search'
       },
       {
-        name: 'Pages',
+        name: 'Plus',
         icon: 'mdi-plus',
         route: '/pages'
       }
     ]
   }),
-  computed: mapState(['snackbar'])
+  computed: {
+    ...mapState(['snackbar']),
+    isMobile() {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    isDesktop() {
+      return !this.isMobile
+    }
+  }
 }
 </script>

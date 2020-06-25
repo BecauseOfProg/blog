@@ -19,6 +19,7 @@
 
 <script>
 export default {
+  name: 'BTopBanner',
   props: {
     icon: {
       type: String,

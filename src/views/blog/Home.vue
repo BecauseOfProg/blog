@@ -29,7 +29,7 @@
         class="gradient">
         <v-row
           style="flex-direction: column"
-          class="fill-height white--text safe"
+          :class="['fill-height', 'white--text', 'safe', ...item.classes]"
           align="center"
           justify="center">
           <span class="display-2">{{ item.title }}</span>
@@ -85,13 +85,8 @@
               type="image, card-heading, actions"/>
           </v-col>
           <v-col
-            cols="12"
-            md="6">
-            <v-skeleton-loader
-              style="width: 100%"
-              type="image, card-heading, actions"/>
-          </v-col>
-          <v-col
+            v-for="i in 2"
+            :key="`loader-${i}`"
             cols="12"
             md="6">
             <v-skeleton-loader
@@ -136,7 +131,8 @@ export default {
           button: {
             label: 'Voir!',
             link: '/article/v2-site-bop'
-          }
+          },
+          classes: ['darker-bg']
         },
       ],
 

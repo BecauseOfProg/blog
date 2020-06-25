@@ -21,23 +21,27 @@
             :length="pages"
             color="darker"
             class="mt-3 mb-2"/>
-          <template v-if="loaded">
-            <v-row>
-              <v-col
-                v-for="article in articles"
-                :key="article.url"
-                cols="12">
-                <b-article-card :article="article"/>
-              </v-col>
-            </v-row>
-          </template>
-          <template v-else>
-            <div class="mt-3">
-              <v-skeleton-loader
-                style="width: 100%"
-                type="image, card-heading, actions"/>
-            </div>
-          </template>
+          <v-scale-transition>
+            <template v-if="loaded">
+              <v-row>
+                <v-col
+                  v-for="article in articles"
+                  :key="article.url"
+                  cols="12">
+                  <b-article-card :article="article"/>
+                </v-col>
+              </v-row>
+            </template>
+          </v-scale-transition>
+          <v-fade-transition appear>
+            <template v-if="!loaded">
+              <div class="mt-3">
+                <v-skeleton-loader
+                  style="width: 100%"
+                  type="image, card-heading, actions"/>
+              </div>
+            </template>
+          </v-fade-transition>
         </v-col>
         <v-col
           cols="12"
@@ -92,13 +96,13 @@
             </v-list>
             <v-divider/>
             <div class="pa-3">
-              <span class="headline darker--text mb-3">Nous suivre</span>
+              <h3 class="headline">Nous suivre</h3>
               <social-icons big/>
             </div>
             <v-divider/>
             <div class="pa-3">
-              <span class="headline darker--text">À propos</span>
-              <p>BecauseOfProg, c'est des développeurs rassemblés autour de projets communs tels que le blog.</p>
+              <h3 class="headline">À propos</h3>
+              <p>BecauseOfProg, c'est des développeurs rassemblés autour de projets communs tels que le blog.</p><br>
               <v-btn
                 text
                 color="darker"
@@ -121,7 +125,7 @@ import SocialIcons from '@/views/parts/SocialIcons'
 import CategoriesChips from '@/views/parts/CategoriesChips'
 
 export default {
-  name: 'ArticleList',
+  name: 'List',
   components: { CategoriesChips, SocialIcons },
   data() {
     return {

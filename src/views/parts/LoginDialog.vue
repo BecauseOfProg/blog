@@ -11,14 +11,19 @@
       <v-card-text class="pt-2">
         <span class="headline">Connexion</span>
         <p>Pour profiter de certaines fonctionnalités du site et empêcher le spam, vous devez vous connecter à votre compte BecauseOfProg.</p>
-        <v-alert
-          v-if="error !== ''"
-          color="darker"
-          icon="mdi-alert-circle-outline"
-          outlined>
-          {{ error }}
-        </v-alert>
-        <v-form v-model="valid">
+        <v-scale-transition>
+          <v-alert
+            v-if="error !== ''"
+            color="darker"
+            icon="mdi-alert-circle-outline"
+            outlined
+            dismissible>
+            {{ error }}
+          </v-alert>
+        </v-scale-transition>
+        <v-form
+          ref="form"
+          v-model="valid">
           <v-text-field
             v-model="form.email"
             :rules="emailRules"
@@ -49,11 +54,12 @@
         <v-spacer/>
         <v-btn
           text
-          @click="enabled = false">
+          @click="cancel">
           Annuler
         </v-btn>
         <v-btn
           :disabled="!valid"
+          :loading="waiting"
           color="light"
           text
           @click="tryLogin">
@@ -67,6 +73,12 @@
 <script>
 import { mapActions } from 'vuex'
 
+const defaultForm = {
+  email: '',
+  password: '',
+  reconnection: false
+}
+
 export default {
   name: 'LoginDialog',
   data() {
@@ -74,12 +86,9 @@ export default {
       enabled: false,
       error: '',
       valid: false,
+      waiting: false,
 
-      form: {
-        email: '',
-        password: '',
-        reconnection: false
-      },
+      form: Object.assign({}, defaultForm),
       emailRules: [
         v => !!v || "L'adresse e-mail est requise",
         v => /.+@.+\..+/.test(v) || "L'adresse e-mail doit être valide",
@@ -96,6 +105,11 @@ export default {
     ...mapActions(['reconnect', 'login']),
     tryLogin() {
       this.login(this)
+    },
+    cancel() {
+      this.$refs.form.reset()
+      this.form = Object.assign({}, defaultForm)
+      this.enabled = false
     }
   }
 }

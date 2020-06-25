@@ -87,8 +87,8 @@
               class="bordered">
               <vue-markdown class="markdown-body mb-3">{{ article.content }}</vue-markdown>
               <v-divider/>
-              <v-col class="text-center">
-                <span class="headline">Partager l'article</span><br>
+              <div class="text-center">
+                <br><h3 class="headline mb-2 text--text">Partager l'article</h3>
                 <v-btn
                   v-for="share in shares"
                   :key="share.name"
@@ -99,8 +99,9 @@
                   outlined>
                   <v-icon left>{{ share.icon }}</v-icon>
                   {{ share.name }}
-                </v-btn><br><br>
-                <span class="headline">Publié dans</span><br>
+                </v-btn>
+                <br><br><v-divider/><br>
+                <h2 class="headline mb-2 text--text">Publié dans</h2>
                 <v-chip>
                   <v-icon left>{{ type.icon }}</v-icon>
                   {{ type.name }}
@@ -114,7 +115,7 @@
                   :key="label">
                   {{ label }}
                 </v-chip>
-              </v-col>
+              </div>
             </b-card>
           </v-col>
           <v-col cols="12">

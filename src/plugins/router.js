@@ -60,7 +60,7 @@ let router = new Router({
       component: () => import(/* webpackChunkName: "pages" */ '@/views/page/About.vue')
     },
     {
-      path: '/page/application',
+      path: '/page/app',
       name: 'application',
       component: () => import(/* webpackChunkName: "pages" */ '@/views/page/Application.vue')
     },

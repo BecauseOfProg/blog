@@ -1,13 +1,18 @@
 <template>
   <v-menu offset-y>
-    <template v-slot:activator="{ on, attrs }">
-      <v-btn
-        color="darker"
-        icon
-        v-bind="attrs"
-        v-on="on">
-        <v-icon>mdi-theme-light-dark</v-icon>
-      </v-btn>
+    <template #activator="{ on: menu, attrs }">
+      <v-tooltip bottom>
+        <template #activator="{ on: tooltip }">
+          <v-btn
+            color="darker"
+            icon
+            v-bind="attrs"
+            v-on="{ ...menu, ...tooltip }">
+            <v-icon>mdi-theme-light-dark</v-icon>
+          </v-btn>
+        </template>
+        <span>Changer le thème</span>
+      </v-tooltip>
     </template>
     <v-list>
       <v-list-item @click="setTheme('auto')">
@@ -36,6 +41,7 @@
 import { mapState, mapActions } from 'vuex'
 
 export default {
+  name: 'ThemeSwitcher',
   computed: mapState(['settings']),
   methods: {
     ...mapActions(['setTheme']),
