@@ -21,22 +21,9 @@ const actions = {
   setTheme({ commit }, theme) {
     commit('SET_THEME', theme)
 
-    let strings = {
-      fr: {
-        auto: "Thème réglé pour s'ajuster à celui de l'appareil.",
-        light: 'Thème réglé en mode clair.',
-        dark: 'Thème réglé en mode sombre.'
-      },
-      en: {
-        auto: "Theme set to match that of the device.",
-        light: 'Theme set in light mode.',
-        dark: 'Theme set in dark mode.'
-      }
-    }
-
     commit('SHOW_SNACKBAR', {
       error: false,
-      message: strings[state.lang][theme]
+      message: `theme.messages.${theme}`
     })
     localStorage.setItem('theme', theme)
   },
@@ -44,17 +31,11 @@ const actions = {
   setLang({ commit }, lang) {
     commit('SET_LANG', lang)
 
-    /*let strings = {
-      fr: "français",
-      en: "english"
-    }
-
     commit('SHOW_SNACKBAR', {
       error: false,
-      message: 'Lang : ' + strings[lang]
-    })*/
+      message: 'lang.switched'
+    })
     localStorage.setItem('lang', lang)
-    window.location.reload()
   }
 }
 

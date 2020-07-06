@@ -2,7 +2,7 @@ import { settings } from '@/utils/data'
 
 const state = {
   token: '',
-  user: {}
+  data: {}
 }
 
 const getters = {
@@ -31,8 +31,8 @@ const actions = {
     context.waiting = true
     context.$http.post(settings.api + '/auth', credentials).then(response => {
       commit('LOGIN', response.data.data)
-      if (context.form.reconnection) localStorage.setItem('doReconnection', 'true')
 
+      if (context.form.reconnection) localStorage.setItem('doReconnection', 'true')
       context.enabled = false
       context.waiting = false
       context.$refs.form.reset()
@@ -40,12 +40,13 @@ const actions = {
 
       commit('SHOW_SNACKBAR', {
         error: false,
-        message: 'Connexion à votre compte avec succès.'
+        message: 'loginDialog.messages.success'
       })
     }, error => {
-      context.waiting = false
       console.log(error)
-      context.error = "Erreur : l'adresse email et/ou le mot de passe est incorrect."
+
+      context.waiting = false
+      context.error = 'loginDialog.messages.credentialsError'
     })
     context.form.password = ''
     context.$refs.form.resetValidation()
@@ -74,10 +75,11 @@ const actions = {
       })
     }, error => {
       console.log(error)
+
       localStorage.removeItem('token')
       commit('SHOW_SNACKBAR', {
         error: true,
-        message: 'Erreur : le jeton utilisateur est erroné.'
+        message: 'loginDialog.messages.tokenError'
       })
     })
   },
@@ -88,7 +90,7 @@ const actions = {
     commit('LOGOUT')
     commit('SHOW_SNACKBAR', {
       error: false,
-      message: 'Déconnexion de votre compte avec succès.'
+      message: 'loginDialog.messages.logout'
     })
   }
 }

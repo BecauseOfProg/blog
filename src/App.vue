@@ -5,7 +5,7 @@
       timeout="5000"
       top
       right>
-      {{ snackbar.message }}
+      {{ $t(snackbar.message) }}
       <template #action="{ attrs }">
         <v-btn
           color="darker"
@@ -92,7 +92,7 @@
         v-for="item in mobileMenu"
         :key="item.name"
         :to="item.route">
-        <span>{{ item.name }}</span>
+        <span>{{ $t(item.name) }}</span>
         <v-icon>{{ item.icon }}</v-icon>
       </v-btn>
     </v-bottom-navigation>
@@ -112,11 +112,11 @@
         <v-col
           class="text-right"
           cols="6">
-          <a
+          <router-link
             class="white--text shadow"
             to="/page/about">
             {{ $t('global.about') }}
-          </a>
+          </router-link>
         </v-col>
       </v-row>
     </v-footer>
@@ -148,22 +148,22 @@ export default {
     mobileMenu: function() {
       return [
         {
-          name: this.$i18n.t('mobileMenu.social'),
+          name: 'mobileMenu.social',
           icon: 'mdi-home',
           route: '/social'
         },
         {
-          name: this.$i18n.t('mobileMenu.articles'),
+          name: 'mobileMenu.articles',
           icon: 'mdi-text-box-multiple-outline',
           route: '/blog'
         },
         {
-          name: this.$i18n.t('mobileMenu.search'),
+          name: 'mobileMenu.search',
           icon: 'mdi-magnify',
           route: '/page/search'
         },
         {
-          name: this.$i18n.t('mobileMenu.more'),
+          name: 'mobileMenu.more',
           icon: 'mdi-plus',
           route: '/pages'
         }

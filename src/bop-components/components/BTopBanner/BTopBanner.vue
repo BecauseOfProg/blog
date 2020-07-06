@@ -8,11 +8,14 @@
       v-if="$vuetify.breakpoint.mdAndUp && icon !== null"
       color="white"
       size="70px">{{ icon }}</v-icon>
-    <h1 class="white--text">{{ title }}</h1>
+    <h1 class="white--text">
+      <template v-if="typeof title === 'object'">{{ $t.apply(this, title) }}</template>
+      <template v-else>{{ $t(title) }}</template>
+    </h1>
     <h3
       v-if="subtitle !== null"
       class="grey--text font-weight-regular">
-      {{ subtitle }}
+      {{ $t(subtitle) }}
     </h3>
   </v-parallax>
 </template>
@@ -21,26 +24,14 @@
 export default {
   name: 'BTopBanner',
   props: {
-    icon: {
-      type: String,
-      default: null
-    },
-    src: {
-      type: String,
-      default: undefined
-    },
-    subtitle: {
-      type: String,
-      default: null
-    },
-    tall: {
-      type: Boolean,
-      default: false
-    },
     title: {
-      type: String,
+      type: [String, Array],
       required: true,
-    }
+    },
+    icon: String,
+    src: String,
+    subtitle: String,
+    tall: Boolean
   },
   computed: {
     classes() {

@@ -1,7 +1,7 @@
 <template>
   <main>
     <b-top-banner
-      title="Application"
+      title="global.application"
       icon="mdi-cellphone-iphone"/>
     <v-container class="page-body"/>
   </main>

@@ -1,7 +1,7 @@
 <template>
   <main>
     <b-top-banner
-      :title="$t('global.projects')"
+      title="global.projects"
       icon="mdi-package-variant"/>
     <v-container class="page-body"/>
   </main>

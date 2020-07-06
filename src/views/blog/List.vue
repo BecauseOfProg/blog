@@ -156,17 +156,17 @@ export default {
       if (this.$route.params.category) {
         params['category'] = this.$route.params.category
         let category = getCategory(this.$route.params.category)
-        this.head.title = this.$i18n.t('list.category', { category: category.name })
+        this.head.title = ['list.category', { category: category.name }]
         this.head.icon = category.icon
         this.head.image = `/img/category/${category.id}.png`
       } else if (this.$route.params.type) {
         params['type'] = this.$route.params.type
         let type = getType(this.$route.params.type)
-        this.head.title = this.$i18n.t('list.type', { type: type.name })
+        this.head.title = ['list.type', { type: type.name }]
         this.head.icon = type.icon
         this.head.image = `/img/type/${type.id}.png`
       } else {
-        this.head.title = this.$i18n.t('global.allArticles')
+        this.head.title = ['global.allArticles']
         this.head.icon = 'mdi-text-box-multiple-outline'
       }
 
