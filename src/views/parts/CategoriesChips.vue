@@ -5,7 +5,7 @@
       :to="{ name: 'all-articles' }"
       active-class="darker white--text">
       <v-icon left>mdi-text-box-multiple-outline</v-icon>
-      Tous les articles
+      {{ $t('global.allArticles') }}
     </v-chip>
     <v-chip
       v-for="category in categories"

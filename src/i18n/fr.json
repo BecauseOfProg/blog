@@ -1,0 +1,92 @@
+{
+  "global": {
+    "cancel": "Annuler",
+    "validate": "Valider",
+    "close": "Fermer",
+    "about": "À propos",
+    "socialNetworks": "Nos réseaux sociaux",
+    "socialNetworksMessage": "Nous postons régulièrement des nouvelles, des tips et des astuces. Suivez-nous!",
+    "allArticles": "Tous les articles",
+    "aboutMessage": "BecauseOfProg, c'est des développeurs rassemblés autour de projets communs tels que le blog.",
+    "more": "En savoir plus",
+    "application": "Application",
+    "projects": "Projets",
+    "search": "Recherche"
+  },
+  "errors": {
+    "unknownArticle": "Erreur : l'article souhaité est inconnu."
+  },
+  "topBar": {
+    "articles": "Articles",
+    "projects": "Projets",
+    "application": "Application",
+    "searchIcon": "Recherche"
+  },
+  "mobileMenu": {
+    "social": "Social",
+    "articles": "Articles",
+    "search": "Recherche",
+    "more": "Plus"
+  },
+  "theme": {
+    "switchTheme": "Changer le thème",
+    "auto": "Automatique",
+    "light": "Clair",
+    "dark": "Sombre"
+  },
+  "lang": {
+    "switchLang": "Changer de langue"
+  },
+  "userMenu": {
+    "login": "Se connecter",
+    "logout": "Déconnexion",
+    "writeArticle": "Écrire un article",
+    "team": "Équipes",
+    "accountConfig": "Gestion du compte",
+    "myAccount": "Mon compte",
+    "settings": "Mes paramètres"
+  },
+  "loginDialog": {
+    "login": "Connexion",
+    "mail": "Adresse e-mail",
+    "password": "Mot de passe",
+    "remember": "Se souvenir de moi",
+    "message": "Pour profiter de certaines fonctionnalités du site et empêcher le spam, vous devez vous connecter à votre compte BecauseOfProg."
+  },
+  "home": {
+    "new": "Nouveau !"
+  },
+  "list": {
+    "exploreCategories": "Explorez nos catégories",
+    "categoriesCaps": "CATÉGORIES",
+    "typesCaps": "TYPES",
+    "followUs": "Nous suivre",
+    "category": "Catégorie — {category}",
+    "type": "Type - {type}"
+  },
+  "article": {
+    "shareArticle": "Partager l'article",
+    "published": "Publié dans ",
+    "publishedBy": "Publié par",
+    "publishedBy2": "le",
+    "links": "Les liens BecauseOfProg",
+    "linksMessage": "Nous partageons des liens vers des ressources, des blogs ou des articles intéressants, afin que vous puissiez vous aussi les découvrir.",
+    "categories": "Catégories"
+  },
+  "social": {
+    "title": "Réseaux sociaux et liens"
+  },
+  "createArticle": {
+    "title": "Créer un article"
+  },
+  "account": {
+    "title": "Mon compte BecauseOfProg"
+  },
+  "pages": {
+    "aboutUs": "À propos de nous",
+    "message": "La BecauseOfProg, c'est plusieurs développeurs rassemblés autour de projets communs, dont ce blog, depuis février 2017. Nous souhaitons avant tout nous améliorer dans divers domaines (développement, administration système, sécurité informatique...) et partager nos passions. Sur ce blog, nous partageons nos trouvailles, nos projets, notre point de vue.",
+    "projects": "Les projets BecauseOfProg",
+    "projectsMessage": "BecauseOfProg, c'est une équipe de développeurs créant divers projets",
+    "see": "Voir"
+  }
+}

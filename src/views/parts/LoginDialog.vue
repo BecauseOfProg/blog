@@ -9,8 +9,8 @@
     </template>
     <v-card>
       <v-card-text class="pt-2">
-        <span class="headline">Connexion</span>
-        <p>Pour profiter de certaines fonctionnalités du site et empêcher le spam, vous devez vous connecter à votre compte BecauseOfProg.</p>
+        <span class="headline">{{ $t('loginDialog.login') }}</span>
+        <p>{{ $t('loginDialog.message') }}</p>
         <v-scale-transition>
           <v-alert
             v-if="error !== ''"
@@ -28,7 +28,7 @@
             v-model="form.email"
             :rules="emailRules"
             prepend-inner-icon="mdi-email-outline"
-            label="Adresse e-mail"
+            :label="$t('loginDialog.mail')"
             type="email"
             color="light"
             outlined
@@ -37,14 +37,14 @@
             v-model="form.password"
             :rules="passwordRules"
             prepend-inner-icon="mdi-key-variant"
-            label="Mot de passe"
+            :label="$t('loginDialog.password')"
             type="password"
             color="light"
             outlined
             required/>
           <v-switch
             v-model="form.reconnection"
-            label="Se souvenir de moi"
+            :label="$t('loginDialog.remember')"
             color="light"
             inset/>
         </v-form>
@@ -55,7 +55,7 @@
         <v-btn
           text
           @click="cancel">
-          Annuler
+          {{ $t('global.cancel') }}
         </v-btn>
         <v-btn
           :disabled="!valid"
@@ -63,7 +63,7 @@
           color="light"
           text
           @click="tryLogin">
-          Valider
+          {{ $t('global.validate') }}
         </v-btn>
       </v-card-actions>
     </v-card>

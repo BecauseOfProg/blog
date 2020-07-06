@@ -1,7 +1,7 @@
 <template>
   <main>
     <b-top-banner
-      title="Recherche"
+      :title="$t('global.search')"
       icon="mdi-magnify"/>
     <v-container class="page-body"/>
   </main>

@@ -11,7 +11,7 @@
             <v-icon>mdi-theme-light-dark</v-icon>
           </v-btn>
         </template>
-        <span>Changer le thème</span>
+        <span>{{ $t('theme.switchTheme') }}</span>
       </v-tooltip>
     </template>
     <v-list>
@@ -19,19 +19,19 @@
         <v-list-item-icon>
           <v-icon>mdi-theme-light-dark</v-icon>
         </v-list-item-icon>
-        <v-list-item-title>Automatique</v-list-item-title>
+        <v-list-item-title>{{ $t('theme.auto') }}</v-list-item-title>
       </v-list-item>
       <v-list-item @click="setTheme('light')">
         <v-list-item-icon>
           <v-icon>mdi-weather-sunny</v-icon>
         </v-list-item-icon>
-        <v-list-item-title>Clair</v-list-item-title>
+        <v-list-item-title>{{ $t('theme.light') }}</v-list-item-title>
       </v-list-item>
       <v-list-item @click="setTheme('dark')">
         <v-list-item-icon>
           <v-icon>mdi-weather-night</v-icon>
         </v-list-item-icon>
-        <v-list-item-title>Sombre</v-list-item-title>
+        <v-list-item-title>{{ $t('theme.dark') }}</v-list-item-title>
       </v-list-item>
     </v-list>
   </v-menu>

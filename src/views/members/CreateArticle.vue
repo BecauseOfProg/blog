@@ -2,7 +2,7 @@
   <main>
     <b-top-banner
       icon="mdi-pencil-outline"
-      title="Créer un article"/>
+      :title="$t('createArticle.title')"/>
     <v-container class="page-body">
       <h1>À venir</h1>
     </v-container>

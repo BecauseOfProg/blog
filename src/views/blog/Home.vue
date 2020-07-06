@@ -4,6 +4,7 @@
       v-if="$vuetify.breakpoint.mdAndUp"
       style="margin-top: 56px"
       class="translucent"
+      dark
       app>
       <v-btn
         v-for="category in categories"
@@ -60,11 +61,11 @@
                   md="6">
                   <v-btn
                     color="white--text"
-                    class="gradient">
+                    class="gradient mb-4">
                     <v-icon left>mdi-clock-outline</v-icon>
-                    Nouveau!
+                    {{ $t('home.new') }}
                   </v-btn>
-                  <h1 class="display-3 text--text lecture-title">{{ articles[0].title }}</h1>
+                  <h1 class="display-3 text--text lecture-title mb-3">{{ articles[0].title }}</h1>
                   <p class="lecture-text">{{ articles[0].description }}</p>
                 </v-col>
               </v-row>
@@ -135,9 +136,7 @@ export default {
           classes: ['darker-bg']
         },
       ],
-
       articles: [],
-
       categories,
       types
     }

@@ -1,14 +1,14 @@
 <template>
   <main>
     <b-top-banner
-      title="Réseaux sociaux et liens"
+      :title="$t('social.title')"
       icon="mdi-rss"/>
     <v-container class="page-body">
       <v-row>
         <v-col cols="12">
           <b-card>
-            <h1>Nos réseaux sociaux</h1>
-            <p>Nous postons régulièrement des nouvelles, des tips et des astuces. Suivez-nous!</p>
+            <h1>{{ $t('global.socialNetworks') }}</h1>
+            <p>{{ $t('global.socialNetworksMessage') }}</p>
             <br>
             <social-icons/>
           </b-card>
