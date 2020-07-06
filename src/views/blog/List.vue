@@ -12,7 +12,7 @@
           lg="7"
           offset-lg="1">
           <b-card v-if="$vuetify.breakpoint.mdAndDown">
-            <h3 class="headline darker--text">Explorez nos catégories</h3>
+            <h3 class="headline darker--text">{{ $t('list.exploreCategories') }}</h3>
             <categories-chips include-all/>
           </b-card>
           <v-pagination
@@ -62,11 +62,11 @@
                   <v-icon>mdi-text-box-multiple-outline</v-icon>
                 </v-list-item-icon>
                 <v-list-item-content>
-                  <v-list-item-title>Tous les articles</v-list-item-title>
+                  <v-list-item-title>{{ $t('global.allArticles') }}</v-list-item-title>
                 </v-list-item-content>
               </v-list-item>
               <v-divider/>
-              <v-subheader>CATÉGORIES</v-subheader>
+              <v-subheader>{{ $t('list.categoriesCaps') }}</v-subheader>
               <v-list-item
                 v-for="category in categories"
                 :key="category.id"
@@ -80,7 +80,7 @@
                 </v-list-item-content>
               </v-list-item>
               <v-divider/>
-              <v-subheader>TYPES</v-subheader>
+              <v-subheader>{{ $t('list.typesCaps') }}</v-subheader>
               <v-list-item
                 v-for="type in types"
                 :key="type.id"
@@ -96,19 +96,19 @@
             </v-list>
             <v-divider/>
             <div class="pa-3">
-              <h3 class="headline">Nous suivre</h3>
+              <h3 class="headline">{{ $t('list.followUs') }}</h3>
               <social-icons big/>
             </div>
             <v-divider/>
             <div class="pa-3">
-              <h3 class="headline">À propos</h3>
-              <p>BecauseOfProg, c'est des développeurs rassemblés autour de projets communs tels que le blog.</p><br>
+              <h3 class="headline">{{ $t('global.about') }}</h3>
+              <p>{{ $t('global.aboutMessage') }}</p><br>
               <v-btn
                 text
                 color="darker"
                 :to="{ name: 'about' }">
                 <v-icon left>mdi-information-outline</v-icon>
-                En savoir plus
+                {{ $t('global.more') }}
               </v-btn>
             </div>
           </b-card>
@@ -156,17 +156,17 @@ export default {
       if (this.$route.params.category) {
         params['category'] = this.$route.params.category
         let category = getCategory(this.$route.params.category)
-        this.head.title = `Catégorie — ${category.name}`
+        this.head.title = this.$i18n.t('list.category', { category: category.name })
         this.head.icon = category.icon
         this.head.image = `/img/category/${category.id}.png`
       } else if (this.$route.params.type) {
         params['type'] = this.$route.params.type
         let type = getType(this.$route.params.type)
-        this.head.title = `Type — ${type.name}`
+        this.head.title = this.$i18n.t('list.type', { type: type.name })
         this.head.icon = type.icon
         this.head.image = `/img/type/${type.id}.png`
       } else {
-        this.head.title = 'Tous les articles'
+        this.head.title = this.$i18n.t('global.allArticles')
         this.head.icon = 'mdi-text-box-multiple-outline'
       }
 

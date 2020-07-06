@@ -19,6 +19,7 @@
           contain/>
       </a>
       <v-spacer/>
+      <lang-switcher/>
       <theme-switcher/>
     </v-app-bar>
     <template v-if="loaded">
@@ -68,7 +69,7 @@
                     cols="6"
                     class="text-right">
                     <v-icon left>mdi-clock-outline</v-icon>
-                    <span>Publié par <strong>{{ article.author.displayname }}</strong> le {{ dateToText(article.timestamp) }}</span>
+                    <span>{{ $t('article.publishedBy') }} <strong>{{ article.author.displayname }}</strong> {{ $t('article.publishedBy2') }} {{ dateToText(article.timestamp) }}</span>
                   </v-col>
                 </v-row>
               </template>
@@ -88,7 +89,7 @@
               <vue-markdown class="markdown-body mb-3">{{ article.content }}</vue-markdown>
               <v-divider/>
               <div class="text-center">
-                <br><h3 class="headline mb-2 text--text">Partager l'article</h3>
+                <br><h3 class="headline mb-2 text--text">{{ $t('article.shareArticle') }}</h3>
                 <v-btn
                   v-for="share in shares"
                   :key="share.name"
@@ -101,7 +102,7 @@
                   {{ share.name }}
                 </v-btn>
                 <br><br><v-divider/><br>
-                <h2 class="headline mb-2 text--text">Publié dans</h2>
+                <h2 class="headline mb-2 text--text">{{ $t('article.published') }}</h2>
                 <v-chip>
                   <v-icon left>{{ type.icon }}</v-icon>
                   {{ type.name }}
@@ -140,8 +141,8 @@
                     cols="12"
                     class="pt-0">
                     <b-card>
-                      <h3 class="headline darker--text">Nos réseaux sociaux</h3>
-                      <p class="mb-3">Nous postons régulièrement des nouvelles, des tips et des astuces. Suivez-nous!</p>
+                      <h3 class="headline darker--text">{{ $t('global.socialNetworks') }}</h3>
+                      <p class="mb-3">{{ $t('global.socialNetworksMessage') }}</p>
                       <social-icons big/>
                     </b-card>
                   </v-col>
@@ -149,15 +150,15 @@
                     cols="12"
                     class="pt-0">
                     <b-card>
-                      <h3 class="headline darker--text">À propos</h3>
-                      <p>BecauseOfProg, c'est des développeurs rassemblés autour de projets communs tels que le blog.</p>
+                      <h3 class="headline darker--text">{{ $t('global.about') }}</h3>
+                      <p>{{ $t('global.aboutMessage') }}</p>
                       <template #actions>
                         <v-btn
                           to="/page/about"
                           color="darker"
                           text>
                           <v-icon left>mdi-information-outline</v-icon>
-                          En savoir plus
+                          {{ $t('global.more') }}
                         </v-btn>
                       </template>
                     </b-card>
@@ -166,8 +167,8 @@
                     cols="12"
                     class="pt-0">
                     <b-card gradient>
-                      <h3 class="headline white--text">Les liens BecauseOfProg</h3>
-                      <p>Nous partageons des liens vers des ressources, des blogs ou des articles intéressants, afin que vous puissiez vous aussi les découvrir.</p>
+                      <h3 class="headline white--text">{{ $t('article.links') }}</h3>
+                      <p>{{ $t('article.linksMessage') }}</p>
                       <template #actions>
                         <v-btn
                           text
@@ -188,7 +189,7 @@
                     cols="12"
                     class="pt-0">
                     <b-card>
-                      <h3 class="headline darker--text">Catégories</h3>
+                      <h3 class="headline darker--text">{{ $t('article.categories') }}</h3>
                       <categories-chips/>
                     </b-card>
                   </v-col>
@@ -214,10 +215,11 @@ import CategoriesChips from '@/views/parts/CategoriesChips'
 import { categories, types, getCategory, getType } from '@/utils/data'
 import { blogPosts } from '@/utils/api'
 import ThemeSwitcher from '../parts/ThemeSwitcher'
+import LangSwitcher from '../parts/LangSwitcher'
 
 export default {
   name: 'Article',
-  components: { ThemeSwitcher, CategoriesChips, MemberCard, VueMarkdown, SocialIcons },
+  components: { ThemeSwitcher, LangSwitcher, CategoriesChips, MemberCard, VueMarkdown, SocialIcons },
   data() {
     return {
       article: {},
@@ -235,7 +237,7 @@ export default {
       console.log(error)
       this.SHOW_SNACKBAR({
         error: true,
-        message: "Erreur : l'article souhaité est inconnu."
+        message: this.$i18n.t('errors.unknownArticle')
       })
       this.$router.push({ name: 'all-articles' })
     })

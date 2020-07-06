@@ -2,7 +2,7 @@
   <main>
     <b-top-banner
       icon="mdi-account-circle-outline"
-      title="Mon compte BecauseOfProg"/>
+      :title="$t('account.title')"/>
     <v-container class="page-body">
       <h1>À venir</h1>
     </v-container>

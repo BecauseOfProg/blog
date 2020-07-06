@@ -1,0 +1,92 @@
+{
+  "global": {
+    "cancel": "Cancel",
+    "validate": "Ok",
+    "close": "Close",
+    "about": "About us",
+    "socialNetworks": "Our social networks",
+    "socialNetworksMessage": "We regularly post news, tips and tricks. Follow us!",
+    "allArticles": "All articles",
+    "aboutMessage": "BecauseOfProg : developers gathered around common projects such as the blog.",
+    "more": "More...",
+    "application": "Application",
+    "projects": "Projects",
+    "search": "Search"
+  },
+  "errors": {
+    "unknownArticle": "Error: The desired article is unknown."
+  },
+  "topBar": {
+    "articles": "Articles",
+    "projects": "Projects",
+    "application": "Application",
+    "searchIcon": "Search"
+  },
+  "mobileMenu": {
+    "social": "Social",
+    "articles": "Articles",
+    "search": "Search",
+    "more": "More"
+  },
+  "theme": {
+    "switchTheme": "Switch theme",
+    "auto": "Automatic",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "lang": {
+    "switchLang": "Change language"
+  },
+  "userMenu": {
+    "login": "Login",
+    "logout": "Logout",
+    "writeArticle": "Write an article",
+    "team": "Teams",
+    "accountConfig": "Account management",
+    "myAccount": "My account",
+    "settings": "My settings"
+  },
+  "loginDialog": {
+    "login": "Login",
+    "mail": "Mail",
+    "password": "Password",
+    "remember": "Remember me",
+    "message": "To take advantage of some of the site's features and prevent spam, you must log in to your BecauseOfProg account."
+  },
+  "home": {
+    "new": "New!"
+  },
+  "list": {
+    "exploreCategories": "Explore our categories",
+    "categoriesCaps": "CATEGORIES",
+    "typesCaps": "TYPES",
+    "followUs": "Follow us",
+    "category": "Categorie — {category}",
+    "type": "Type - {type}"
+  },
+  "article": {
+    "shareArticle": "Share the article",
+    "published": "Published in ",
+    "publishedBy": "Published by",
+    "publishedBy2": "on",
+    "links": "BecauseOfProg's links",
+    "linksMessage": "We share links to interesting resources, blogs or articles so that you too can discover them.",
+    "categories": "Categories"
+  },
+  "social": {
+    "title": "Social Networks and links"
+  },
+  "createArticle": {
+    "title": "Create an article"
+  },
+  "account": {
+    "title": "My BecauseOfProg account"
+  },
+  "pages": {
+    "aboutUs": "About us",
+    "message": "BecauseOfProg is several developers gathered around common projects, including this blog, since February 2017. Above all, we want to improve ourselves in various fields (development, system administration, computer security...) and share our passions. On this blog, we share our findings, our projects, our point of view.",
+    "projects": "BecauseOfProg's projects",
+    "projectsMessage": "BecauseOfProg is a team of developers creating various projects",
+    "see": "See"
+  }
+}

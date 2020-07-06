@@ -1,13 +1,15 @@
 const defaults = {
   token: '',
   reconnection: false,
-  theme: 'auto'
+  theme: 'auto',
+  lang: 'fr'
 }
 
 function loadFromStorage(category, json = false) {
   let data = localStorage.getItem(category)
   if (data === null) {
-    data = JSON.stringify(defaults[category])
+    if (json) data = JSON.stringify(defaults[category])
+    else data = defaults[category]
     localStorage.setItem(category, data)
   }
 

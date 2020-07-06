@@ -12,7 +12,7 @@
           text
           v-bind="attrs"
           @click="snackbar.show = false">
-          Fermer
+          {{ $t('global.close') }}
         </v-btn>
       </template>
     </v-snackbar>
@@ -45,21 +45,21 @@
           color="darker"
           text>
           <v-icon left>mdi-text-box-multiple-outline</v-icon>
-          Articles
+          {{ $t('topBar.articles') }}
         </v-btn>
         <v-btn
           to="/page/projects"
           color="darker"
           text>
           <v-icon left>mdi-package-variant</v-icon>
-          Projets
+          {{ $t('topBar.projects') }}
         </v-btn>
         <v-btn
           to="/page/app"
           color="darker"
           text>
           <v-icon left>mdi-cellphone-iphone</v-icon>
-          Application
+          {{ $t('topBar.application') }}
         </v-btn>
         <v-tooltip bottom>
           <template #activator="{ on }">
@@ -70,9 +70,10 @@
               <v-icon>mdi-magnify</v-icon>
             </v-btn>
           </template>
-          <span>Recherche</span>
+          <span>{{ $t('topBar.searchIcon') }}</span>
         </v-tooltip>
         <theme-switcher/>
+        <lang-switcher/>
         <user-menu/>
       </div>
     </v-app-bar>
@@ -114,7 +115,7 @@
           <a
             class="white--text shadow"
             to="/page/about">
-            À propos
+            {{ $t('global.about') }}
           </a>
         </v-col>
       </v-row>
@@ -125,36 +126,17 @@
 <script>
 import { mapState } from 'vuex'
 import ThemeSwitcher from '@/views/parts/ThemeSwitcher'
+import LangSwitcher from '@/views/parts/LangSwitcher'
 import UserMenu from '@/views/members/UserMenu'
 
 export default {
   name: 'App',
-  components: { ThemeSwitcher, UserMenu },
-  data: () => ({
-    bottomNav: '',
-    mobileMenu: [
-      {
-        name: 'Social',
-        icon: 'mdi-home',
-        route: '/social'
-      },
-      {
-        name: 'Articles',
-        icon: 'mdi-text-box-multiple-outline',
-        route: '/blog'
-      },
-      {
-        name: 'Recherche',
-        icon: 'mdi-magnify',
-        route: '/page/search'
-      },
-      {
-        name: 'Plus',
-        icon: 'mdi-plus',
-        route: '/pages'
-      }
-    ]
-  }),
+  components: { ThemeSwitcher, UserMenu, LangSwitcher },
+  data () {
+    return {
+      bottomNav: '',
+    }
+  },
   computed: {
     ...mapState(['snackbar']),
     isMobile() {
@@ -162,6 +144,31 @@ export default {
     },
     isDesktop() {
       return !this.isMobile
+    },
+    mobileMenu: function() {
+      return [
+        {
+          name: this.$i18n.t('mobileMenu.social'),
+          icon: 'mdi-home',
+          route: '/social'
+        },
+        {
+          name: this.$i18n.t('mobileMenu.articles'),
+          icon: 'mdi-text-box-multiple-outline',
+          route: '/blog'
+        },
+        {
+          name: this.$i18n.t('mobileMenu.search'),
+          icon: 'mdi-magnify',
+          route: '/page/search'
+        },
+        {
+          name: this.$i18n.t('mobileMenu.more'),
+          icon: 'mdi-plus',
+          route: '/pages'
+        }
+      ]
+
     }
   }
 }

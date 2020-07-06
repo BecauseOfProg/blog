@@ -1,7 +1,7 @@
 <template>
   <main>
     <b-top-banner
-      title="À propos"
+      :title="$t('global.about')"
       icon="mdi-information-outline"/>
     <v-container class="page-body"/>
   </main>
