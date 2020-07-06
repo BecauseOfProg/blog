@@ -76,7 +76,7 @@
                   <v-icon>{{ category.icon }}</v-icon>
                 </v-list-item-icon>
                 <v-list-item-content>
-                  <v-list-item-title>{{ category.name }}</v-list-item-title>
+                  <v-list-item-title>{{ $t(`categories.${category.id}`) }}</v-list-item-title>
                 </v-list-item-content>
               </v-list-item>
               <v-divider/>
@@ -90,7 +90,7 @@
                   <v-icon>{{ type.icon }}</v-icon>
                 </v-list-item-icon>
                 <v-list-item-content>
-                  <v-list-item-title>{{ type.name }}</v-list-item-title>
+                  <v-list-item-title>{{ $t(`types.${type.id}`) }}</v-list-item-title>
                 </v-list-item-content>
               </v-list-item>
             </v-list>
@@ -156,13 +156,13 @@ export default {
       if (this.$route.params.category) {
         params['category'] = this.$route.params.category
         let category = getCategory(this.$route.params.category)
-        this.head.title = ['list.category', { category: category.name }]
+        this.head.title = ['list.category', { category: this.$t(`categories.${category.id}`) }]
         this.head.icon = category.icon
         this.head.image = `/img/category/${category.id}.png`
       } else if (this.$route.params.type) {
         params['type'] = this.$route.params.type
         let type = getType(this.$route.params.type)
-        this.head.title = ['list.type', { type: type.name }]
+        this.head.title = ['list.type', { type: this.$t(`types.${type.id}`) }]
         this.head.icon = type.icon
         this.head.image = `/img/type/${type.id}.png`
       } else {

@@ -14,7 +14,7 @@
         <template v-if="$vuetify.breakpoint.lgAndUp">
           <v-icon left>{{ category.icon }}</v-icon>
         </template>
-        {{ category.name }}
+        {{ $t(`categories.${category.id}`) }}
       </v-btn>
     </v-app-bar>
     <v-carousel

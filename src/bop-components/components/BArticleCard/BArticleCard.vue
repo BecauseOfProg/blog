@@ -18,7 +18,7 @@
         <v-icon left>
           {{ category.icon }}
         </v-icon>
-        {{ category.name }}
+        {{ $t(`categories.${category.id}`) }}
       </v-chip>
       <v-chip>
         {{ dateToText(article.timestamp) }}

@@ -105,11 +105,11 @@
                 <h2 class="headline mb-2 text--text">{{ $t('article.published') }}</h2>
                 <v-chip>
                   <v-icon left>{{ type.icon }}</v-icon>
-                  {{ type.name }}
+                  {{ $t(`types.${type.id}`) }}
                 </v-chip>
                 <v-chip>
                   <v-icon left>{{ category.icon }}</v-icon>
-                  {{ category.name }}
+                  {{ $t(`categories.${category.id}`) }}
                 </v-chip>
                 <v-chip
                   v-for="label in article.labels"

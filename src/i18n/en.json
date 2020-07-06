@@ -105,5 +105,21 @@
     "projects": "BecauseOfProg's projects",
     "projectsMessage": "BecauseOfProg is a team of developers creating various projects",
     "see": "See"
+  },
+  "categories": {
+    "software": "Software",
+    "security": "Security",
+    "web": "Web",
+    "hardware": "Hardware",
+    "programming": "Programming",
+    "android": "Android",
+    "linux": "Linux",
+    "windows": "Windows",
+    "apple": "Apple"
+  },
+  "types": {
+    "article": "Article",
+    "flash": "Flash",
+    "tutorial": "Tutorial"
   }
 }

@@ -1,13 +1,13 @@
 const categories = [
-  { id: 'software', name: 'Software', icon: 'mdi-web' },
-  { id: 'security', name: 'Sécurité', icon: 'mdi-lock-outline' },
-  { id: 'web', name: 'Web', icon: 'mdi-earth' },
-  { id: 'hardware', name: 'Hardware', icon: 'mdi-sim' },
-  { id: 'programming', name: 'Programmation', icon: 'mdi-code-tags' },
-  { id: 'android', name: 'Android', icon: 'mdi-android' },
-  { id: 'linux', name: 'Linux', icon: 'mdi-linux' },
-  { id: 'windows', name: 'Windows', icon: 'mdi-microsoft-windows' },
-  { id: 'apple', name: 'Apple', icon: 'mdi-apple' }
+  { id: 'software', icon: 'mdi-web' },
+  { id: 'security', icon: 'mdi-lock-outline' },
+  { id: 'web', icon: 'mdi-earth' },
+  { id: 'hardware', icon: 'mdi-sim' },
+  { id: 'programming', icon: 'mdi-code-tags' },
+  { id: 'android', icon: 'mdi-android' },
+  { id: 'linux', icon: 'mdi-linux' },
+  { id: 'windows', icon: 'mdi-microsoft-windows' },
+  { id: 'apple', icon: 'mdi-apple' }
 ]
 
 function getCategory(id) {

@@ -13,7 +13,7 @@
       :to="{ name: 'category', params: { category: category.id }}"
       active-class="darker white--text">
       <v-icon left>{{ category.icon }}</v-icon>
-      {{ category.name }}
+      {{ $t(`categories.${category.id}`) }}
     </v-chip>
     <v-chip
       v-for="type in types"
@@ -21,7 +21,7 @@
       :to="{ name: 'type', params: { type: type.id }}"
       active-class="darker white--text">
       <v-icon left>{{ type.icon }}</v-icon>
-      {{ type.name }}
+      {{ $t(`types.${type.id}`) }}
     </v-chip>
   </v-col>
 </template>
