@@ -32,10 +32,17 @@
     "switchTheme": "Switch theme",
     "auto": "Automatic",
     "light": "Light",
-    "dark": "Dark"
+    "dark": "Dark",
+
+    "messages": {
+      "auto": "Theme set to match that of the device.",
+      "light": "Theme set in light mode.",
+      "dark": "Theme set in dark mode."
+    }
   },
   "lang": {
-    "switchLang": "Change language"
+    "switchLang": "Change language",
+    "switched": "Language switched to English."
   },
   "userMenu": {
     "login": "Login",
@@ -51,7 +58,17 @@
     "mail": "Mail",
     "password": "Password",
     "remember": "Remember me",
-    "message": "To take advantage of some of the site's features and prevent spam, you must log in to your BecauseOfProg account."
+    "message": "To take advantage of some of the site's features and prevent spam, you must log in to your BecauseOfProg account.",
+    "emailRequired": "The mail address is required",
+    "emailValidation": "The mail address must be valid",
+    "passwordRequired": "The password is required",
+
+    "messages": {
+      "success": "Successfully logged in to your account.",
+      "credentialsError": "Error : your mail address and/or password is incorrect",
+      "tokenError": "Error : user token is incorrect",
+      "logout": "Successfully logged out of your account."
+    }
   },
   "home": {
     "new": "New!"
@@ -61,7 +78,7 @@
     "categoriesCaps": "CATEGORIES",
     "typesCaps": "TYPES",
     "followUs": "Follow us",
-    "category": "Categorie — {category}",
+    "category": "Category - {category}",
     "type": "Type - {type}"
   },
   "article": {

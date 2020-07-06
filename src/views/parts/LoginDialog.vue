@@ -18,7 +18,7 @@
             icon="mdi-alert-circle-outline"
             outlined
             dismissible>
-            {{ error }}
+            {{ $t(error) }}
           </v-alert>
         </v-scale-transition>
         <v-form
@@ -32,7 +32,11 @@
             type="email"
             color="light"
             outlined
-            required/>
+            required>
+            <template #message="{ message }">
+              {{ $t(message) }}
+            </template>
+          </v-text-field>
           <v-text-field
             v-model="form.password"
             :rules="passwordRules"
@@ -41,7 +45,11 @@
             type="password"
             color="light"
             outlined
-            required/>
+            required>
+            <template #message="{ message }">
+              {{ $t(message) }}
+            </template>
+          </v-text-field>
           <v-switch
             v-model="form.reconnection"
             :label="$t('loginDialog.remember')"
@@ -90,11 +98,11 @@ export default {
 
       form: Object.assign({}, defaultForm),
       emailRules: [
-        v => !!v || "L'adresse e-mail est requise",
-        v => /.+@.+\..+/.test(v) || "L'adresse e-mail doit être valide",
+        v => !!v || 'loginDialog.emailRequired',
+        v => /.+@.+\..+/.test(v) || 'loginDialog.emailValidation',
       ],
       passwordRules: [
-        v => !!v || "Le mot de passe est requis",
+        v => !!v || 'loginDialog.passwordRequired',
       ]
     }
   },

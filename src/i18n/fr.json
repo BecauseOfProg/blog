@@ -32,10 +32,17 @@
     "switchTheme": "Changer le thème",
     "auto": "Automatique",
     "light": "Clair",
-    "dark": "Sombre"
+    "dark": "Sombre",
+
+    "messages": {
+      "auto": "Thème réglé pour s'ajuster à celui de l'appareil.",
+      "light": "Thème réglé en mode clair.",
+      "dark": "Thème réglé en mode sombre."
+    }
   },
   "lang": {
-    "switchLang": "Changer de langue"
+    "switchLang": "Changer de langue",
+    "switched": "Langue paramétrée en français."
   },
   "userMenu": {
     "login": "Se connecter",
@@ -51,7 +58,17 @@
     "mail": "Adresse e-mail",
     "password": "Mot de passe",
     "remember": "Se souvenir de moi",
-    "message": "Pour profiter de certaines fonctionnalités du site et empêcher le spam, vous devez vous connecter à votre compte BecauseOfProg."
+    "message": "Pour profiter de certaines fonctionnalités du site et empêcher le spam, vous devez vous connecter à votre compte BecauseOfProg.",
+    "emailRequired": "L'adresse email est requise",
+    "emailValidation": "L'adresse email doit être valide",
+    "passwordRequired": "Le mot de passe est requis",
+
+    "messages": {
+      "success": "Connexion à votre compte avec succès.",
+      "credentialsError": "Erreur : l'adresse email et/ou le mot de passe est incorrect.",
+      "tokenError": "Erreur : le jeton utilisateur est erroné.",
+      "logout": "Déconnexion de votre compte avec succès."
+    }
   },
   "home": {
     "new": "Nouveau !"
