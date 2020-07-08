@@ -44,15 +44,15 @@ let router = new Router({
       meta: { requiresAuth: true }
     },
     {
-      path: '/account/create-article',
+      path: '/staff/create-article',
       name: 'create-article',
-      component: () => import(/* webpackChunkName: "members" */ '@/views/members/CreateArticle.vue'),
+      component: () => import(/* webpackChunkName: "staff" */ '@/views/staff/CreateArticle.vue'),
       meta: { requiresAuth: true, requiredPermission: 'BLOG_WRITE' }
     },
     {
-      path: '/account/articles',
+      path: '/staff/articles',
       name: 'manage-articles',
-      component: () => import(/* webpackChunkName: "members" */ '@/views/members/Articles.vue'),
+      component: () => import(/* webpackChunkName: "staff" */ '@/views/staff/Articles.vue'),
       meta: { requiresAuth: true, requiredPermission: 'BLOG_WRITE' }
     },
     {

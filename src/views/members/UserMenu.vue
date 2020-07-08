@@ -42,13 +42,13 @@
         <template v-if="user.permissions.length">
           <v-subheader>{{ $t('userMenu.team') }}</v-subheader>
           <template v-if="user.permissions.includes('BLOG_WRITE')">
-            <v-list-item to="/account/create-article">
+            <v-list-item to="/staff/create-article">
               <v-list-item-icon>
                 <v-icon>mdi-pencil-outline</v-icon>
               </v-list-item-icon>
               <v-list-item-title>{{ $t('userMenu.writeArticle') }}</v-list-item-title>
             </v-list-item>
-            <v-list-item to="/account/articles">
+            <v-list-item to="/staff/articles">
               <v-list-item-icon>
                 <v-icon>mdi-file-cog-outline</v-icon>
               </v-list-item-icon>
