@@ -13,7 +13,6 @@ const mutations = {
   LOGIN(state, data) {
     state.token = data.token
     state.data = data.user
-    localStorage.setItem('token', data.token)
   },
   LOGOUT(state) {
     state.token = ''
@@ -30,9 +29,10 @@ const actions = {
 
     context.waiting = true
     context.$http.post(settings.api + '/auth', credentials).then(response => {
-      commit('LOGIN', response.data.data)
+      let data = response.data.data
+      commit('LOGIN', data)
 
-      if (context.form.reconnection) localStorage.setItem('doReconnection', 'true')
+      if (context.form.reconnection) localStorage.setItem('token', data.token)
       context.enabled = false
       context.waiting = false
       context.$refs.form.reset()
@@ -52,12 +52,6 @@ const actions = {
     context.$refs.form.resetValidation()
   },
   reconnect({ commit }, context) {
-    let reconnection = localStorage.getItem('doReconnection')
-    if (reconnection === null) {
-      localStorage.removeItem('token')
-      return
-    }
-
     let token = localStorage.getItem('token')
     if (token === null) return
 
@@ -84,7 +78,6 @@ const actions = {
     })
   },
   logout({ commit }) {
-    localStorage.removeItem('doReconnection')
     localStorage.removeItem('token')
 
     commit('LOGOUT')
