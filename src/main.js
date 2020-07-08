@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from '@/App.vue'
 
 // Plugins
+import i18n from '@/plugins/i18n'
 import router from '@/plugins/router'
 import store from '@/store'
 import vuetify from '@/plugins/vuetify'
@@ -18,8 +19,6 @@ import 'github-markdown-css/github-markdown.css'
 
 // Mixins
 import '@/plugins/moment'
-
-import i18n from './i18n'
 
 Vue.config.productionTip = false
 
