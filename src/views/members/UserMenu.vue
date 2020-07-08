@@ -8,6 +8,7 @@
           <template #activator="{ on: tooltip }">
             <v-avatar
               size="42"
+              style="cursor: pointer"
               v-on="{ ...menu, ...tooltip }">
               <v-img
                 :src="user.picture"
@@ -17,7 +18,7 @@
           <span>{{ $t('userMenu.myAccount') }}</span>
         </v-tooltip>
       </template>
-      <v-list subheader>
+      <v-list two-line>
         <v-list-item>
           <v-list-item-avatar>
             <v-img
@@ -25,10 +26,12 @@
               alt="Ma photo de profil"/>
           </v-list-item-avatar>
           <v-list-item-content>
-            <v-list-item-title>{{ user.displayname }} ({{ user.username }})</v-list-item-title>
+            <v-list-item-title>{{ user.displayname }} (@{{ user.username }})</v-list-item-title>
+            <v-list-item-subtitle>{{ $t('userMenu.bopAccount') }}</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
-        <v-divider/>
+      </v-list>
+      <v-list subheader>
         <v-subheader>{{ $t('userMenu.settings') }}</v-subheader>
         <v-list-item to="/account">
           <v-list-item-icon>
@@ -37,16 +40,21 @@
           <v-list-item-title>{{ $t('userMenu.accountConfig') }}</v-list-item-title>
         </v-list-item>
         <template v-if="user.permissions.length">
-          <v-divider/>
           <v-subheader>{{ $t('userMenu.team') }}</v-subheader>
-          <v-list-item
-            v-if="user.permissions.includes('BLOG_WRITE')"
-            to="/account/create-article">
-            <v-list-item-icon>
-              <v-icon>mdi-pencil-outline</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>{{ $t('userMenu.writeArticle') }}</v-list-item-title>
-          </v-list-item>
+          <template v-if="user.permissions.includes('BLOG_WRITE')">
+            <v-list-item to="/account/create-article">
+              <v-list-item-icon>
+                <v-icon>mdi-pencil-outline</v-icon>
+              </v-list-item-icon>
+              <v-list-item-title>{{ $t('userMenu.writeArticle') }}</v-list-item-title>
+            </v-list-item>
+            <v-list-item to="/account/articles">
+              <v-list-item-icon>
+                <v-icon>mdi-file-cog-outline</v-icon>
+              </v-list-item-icon>
+              <v-list-item-title>{{ $t('userMenu.articlesManagement') }}</v-list-item-title>
+            </v-list-item>
+          </template>
         </template>
         <v-divider/>
         <v-list-item @click="logout">

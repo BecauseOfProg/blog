@@ -50,6 +50,12 @@ let router = new Router({
       meta: { requiresAuth: true, requiredPermission: 'BLOG_WRITE' }
     },
     {
+      path: '/account/articles',
+      name: 'manage-articles',
+      component: () => import(/* webpackChunkName: "members" */ '@/views/members/Articles.vue'),
+      meta: { requiresAuth: true, requiredPermission: 'BLOG_WRITE' }
+    },
+    {
       path: '/pages',
       name: 'pages',
       component: () => import(/* webpackChunkName: "pages" */ '@/views/page/Pages.vue')

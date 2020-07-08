@@ -48,10 +48,12 @@
     "login": "Login",
     "logout": "Logout",
     "writeArticle": "Write an article",
+    "articlesManagement": "Manage articles",
     "team": "Teams",
     "accountConfig": "Account management",
     "myAccount": "My account",
-    "settings": "My settings"
+    "settings": "My settings",
+    "bopAccount": "BecauseOfProg account"
   },
   "loginDialog": {
     "login": "Login",

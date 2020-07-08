@@ -48,10 +48,12 @@
     "login": "Se connecter",
     "logout": "Déconnexion",
     "writeArticle": "Écrire un article",
+    "articlesManagement": "Gérer les articles",
     "team": "Équipes",
     "accountConfig": "Gestion du compte",
     "myAccount": "Mon compte",
-    "settings": "Mes paramètres"
+    "settings": "Mes paramètres",
+    "bopAccount": "Compte BecauseOfProg"
   },
   "loginDialog": {
     "login": "Connexion",
