@@ -83,7 +83,11 @@
     "category": "Category - {category}",
     "type": "Type - {type}"
   },
+  "devblog": {
+    "title": "BecauseOfProg's DevBlog"
+  },
   "article": {
+    "wasRead": "You saw this article.",
     "shareArticle": "Share the article",
     "published": "Published in ",
     "publishedBy": "Published by",

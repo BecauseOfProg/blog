@@ -208,14 +208,16 @@
 
 <script>
 import VueMarkdown from 'vue-markdown'
-import { mapMutations } from 'vuex'
+import { mapMutations, mapActions } from 'vuex'
+
 import SocialIcons from '@/views/parts/SocialIcons'
 import MemberCard from '@/views/parts/MemberCard'
+import ThemeSwitcher from '@/views/parts/ThemeSwitcher'
+import LangSwitcher from '@/views/parts/LangSwitcher'
 import CategoriesChips from '@/views/parts/CategoriesChips'
+
 import { categories, types, getCategory, getType } from '@/utils/data'
 import { blogPosts } from '@/utils/api'
-import ThemeSwitcher from '../parts/ThemeSwitcher'
-import LangSwitcher from '../parts/LangSwitcher'
 
 export default {
   name: 'Article',
@@ -233,6 +235,7 @@ export default {
     blogPosts.get({ id: this.$route.params.url }).then(response => {
       this.article = response.body.data
       this.loaded = true
+      this.addReadArticle(this.article.url)
     }, error => {
       console.log(error)
       this.SHOW_SNACKBAR({
@@ -277,7 +280,8 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(['SHOW_SNACKBAR'])
+    ...mapMutations(['SHOW_SNACKBAR']),
+    ...mapActions(['addReadArticle'])
   }
 }
 </script>

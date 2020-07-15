@@ -3,6 +3,7 @@
     "cancel": "Annuler",
     "validate": "Valider",
     "close": "Fermer",
+    "devblog": "DevBlog",
     "about": "À propos",
     "socialNetworks": "Nos réseaux sociaux",
     "socialNetworksMessage": "Nous postons régulièrement des nouvelles, des tips et des astuces. Suivez-nous!",
@@ -83,7 +84,11 @@
     "category": "Catégorie — {category}",
     "type": "Type - {type}"
   },
+  "devblog": {
+    "title": "Le DevBlog de la BecauseOfProg"
+  },
   "article": {
+    "wasRead": "Vous avez consulté cet article.",
     "shareArticle": "Partager l'article",
     "published": "Publié dans ",
     "publishedBy": "Publié par",
