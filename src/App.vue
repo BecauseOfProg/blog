@@ -110,8 +110,14 @@
           </a>
         </v-col>
         <v-col
-          class="text-right"
+          class="text-right white--text"
           cols="6">
+          <router-link
+            class="white--text shadow"
+            to="/devblog">
+            {{ $t('global.devblog') }}
+          </router-link>
+          &mdash;
           <router-link
             class="white--text shadow"
             to="/page/about">
@@ -124,7 +130,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 import ThemeSwitcher from '@/views/parts/ThemeSwitcher'
 import LangSwitcher from '@/views/parts/LangSwitcher'
 import UserMenu from '@/views/members/UserMenu'
@@ -136,6 +142,9 @@ export default {
     return {
       bottomNav: '',
     }
+  },
+  mounted() {
+    this.LOAD_READ_ARTICLES()
   },
   computed: {
     ...mapState(['snackbar']),
@@ -170,6 +179,7 @@ export default {
       ]
 
     }
-  }
+  },
+  methods: mapMutations(['LOAD_READ_ARTICLES'])
 }
 </script>

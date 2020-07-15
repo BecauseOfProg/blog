@@ -1,8 +1,8 @@
 const defaults = {
   token: '',
-  reconnection: false,
   theme: 'auto',
-  lang: 'fr'
+  lang: 'fr',
+  'read-articles': ''
 }
 
 function loadFromStorage(category, json = false) {
