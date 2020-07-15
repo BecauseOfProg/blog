@@ -100,7 +100,10 @@
     "title": "Social Networks and links"
   },
   "createArticle": {
-    "title": "Create an article"
+    "title": "Create an article",
+    "publish": "Publish article",
+    "success": "Your article was successfully published!",
+    "error": "An error occurred in the upload of your article."
   },
   "account": {
     "title": "My BecauseOfProg account"

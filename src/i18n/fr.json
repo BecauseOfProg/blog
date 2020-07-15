@@ -101,7 +101,10 @@
     "title": "Réseaux sociaux et liens"
   },
   "createArticle": {
-    "title": "Créer un article"
+    "title": "Créer un article",
+    "publish": "Publier l'article",
+    "success": "Votre article a été publié avec succès!",
+    "error": "Une erreur est survenue dans la publication de l'article."
   },
   "account": {
     "title": "Mon compte BecauseOfProg"
