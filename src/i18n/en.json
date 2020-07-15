@@ -106,7 +106,11 @@
     "error": "An error occurred in the upload of your article."
   },
   "account": {
-    "title": "My BecauseOfProg account"
+    "title": "My BecauseOfProg account",
+    "messages": {
+      "loginRequired": "Error : you must be logged in in order to see this page.",
+      "permissionRequired": "Error : you don't have required permissions to see this page."
+    }
   },
   "pages": {
     "aboutUs": "About us",

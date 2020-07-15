@@ -38,6 +38,11 @@ let router = new Router({
       component: () => import(/* webpackChunkName: "blog" */ '@/views/blog/Article.vue')
     },
     {
+      path: '/devblog',
+      name: 'devblog',
+      component: () => import(/* webpackChunkName: "blog" */ '@/views/blog/DevBlog.vue')
+    },
+    {
       path: '/account',
       name: 'account',
       component: () => import(/* webpackChunkName: "members" */ '@/views/members/Account.vue'),
@@ -87,26 +92,20 @@ router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
     if (store.getters.isAuthenticated) {
       if (to.matched.some(record => record.meta.requiredPermission !== undefined && !store.state.user.data.permissions.includes(record.meta.requiredPermission))) {
-        console.log('no permission')
         next({ name: 'home' })
         store.commit('SHOW_SNACKBAR', {
           error: true,
-          message: "Erreur : vous n'avez pas les permissions nécessaires pour consulter cette page."
+          message: 'account.messages.permissionRequired'
         })
-      } else {
-        console.log('permission')
-        next()
-      }
+      } else next()
     } else {
       next({ name: 'home' })
       store.commit('SHOW_SNACKBAR', {
         error: true,
-        message: 'Erreur : vous devez être connecté pour consulter cette page.'
+        message: 'account.messages.loginRequired'
       })
     }
-  } else {
-    next() // make sure to always call next()!
-  }
+  } else next()
 })
 
 export default router

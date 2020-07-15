@@ -2,7 +2,7 @@
   <main>
     <b-top-banner
       icon="mdi-pencil-outline"
-      :title="$t('createArticle.title')"/>
+      title="createArticle.title"/>
     <v-container class="page-body">
       <v-row>
         <v-col cols="12">

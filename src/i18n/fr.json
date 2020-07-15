@@ -107,7 +107,11 @@
     "error": "Une erreur est survenue dans la publication de l'article."
   },
   "account": {
-    "title": "Mon compte BecauseOfProg"
+    "title": "Mon compte BecauseOfProg",
+    "messages": {
+      "loginRequired": "Erreur : vous devez être connecté pour consulter cette page.",
+      "permissionRequired": "Erreur : vous n'avez pas les permissions nécessaires pour consulter cette page."
+    }
   },
   "pages": {
     "aboutUs": "À propos de nous",
