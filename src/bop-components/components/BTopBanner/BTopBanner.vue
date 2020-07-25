@@ -2,8 +2,13 @@
   <v-parallax
     id="b-top-banner"
     :src="src"
-    :height="tall ? 300 : 150"
+    :height="height"
     :class="classes">
+    <img
+      v-if="image"
+      src="https://cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/assets/logos/bop.min.svg"
+      alt="BecauseOfProg"
+      width="200">
     <v-icon
       v-if="$vuetify.breakpoint.mdAndUp && icon !== null"
       color="white"
@@ -14,7 +19,7 @@
     </h1>
     <h3
       v-if="subtitle !== null"
-      class="grey--text font-weight-regular">
+      class="grey--text text--lighten-2 font-weight-regular">
       {{ $t(subtitle) }}
     </h3>
   </v-parallax>
@@ -31,7 +36,8 @@ export default {
     icon: String,
     src: String,
     subtitle: String,
-    tall: Boolean
+    tall: Boolean,
+    image: Boolean
   },
   computed: {
     classes() {
@@ -39,6 +45,11 @@ export default {
         'remove-safe': true,
         gradient: this.src === undefined
       }
+    },
+    height() {
+      if (this.image) return 400
+      else if (this.tall) return 300
+      else return 150
     }
   }
 }
