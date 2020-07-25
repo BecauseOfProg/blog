@@ -135,5 +135,21 @@
     "article": "Article",
     "flash": "Flash",
     "tutorial": "Tutoriel"
+  },
+  "projects": {
+    "title": "Les projets BecauseOfProg",
+    "description": "En tant que passionnés de programmation, nous utilisons au quotidien des logiciels, librairies et services open-source.\nEn tant qu'équipe réunie par cette même passion, nous créons des projets open-source, d'abord pour nos propres besoins, et pour le reste de la communauté.",
+    "links": {
+      "documentation": "Documentation",
+      "source": "Source",
+      "discord": "Discord",
+      "website": "Site"
+    },
+    "more": "Davantage sur notre GitHub",
+    "blog": {
+      "title": "Notre blog est aussi open-source!",
+      "description": "Tout le monde est invité à contribuer, que ce soit pour documenter, traduire, corriger les problèmes ou étendre les fonctionnalités !",
+      "discover": "Découvrir"
+    }
   }
 }

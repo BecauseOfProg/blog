@@ -134,5 +134,21 @@
     "article": "Article",
     "flash": "Flash",
     "tutorial": "Tutorial"
+  },
+  "projects": {
+    "title": "BecauseOfProg's projects",
+    "description": "As programming enthusiasts, we use every day open-source software, libraries and services.\nAs a team gathered by this same passion, we create our own open-source projects, for our needs, and for the rest of the community.",
+    "links": {
+      "documentation": "Documentation",
+      "source": "Source",
+      "discord": "Discord",
+      "website": "Website"
+    },
+    "more": "More on our GitHub",
+    "blog": {
+      "title": "Our blog is also open-source!",
+      "description": "Everyone is invited to contribute, be it to document, translate, correct problems or extend functionality !",
+      "discover": "Discover"
+    }
   }
 }
