@@ -16,8 +16,8 @@
               cols="12"
               md="6">
               <b-card>
-                <h3 class="headline">{{ project.name }}</h3>
-                <p class="text-justify">{{ project.description }}</p>
+                <h3 class="headline">{{ $t(`projects.projects.${project.name}.title`) }}</h3>
+                <p class="text-justify">{{ $t(`projects.projects.${project.name}.description`) }}</p>
                 <template #actions>
                   <v-btn
                     v-for="link in project.links"

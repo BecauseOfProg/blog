@@ -138,6 +138,24 @@
   "projects": {
     "title": "BecauseOfProg's projects",
     "description": "As programming enthusiasts, we use every day open-source software, libraries and services.\nAs a team gathered by this same passion, we create our own open-source projects, for our needs, and for the rest of the community.",
+    "projects": {
+      "yt-podcast": {
+        "title": "Youtube Podcast",
+        "description": "Easily transform YouTube channel or playlist in an audio or video podcast"
+      },
+      "api": {
+        "title": "Our public API",
+        "description": "Our public API's documentation is available on GitHub. #OpenData"
+      },
+      "discord-bot": {
+        "title": "Our Discord bot",
+        "description": "boop-boop, user banned! We own a robot on our Discord server, in-house developed!"
+      },
+      "openweathermap-ruby": {
+        "title": "A Ruby implementation of the OpenWeatherMap API",
+        "description": "A simple, fast and documented libary to easily access OpenWeatherMap data using Ruby's flexibility"
+      }
+    },
     "links": {
       "documentation": "Documentation",
       "source": "Source",
