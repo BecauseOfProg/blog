@@ -174,19 +174,19 @@
     "subtitle": "Stay connected to our news",
     "list": {
       "title": "Get quick access to the latest headlines",
-      "description": "Notre application est simple d'utilisation : accédez en un tapotement à toutes les catégories d'articles. Les bannières renforcent le contenu et permettent de connaître le contenu de l'article sans même lire le titre.<br><br>Nous avons optimisé les performances de l'application pour un <strong>chargement rapide</strong> et une <strong>utilisation fluide</strong>. Le contenu essentiel est gardé en cache pour le retrouver efficacement dès le chargement suivant."
+      "description": "Our application is easy to use: access all article categories with a tap. Banners reinforce the content and allow you to know the content of the article without even reading the title.<br><br> We have optimized the performance of the application for a <strong>fast loading</strong> and a <strong>fluid use</strong>. Essential content is cached so that it can be efficiently retrieved for a next use."
     },
     "article": {
       "title": "Read comfortably our articles",
-      "description": "La présentation des articles est claire et va à l'essentiel : pas de popups agaçantes, de boutons de réseaux sociaux... <strong>Concentrez-vous sur la lecture de votre article</strong> dans une page optimisée uniquement pour cela.<br><i>En plus, nos articles sont écrits avec amour pour vous proposer le meilleur contenu <3</i>"
+      "description": "The presentation of the articles is clear and goes to the essentials: no annoying popups, no social network buttons... <stong>Focus on the reading of your article in a page only optimized for that. <br><i>In fact, our articles are written with love to offer you the best content <3</i>"
     },
     "theme": {
       "title": "In light... as in dark",
-      "description": "Vous aimez les journées ensoleillées d'été ? Nous disposons d'un thème clair. Vous préférez les cavernes sombres ? Nous avons également un thème sombre. Choisissez <strong>l'apparence qui vous plaît</strong> parmis nos deux magnifiques thèmes, et lisez vos articles confortablement.<br><br>Si vous le souhaitez, le thème peut s'adapter à celui de votre système. Fini les bidouillages indépendants dans chaque application pour ne pas vous détruire les yeux à l'ouverture."
+      "description": "Do you like sunny summer days? We have a clear theme. Do you prefer dark caves? We also have a dark theme. Choose <strong>the look you like</strong> from our two beautiful themes, and read your articles comfortably.<br><br>If you wish, the theme can be adapted to your system. No more independent tweaks in each application in order not to destroy your eyes at the opening."
     },
     "privacy": {
       "title": "No ads. No tracking. It's as simple as that.",
-      "description": "Étant nous-mêmes utilisateurs de nombreuses applications de lecture sur nos téléphones, nous avons souhaité reproduire leurs avantages sans porter leurs inconvénients. C'est pour cela qu'<strong>aucune publicité</strong> n'est affichée dans l'application. De plus, nous ne récoltons <strong>aucune donnée</strong>, pas même anonymes. La statistique est loin d'être notre domaine de spécialité, croyez-nous.<br><br>Vous souhaitez le vérifier par vous-mêmes ? Aucun problème, l'application est <a href='https://github.com/BecauseOfProg/app'>distribuée en open-source</a> sous licence GNU GPL v3. Par ailleurs, n'hésitez-pas à contribuer à son développement!"
+      "description": "Being ourselves users of numerous reading applications on our phones, we wanted to reproduce their advantages without bearing their disadvantages. That's why <strong>no advertising</strong> is displayed across the app. Moreover, we don't collect <strong>any data</strong>, not even in an anonymous way. Statistics is far from being our area of expertise, believe us.<br><br>Do you want to check it out by yourself? No problem, the application is <a href='https://github.com/BecauseOfProg/app'>distributed in open-source </a> under GNU GPL v3 license. Also, don't hesitate to contribute to its development!"
     },
     "download": {
       "title": "Ready to use our application?",
@@ -194,31 +194,31 @@
     },
     "pwa": {
       "title": "Installing an application doesn't suit you?",
-      "description": "Pas de panique. Grâce à notre application web progressive (PWA) directement installée sur le site becauseofprog.fr, vous pouvez ajouter le site sur votre écran d'accueil pour un accès facile à tous les articles. Vous ne profiterez cependant pas de futures fonctionnalités, telles que les notifications à la publication de nouveaux contenus.",
+      "description": "Don't panic. Thanks to our progressive web application (PWA) directly installed on becauseofprog.fr, you can add the site to your home screen for an easy access to all the articles. However, you won't benefit from future features, such as notifications when new content is published.",
       "browsers": {
         "chrome": {
-          "title": "On Chrome",
-          "content": "<strong>Si vous êtes sur mobile / tablette :</strong> Allez dans les 3 petits points en haut à droite de l'écran et touchez \"Ajouter à l'écran d'accueil\".<br><br><strong>Si vous êtes sur PC :</strong> Allez dans les 3 petits points en haut à droite de l'écran, allez dans \"Plus d'outils\" et cliquez sur \"Ajouter au bureau\". N'oubliez pas de cocher la case \"Ouvrir dans une fenêtre\".\nRetrouvez-y même sur chrome://apps"
+          "title": "On Chrome (or any Chrome-based browser)",
+          "content": "<strong>If you are on mobile / tablet :</strong> Go to the 3 small dots at the top right of the screen and touch \"Add to Home screen\".<br><br><strong> If you are on PC :</strong> Go to the 3 small dots at the top right of the screen, go to \"More tools\" and click \"Add to desktop\". Don't forget to check the box \"Open in window\".<br>You can also find it in the chrome://apps page"
         },
         "android": {
           "title": "On the Android 4.2+ browser",
-          "content": "Ce navigateur ne supporte pas les applications web !"
+          "content": "This browser doesn't support web applications!"
         },
         "firefox": {
           "title": "On Firefox",
-          "content": "Ce navigateur ne supporte pas encore les fonctionnalités les plus récentes, utilisez plutôt Chrome ou Opera. Appuyez longuement sur l'URL et cliquez sur \"Ajouter à l'écran d'accueil\""
+          "content": "This browser doesn't support the most recent features, prefer using a Chrome-based browser or Opera. Press and hold down the URL and click \"Add to home screen\"."
         },
         "opera": {
           "title": "On Opera",
-          "content": "Allez dans les 3 petits points en haut à droite de l'écran et touchez \"Ecran d'accueil\" tout en bas."
+          "content": "Go to the 3 small dots at the top right of the screen and touch \"Home screen\" at the very bottom."
         },
         "opera_mini": {
           "title": "On Opera Mini",
-          "content": "Ce navigateur ne supporte pas les applications web. Toutefois, vous pouvez prendre la version complète d'Opera (instructions juste en dessous)."
+          "content": "This browser does not support web applications. However, you can get the full version of Opera (instructions just above)."
         },
         "safari": {
           "title": "On iOS (with Safari)",
-          "content": "Appuyez sur le bouton du milieu en bas de l'écran, et appuyez sur \"Ajouter à l'écran d'accueil\"."
+          "content": "Press the middle button at the bottom of the screen, and tap \"Add to Home screen\"."
         }
       }
     }

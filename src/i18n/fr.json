@@ -195,11 +195,11 @@
     },
     "pwa": {
       "title": "Installer une application vous incomode?",
-      "description": "Pas de panique. Grâce à notre application web progressive (PWA) directement installée sur le site becauseofprog.fr, vous pouvez ajouter le site sur votre écran d'accueil pour un accès facile à tous les articles. Vous ne profiterez cependant pas de futures fonctionnalités, telles que les notifications à la publication de nouveaux contenus.",
+      "description": "Pas de panique. Grâce à notre application web progressive (PWA) directement installée sur becauseofprog.fr, vous pouvez ajouter le site sur votre écran d'accueil pour un accès facile à tous les articles. Vous ne profiterez cependant pas de futures fonctionnalités, telles que les notifications à la publication de nouveaux contenus.",
       "browsers": {
         "chrome": {
-          "title": "Sur Chrome",
-          "content": "<strong>Si vous êtes sur mobile / tablette :</strong> Allez dans les 3 petits points en haut à droite de l'écran et touchez \"Ajouter à l'écran d'accueil\".<br><br><strong>Si vous êtes sur PC :</strong> Allez dans les 3 petits points en haut à droite de l'écran, allez dans \"Plus d'outils\" et cliquez sur \"Ajouter au bureau\". N'oubliez pas de cocher la case \"Ouvrir dans une fenêtre\".\nRetrouvez-y même sur chrome://apps"
+          "title": "Sur Chrome (ou n'importe quel navigateur basé sur Chrome)",
+          "content": "<strong>Si vous êtes sur mobile / tablette :</strong> Allez dans les 3 petits points en haut à droite de l'écran et touchez \"Ajouter à l'écran d'accueil\".<br><br><strong>Si vous êtes sur PC :</strong> Allez dans les 3 petits points en haut à droite de l'écran, allez dans \"Plus d'outils\" et cliquez sur \"Ajouter au bureau\". N'oubliez pas de cocher la case \"Ouvrir dans une fenêtre\".<br>Vous pouvez également y retrouver sur la page chrome://apps"
         },
         "android": {
           "title": "Sur le navigateur Android 4.2+",
@@ -215,7 +215,7 @@
         },
         "opera_mini": {
           "title": "Sur Opera Mini",
-          "content": "Ce navigateur ne supporte pas les applications web. Toutefois, vous pouvez prendre la version complète d'Opera (instructions juste en dessous)."
+          "content": "Ce navigateur ne supporte pas les applications web. Toutefois, vous pouvez prendre la version complète d'Opera (instructions juste au dessus)."
         },
         "safari": {
           "title": "Sur iOS (avec Safari)",

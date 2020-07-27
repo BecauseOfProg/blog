@@ -48,8 +48,13 @@
     <v-container class="page-body">
       <v-row>
         <template v-if="articles.length">
-          <v-col cols="12">
-            <b-card :to="{ name: 'article', params: { url: articles[0].url }}">
+          <v-col
+            cols="12"
+            md="8"
+            offset-md="2">
+            <b-card
+              v-if="articles.length"
+              :to="{ name: 'article', params: { url: articles[0].url }}">
               <v-row>
                 <v-col
                   cols="12"
@@ -70,29 +75,30 @@
                 </v-col>
               </v-row>
             </b-card>
-          </v-col>
-          <v-col
-            v-for="i in 2"
-            :key="`article-${i}`"
-            cols="12"
-            md="6">
-            <b-article-card :article="articles[i]"/>
-          </v-col>
-        </template>
-        <template v-else>
-          <v-col cols="12">
             <v-skeleton-loader
+              v-else
               style="width: 100%"
               type="image, card-heading, actions"/>
           </v-col>
           <v-col
-            v-for="i in 2"
-            :key="`loader-${i}`"
             cols="12"
-            md="6">
-            <v-skeleton-loader
-              style="width: 100%"
-              type="image, card-heading, actions"/>
+            md="10"
+            offset-md="1">
+            <v-row>
+              <v-col
+                v-for="i in 2"
+                :key="`article-${i}`"
+                cols="12"
+                md="6">
+                <b-article-card
+                  v-if="articles.length"
+                  :article="articles[i]"/>
+                <v-skeleton-loader
+                  v-else
+                  style="width: 100%"
+                  type="image, card-heading, actions"/>
+              </v-col>
+            </v-row>
           </v-col>
         </template>
       </v-row>
@@ -123,6 +129,15 @@ export default {
           button: {
             label: 'En savoir plus',
             link: '/page/projects'
+          }
+        },
+        {
+          background: 'https://cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/assets/android_wallpaper.png',
+          title: 'Notre application',
+          subtitle: "La BecauseOfProg arrive sur vos écrans d'accueil : téléchargez notre application Android!",
+          button: {
+            label: 'Télécharger!',
+            link: '/page/app'
           }
         },
         {
