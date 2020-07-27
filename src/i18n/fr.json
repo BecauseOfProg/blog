@@ -169,5 +169,59 @@
       "description": "Tout le monde est invité à contribuer, que ce soit pour documenter, traduire, corriger les problèmes ou étendre les fonctionnalités !",
       "discover": "Découvrir"
     }
+  },
+  "application": {
+    "title": "L'appli de la BecauseOfProg",
+    "subtitle": "Restez connecté à notre actualité",
+    "list": {
+      "title": "Accédez rapidement aux derniers titres",
+      "description": "Notre application est simple d'utilisation : accédez en un tapotement à toutes les catégories d'articles. Les bannières renforcent le contenu et permettent de connaître le contenu de l'article sans même lire le titre.<br><br>Nous avons optimisé les performances de l'application pour un <strong>chargement rapide</strong> et une <strong>utilisation fluide</strong>. Le contenu essentiel est gardé en cache pour le retrouver efficacement dès le chargement suivant."
+    },
+    "article": {
+      "title": "Lisez confortablement nos articles",
+      "description": "La présentation des articles est claire et va à l'essentiel : pas de popups agaçantes, de boutons de réseaux sociaux... <strong>Concentrez-vous sur la lecture de votre article</strong> dans une page optimisée uniquement pour cela.<br><i>En plus, nos articles sont écrits avec amour pour vous proposer le meilleur contenu <3</i>"
+    },
+    "theme": {
+      "title": "En clair... comme en foncé",
+      "description": "Vous aimez les journées ensoleillées d'été ? Nous disposons d'un thème clair. Vous préférez les cavernes sombres ? Nous avons également un thème sombre. Choisissez <strong>l'apparence qui vous plaît</strong> parmis nos deux magnifiques thèmes, et lisez vos articles confortablement.<br><br>Si vous le souhaitez, le thème peut s'adapter à celui de votre système. Fini les bidouillages indépendants dans chaque application pour ne pas vous détruire les yeux à l'ouverture."
+    },
+    "privacy": {
+      "title": "Pas de publicités. Pas de traçage. C'est aussi simple que ça.",
+      "description": "Étant nous-mêmes utilisateurs de nombreuses applications de lecture sur nos téléphones, nous avons souhaité reproduire leurs avantages sans porter leurs inconvénients. C'est pour cela qu'<strong>aucune publicité</strong> n'est affichée dans l'application. De plus, nous ne récoltons <strong>aucune donnée</strong>, pas même anonymes. La statistique est loin d'être notre domaine de spécialité, croyez-nous.<br><br>Vous souhaitez le vérifier par vous-mêmes ? Aucun problème, l'application est <a href='https://github.com/BecauseOfProg/app'>distribuée en open-source</a> sous licence GNU GPL v3. Par ailleurs, n'hésitez-pas à contribuer à son développement!"
+    },
+    "download": {
+      "title": "Prêts à utiliser notre application ?",
+      "description": "Téléchargez-la sur votre téléphone dès maintenant!"
+    },
+    "pwa": {
+      "title": "Installer une application vous incomode?",
+      "description": "Pas de panique. Grâce à notre application web progressive (PWA) directement installée sur le site becauseofprog.fr, vous pouvez ajouter le site sur votre écran d'accueil pour un accès facile à tous les articles. Vous ne profiterez cependant pas de futures fonctionnalités, telles que les notifications à la publication de nouveaux contenus.",
+      "browsers": {
+        "chrome": {
+          "title": "Sur Chrome",
+          "content": "<strong>Si vous êtes sur mobile / tablette :</strong> Allez dans les 3 petits points en haut à droite de l'écran et touchez \"Ajouter à l'écran d'accueil\".<br><br><strong>Si vous êtes sur PC :</strong> Allez dans les 3 petits points en haut à droite de l'écran, allez dans \"Plus d'outils\" et cliquez sur \"Ajouter au bureau\". N'oubliez pas de cocher la case \"Ouvrir dans une fenêtre\".\nRetrouvez-y même sur chrome://apps"
+        },
+        "android": {
+          "title": "Sur le navigateur Android 4.2+",
+          "content": "Ce navigateur ne supporte pas les applications web !"
+        },
+        "firefox": {
+          "title": "Sur Firefox",
+          "content": "Ce navigateur ne supporte pas encore les fonctionnalités les plus récentes, utilisez plutôt Chrome ou Opera. Appuyez longuement sur l'URL et cliquez sur \"Ajouter à l'écran d'accueil\""
+        },
+        "opera": {
+          "title": "Sur Opera",
+          "content": "Allez dans les 3 petits points en haut à droite de l'écran et touchez \"Ecran d'accueil\" tout en bas."
+        },
+        "opera_mini": {
+          "title": "Sur Opera Mini",
+          "content": "Ce navigateur ne supporte pas les applications web. Toutefois, vous pouvez prendre la version complète d'Opera (instructions juste en dessous)."
+        },
+        "safari": {
+          "title": "Sur iOS (avec Safari)",
+          "content": "Appuyez sur le bouton du milieu en bas de l'écran, et appuyez sur \"Ajouter à l'écran d'accueil\"."
+        }
+      }
+    }
   }
 }
