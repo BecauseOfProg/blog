@@ -21,7 +21,9 @@
       {{ article.title }}
     </span>
     <p class="lecture-text mb-3">{{ article.description }}</p>
-    <v-row class="mx-0">
+    <v-row
+      class="mx-0"
+      justify="space-between">
       <v-chip>
         <v-avatar left>
           <v-img :src="article.author.picture"/>

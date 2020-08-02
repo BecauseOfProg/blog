@@ -9,9 +9,8 @@
       <v-row>
         <v-col
           cols="12"
-          lg="7"
-          offset-lg="1">
-          <b-card v-if="$vuetify.breakpoint.mdAndDown">
+          lg="12">
+          <b-card>
             <h3 class="headline darker--text">{{ $t('list.exploreCategories') }}</h3>
             <categories-chips include-all/>
           </b-card>
@@ -25,10 +24,34 @@
             <template v-if="loaded">
               <v-row>
                 <v-col
-                  v-for="article in articles"
+                  v-for="(article, index) in articles"
                   :key="article.url"
-                  cols="12">
-                  <b-article-card :article="article"/>
+                  cols="12"
+                  :md="index % 7 ? 4 : 10"
+                  :offset-md="index % 7 ? 0 : 1">
+                  <template v-if="index % 7">
+                    <b-article-card :article="article"/>
+                  </template>
+                  <template v-else>
+                    <router-link :to="{ name: 'article', params: { url: article.url }}">
+                      <v-img
+                        v-ripple
+                        :src="article.banner"
+                        class="b-card">
+                        <v-row
+                          style="height: 100%"
+                          class="darker-bg text-center pa-3"
+                          justify="center"
+                          align="center">
+                          <v-col>
+                            <h3 class="text-h3 mb-3 white--text">{{ article.title }}</h3>
+                            <p>{{ article.description }}</p>
+                            <span class="overline">Publié par {{ article.author.displayname }} le {{ dateToText(article.timestamp) }}</span>
+                          </v-col>
+                        </v-row>
+                      </v-img>
+                    </router-link>
+                  </template>
                 </v-col>
               </v-row>
             </template>
@@ -43,9 +66,11 @@
             </template>
           </v-fade-transition>
         </v-col>
+        tout ce qui a après vous vous en occupez pas ça va dégager
         <v-col
           cols="12"
-          lg="3">
+          lg="3"
+          offset-lg="1">
           <b-card
             fluid
             tile
