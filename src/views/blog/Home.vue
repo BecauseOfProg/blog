@@ -1,22 +1,6 @@
 <template>
   <main>
-    <v-app-bar
-      v-if="$vuetify.breakpoint.mdAndUp"
-      style="margin-top: 56px"
-      class="translucent"
-      dark
-      app>
-      <v-btn
-        v-for="category in categories"
-        :key="category.id"
-        :to="{ name: 'category', params: { category: category.id }}"
-        text>
-        <template v-if="$vuetify.breakpoint.lgAndUp">
-          <v-icon left>{{ category.icon }}</v-icon>
-        </template>
-        {{ $t(`categories.${category.id}`) }}
-      </v-btn>
-    </v-app-bar>
+    <categories-bar/>
     <v-carousel
       height="400px"
       interval="4000"
@@ -65,12 +49,13 @@
                   cols="12"
                   md="6">
                   <v-btn
-                    color="white--text"
-                    class="gradient mb-4">
+                    color="darker"
+                    class="mb-3"
+                    text>
                     <v-icon left>mdi-clock-outline</v-icon>
                     {{ $t('home.new') }}
                   </v-btn>
-                  <h1 class="display-3 text--text lecture-title mb-3">{{ articles[0].title }}</h1>
+                  <h2 class="text-h4 text--text lecture-title mb-3">{{ articles[0].title }}</h2>
                   <p class="lecture-text">{{ articles[0].description }}</p>
                 </v-col>
               </v-row>
@@ -110,9 +95,11 @@
 import { imageProxy } from '@/utils/helpers'
 import { blogPosts } from '@/utils/api'
 import { categories, types } from '@/utils/data'
+import CategoriesBar from '@/views/parts/CategoriesBar'
 
 export default {
   name: 'Home',
+  components: { CategoriesBar },
   data () {
     return {
       carousel: [
@@ -161,8 +148,6 @@ export default {
       this.articles = data.body.data
     })
   },
-  methods: {
-    imageProxy
-  }
+  methods: { imageProxy }
 }
 </script>

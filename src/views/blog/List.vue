@@ -1,5 +1,6 @@
 <template>
   <main>
+    <categories-bar/>
     <b-top-banner
       :title="head.title"
       :icon="head.icon"
@@ -10,10 +11,7 @@
         <v-col
           cols="12"
           lg="12">
-          <b-card>
-            <h3 class="headline darker--text">{{ $t('list.exploreCategories') }}</h3>
-            <categories-chips include-all/>
-          </b-card>
+          <categories-chips include-all/>
           <v-pagination
             v-if="pages > 0"
             v-model="page"
@@ -37,6 +35,7 @@
                       <v-img
                         v-ripple
                         :src="article.banner"
+                        :alt="article.title"
                         class="b-card">
                         <v-row
                           style="height: 100%"
@@ -45,8 +44,8 @@
                           align="center">
                           <v-col>
                             <h3 class="text-h3 mb-3 white--text">{{ article.title }}</h3>
-                            <p>{{ article.description }}</p>
-                            <span class="overline">Publié par {{ article.author.displayname }} le {{ dateToText(article.timestamp) }}</span>
+                            <p class="white--text">{{ article.description }}</p>
+                            <span class="overline white--text">Publié par {{ article.author.displayname }} le {{ dateToText(article.timestamp) }}</span>
                           </v-col>
                         </v-row>
                       </v-img>
@@ -148,10 +147,11 @@ import { blogPosts } from '@/utils/api'
 import { categories, types, getCategory, getType } from '@/utils/data'
 import SocialIcons from '@/views/parts/SocialIcons'
 import CategoriesChips from '@/views/parts/CategoriesChips'
+import CategoriesBar from '@/views/parts/CategoriesBar'
 
 export default {
   name: 'List',
-  components: { CategoriesChips, SocialIcons },
+  components: { CategoriesChips, CategoriesBar, SocialIcons },
   data() {
     return {
       head: {
