@@ -20,13 +20,13 @@
       style="height: 8px; width: 100%"
       class="v-app-bar v-app-bar--fixed top-bar gradient"/>
     <v-app-bar
-      v-if="$route.name !== 'article'"
+      id="app-navigation"
       style="margin-top: 8px"
       app
       dense>
-      <v-spacer v-if="$vuetify.breakpoint.smAndDown"/>
+      <v-spacer v-if="isMobile"/>
       <router-link
-        to="/"
+        :to="{ name: $route.name === 'article' && isMobile ? 'all-articles' : 'home' }"
         class="d-flex align-center darker--text">
         <v-img
           alt="BecauseOfProg Logo"
@@ -34,48 +34,65 @@
           src="https://cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/assets/logos/bop.min.svg"
           width="40"
           contain/>
-        <v-toolbar-title>
+        <v-toolbar-title class="font-weight-medium">
           BecauseOfProg
         </v-toolbar-title>
       </router-link>
       <v-spacer/>
-      <div class="hidden-sm-and-down">
-        <v-btn
-          to="/blog"
-          color="darker"
-          text>
-          <v-icon left>mdi-text-box-multiple-outline</v-icon>
-          {{ $t('topBar.articles') }}
-        </v-btn>
-        <v-btn
-          to="/page/projects"
-          color="darker"
-          text>
-          <v-icon left>mdi-package-variant</v-icon>
-          {{ $t('topBar.projects') }}
-        </v-btn>
-        <v-btn
-          to="/page/app"
-          color="darker"
-          text>
-          <v-icon left>mdi-cellphone-iphone</v-icon>
-          {{ $t('topBar.application') }}
-        </v-btn>
-        <v-tooltip bottom>
-          <template #activator="{ on }">
-            <v-btn
-              color="darker"
-              icon
-              v-on="on">
-              <v-icon>mdi-magnify</v-icon>
-            </v-btn>
-          </template>
-          <span>{{ $t('topBar.searchIcon') }}</span>
-        </v-tooltip>
+      <template v-if="isDesktop">
+        <template v-if="searchMode">
+          <v-text-field
+            v-model="search"
+            color="darker"
+            placeholder="Recherche..."
+            single-line
+            hide-details/>
+          <v-btn
+            color="darker"
+            icon
+            @click="searchMode = false">
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+        </template>
+        <template v-else>
+          <v-btn
+            to="/blog"
+            color="darker"
+            text>
+            <v-icon left>mdi-text-box-multiple-outline</v-icon>
+            {{ $t('topBar.articles') }}
+          </v-btn>
+          <v-btn
+            to="/page/projects"
+            color="darker"
+            text>
+            <v-icon left>mdi-package-variant</v-icon>
+            {{ $t('topBar.projects') }}
+          </v-btn>
+          <v-btn
+            to="/page/app"
+            color="darker"
+            text>
+            <v-icon left>mdi-cellphone-iphone</v-icon>
+            {{ $t('topBar.application') }}
+          </v-btn>
+          <v-tooltip bottom>
+            <template #activator="{ on }">
+              <v-btn
+                color="darker"
+                icon
+                @click="searchMode = true"
+                v-on="on">
+                <v-icon>mdi-magnify</v-icon>
+              </v-btn>
+            </template>
+            <span>{{ $t('topBar.searchIcon') }}</span>
+          </v-tooltip>
+        </template>
         <theme-switcher/>
         <lang-switcher/>
         <user-menu/>
-      </div>
+      </template>
     </v-app-bar>
 
     <v-main :style="isDesktop ? 'padding-top: 56px' : ''">
@@ -141,6 +158,9 @@ export default {
   data () {
     return {
       bottomNav: '',
+
+      searchMode: false,
+      search: ''
     }
   },
   mounted() {

@@ -1,27 +1,5 @@
 <template>
   <main>
-    <v-app-bar
-      style="margin-top: 8px"
-      dense
-      app>
-      <v-btn
-        color="darker"
-        to="/blog"
-        icon>
-        <v-icon>mdi-arrow-left</v-icon>
-      </v-btn>
-      <router-link to="/">
-        <v-img
-          alt="BecauseOfProg Logo"
-          class="shrink mr-2"
-          src="https://cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/assets/logos/bop.min.svg"
-          width="40"
-          contain/>
-      </router-link>
-      <v-spacer/>
-      <lang-switcher/>
-      <theme-switcher/>
-    </v-app-bar>
     <template v-if="loaded">
       <v-parallax
         :height="$vuetify.breakpoint.smAndDown ? 650 : 500"
@@ -289,12 +267,9 @@
 <script>
 import VueMarkdown from 'vue-markdown'
 import { mapMutations, mapActions } from 'vuex'
-import md5 from 'blueimp-md5'
 
 import SocialIcons from '@/views/parts/SocialIcons'
 import MemberCard from '@/views/parts/MemberCard'
-import ThemeSwitcher from '@/views/parts/ThemeSwitcher'
-import LangSwitcher from '@/views/parts/LangSwitcher'
 import CategoriesChips from '@/views/parts/CategoriesChips'
 
 import { categories, types, getCategory, getType } from '@/utils/data'
@@ -302,7 +277,7 @@ import { blogPosts, comments } from '@/utils/api'
 
 export default {
   name: 'Article',
-  components: { ThemeSwitcher, LangSwitcher, CategoriesChips, MemberCard, VueMarkdown, SocialIcons },
+  components: { CategoriesChips, MemberCard, VueMarkdown, SocialIcons },
   data() {
     return {
       article: {},
@@ -388,11 +363,6 @@ export default {
         if (this.commentsPages === 0) this.commentsPage = 0
         this.commentsLoading = false
       })
-    },
-    getGravatar(email) {
-      let compressed = email.trim().toLowerCase()
-      let hash = md5(compressed)
-      return `https://i.cdn.becauseofprog.fr/gravatar.com/avatar/${hash}`
     }
   }
 }
