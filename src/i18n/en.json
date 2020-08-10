@@ -14,7 +14,14 @@
     "search": "Search"
   },
   "errors": {
-    "unknownArticle": "Error: The desired article is unknown."
+    "unknownArticle": "The desired article is unknown.",
+    "pageNotFound": "The page wasn't found.",
+    "unauthorized": "You must be authenticated in order to perform this action.",
+    "forbidden": "You don't have the required permission to perform this action.",
+    "invalidPage": "The page you tried to access in invalid.",
+    "invalidCredentials": "Invalid email address and/or password",
+    "alreadyExists": "The resource already exists. Try changing the identifier.",
+    "internalError": "The server encountered an unknown error. Our teams are currently trying to overcome this problem."
   },
   "topBar": {
     "articles": "Articles",

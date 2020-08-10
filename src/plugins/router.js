@@ -95,14 +95,14 @@ router.beforeEach((to, from, next) => {
         next({ name: 'home' })
         store.commit('SHOW_SNACKBAR', {
           error: true,
-          message: 'account.messages.permissionRequired'
+          message: 'errors.forbidden'
         })
       } else next()
     } else {
       next({ name: 'home' })
       store.commit('SHOW_SNACKBAR', {
         error: true,
-        message: 'account.messages.loginRequired'
+        message: 'errors.unauthorized'
       })
     }
   } else next()

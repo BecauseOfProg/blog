@@ -15,7 +15,14 @@
     "search": "Recherche"
   },
   "errors": {
-    "unknownArticle": "Erreur : l'article souhaité est inconnu."
+    "unknownArticle": "L'article souhaité est inconnu.",
+    "pageNotFound": "La page n'a pas été trouvée.",
+    "unauthorized": "Vous devez être authentifié afin d'effectuer cette action.",
+    "forbidden": "Vous n'avez pas la permission require pour effectuer cette action.",
+    "invalidPage": "La page que vous essayez de consulter est invalide.",
+    "invalidCredentials": "Adresse e-mail et/ou mot de passe erronés.",
+    "alreadyExists": "La ressource existe déjà. Essayez de changer l'identifieur.",
+    "internalError": "Le serveur a rencontré une erreur inconnue. Nos équipes essayent activement de résoudre le problème."
   },
   "topBar": {
     "articles": "Articles",
@@ -68,7 +75,6 @@
 
     "messages": {
       "success": "Connexion à votre compte avec succès.",
-      "credentialsError": "Erreur : l'adresse email et/ou le mot de passe est incorrect.",
       "tokenError": "Erreur : le jeton utilisateur est erroné.",
       "logout": "Déconnexion de votre compte avec succès."
     }
@@ -85,7 +91,11 @@
     "type": "Type - {type}"
   },
   "devblog": {
-    "title": "Le DevBlog de la BecauseOfProg"
+    "title": "Le DevBlog de la BecauseOfProg",
+    "description": "Retrouvez l'actualité technique de la BecauseOfProg, ce qu'il se passe en coulisses, les dernières mises-à-jour de nos services...",
+    "errors": {
+      "loadFailed": "Le chargement des billets a échoué."
+    }
   },
   "article": {
     "wasRead": "Vous avez consulté cet article.",
@@ -107,11 +117,7 @@
     "error": "Une erreur est survenue dans la publication de l'article."
   },
   "account": {
-    "title": "Mon compte BecauseOfProg",
-    "messages": {
-      "loginRequired": "Erreur : vous devez être connecté pour consulter cette page.",
-      "permissionRequired": "Erreur : vous n'avez pas les permissions nécessaires pour consulter cette page."
-    }
+    "title": "Mon compte BecauseOfProg"
   },
   "pages": {
     "aboutUs": "À propos de nous",

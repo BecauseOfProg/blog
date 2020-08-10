@@ -46,7 +46,7 @@ const actions = {
       console.log(error)
 
       context.waiting = false
-      context.error = 'loginDialog.messages.credentialsError'
+      context.error = 'errors.invalidCredentials'
     })
     context.form.password = ''
     context.$refs.form.resetValidation()
