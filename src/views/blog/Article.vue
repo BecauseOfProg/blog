@@ -10,14 +10,14 @@
         icon>
         <v-icon>mdi-arrow-left</v-icon>
       </v-btn>
-      <a href="/">
+      <router-link to="/">
         <v-img
           alt="BecauseOfProg Logo"
           class="shrink mr-2"
           src="https://cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/assets/logos/bop.min.svg"
           width="40"
           contain/>
-      </a>
+      </router-link>
       <v-spacer/>
       <lang-switcher/>
       <theme-switcher/>
@@ -131,6 +131,86 @@
                     class="pt-0">
                     <member-card :member="article.author"/>
                   </v-col>
+                  <v-col cols="12">
+                    <b-card>
+                      <h3 class="headline">Laisser un commentaire</h3>
+                      <v-row>
+                        <v-col
+                          cols="12"
+                          md="6">
+                          <v-text-field
+                            v-model="commentForm.username"
+                            color="light"
+                            label="Nom d'utilisateur"
+                            type="text"
+                            hide-details
+                            outlined/>
+                        </v-col>
+                        <v-col
+                          cols="12"
+                          md="6">
+                          <v-text-field
+                            v-model="commentForm.email"
+                            color="light"
+                            label="Adresse email"
+                            type="email"
+                            hide-details
+                            outlined/>
+                        </v-col>
+                        <v-col cols="12">
+                          <v-textarea
+                            v-model="commentForm.content"
+                            color="light"
+                            label="Contenu"
+                            hide-details
+                            outlined/>
+                        </v-col>
+                        <v-col
+                          cols="12"
+                          class="text-right">
+                          <v-btn
+                            :loading="sendingComment"
+                            text
+                            color="darker">
+                            Envoyer
+                            <v-icon right>mdi-send</v-icon>
+                          </v-btn>
+                        </v-col>
+                      </v-row>
+                      <v-divider/><br>
+                      <h3 class="headline">Commentaires des lecteurs</h3>
+                      <v-list v-if="comments.length">
+                        <v-list-item
+                          v-for="comment in comments"
+                          :key="comment.slug">
+                          <v-list-item-avatar>
+                            <v-img
+                              :src="`https://i.cdn.becauseofprog.fr/gravatar.com/avatar/${comment.encoded_email}`"
+                              :alt="comment.username"/>
+                          </v-list-item-avatar>
+                          <v-list-item-content>
+                            <v-list-item-title>
+                              <span class="text--primary">{{ comment.username }}</span> &mdash; {{ dateToText(comment.timestamp) }}
+                            </v-list-item-title>
+                            <p>{{ comment.content }}</p>
+                          </v-list-item-content>
+                        </v-list-item>
+                      </v-list>
+                      <p
+                        v-else-if="!commentsLoading"
+                        class="font-italic">
+                        Aucun commentaire pour le moment. Soyez le premier à en créer un!
+                      </p>
+                      <v-btn
+                        v-if="commentsPage !== commentsPages"
+                        color="darker"
+                        text
+                        :loading="commentsLoading"
+                        @click="fetchComments">
+                        Voir plus
+                      </v-btn>
+                    </b-card>
+                  </v-col>
                 </v-row>
               </v-col>
               <v-col
@@ -209,6 +289,7 @@
 <script>
 import VueMarkdown from 'vue-markdown'
 import { mapMutations, mapActions } from 'vuex'
+import md5 from 'blueimp-md5'
 
 import SocialIcons from '@/views/parts/SocialIcons'
 import MemberCard from '@/views/parts/MemberCard'
@@ -217,7 +298,7 @@ import LangSwitcher from '@/views/parts/LangSwitcher'
 import CategoriesChips from '@/views/parts/CategoriesChips'
 
 import { categories, types, getCategory, getType } from '@/utils/data'
-import { blogPosts } from '@/utils/api'
+import { blogPosts, comments } from '@/utils/api'
 
 export default {
   name: 'Article',
@@ -226,6 +307,18 @@ export default {
     return {
       article: {},
       loaded: false,
+
+      comments: [],
+      commentsPage: 0,
+      commentsPages: 0,
+      commentsLoading: false,
+
+      commentForm: {
+        username: '',
+        email: '',
+        content: ''
+      },
+      sendingComment: false,
 
       categories,
       types
@@ -244,6 +337,7 @@ export default {
       })
       this.$router.push({ name: 'all-articles' })
     })
+    this.fetchComments()
   },
   computed: {
     category() {
@@ -257,7 +351,7 @@ export default {
         return [
           {
             name: 'Twitter', icon: 'mdi-twitter', color: 'blue lighten-2',
-            link: `https://twitter.com/intent/tweet?url=https://becauseofprog.fr/article/${this.article.id}&text=${this.article.title} (via @BecauseOfProg)`
+            link: `https://twitter.com/intent/tweet?url=https://becauseofprog.fr/article/${this.article.url}&text=${this.article.title} (via @BecauseOfProg)`
           },
           {
             name: 'Facebook', icon: 'mdi-facebook', color: 'blue darken-4',
@@ -281,7 +375,25 @@ export default {
   },
   methods: {
     ...mapMutations(['SHOW_SNACKBAR']),
-    ...mapActions(['addReadArticle'])
+    ...mapActions(['addReadArticle']),
+    fetchComments() {
+      this.commentsLoading = true
+      this.commentsPage += 1
+      comments.get({ post: this.$route.params.url, page: this.commentsPage }).then(response => {
+        this.comments = [
+          ...this.comments,
+          ...response.body.data
+        ]
+        this.commentsPages = response.body.pages
+        if (this.commentsPages === 0) this.commentsPage = 0
+        this.commentsLoading = false
+      })
+    },
+    getGravatar(email) {
+      let compressed = email.trim().toLowerCase()
+      let hash = md5(compressed)
+      return `https://i.cdn.becauseofprog.fr/gravatar.com/avatar/${hash}`
+    }
   }
 }
 </script>
