@@ -49,16 +49,10 @@ let router = new Router({
       meta: { requiresAuth: true }
     },
     {
-      path: '/staff/create-article',
-      name: 'create-article',
-      component: () => import(/* webpackChunkName: "staff" */ '@/views/staff/CreateArticle.vue'),
-      meta: { requiresAuth: true, requiredPermission: 'BLOG_WRITE' }
-    },
-    {
-      path: '/staff/articles',
-      name: 'manage-articles',
-      component: () => import(/* webpackChunkName: "staff" */ '@/views/staff/Articles.vue'),
-      meta: { requiresAuth: true, requiredPermission: 'BLOG_WRITE' }
+      path: '/staff',
+      name: 'staff',
+      component: () => import(/* webpackChunkName: "staff" */ '@/views/staff/Skeleton.vue'),
+      meta: { requiresAuth: true, requiresStaff: true }
     },
     {
       path: '/pages',
@@ -91,13 +85,17 @@ let router = new Router({
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
     if (store.getters.isAuthenticated) {
-      if (to.matched.some(record => record.meta.requiredPermission !== undefined && !store.state.user.data.permissions.includes(record.meta.requiredPermission))) {
+      if (
+        (to.matched.some(record => record.meta.requiredPermission !== undefined && !store.state.user.data.permissions.includes(record.meta.requiredPermission)))
+        || (to.matched.some(record => record.meta.requiresStaff !== undefined && !store.state.user.data.permissions.length))
+      ){
         next({ name: 'home' })
         store.commit('SHOW_SNACKBAR', {
           error: true,
           message: 'errors.forbidden'
         })
-      } else next()
+      }
+      else next()
     } else {
       next({ name: 'home' })
       store.commit('SHOW_SNACKBAR', {
