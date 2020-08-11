@@ -1,26 +1,19 @@
 <template>
   <v-card class="b-card member-card">
     <v-row>
-      <v-col
-        cols="12"
-        sm="6"
-        md="3"
-        lg="2"
-        class="py-0 pr-0">
-        <v-img
-          height="100%"
-          class="mr-0"
-          :aspect-ratio="1"
-          :src="member.picture"/>
+      <v-col class="py-0 pr-0">
+        <img
+          :src="member.picture"
+          :alt="member.displayname"
+          height="300px"
+          width="auto"
+          class="mr-0">
       </v-col>
-      <v-col
-        cols="12"
-        sm="6"
-        md="9"
-        lg="10"
-        class="pl-0">
+      <v-col class="pl-0">
         <h1 :class="alignmentClasses">{{ member.displayname }}</h1>
-        <p :class="{ ...alignmentClasses, 'text-center': true, 'lecture-text': true }">« {{ member.biography }} »</p>
+        <p
+          :class="alignmentClasses"
+          class="text-center text-caption">« {{ member.biography }} »</p>
         <v-divider/>
         <v-row>
           <v-spacer/>
@@ -79,6 +72,7 @@ export default {
 </script>
 
 <style lang="stylus">
-.member-card .v-image
-  width: 100%
+.member-card img
+  border-top-left-radius: 20px
+  border-bottom-left-radius: 20px
 </style>

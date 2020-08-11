@@ -1,8 +1,8 @@
 <template>
   <main>
     <b-top-banner
-      icon="mdi-pencil-outline"
-      title="createArticle.title"/>
+      icon="mdi-text-box-plus-outline"
+      title="staff.posts.create.title"/>
     <v-container class="page-body">
       <v-row>
         <v-col cols="12">
@@ -86,7 +86,7 @@
             color="darker"
             @click="publish">
             <v-icon left>mdi-publish</v-icon>
-            {{ $t('createArticle.publish')}}
+            {{ $t('staff.posts.create.publish')}}
           </v-btn>
         </v-col>
       </v-row>
@@ -150,14 +150,14 @@ export default {
         this.waiting = false
         this.SHOW_SNACKBAR({
           error: false,
-          message: 'createArticle.success'
+          message: 'staff.posts.create.success'
         })
       }, error => {
         console.log(error)
         this.waiting = false
         this.SHOW_SNACKBAR({
           error: true,
-          message: 'createArticle.error'
+          message: 'staff.posts.create.error'
         })
       })
     }
