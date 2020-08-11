@@ -67,6 +67,8 @@
     "login": "Connexion",
     "mail": "Adresse e-mail",
     "password": "Mot de passe",
+    "showPassword": "Montrer le mot de passe",
+    "hidePassword": "Cacher le mot de passe",
     "remember": "Se souvenir de moi",
     "message": "Pour profiter de certaines fonctionnalités du site et empêcher le spam, vous devez vous connecter à votre compte BecauseOfProg.",
     "emailRequired": "L'adresse email est requise",
@@ -110,11 +112,19 @@
   "social": {
     "title": "Réseaux sociaux et liens"
   },
-  "createArticle": {
-    "title": "Créer un article",
-    "publish": "Publier l'article",
-    "success": "Votre article a été publié avec succès!",
-    "error": "Une erreur est survenue dans la publication de l'article."
+  "staff": {
+    "dashboard": {
+      "title": "Tableau de bord"
+    },
+    "posts": {
+      "title": "Publications",
+      "create": {
+        "title": "Créer une publication",
+        "publish": "Publier",
+        "success": "Votre publication a été ajoutée avec succès!",
+        "error": "Une erreur est survenue dans l'ajout de la publication."
+      }
+    }
   },
   "account": {
     "title": "Mon compte BecauseOfProg"

@@ -42,12 +42,25 @@
             :rules="passwordRules"
             prepend-inner-icon="mdi-key-variant"
             :label="$t('loginDialog.password')"
-            type="password"
+            :type="showPassword ? 'text' : 'password'"
             color="light"
             outlined
             required>
             <template #message="{ message }">
               {{ $t(message) }}
+            </template>
+            <template #append-outer>
+              <v-tooltip bottom>
+                <template #activator="{ on }">
+                  <v-btn
+                    icon
+                    v-on="on"
+                    @click="showPassword = !showPassword">
+                    <v-icon>{{ showPassword ? 'mdi-eye-outline' : 'mdi-eye-off-outline' }}</v-icon>
+                  </v-btn>
+                </template>
+                <span>{{ $t('loginDialog.' + (showPassword ? 'hidePassword' : 'showPassword')) }}</span>
+              </v-tooltip>
             </template>
           </v-text-field>
           <v-switch
@@ -95,6 +108,8 @@ export default {
       error: '',
       valid: false,
       waiting: false,
+
+      showPassword: false,
 
       form: Object.assign({}, defaultForm),
       emailRules: [
