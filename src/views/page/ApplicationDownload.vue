@@ -7,7 +7,7 @@
         :href="universal"
         color="green darken-1 white--text">
         <v-icon left>mdi-android</v-icon>
-        Télécharger ≈18Mo
+        {{ $t('application.download.download') }} ≈18Mo
       </v-btn>
     </v-col>
     <v-col>
@@ -17,7 +17,7 @@
             color="green lighten-2 white--text"
             v-bind="attrs"
             v-on="on">
-            Autres architectures ≈9Mo
+            {{ $t('application.download.specificArch') }} ≈9Mo
           </v-btn>
         </template>
         <v-list>

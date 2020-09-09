@@ -27,7 +27,8 @@
     "articles": "Articles",
     "projects": "Projects",
     "application": "Application",
-    "searchIcon": "Search"
+    "search": "Search",
+    "searchField": "Search for posts..."
   },
   "mobileMenu": {
     "social": "Social",
@@ -88,20 +89,35 @@
     "typesCaps": "TYPES",
     "followUs": "Follow us",
     "category": "Category - {category}",
-    "type": "Type - {type}"
+    "type": "Type - {type}",
+    "loadMore": "Load more"
   },
   "devblog": {
-    "title": "BecauseOfProg's DevBlog"
+    "title": "BecauseOfProg's DevBlog",
+    "description": "Read BecauseOfProg's technical news, what is going on behind the scenes, our last updates about our services...",
+    "errors": {
+      "loadFailed": "Devblogs' loading failed."
+    },
+    "otherPosts": "Our other devblogs"
   },
   "article": {
     "wasRead": "You saw this article.",
     "shareArticle": "Share the article",
     "published": "Published in ",
-    "publishedBy": "Published by",
-    "publishedBy2": "on",
+    "publishedBy": "Published by {author} on {date}",
     "links": "BecauseOfProg's links",
     "linksMessage": "We share links to interesting resources, blogs or articles so that you too can discover them.",
-    "categories": "Categories"
+    "categories": "Categories",
+    "comments": {
+      "title": "Readers' comments",
+      "any": "No comments for the moment. Be the first to create one!",
+      "leaveComment": "Leave a comment",
+      "username": "Username",
+      "email": "Email address",
+      "content": "Content",
+      "send": "Send",
+      "verification": "Your comment will need to be verified by a moderator in order to get published."
+    }
   },
   "social": {
     "title": "Social Networks and links"
@@ -197,7 +213,9 @@
     },
     "download": {
       "title": "Ready to use our application?",
-      "description": "Download it on your phone now!"
+      "description": "Download it on your phone now!",
+      "download": "Download",
+      "specificArch": "Specific architecture"
     },
     "pwa": {
       "title": "Installing an application doesn't suit you?",

@@ -44,7 +44,7 @@
           <v-text-field
             v-model="search"
             color="darker"
-            placeholder="Recherche..."
+            :placeholder="$t('topBar.searchField')"
             single-line
             hide-details/>
           <v-btn
@@ -86,7 +86,7 @@
                 <v-icon>mdi-magnify</v-icon>
               </v-btn>
             </template>
-            <span>{{ $t('topBar.searchIcon') }}</span>
+            <span>{{ $t('topBar.search') }}</span>
           </v-tooltip>
         </template>
         <theme-switcher/>

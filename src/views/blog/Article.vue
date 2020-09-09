@@ -47,7 +47,7 @@
                     cols="6"
                     class="text-right">
                     <v-icon left>mdi-clock-outline</v-icon>
-                    <span>{{ $t('article.publishedBy') }} <strong>{{ article.author.displayname }}</strong> {{ $t('article.publishedBy2') }} {{ dateToText(article.timestamp) }}</span>
+                    <span>{{ $t('article.publishedBy', { author: article.author.displayname, date: dateToText(article.timestamp) }) }}</span>
                   </v-col>
                 </v-row>
               </template>
@@ -111,15 +111,15 @@
                   </v-col>
                   <v-col cols="12">
                     <b-card>
-                      <h3 class="headline">Laisser un commentaire</h3>
+                      <h3 class="headline">{{ $t('article.comments.leaveComment') }}</h3>
                       <v-row>
                         <v-col
                           cols="12"
                           md="6">
                           <v-text-field
                             v-model="commentForm.username"
+                            :label="$t('article.comments.username')"
                             color="light"
-                            label="Nom d'utilisateur"
                             type="text"
                             hide-details
                             outlined/>
@@ -129,8 +129,8 @@
                           md="6">
                           <v-text-field
                             v-model="commentForm.email"
+                            :label="$t('article.comments.email')"
                             color="light"
-                            label="Adresse email"
                             type="email"
                             hide-details
                             outlined/>
@@ -138,11 +138,12 @@
                         <v-col cols="12">
                           <v-textarea
                             v-model="commentForm.content"
+                            :label="$t('article.comments.content')"
                             color="light"
-                            label="Contenu"
                             hide-details
                             outlined/>
                         </v-col>
+                        <p class="font-italic">{{ $t('article.comments.verification') }}</p>
                         <v-col
                           cols="12"
                           class="text-right">
@@ -150,13 +151,13 @@
                             :loading="sendingComment"
                             text
                             color="darker">
-                            Envoyer
+                            {{ $t('article.comments.send') }}
                             <v-icon right>mdi-send</v-icon>
                           </v-btn>
                         </v-col>
                       </v-row>
                       <v-divider/><br>
-                      <h3 class="headline">Commentaires des lecteurs</h3>
+                      <h3 class="headline">{{ $t('article.comments.title') }}</h3>
                       <v-list v-if="comments.length">
                         <v-list-item
                           v-for="comment in comments"
@@ -177,7 +178,7 @@
                       <p
                         v-else-if="!commentsLoading"
                         class="font-italic">
-                        Aucun commentaire pour le moment. Soyez le premier à en créer un!
+                        {{ $t('article.comments.any') }}
                       </p>
                       <v-btn
                         v-if="commentsPage !== commentsPages"
@@ -185,7 +186,7 @@
                         text
                         :loading="commentsLoading"
                         @click="fetchComments">
-                        Voir plus
+                        {{ $t('list.loadMore') }}
                       </v-btn>
                     </b-card>
                   </v-col>
@@ -258,9 +259,7 @@
         </v-row>
       </v-container>
     </template>
-    <template v-else>
-      <b-loading-screen/>
-    </template>
+    <b-loading-screen v-else/>
   </main>
 </template>
 
@@ -300,7 +299,7 @@ export default {
     }
   },
   mounted() {
-    blogPosts.get({ id: this.$route.params.url }).then(response => {
+    blogPosts.get({ url: this.$route.params.url }).then(response => {
       this.article = response.body.data
       this.loaded = true
       this.addReadArticle(this.article.url)

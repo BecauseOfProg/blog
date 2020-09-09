@@ -28,7 +28,8 @@
     "articles": "Articles",
     "projects": "Projets",
     "application": "Application",
-    "searchIcon": "Recherche"
+    "search": "Recherche",
+    "searchField": "Rechercher des publications..."
   },
   "mobileMenu": {
     "social": "Social",
@@ -90,24 +91,35 @@
     "typesCaps": "TYPES",
     "followUs": "Nous suivre",
     "category": "Catégorie — {category}",
-    "type": "Type - {type}"
+    "type": "Type - {type}",
+    "loadMore": "Voir plus"
   },
   "devblog": {
     "title": "Le DevBlog de la BecauseOfProg",
     "description": "Retrouvez l'actualité technique de la BecauseOfProg, ce qu'il se passe en coulisses, les dernières mises-à-jour de nos services...",
     "errors": {
       "loadFailed": "Le chargement des billets a échoué."
-    }
+    },
+    "otherPosts": "Nos autres billets"
   },
   "article": {
     "wasRead": "Vous avez consulté cet article.",
     "shareArticle": "Partager l'article",
     "published": "Publié dans ",
-    "publishedBy": "Publié par",
-    "publishedBy2": "le",
+    "publishedBy": "Publié par {author} le {date}",
     "links": "Les liens BecauseOfProg",
     "linksMessage": "Nous partageons des liens vers des ressources, des blogs ou des articles intéressants, afin que vous puissiez vous aussi les découvrir.",
-    "categories": "Catégories"
+    "categories": "Catégories",
+    "comments": {
+      "title": "Commentaires des lecteurs",
+      "any": "Aucun commentaire pour le moment. Soyez le premier à en créer un!",
+      "leaveComment": "Laisser un commentaire",
+      "username": "Nom d'utilisateur",
+      "email": "Adresse email",
+      "content": "Contenu",
+      "send": "Envoyer",
+      "verification": "Votre commentaire devra être approuvé par un modérateur avant d'être publié."
+    }
   },
   "social": {
     "title": "Réseaux sociaux et liens"
@@ -207,7 +219,9 @@
     },
     "download": {
       "title": "Prêts à utiliser notre application ?",
-      "description": "Téléchargez-la sur votre téléphone dès maintenant!"
+      "description": "Téléchargez-la sur votre téléphone dès maintenant!",
+      "download": "Télécharger",
+      "specificArch": "Architecture spécifique"
     },
     "pwa": {
       "title": "Installer une application vous incomode?",

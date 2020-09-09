@@ -37,9 +37,18 @@
                           justify="center"
                           align="center">
                           <v-col>
-                            <h3 class="text-h3 mb-3 white--text">{{ article.title }}</h3>
-                            <p class="white--text">{{ article.description }}</p>
-                            <span class="overline white--text">Publié par {{ article.author.displayname }} le {{ dateToText(article.timestamp) }}</span>
+                            <h3 class="text-h3 mb-3 white--text lexture-title">{{ article.title }}</h3>
+                            <p class="white--text lecture-text text-center">{{ article.description }}</p>
+                            <span class="overline white--text">
+                              {{ $t('article.publishedBy', { author: article.author.displayname, date: dateToText(article.timestamp) }) }}
+                            </span>
+                            <v-btn
+                              :to="{ name: 'category', params: { category: category(article.category).id }}"
+                              text
+                              color="white">
+                              <v-icon left>{{ category(article.category).icon }}</v-icon>
+                              {{ $t(`categories.${category(article.category).id}`) }}
+                            </v-btn>
                           </v-col>
                         </v-row>
                       </v-img>
@@ -55,7 +64,7 @@
                 text
                 :loading="loading"
                 @click="fetchArticles">
-                Voir plus
+                {{ $t('list.loadMore') }}
               </v-btn>
             </div>
           </template>
@@ -97,6 +106,7 @@
         </v-col>
       </v-row>
       <v-btn
+        :small="$vuetify.breakpoint.smAndDown"
         color="light white--text"
         fab
         fixed
@@ -163,15 +173,18 @@ export default {
     this.fetchArticles()
   },
   methods: {
+    category(id) {
+      return getCategory(id)
+    },
     fetchArticles() {
       this.loading = true
       this.params.page += 1
-      blogPosts.get(this.params).then(data => {
+      blogPosts.get(this.params).then(response => {
         this.articles = [
           ...this.articles,
-          ...data.body.data
+          ...response.body.data
         ]
-        this.pages = data.body.pages
+        this.pages = response.body.pages
         this.loading = false
       })
     }
