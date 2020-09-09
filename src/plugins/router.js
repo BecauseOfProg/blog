@@ -39,8 +39,13 @@ let router = new Router({
     },
     {
       path: '/devblog',
+      name: 'devblogs',
+      component: () => import(/* webpackChunkName: "devblog" */ '@/views/devblog/DevBlogs.vue')
+    },
+    {
+      path: '/devblog/:url',
       name: 'devblog',
-      component: () => import(/* webpackChunkName: "blog" */ '@/views/blog/DevBlog.vue')
+      component: () => import(/* webpackChunkName: "devblog" */ '@/views/devblog/DevBlog.vue')
     },
     {
       path: '/account',
