@@ -119,7 +119,7 @@ export default {
           }
         },
         {
-          background: 'https://cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/assets/android_wallpaper.png',
+          background: '/img/category/android.png',
           title: 'Notre application',
           subtitle: "La BecauseOfProg arrive sur vos écrans d'accueil : téléchargez notre application Android!",
           button: {

@@ -47,12 +47,12 @@
                   :src="article.banner"
                   :alt="article.title"
                   :aspect-ratio="16/9"/>
-                <h5 class="text-h5 my-2 text--text">{{ article.title }}</h5>
-                <p class="text--primary">{{ article.description }}</p>
+                <h5 class="text-h5 my-2 text--text lecture-title">{{ article.title }}</h5>
+                <p class="text--primary lecture-text">{{ article.description }}</p>
                 <span class="text--text">
                   {{ article.author.displayname }}
                   &mdash;
-                  {{ dateToText(categoryArticles[category.id][0].timestamp) }}
+                  {{ dateToText(article.timestamp) }}
                 </span>
               </router-link>
             </v-col>
@@ -63,7 +63,7 @@
                 v-if="categoryArticles[category.id].length === 3"
                 :to="{ name: 'category', params: { category: category.id }}"
                 color="darker white--text">
-                Voir plus
+                {{ $t('list.loadMore') }}
                 <v-icon right>mdi-chevron-right</v-icon>
               </v-btn>
             </v-col>

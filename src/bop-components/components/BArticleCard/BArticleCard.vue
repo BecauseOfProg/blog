@@ -21,25 +21,13 @@
       {{ article.title }}
     </span>
     <p class="lecture-text mb-3">{{ article.description }}</p>
-    <v-row
-      class="mx-0"
-      justify="space-between">
-      <v-chip>
-        <v-avatar left>
-          <v-img :src="article.author.picture"/>
-        </v-avatar>
-        {{ article.author.displayname }}
-      </v-chip>
-      <v-chip :to="{ name: 'category', params: { category: category.id }}">
-        <v-icon left>
-          {{ category.icon }}
-        </v-icon>
-        {{ $t(`categories.${category.id}`) }}
-      </v-chip>
-      <v-chip>
-        {{ dateToText(article.timestamp) }}
-      </v-chip>
-    </v-row>
+    <p>{{ $t('article.publishedBy', { author: article.author.displayname, date: dateToText(article.timestamp) }) }}</p>
+    <v-chip :to="{ name: 'category', params: { category: category.id }}">
+      <v-icon left>
+        {{ category.icon }}
+      </v-icon>
+      {{ $t(`categories.${category.id}`) }}
+    </v-chip>
   </b-card>
 </template>
 
