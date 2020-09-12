@@ -49,7 +49,7 @@
                   :aspect-ratio="16/9"/>
                 <h5 class="text-h5 my-2 text--text lecture-title">{{ article.title }}</h5>
                 <p class="text--primary lecture-text">{{ article.description }}</p>
-                <span class="text--text">
+                <span class="font-weight-light blue-grey--text">
                   {{ article.author.displayname }}
                   &mdash;
                   {{ dateToText(article.timestamp) }}

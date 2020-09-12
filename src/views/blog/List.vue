@@ -19,8 +19,8 @@
                   v-for="(article, index) in articles"
                   :key="article.url"
                   cols="12"
-                  :md="index % 7 ? 4 : 10"
-                  :offset-md="index % 7 ? 0 : 1">
+                  :md="index % 7 ? 4 : 8"
+                  :offset-md="index % 7 ? 0 : 2">
                   <template v-if="index % 7">
                     <b-article-card :article="article"/>
                   </template>
