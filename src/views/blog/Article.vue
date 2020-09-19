@@ -14,11 +14,12 @@
             cols="12">
             <span
               id="title"
-              class="display-3 white--text">
+              class="display-3 white--text ml-2 mr-2">
               {{ article.title }}
             </span>
           </v-col>
           <v-col
+            class="pl-10 pr-10 mt-n16"
             cols="12"
             lg="8">
             <b-card class="bordered">

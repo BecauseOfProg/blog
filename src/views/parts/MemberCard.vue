@@ -1,22 +1,21 @@
 <template>
-  <v-card class="b-card member-card">
-    <v-row>
-      <v-col class="py-0 pr-0">
-        <img
-          :src="member.picture"
-          :alt="member.displayname"
-          height="300px"
-          width="auto"
-          class="mr-0">
-      </v-col>
-      <v-col class="pl-0">
-        <h1 :class="alignmentClasses">{{ member.displayname }}</h1>
-        <p
-          :class="alignmentClasses"
-          class="text-center text-caption">« {{ member.biography }} »</p>
-        <v-divider/>
-        <v-row>
-          <v-spacer/>
+  <v-card class="b-card">
+    <div
+      class="d-flex flex-no-wrap"
+      :class="rowOrCol">
+      <div class="d-flex flex-column justify-center align-center mt-2 ml-2 mr-2">
+        <div class="mt-2">
+          <v-avatar
+            size="100"
+            tile
+          >
+            <v-img
+              style="border-radius: 12px"
+              :src="member.picture"
+              :alt="`img_${member.displayname}`"/>
+          </v-avatar>
+        </div>
+        <div class="mt-3 mb-2">
           <v-tooltip
             v-for="social in socials"
             :key="member.username + social.id"
@@ -32,10 +31,20 @@
             </template>
             <span>{{ social.name }}</span>
           </v-tooltip>
-          <v-spacer/>
-        </v-row>
+        </div>
+      </div>
+      <v-divider
+        class="mr-0"
+        :vertical="dividerDirection"/>
+      <v-col>
+        <v-card-title
+          class="vcardtitle headline"
+          v-text="member.displayname"
+        />
+        <v-card-subtitle v-text="member.biography"/>
+
       </v-col>
-    </v-row>
+    </div>
   </v-card>
 </template>
 
@@ -51,11 +60,15 @@ export default {
     }
   },
   computed: {
-    alignmentClasses() {
+    rowOrCol() {
       return {
-        'ml-5': this.$vuetify.breakpoint.xsOnly,
-        'ml-2': this.$vuetify.breakpoint.smAndUp
+        'flex-column': this.$vuetify.breakpoint.xsOnly,
+        'flex-row': this.$vuetify.breakpoint.smAndUp
       }
+    },
+    dividerDirection() {
+      if (this.$vuetify.breakpoint.xsOnly) return false
+      return this.$vuetify.breakpoint.smAndUp;
     },
     socials() {
       let socials = []
@@ -70,9 +83,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus">
-.member-card img
-  border-top-left-radius: 20px
-  border-bottom-left-radius: 20px
-</style>
