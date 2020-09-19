@@ -39,7 +39,9 @@ import BCard from '../BCard'
 
 export default {
   name: 'BArticleCard',
-  components: BCard,
+  components: {
+    'b-card': BCard
+  },
   props: {
     article: {
       type: Object,
