@@ -21,7 +21,18 @@
       {{ article.title }}
     </span>
     <p class="lecture-text mt-2 mb-3">{{ article.description }}</p>
-    <p class="font-weight-light blue-grey--text">{{ $t('article.publishedBy', { author: article.author.displayname, date: dateToText(article.timestamp) }) }}</p>
+    <!--    <p class="font-weight-light blue-grey&#45;&#45;text">{{ $t('article.publishedBy', { author: article.author.displayname, date: dateToText(article.timestamp) }) }}</p>-->
+    <v-chip class="mt-2">
+      <v-avatar left>
+        <v-img :src="article.author.picture"/>
+      </v-avatar>
+      {{ article.author.displayname }}
+    </v-chip>
+
+    <v-chip class="mt-2">
+      {{ dateToText(article.timestamp) }}
+    </v-chip>
+
     <v-chip
       class="mt-2"
       :to="{ name: 'category', params: { category: category.id }}">
