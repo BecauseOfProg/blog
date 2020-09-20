@@ -237,12 +237,14 @@
                           text
                           color="white"
                           href="https://twitter.com/BecauseOfProg">
+                          <v-icon left>mdi-twitter</v-icon>
                           Twitter
                         </v-btn>
                         <v-btn
                           text
                           color="white"
                           href="#!">
+                          <v-icon left>mdi-rss</v-icon>
                           RSS
                         </v-btn>
                       </template>
