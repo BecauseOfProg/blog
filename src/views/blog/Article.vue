@@ -65,7 +65,10 @@
             <b-card
               id="article-content"
               class="bordered">
-              <vue-markdown class="markdown-body mb-3">{{ article.content }}</vue-markdown>
+              <markdown-it-vue-light
+                v-show="article && article.content"
+                class="markdown-body mb-3"
+                :content="article.content"/>
               <v-divider/>
               <div class="text-center">
                 <br><h3 class="headline mb-2 text--text">{{ $t('article.shareArticle') }}</h3>
@@ -144,7 +147,7 @@
                             hide-details
                             outlined/>
                         </v-col>
-                        <p class="font-italic">{{ $t('article.comments.verification') }}</p>
+                        <p class="ml-3 grey--text font-italic">{{ $t('article.comments.verification') }}</p>
                         <v-col
                           cols="12"
                           class="text-right">
@@ -265,7 +268,6 @@
 </template>
 
 <script>
-import VueMarkdown from 'vue-markdown'
 import { mapMutations, mapActions } from 'vuex'
 
 import SocialIcons from '@/views/parts/SocialIcons'
@@ -274,10 +276,12 @@ import CategoriesChips from '@/views/parts/CategoriesChips'
 
 import { categories, types, getCategory, getType } from '@/utils/data'
 import { blogPosts, comments } from '@/utils/api'
+import MarkdownItVueLight from 'markdown-it-vue/dist/markdown-it-vue-light.umd.min.js'
+import 'markdown-it-vue/dist/markdown-it-vue.css'
 
 export default {
   name: 'Article',
-  components: { CategoriesChips, MemberCard, VueMarkdown, SocialIcons },
+  components: { CategoriesChips, MemberCard, SocialIcons, MarkdownItVueLight },
   data() {
     return {
       article: {},
@@ -298,6 +302,8 @@ export default {
       categories,
       types
     }
+  },
+  created() {
   },
   mounted() {
     blogPosts.get({ url: this.$route.params.url }).then(response => {

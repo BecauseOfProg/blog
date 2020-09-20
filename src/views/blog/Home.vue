@@ -17,8 +17,8 @@
           :class="['fill-height', 'white--text', 'safe', ...item.classes]"
           align="center"
           justify="center">
-          <span class="display-2">{{ item.title }}</span>
-          <span class="headline">{{ item.subtitle }}</span>
+          <span class="display-2 mb-3">{{ item.title }}</span>
+          <span class="headline mb-3">{{ item.subtitle }}</span>
           <v-btn
             v-if="item.button != null"
             :to="item.button.link"

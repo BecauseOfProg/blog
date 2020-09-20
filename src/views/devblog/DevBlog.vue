@@ -19,7 +19,10 @@
                 <p>{{ $t('article.publishedBy', { author: post.author.displayname, date: dateToText(post.timestamp) })}}</p>
               </div>
 
-              <vue-markdown class="markdown-body mb-3">{{ post.content }}</vue-markdown>
+              <markdown-it-vue-light
+                v-show="post && post.content"
+                class="markdown-body mb-3"
+                :content="post.content"/>
             </b-card>
           </v-col>
           <v-col
@@ -78,13 +81,13 @@
 </template>
 
 <script>
-import VueMarkdown from 'vue-markdown'
 import SocialIcons from '@/views/parts/SocialIcons'
 import { posts } from '@/utils/api'
-
+import MarkdownItVueLight from 'markdown-it-vue/dist/markdown-it-vue-light.umd.min.js'
+import 'markdown-it-vue/dist/markdown-it-vue.css'
 export default {
   name: 'Post',
-  components: { VueMarkdown, SocialIcons },
+  components: { SocialIcons, MarkdownItVueLight },
   data() {
     return {
       post: {},

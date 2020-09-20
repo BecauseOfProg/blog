@@ -1,10 +1,10 @@
 const socials = [
   { id: 'website', name: 'Site web', icon: 'mdi-web', color: 'darker', link: '' },
   { id: 'twitter', name: 'Twitter', icon: 'mdi-twitter', color: 'light-blue', link: 'https://twitter.com/' },
-  { id: 'discord', name: 'Discord', icon: 'mdi-discord', color: 'teal', link: '' },
+  { id: 'discord', name: 'Discord', icon: 'mdi-discord', color: '#7289DA', link: '' },
   { id: 'mastodon', name: 'Mastodon', icon: 'mdi-mastodon', color: 'blue', link: '' },
-  { id: 'github', name: 'GitHub', icon: 'mdi-github', color: 'darker', link: 'https://github.com/' },
-  { id: 'instagram', name: 'Instagram', icon: 'mdi-instagram', color: 'pink', link: 'https://instagram.com/' },
+  { id: 'github', name: 'GitHub', icon: 'mdi-github', color: '#24292e', link: 'https://github.com/' },
+  { id: 'instagram', name: 'Instagram', icon: 'mdi-instagram', color: '#E1306C', link: 'https://instagram.com/' },
   { id: 'reddit', name: 'Reddit', icon: 'mdi-reddit', color: 'deep-orange ', link: 'https://reddit.com/u/' }
 ]
 
