@@ -116,7 +116,7 @@
 
     <v-footer
       class="gradient"
-      :style="isMobile ? 'margin-bottom: 56px' : ''">
+      :style="isMobile ? 'margin-bottom: 65px' : ''">
       <v-row>
         <v-col cols="6">
           <a
@@ -177,8 +177,13 @@ export default {
     mobileMenu: function() {
       return [
         {
-          name: 'mobileMenu.social',
+          name: 'mobileMenu.home',
           icon: 'mdi-home',
+          route: '/'
+        },
+        {
+          name: 'mobileMenu.social',
+          icon: 'mdi-twitter-retweet',
           route: '/social'
         },
         {

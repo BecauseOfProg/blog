@@ -32,6 +32,7 @@
     "searchField": "Rechercher des publications..."
   },
   "mobileMenu": {
+    "home": "Accueil",
     "social": "Social",
     "articles": "Articles",
     "search": "Recherche",

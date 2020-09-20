@@ -9,10 +9,13 @@
       alt="BecauseOfProg"
       width="200">
     <v-icon
-      v-if="$vuetify.breakpoint.mdAndUp && icon !== null"
+      v-if="icon && tall"
+      :class="{'mt-12': tall}"
       color="white"
       size="70px">{{ icon }}</v-icon>
-    <h1 class="white--text text-center">
+    <h1
+      class="white--text text-center"
+      :class="{'mt-12': $vuetify.breakpoint.smAndDown && !icon}">
       <template v-if="typeof title === 'object'">{{ $t.apply(this, title) }}</template>
       <template v-else>{{ $t(title) }}</template>
     </h1>

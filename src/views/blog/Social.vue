@@ -1,7 +1,7 @@
 <template>
   <main>
     <b-top-banner
-      :title="$t('social.title')"
+      title="social.title"
       icon="mdi-rss"/>
     <v-container class="page-body">
       <v-row>
@@ -21,10 +21,10 @@
           class="px-0"
           cols="12">
           <v-list class="background">
-            <template v-for="post in posts">
-              <v-divider :key="post.text"/>
+            <template v-for="(post, i) in posts">
+              <v-divider :key="`divider_${i}`"/>
               <v-list-item
-                :key="post.text"
+                :key="`v_list_item_${i}`"
                 :href="post.link"
                 target="_blank">
                 <v-list-item-icon>
@@ -33,8 +33,8 @@
                 <v-list-item-content>
                   <v-list-item-title>{{ post.text }}</v-list-item-title>
                   <v-img
-                    v-for="image in post.images"
-                    :key="image"
+                    v-for="(image, i) in post.images"
+                    :key="`image_${i}`"
                     :src="image"
                     max-width="600px"/>
                   <v-list-item-subtitle>{{ post.date }} -

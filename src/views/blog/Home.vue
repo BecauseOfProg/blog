@@ -18,7 +18,7 @@
           justify="center"
           style="flex-direction: column">
           <span class="display-2 mb-3">{{ item.title }}</span>
-          <span class="headline mb-3">{{ item.subtitle }}</span>
+          <span class="headline mb-3 text-center ml-1 mr-2">{{ item.subtitle }}</span>
           <v-btn
             v-if="item.button != null"
             :to="item.button.link"
