@@ -7,8 +7,8 @@ const today = new Date().toISOString().substr(0, 10)
 
 function dateToText(timestamp) {
   if (this.$i18n.locale) {
-    return DateTime.fromMillis(timestamp * 1000).setLocale(this.$i18n.locale).toLocaleString('DATE_FULL')
-  } else return DateTime.fromMillis(timestamp * 1000).toLocaleString('DATE_FULL')
+    return DateTime.fromMillis(timestamp * 1000).setLocale(this.$i18n.locale).toLocaleString(DateTime.DATE_FULL)
+  } else return DateTime.fromMillis(timestamp * 1000).toLocaleString(DateTime.DATE_FULL)
 }
 
 Vue.mixin({
