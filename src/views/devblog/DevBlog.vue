@@ -10,19 +10,24 @@
             <b-card>
               <template #image>
                 <v-img
-                  :src="post.banner"
-                  :alt="post.title"/>
+                  :alt="post.title"
+                  :src="post.banner"/>
               </template>
               <div class="text-center mb-5">
                 <div>{{ post.category }}</div>
                 <h1 class="text-h2">{{ post.title }}</h1>
-                <p>{{ $t('article.publishedBy', { author: post.author.displayname, date: dateToText(post.timestamp) })}}</p>
+                <p>{{
+                  $t('article.publishedBy', {
+                    author: post.author.displayname,
+                    date: dateToText(post.timestamp)
+                  })
+                }}</p>
               </div>
 
               <markdown-it-vue-light
                 v-show="post && post.content"
-                class="markdown-body mb-3"
-                :content="post.content"/>
+                :content="post.content"
+                class="markdown-body mb-3"/>
             </b-card>
           </v-col>
           <v-col
@@ -40,8 +45,8 @@
               <p>{{ $t('global.aboutMessage') }}</p>
               <v-btn
                 :to="{ name: 'about' }"
-                color="darker"
                 class="mb-2"
+                color="darker"
                 text>
                 <v-icon left>mdi-information-outline</v-icon>
                 {{ $t('global.more') }}
@@ -82,12 +87,13 @@
 
 <script>
 import SocialIcons from '@/views/parts/SocialIcons'
-import { posts } from '@/utils/api'
+import {posts} from '@/utils/api'
 import MarkdownItVueLight from 'markdown-it-vue/dist/markdown-it-vue-light.umd.min.js'
 import 'markdown-it-vue/dist/markdown-it-vue.css'
+
 export default {
   name: 'Post',
-  components: { SocialIcons, MarkdownItVueLight },
+  components: {SocialIcons, MarkdownItVueLight},
   data() {
     return {
       post: {},
@@ -97,12 +103,12 @@ export default {
     }
   },
   mounted() {
-    posts.get({ url: this.$route.params.url }).then(response => {
+    posts.get({url: this.$route.params.url}).then(response => {
       this.post = response.body.data
       this.loaded = true
     }, error => {
       console.log(error)
-      this.$router.push({ name: 'devblogs' })
+      this.$router.push({name: 'devblogs'})
     })
 
     posts.get().then(response => {

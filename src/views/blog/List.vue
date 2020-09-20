@@ -37,8 +37,8 @@
                           justify="center"
                           align="center">
                           <v-col>
-                            <h3 class="text-h3 mb-3 white--text lexture-title">{{ article.title }}</h3>
-                            <p class="white--text lecture-text text-center">{{ article.description }}</p>
+                            <h3 class="text-h3 mb-8 white--text lexture-title ma-4">{{ article.title }}</h3>
+                            <p class="white--text lecture-text text-center ma-4">{{ article.description }}</p>
                             <span class="overline white--text">
                               {{ $t('article.publishedBy', { author: article.author.displayname, date: dateToText(article.timestamp) }) }}
                             </span>

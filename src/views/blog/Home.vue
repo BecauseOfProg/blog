@@ -2,28 +2,28 @@
   <main>
     <categories-bar/>
     <v-carousel
-      height="400px"
-      interval="4000"
-      hide-delimiter-background
       :show-arrows="false"
-      cycle>
+      cycle
+      height="400px"
+      hide-delimiter-background
+      interval="4000">
       <v-carousel-item
         v-for="item in carousel"
         :key="item.title"
         :src="item.background === null ? '' : item.background"
         class="gradient">
         <v-row
-          style="flex-direction: column"
           :class="['fill-height', 'white--text', 'safe', ...item.classes]"
           align="center"
-          justify="center">
+          justify="center"
+          style="flex-direction: column">
           <span class="display-2 mb-3">{{ item.title }}</span>
           <span class="headline mb-3">{{ item.subtitle }}</span>
           <v-btn
             v-if="item.button != null"
             :to="item.button.link"
-            color="white--text"
-            class="gradient normal-weight">
+            class="gradient normal-weight"
+            color="white--text">
             {{ item.button.label }}
           </v-btn>
         </v-row>
@@ -49,8 +49,8 @@
                   cols="12"
                   md="6">
                   <v-btn
-                    color="darker"
                     class="mb-3"
+                    color="darker"
                     text>
                     <v-icon left>mdi-clock-outline</v-icon>
                     {{ $t('home.new') }}
@@ -92,15 +92,15 @@
 </template>
 
 <script>
-import { imageProxy } from '@/utils/helpers'
-import { blogPosts } from '@/utils/api'
-import { categories, types } from '@/utils/data'
+import {imageProxy} from '@/utils/helpers'
+import {blogPosts} from '@/utils/api'
+import {categories, types} from '@/utils/data'
 import CategoriesBar from '@/views/parts/CategoriesBar'
 
 export default {
   name: 'Home',
-  components: { CategoriesBar },
-  data () {
+  components: {CategoriesBar},
+  data() {
     return {
       carousel: [
         {
@@ -148,6 +148,6 @@ export default {
       this.articles = data.body.data
     })
   },
-  methods: { imageProxy }
+  methods: {imageProxy}
 }
 </script>

@@ -18,7 +18,7 @@ import '@/css/index.styl'
 import 'github-markdown-css/github-markdown.css'
 
 // Mixins
-import '@/plugins/moment'
+import '@/plugins/luxon'
 
 Vue.config.productionTip = false
 

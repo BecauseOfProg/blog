@@ -20,9 +20,11 @@
       </v-tooltip>
       {{ article.title }}
     </span>
-    <p class="lecture-text mb-3">{{ article.description }}</p>
-    <p>{{ $t('article.publishedBy', { author: article.author.displayname, date: dateToText(article.timestamp) }) }}</p>
-    <v-chip :to="{ name: 'category', params: { category: category.id }}">
+    <p class="lecture-text mt-2 mb-3">{{ article.description }}</p>
+    <p class="font-weight-light blue-grey--text">{{ $t('article.publishedBy', { author: article.author.displayname, date: dateToText(article.timestamp) }) }}</p>
+    <v-chip
+      class="mt-2"
+      :to="{ name: 'category', params: { category: category.id }}">
       <v-icon left>
         {{ category.icon }}
       </v-icon>
