@@ -85,19 +85,22 @@
           lg="8"
           offset-lg="2">
           <b-card>
-            <v-row>
-              <v-col cols="6">
-                <h3 class="headline">{{ $t('list.followUs') }}</h3>
+            <v-row justify="center">
+              <v-col
+                cols="5"
+                class="d-flex align-center flex-column mt-2">
+                <h3 class="headline mb-3">{{ $t('list.followUs') }}</h3>
                 <social-icons big/>
               </v-col>
-              <v-col cols="6">
+              <v-col
+                cols="5"
+                class="d-flex align-center flex-column mt-2">
                 <h3 class="headline">{{ $t('global.about') }}</h3>
-                <p>{{ $t('global.aboutMessage') }}</p><br>
+                <p class="font-weight-light blue-grey--text text-center">{{ $t('global.aboutMessage') }}</p><br>
                 <v-btn
                   text
                   color="darker"
                   :to="{ name: 'about' }">
-                  <v-icon left>mdi-information-outline</v-icon>
                   {{ $t('global.more') }}
                 </v-btn>
               </v-col>

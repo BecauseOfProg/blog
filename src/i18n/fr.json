@@ -8,7 +8,7 @@
     "socialNetworks": "Nos réseaux sociaux",
     "socialNetworksMessage": "Nous postons régulièrement des nouvelles, des tips et des astuces. Suivez-nous!",
     "allArticles": "Tous les articles",
-    "aboutMessage": "BecauseOfProg, c'est des développeurs rassemblés autour de projets communs tels que le blog.",
+    "aboutMessage": "La BecauseOfProg réunit plusieurs développeurs autour de projets communs, comme le blog!",
     "more": "En savoir plus",
     "application": "Application",
     "projects": "Projets",
@@ -191,7 +191,7 @@
       "discord": "Discord",
       "website": "Site"
     },
-    "more": "Davantage sur notre GitHub",
+    "more": "Voir plus sur notre GitHub",
     "blog": {
       "title": "Notre blog est aussi open-source!",
       "description": "Tout le monde est invité à contribuer, que ce soit pour documenter, traduire, corriger les problèmes ou étendre les fonctionnalités !",

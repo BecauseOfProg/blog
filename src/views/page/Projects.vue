@@ -40,7 +40,7 @@
                 target="_blank"
                 class="white--text"
                 color="darker">
-                <v-icon left>mdi-github</v-icon>
+                <v-icon left>{{ icons['github'] }}</v-icon>
                 {{ $t('projects.more') }}
               </v-btn>
             </v-col>
@@ -58,12 +58,14 @@
                   text
                   color="white"
                   href="https://github.com/BecauseOfProg">
+                  <v-icon left>{{ icons['github'] }}</v-icon>
                   GitHub
                 </v-btn>
                 <v-btn
                   text
                   color="white"
                   href="https://twitter.com/BecauseOfProg">
+                  <v-icon left>{{ icons['twitter'] }}</v-icon>
                   Twitter
                 </v-btn>
               </template>
@@ -103,7 +105,9 @@ export default {
         documentation: 'mdi-text-box-multiple-outline',
         source: 'mdi-xml',
         discord: 'mdi-discord',
-        website: 'mdi-web'
+        website: 'mdi-web',
+        github: 'mdi-github',
+        twitter: 'mdi-twitter'
       },
       projects
     }
