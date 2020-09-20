@@ -1,8 +1,22 @@
 <div align="center">
   <img src="https://cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/assets/logos/bop.svg" width="200" />
   <h1>BecauseOfProg's blog</h1>
-  <h3>Our blog about informatic and digital</h3>
-  <a href="https://becauseofprog.fr">https://becauseofprog.fr</a>
+  <a href="https://becauseofprog.fr">Website</a> &mdash; <a href="https://dev.becauseofprog.fr">Dev website</a> &mdash; <a href="https://trello.com/b/4ef4jlfC/blog-v3">Trello</a> &mdash; <a href="https://discord.becauseofprog.fr">Discord</a><br>
+  <a href="https://app.netlify.com/sites/becauseofprog-dev/deploys">
+    <img src="https://api.netlify.com/api/v1/badges/bc059206-9f7c-4906-9692-9d582aeadb61/deploy-status)" alt="Netlify status"
+  </a>
+  <a href="https://discord.becauseofprog.fr">
+    <img src="https://img.shields.io/discord/272454426038370304?color=blue&label=discord" alt="Chat on Discord">
+  </a>
+  <a href="https://github.com/BecauseOfProg/blog/issues">
+    <img src="https://img.shields.io/github/issues/BecauseOfProg/blog" alt="Open issues">
+  </a>
+  <a href="https://github.com/BecauseOfProg/blog/releases">
+    <img src="https://img.shields.io/github/v/release/BecauseOfProg/blog" alt="Latest release">
+  </a>
+  <a href="./LICENSE">
+    <img src="https://img.shields.io/github/license/BecauseOfProg/blog" alt="License">
+  </a>
 </div>
 
 - [💻 Development](#-development)
@@ -71,10 +85,10 @@ If you want to customize the build configuration, check the [Configuration Refer
 
 - Libraries : [VueJS](https://vuejs.org), [Vuetify](https://vuetifyjs.com)
 - Website design : [Gildas GH](https://github.com/Gildas-GH)
-- Maintainer : [Exybore](https://github.com/exybore)
+- Maintainers : [Théo Vidal (exybore)](https://github.com/exybore), [Noéwen (kernoeb)](https://github.com/kernoeb)
 
 ## 🔐 License
 
-Copyright (C) 2019  BecauseOfProg
+Copyright (C) 2020  BecauseOfProg
 
 Project under the [GNU GPL v3](./LICENSE) license.
