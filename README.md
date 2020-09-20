@@ -3,7 +3,7 @@
   <h1>BecauseOfProg's blog</h1>
   <a href="https://becauseofprog.fr">Website</a> &mdash; <a href="https://dev.becauseofprog.fr">Dev website</a> &mdash; <a href="https://trello.com/b/4ef4jlfC/blog-v3">Trello</a> &mdash; <a href="https://discord.becauseofprog.fr">Discord</a><br>
   <a href="https://app.netlify.com/sites/becauseofprog-dev/deploys">
-    <img src="https://api.netlify.com/api/v1/badges/bc059206-9f7c-4906-9692-9d582aeadb61/deploy-status)" alt="Netlify status"
+    <img src="https://api.netlify.com/api/v1/badges/bc059206-9f7c-4906-9692-9d582aeadb61/deploy-status" alt="Netlify status"
   </a>
   <a href="https://discord.becauseofprog.fr">
     <img src="https://img.shields.io/discord/272454426038370304?color=blue&label=discord" alt="Chat on Discord">
