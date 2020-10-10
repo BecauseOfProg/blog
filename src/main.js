@@ -11,7 +11,6 @@ import '@/plugins/resource'
 import '@/plugins/service-worker'
 
 // Styles
-import '@babel/polyfill'
 import 'roboto-fontface/css/roboto/roboto-fontface.css'
 import '@mdi/font/css/materialdesignicons.css'
 import '@/css/index.styl'
