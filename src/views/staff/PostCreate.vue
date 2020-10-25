@@ -4,92 +4,116 @@
       icon="mdi-text-box-plus-outline"
       title="staff.posts.create.title"/>
     <v-container class="page-body">
-      <v-row>
-        <v-col cols="12">
-          <v-text-field
-            v-model="form.title"
-            label="Titre"
-            color="light"
-            outlined/>
-        </v-col>
-        <v-col cols="12">
-          <v-textarea
-            v-model="form.description"
-            label="Description"
-            color="light"
-            outlined/>
-        </v-col>
-        <v-col
-          cols="12"
-          md="6">
-          <v-select
-            v-model="form.category"
-            :items="categories.map(category => category.id)"
-            label="Catégorie"
-            color="light"
-            outlined>
-            <template #item="{ item }">
-              {{ $t(`categories.${item}`) }}
-            </template>
-            <template #selection="{ item }">
-              {{ $t(`categories.${item}`) }}
-            </template>
-          </v-select>
-        </v-col>
-        <v-col
-          cols="12"
-          md="6">
-          <v-select
-            v-model="form.type"
-            :items="types.map(type => type.id)"
-            label="Type"
-            color="light"
-            outlined>
-            <template #item="{ item }">
-              {{ $t(`types.${item}`) }}
-            </template>
-            <template #selection="{ item }">
-              {{ $t(`types.${item}`) }}
-            </template>
-          </v-select>
-        </v-col>
-        <v-col
-          cols="12"
-          md="6">
-          <v-text-field
-            v-model="form.banner"
-            label="Lien HTTPS vers la bannière"
-            color="light"
-            outlined/>
-        </v-col>
-        <v-col
-          cols="12"
-          md="6">
-          <v-text-field
-            v-model="form.labels"
-            label="Labels (séparés par une virgule)"
-            color="light"
-            outlined/>
-        </v-col>
-        <v-col cols="12">
-          <textarea
-            id="md-editor"
-            cols="250"
-            rows="10"
-            name="md-editor"/>
-        </v-col>
-        <v-col
-          cols="12"
-          class="text-center">
-          <v-btn
-            :loading="waiting"
-            color="darker"
-            @click="publish">
-            <v-icon left>mdi-publish</v-icon>
-            {{ $t('staff.posts.create.publish')}}
-          </v-btn>
-        </v-col>
-      </v-row>
+      <v-form v-model="valid">
+        <v-row>
+          <v-col cols="12">
+            <v-text-field
+              v-model="form.title"
+              :rules="rule"
+              label="Titre"
+              color="light"
+              outlined
+              required/>
+          </v-col>
+          <v-col cols="12">
+            <v-textarea
+              v-model="form.description"
+              :rules="rule"
+              label="Description"
+              color="light"
+              outlined
+              required/>
+          </v-col>
+          <v-col
+            cols="12"
+            md="6">
+            <v-select
+              v-model="form.category"
+              :rules="rule"
+              :items="categories.map(category => category.id)"
+              label="Catégorie"
+              color="light"
+              outlined
+              required>
+              <template #item="{ item }">
+                {{ $t(`categories.${item}`) }}
+              </template>
+              <template #selection="{ item }">
+                {{ $t(`categories.${item}`) }}
+              </template>
+            </v-select>
+          </v-col>
+          <v-col
+            cols="12"
+            md="6">
+            <v-select
+              v-model="form.type"
+              :rules="rule"
+              :items="types.map(type => type.id)"
+              label="Type"
+              color="light"
+              outlined
+              required>
+              <template #item="{ item }">
+                {{ $t(`types.${item}`) }}
+              </template>
+              <template #selection="{ item }">
+                {{ $t(`types.${item}`) }}
+              </template>
+            </v-select>
+          </v-col>
+          <v-col
+            cols="12"
+            md="6">
+            <v-text-field
+              v-model="form.banner"
+              :rules="rule"
+              label="Lien HTTPS vers la bannière"
+              color="light"
+              outlined
+              required/>
+          </v-col>
+          <v-col
+            cols="12"
+            md="6">
+            <v-text-field
+              v-model="form.labels"
+              :rules="rule"
+              label="Mots-clés (séparés par une virgule)"
+              color="light"
+              outlined
+              required/>
+          </v-col>
+          <v-col cols="12">
+            <textarea
+              id="md-editor"
+              cols="250"
+              rows="10"
+              name="md-editor"/>
+          </v-col>
+          <v-col
+            cols="12"
+            class="text-center">
+            <v-btn
+              :loading="waiting"
+              :disabled="!valid"
+              color="darker"
+              @click="publish">
+              <v-icon left>mdi-publish</v-icon>
+              {{ $t('staff.posts.create.publish')}}
+            </v-btn>
+          </v-col>
+        </v-row>
+      </v-form>
+      <v-btn
+        color="darker"
+        fixed
+        bottom
+        right
+        fab
+        @click="$emit('close')">
+        <v-icon>mdi-close</v-icon>
+      </v-btn>
     </v-container>
   </main>
 </template>
@@ -110,6 +134,8 @@ export default {
         labels: '',
         banner: ''
       },
+      rule: [v => !!v || 'Name is required'],
+      valid: false,
       simplemde: null,
       waiting: false,
 
