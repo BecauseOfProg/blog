@@ -15,14 +15,16 @@
       <v-icon left>{{ category.icon }}</v-icon>
       {{ $t(`categories.${category.id}`) }}
     </v-chip>
-    <v-chip
-      v-for="type in types"
-      :key="type.id"
-      :to="{ name: 'type', params: { type: type.id }}"
-      active-class="darker white--text">
-      <v-icon left>{{ type.icon }}</v-icon>
-      {{ $t(`types.${type.id}`) }}
-    </v-chip>
+    <template v-if="!excludeTypes">
+      <v-chip
+        v-for="type in types"
+        :key="type.id"
+        :to="{ name: 'type', params: { type: type.id }}"
+        active-class="darker white--text">
+        <v-icon left>{{ type.icon }}</v-icon>
+        {{ $t(`types.${type.id}`) }}
+      </v-chip>
+    </template>
   </v-col>
 </template>
 
@@ -33,6 +35,10 @@ export default {
   name: 'CategoriesChips',
   props: {
     includeAll: {
+      type: Boolean,
+      default: false
+    },
+    excludeTypes: {
       type: Boolean,
       default: false
     }

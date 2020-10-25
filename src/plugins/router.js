@@ -60,11 +60,6 @@ let router = new Router({
       meta: { requiresAuth: true, requiresStaff: true }
     },
     {
-      path: '/pages',
-      name: 'pages',
-      component: () => import(/* webpackChunkName: "pages" */ '@/views/page/Pages.vue')
-    },
-    {
       path: '/page/about',
       name: 'about',
       component: () => import(/* webpackChunkName: "pages" */ '@/views/page/About.vue')
@@ -83,7 +78,7 @@ let router = new Router({
       path: '/page/search',
       name: 'search',
       component: () => import(/* webpackChunkName: "pages" */ '@/views/page/Search.vue')
-    },
+    }
   ]
 })
 

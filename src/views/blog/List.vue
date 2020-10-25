@@ -12,6 +12,14 @@
           cols="12"
           lg="12">
           <categories-chips include-all/>
+          <v-text-field
+            v-model="params.search"
+            :label="`${$t('global.search')}...`"
+            prepend-inner-icon="mdi-magnify"
+            color="darker"
+            type="search"
+            outlined
+            @keydown.enter="fetchArticles(null, true)"/>
           <template v-if="articles.length">
             <v-scale-transition>
               <v-row>
@@ -67,6 +75,9 @@
                 {{ $t('list.loadMore') }}
               </v-btn>
             </div>
+          </template>
+          <template v-else-if="empty">
+            <h3 class="text-center">{{ $t('list.noResults') }}</h3>
           </template>
           <v-fade-transition
             v-else
@@ -142,15 +153,20 @@ export default {
       params: {
         page: 0
       },
+      search: '',
       articles: [],
       loading: false,
       pages: 0,
+      empty: false,
 
       categories,
       types
     }
   },
   mounted() {
+    this.head.title = ['global.allArticles']
+    this.head.icon = 'mdi-text-box-multiple-outline'
+
     if (this.$route.params.category) {
       this.params = {
         ...this.params,
@@ -160,7 +176,8 @@ export default {
       this.head.title = ['list.category', { category: this.$t(`categories.${category.id}`) }]
       this.head.icon = category.icon
       this.head.image = `/img/category/${category.id}.png`
-    } else if (this.$route.params.type) {
+    }
+    if (this.$route.params.type) {
       this.params = {
         ...this.params,
         type: this.$route.params.type
@@ -169,24 +186,30 @@ export default {
       this.head.title = ['list.type', { type: this.$t(`types.${type.id}`) }]
       this.head.icon = type.icon
       this.head.image = `/img/type/${type.id}.png`
-    } else {
-      this.head.title = ['global.allArticles']
-      this.head.icon = 'mdi-text-box-multiple-outline'
     }
+    if (this.$route.query.search) {
+      this.params = {
+        ...this.params,
+        search: this.$route.query.search
+      }
+    }
+
     this.fetchArticles()
   },
   methods: {
     category(id) {
       return getCategory(id)
     },
-    fetchArticles() {
+    fetchArticles(_, reset = false) {
       this.loading = true
-      this.params.page += 1
+      if (reset) this.params.page = 1
+      else this.params.page += 1
       blogPosts.get(this.params).then(response => {
-        this.articles = [
+        this.articles = reset ? response.body.data : this.articles = [
           ...this.articles,
           ...response.body.data
         ]
+        if (!this.articles.length) this.empty = true
         this.pages = response.body.pages
         this.loading = false
       })

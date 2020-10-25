@@ -40,17 +40,18 @@
       </router-link>
       <v-spacer/>
       <template v-if="isDesktop">
-        <template v-if="searchMode">
+        <template v-if="showSearchField">
           <v-text-field
             v-model="search"
             color="darker"
             :placeholder="$t('topBar.searchField')"
             single-line
-            hide-details/>
+            hide-details
+            @keydown.enter="makeSearch"/>
           <v-btn
             color="darker"
             icon
-            @click="searchMode = false">
+            @click="showSearchField = false">
             <v-icon>mdi-close</v-icon>
           </v-btn>
         </template>
@@ -81,7 +82,7 @@
               <v-btn
                 color="darker"
                 icon
-                @click="searchMode = true"
+                @click="showSearchField = true"
                 v-on="on">
                 <v-icon>mdi-magnify</v-icon>
               </v-btn>
@@ -101,7 +102,7 @@
 
     <v-bottom-navigation
       v-if="isMobile && $route.name !== 'article'"
-      v-model="bottomNav"
+      v-model="bottomNavigation"
       color="darker"
       fixed
       app>
@@ -157,9 +158,9 @@ export default {
   components: { ThemeSwitcher, UserMenu, LangSwitcher },
   data () {
     return {
-      bottomNav: '',
+      bottomNavigation: '',
 
-      searchMode: false,
+      showSearchField: false,
       search: ''
     }
   },
@@ -178,7 +179,7 @@ export default {
       return [
         {
           name: 'mobileMenu.home',
-          icon: 'mdi-home',
+          icon: 'mdi-home-outline',
           route: '/'
         },
         {
@@ -195,16 +196,22 @@ export default {
           name: 'mobileMenu.search',
           icon: 'mdi-magnify',
           route: '/page/search'
-        },
-        {
-          name: 'mobileMenu.more',
-          icon: 'mdi-plus',
-          route: '/pages'
         }
       ]
 
     }
   },
-  methods: mapMutations(['LOAD_READ_ARTICLES'])
+  methods: {
+    ...mapMutations(['LOAD_READ_ARTICLES']),
+    makeSearch() {
+      this.showSearchField = false
+      this.$router.push({
+        name: 'all-articles',
+        query: {
+          search: this.search
+        }
+      })
+    }
+  }
 }
 </script>
