@@ -11,7 +11,8 @@
     "more": "More...",
     "application": "Application",
     "projects": "Projects",
-    "search": "Search"
+    "search": "Search",
+    "devblog": "DevBlog"
   },
   "errors": {
     "unknownArticle": "The desired article is unknown.",
@@ -91,11 +92,15 @@
     "followUs": "Follow us",
     "category": "Category - {category}",
     "type": "Type - {type}",
-    "loadMore": "Load more"
+    "search": "Search: {search}",
+    "noResults": "No results were found using this query. Try searching for other categories and/or keywords.",
+    "loadMore": "Load more",
+    "suggestedCategories": "Suggested categories"
   },
   "devblog": {
     "title": "BecauseOfProg's DevBlog",
     "description": "Read BecauseOfProg's technical news, what is going on behind the scenes, our last updates about our services...",
+    "followUs": "Follow us on Twitter",
     "errors": {
       "loadFailed": "Devblogs' loading failed."
     },
@@ -123,17 +128,25 @@
   "social": {
     "title": "Social Networks and links"
   },
-  "createArticle": {
-    "title": "Create an article",
-    "publish": "Publish article",
-    "success": "Your article was successfully published!",
-    "error": "An error occurred in the upload of your article."
-  },
   "account": {
     "title": "My BecauseOfProg account",
     "messages": {
       "loginRequired": "Error : you must be logged in in order to see this page.",
       "permissionRequired": "Error : you don't have required permissions to see this page."
+    }
+  },
+  "staff": {
+    "dashboard": {
+      "title": "Tableau de bord"
+    },
+    "posts": {
+      "title": "Publications",
+      "create": {
+        "title": "Create an article",
+        "publish": "Publish article",
+        "success": "Your article was successfully published!",
+        "error": "An error occurred in the upload of your article."
+      }
     }
   },
   "pages": {

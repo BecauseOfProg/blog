@@ -11,7 +11,7 @@ const socials = [
 const bopSocials = [
   { ...getSocial('twitter'), value: 'BecauseOfProg' },
   { ...getSocial('discord'), value: 'https://discord.becauseofprog.fr' },
-  { ...getSocial('mastodon'), value: 'https://mstdn.io/@bop' },
+  { ...getSocial('mastodon'), value: 'https://mamot.fr/@becauseofprog' },
   { ...getSocial('github'), value: 'BecauseOfProg' },
   { ...getSocial('instagram'), value: 'BecauseOfProg' }
 ]

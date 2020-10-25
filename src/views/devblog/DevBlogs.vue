@@ -18,7 +18,7 @@
                 target="_blank"
                 color="darker"
                 text>
-                Suivez-nous sur Twitter
+                {{ $t('devblog.followUs') }}
               </v-btn>
             </template>
           </b-card>

@@ -73,7 +73,7 @@
             class="text-center"
             cols="12"
             order="3">
-            <v-btn color="darker">
+            <v-btn color="darker white--text">
               <v-icon left>mdi-github</v-icon>
               {{ $t('projects.more') }}
             </v-btn>

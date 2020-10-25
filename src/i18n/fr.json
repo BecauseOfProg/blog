@@ -3,7 +3,6 @@
     "cancel": "Annuler",
     "validate": "Valider",
     "close": "Fermer",
-    "devblog": "DevBlog",
     "about": "À propos",
     "socialNetworks": "Nos réseaux sociaux",
     "socialNetworksMessage": "Nous postons régulièrement des nouvelles, des tips et des astuces. Suivez-nous!",
@@ -12,7 +11,8 @@
     "more": "En savoir plus",
     "application": "Application",
     "projects": "Projets",
-    "search": "Recherche"
+    "search": "Recherche",
+    "devblog": "DevBlog"
   },
   "errors": {
     "unknownArticle": "L'article souhaité est inconnu.",
@@ -93,11 +93,15 @@
     "followUs": "Nous suivre",
     "category": "Catégorie — {category}",
     "type": "Type - {type}",
-    "loadMore": "Voir plus"
+    "search": "Recherche : {search}",
+    "noResults": "Aucun résultat n'a été trouvé en utilisant cette requête. Essayez de rechercher d'autres catégories et/ou mots-clé.",
+    "loadMore": "Voir plus",
+    "suggestedCategories": "Catégories suggérées"
   },
   "devblog": {
     "title": "Le DevBlog de la BecauseOfProg",
     "description": "Retrouvez l'actualité technique de la BecauseOfProg, ce qu'il se passe en coulisses, les dernières mises-à-jour de nos services...",
+    "followUs": "Suivez-nous sur Twitter",
     "errors": {
       "loadFailed": "Le chargement des billets a échoué."
     },
@@ -125,6 +129,9 @@
   "social": {
     "title": "Réseaux sociaux et liens"
   },
+  "account": {
+    "title": "Mon compte BecauseOfProg"
+  },
   "staff": {
     "dashboard": {
       "title": "Tableau de bord"
@@ -138,9 +145,6 @@
         "error": "Une erreur est survenue dans l'ajout de la publication."
       }
     }
-  },
-  "account": {
-    "title": "Mon compte BecauseOfProg"
   },
   "pages": {
     "aboutUs": "À propos de nous",

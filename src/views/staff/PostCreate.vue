@@ -134,7 +134,7 @@ export default {
         labels: '',
         banner: ''
       },
-      rule: [v => !!v || 'Name is required'],
+      rule: [v => !!v || 'Le champ est requis'],
       valid: false,
       simplemde: null,
       waiting: false,
