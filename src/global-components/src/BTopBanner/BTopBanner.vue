@@ -57,7 +57,7 @@ export default {
         'b-top-banner': true,
         'text-center': true,
         'remove-safe': true,
-        gradient: this.src === undefined
+        gradient: this.src === ''
       }
     },
     height() {
