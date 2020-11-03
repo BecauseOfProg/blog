@@ -149,8 +149,8 @@
 
 <script>
 import { mapState, mapMutations } from 'vuex'
-import ThemeSwitcher from '@/views/parts/ThemeSwitcher'
-import LangSwitcher from '@/views/parts/LangSwitcher'
+import ThemeSwitcher from '@/components/ThemeSwitcher'
+import LangSwitcher from '@/components/LangSwitcher'
 import UserMenu from '@/views/members/UserMenu'
 
 export default {

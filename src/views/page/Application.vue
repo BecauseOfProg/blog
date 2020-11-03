@@ -5,7 +5,7 @@
       subtitle="application.subtitle"
       tall
       image>
-      <ApplicationDownload/>
+      <application-download/>
     </b-top-banner>
     <div
       v-for="(part, i) in imagedParts"
@@ -63,7 +63,7 @@
         <p
           class="text-h4"
           v-html="$t('application.download.description')"/>
-        <ApplicationDownload/>
+        <application-download/>
       </div>
     </div>
     <v-container class="page-body">
@@ -99,7 +99,7 @@
 </template>
 
 <script>
-import ApplicationDownload from './ApplicationDownload'
+import ApplicationDownload from '@/components/ApplicationDownload'
 
 export default {
   name: 'Application',

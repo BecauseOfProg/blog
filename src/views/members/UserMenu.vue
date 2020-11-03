@@ -79,7 +79,7 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import LoginDialog from '@/views/parts/LoginDialog'
+import LoginDialog from '@/components/LoginDialog'
 
 export default {
   name: 'UserMenu',

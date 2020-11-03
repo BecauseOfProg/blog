@@ -6,17 +6,17 @@ import i18n from '@/plugins/i18n'
 import router from '@/plugins/router'
 import store from '@/store'
 import vuetify from '@/plugins/vuetify'
-import '@/plugins/bop-components'
 import '@/plugins/resource'
 import '@/plugins/service-worker'
 
 // Styles
+import 'github-markdown-css/github-markdown.css'
 import 'roboto-fontface/css/roboto/roboto-fontface.css'
 import '@mdi/font/css/materialdesignicons.css'
 import '@/css/index.styl'
-import 'github-markdown-css/github-markdown.css'
 
-// Mixins
+// Mixins & components
+import '@/global-components'
 import '@/plugins/luxon'
 
 Vue.config.productionTip = false

@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import CategoriesChips from '@/views/parts/CategoriesChips'
+import CategoriesChips from '@/components/CategoriesChips'
 import { blogPosts } from '@/utils/api'
 
 export default {

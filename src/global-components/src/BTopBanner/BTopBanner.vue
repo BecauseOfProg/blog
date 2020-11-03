@@ -36,9 +36,18 @@ export default {
       type: [String, Array],
       required: true,
     },
-    icon: String,
-    src: String,
-    subtitle: String,
+    icon: {
+      type: String,
+      default: ''
+    },
+    src: {
+      type: String,
+      default: ''
+    },
+    subtitle: {
+      type: String,
+      default: ''
+    },
     tall: Boolean,
     image: Boolean
   },

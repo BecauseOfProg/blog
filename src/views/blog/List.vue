@@ -136,9 +136,9 @@
 <script>
 import { blogPosts } from '@/utils/api'
 import { categories, types, getCategory, getType } from '@/utils/data'
-import SocialIcons from '@/views/parts/SocialIcons'
-import CategoriesChips from '@/views/parts/CategoriesChips'
-import CategoriesBar from '@/views/parts/CategoriesBar'
+import SocialIcons from '@/components/SocialIcons'
+import CategoriesChips from '@/components/CategoriesChips'
+import CategoriesBar from '@/components/CategoriesBar'
 
 export default {
   name: 'List',

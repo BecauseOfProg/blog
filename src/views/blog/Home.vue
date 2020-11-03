@@ -90,14 +90,14 @@
     </v-container>
     <v-carousel
       :show-arrows="false"
-      cycle
-      height="400px"
       hide-delimiter-background
-      interval="4000">
+      interval="4000"
+      height="400px"
+      cycle>
       <v-carousel-item
         v-for="(item, i) in carousel2"
         :key="`carousel2_${i}`"
-        :src="item.background === null ? '' : item.background"
+        :src="item.background !== undefined && item.background"
         class="gradient">
         <v-row
           :class="['fill-height', 'white--text', 'safe', ...item.classes]"
@@ -107,7 +107,7 @@
           <span class="display-2 mb-3">{{ item.title }}</span>
           <span class="headline mb-3 text-center ml-1 mr-2">{{ item.subtitle }}</span>
           <v-btn
-            v-if="item.button != null"
+            v-if="item.button !== undefined"
             :to="item.button.link"
             class="gradient normal-weight"
             color="white--text">
@@ -117,33 +117,34 @@
       </v-carousel-item>
     </v-carousel>
     <v-container class="page-body">
-      <v-col
-        cols="12"
-        md="10"
-        offset-md="1">
-        <v-row
-          v-for="(a, b) in 3"
-          :key="`news_nb_${b}`">
-          <v-col
-            v-for="(c, d) in 3"
-            :key="`news-${d}`"
-            cols="12"
-            md="4">
-            <b-card>
-              <h3 class="headline darker--text">Exemple</h3>
-              <p style="height: 100px">Lorem ipsum</p>
-              <template #actions>
-                <v-btn
-                  to="/page/about"
-                  color="darker"
-                  text>
-                  Lire
-                </v-btn>
-              </template>
-            </b-card>
-          </v-col>
-        </v-row>
-      </v-col>
+      <v-row>
+        <v-col
+          cols="12"
+          md="5"
+          lg="4"
+          xl="2"
+          offset-md="1"
+          offset-lg="0"
+          offset-xl="2">
+          twitter
+        </v-col>
+        <v-col
+          cols="12"
+          md="5"
+          lg="4"
+          xl="2">
+          insta
+        </v-col>
+        <v-col
+          cols="12"
+          md="5"
+          lg="4"
+          xl="2"
+          offset-md="1"
+          offset-lg="0">
+          mastodon
+        </v-col>
+      </v-row>
     </v-container>
     <hr
       class="mt-2 mb-8"
@@ -159,7 +160,7 @@
               <h1>{{ $t('global.socialNetworks') }}</h1>
               <p>{{ $t('global.socialNetworksMessage') }}</p>
               <br>
-              <social-icons/>
+              <social-icons big/>
             </b-card>
           </v-col>
           <v-col>
@@ -184,23 +185,22 @@
 </template>
 
 <script>
-import {imageProxy} from '@/utils/helpers'
-import {blogPosts} from '@/utils/api'
-import {categories, types} from '@/utils/data'
-import CategoriesBar from '@/views/parts/CategoriesBar'
-import SocialIcons from "@/views/parts/SocialIcons";
+import CategoriesBar from '@/components/CategoriesBar'
+import SocialIcons from '@/components/SocialIcons'
+
+import { imageProxy } from '@/utils/helpers'
+import { blogPosts } from '@/utils/api'
+import { categories, types } from '@/utils/data'
 
 export default {
   name: 'Home',
-  components: {SocialIcons, CategoriesBar},
+  components: { SocialIcons, CategoriesBar },
   data() {
     return {
       carousel: [
         {
-          background: null,
           title: 'BecauseOfProg',
           subtitle: 'Blog autour de la programmation créé par des passionnés',
-          button: null
         },
         {
           background: 'https://i.cdn.becauseofprog.fr/cdn.becauseofprog.fr/syst-images/dev.jpg?w=1920',
@@ -226,7 +226,7 @@ export default {
           subtitle: 'La V2 du site !',
           button: {
             label: 'Voir!',
-            link: '/article/v2-site-bop'
+            link: '/devblog/v2-site-bop'
           },
           classes: ['darker-bg']
         },
@@ -252,6 +252,6 @@ export default {
       this.articles = data.body.data
     })
   },
-  methods: {imageProxy}
+  methods: { imageProxy }
 }
 </script>

@@ -56,7 +56,7 @@
 
 <script>
 import { feeds, socials } from '@/utils/data'
-import SocialIcons from '../parts/SocialIcons'
+import SocialIcons from '../../components/SocialIcons'
 
 export default {
   name: 'Social',

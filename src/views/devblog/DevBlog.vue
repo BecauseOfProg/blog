@@ -86,7 +86,7 @@
 </template>
 
 <script>
-import SocialIcons from '@/views/parts/SocialIcons'
+import SocialIcons from '@/components/SocialIcons'
 import {posts} from '@/utils/api'
 import MarkdownItVueLight from 'markdown-it-vue/dist/markdown-it-vue-light.umd.min.js'
 import 'markdown-it-vue/dist/markdown-it-vue.css'
