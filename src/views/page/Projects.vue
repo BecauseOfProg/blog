@@ -16,7 +16,21 @@
               cols="12"
               md="6">
               <b-card>
-                <h3 class="headline">{{ $t(`projects.projects.${project.name}.title`) }}</h3>
+                <h3
+                  class="headline"
+                  :class="`${project.color}--text`">
+                  <v-icon
+                    :color="project.color">
+                    {{ project.icon }}
+                  </v-icon>
+                  {{ $t(`projects.projects.${project.name}.title`) }}
+                </h3>
+                <v-chip
+                  :color="languages[project.language].color"
+                  outlined>
+                  <v-icon left>{{ languages[project.language].icon }}</v-icon>
+                  {{ project.language }}
+                </v-chip>
                 <p class="text-justify">{{ $t(`projects.projects.${project.name}.description`) }}</p>
                 <template #actions>
                   <v-btn
@@ -95,7 +109,7 @@
 </template>
 
 <script>
-import { projects } from '@/utils/data'
+import { projects, languages } from '@/utils/data'
 
 export default {
   name: 'Projects',
@@ -109,7 +123,8 @@ export default {
         github: 'mdi-github',
         twitter: 'mdi-twitter'
       },
-      projects
+      projects,
+      languages
     }
   }
 }
