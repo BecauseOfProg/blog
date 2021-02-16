@@ -32,18 +32,18 @@
 ### Environment setup
 
 Thank you for being interested in helping our blog to grow by expanding its code !
-First of all, clone the repository from GitHub on your local machine : (this requires Git to be installed)
+First, clone the repository from GitHub on your local machine : (this requires Git to be installed)
 
 ```bash
-git clone https://github.com/BecauseOfProg/blog.git  # Using HTTP
-git clone git@github.com:BecauseOfProg/blog          # Using SSH
+git clone https://github.com/BecauseOfProg/blog-v4.git  # Using HTTP
+git clone git@github.com:BecauseOfProg/blog-v4          # Using SSH
 ```
 
 Install the required dependencies using your favorite package manager :
 
 ```bash
 npm i         # Using NPM
-yarn install  # Using Yarn
+yarn  # Using Yarn
 ```
 
 Then, run the application using the `serve` command : (Make sure you installed Vue CLI on your system)
@@ -57,7 +57,7 @@ A web server will start with hot reload enabled, perfect to develop.
 
 ### Building the app
 
-To get a built version of the blog ready to be served by a HTTP server, use the `build` command :
+To get a built version of the blog ready to be served by an HTTP server, use the `build` command :
 
 ```bash
 npm run build  # Using NPM
@@ -85,10 +85,10 @@ If you want to customize the build configuration, check the [Configuration Refer
 
 - Libraries : [VueJS](https://vuejs.org), [Vuetify](https://vuetifyjs.com)
 - Website design : [Gildas GH](https://github.com/Gildas-GH)
-- Maintainers : [Théo Vidal (exybore)](https://github.com/exybore), [Noéwen (kernoeb)](https://github.com/kernoeb)
+- Maintainers : [Théo Vidal](https://github.com/theovidal), [Noéwen (kernoeb)](https://github.com/kernoeb)
 
 ## 🔐 License
 
-Copyright (C) 2020  BecauseOfProg
+Copyright (C) 2021  BecauseOfProg
 
 Project under the [GNU GPL v3](./LICENSE) license.
