@@ -312,8 +312,7 @@ export default {
       this.article = response.body.data
       this.loaded = true
       this.addReadArticle(this.article.url)
-    }, error => {
-      console.log(error)
+    }, () => {
       this.SHOW_SNACKBAR({
         error: true,
         message: this.$i18n.t('errors.unknownArticle')

@@ -41,7 +41,7 @@
                         class="b-card">
                         <v-row
                           style="height: 100%"
-                          class="darker-bg text-center pa-3"
+                          class="darker-bg text-center pa-3 ma-0"
                           justify="center"
                           align="center">
                           <v-col>

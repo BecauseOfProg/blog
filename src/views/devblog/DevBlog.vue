@@ -93,7 +93,7 @@ import 'markdown-it-vue/dist/markdown-it-vue.css'
 
 export default {
   name: 'Post',
-  components: {SocialIcons, MarkdownItVueLight},
+  components: { SocialIcons, MarkdownItVueLight },
   data() {
     return {
       post: {},
@@ -106,8 +106,11 @@ export default {
     posts.get({url: this.$route.params.url}).then(response => {
       this.post = response.body.data
       this.loaded = true
-    }, error => {
-      console.log(error)
+    }, () => {
+      this.SHOW_SNACKBAR({
+        error: true,
+        message: this.$i18n.t('errors.unknownDevblog')
+      })
       this.$router.push({name: 'devblogs'})
     })
 

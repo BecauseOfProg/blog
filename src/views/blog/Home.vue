@@ -3,20 +3,20 @@
     <categories-bar/>
     <v-carousel
       :show-arrows="false"
-      cycle
+      interval="4000"
       height="400px"
       hide-delimiter-background
-      interval="4000">
+      cycle>
       <v-carousel-item
         v-for="(item, i) in carousel"
         :key="`carousel1_${i}`"
         :src="item.background === null ? '' : item.background"
         class="gradient">
         <v-row
-          :class="['fill-height', 'white--text', 'safe', ...item.classes]"
+          class="fill-height white--text safe ma-0 flex-column"
+          :class="item.classes"
           align="center"
-          justify="center"
-          style="flex-direction: column">
+          justify="center">
           <span class="display-2 mb-3">{{ item.title }}</span>
           <span class="headline mb-3 text-center ml-1 mr-2">{{ item.subtitle }}</span>
           <v-btn
@@ -31,61 +31,63 @@
     </v-carousel>
     <v-container class="page-body">
       <v-row>
-        <template v-if="articles.length">
-          <v-col
-            cols="12"
-            md="8"
-            offset-md="2">
-            <b-card
-              v-if="articles.length"
-              :to="{ name: 'article', params: { url: articles[0].url }}">
-              <v-row>
-                <v-col
-                  cols="12"
-                  md="6">
-                  <v-img :src="imageProxy(articles[0].banner, 617.15, 0)"/>
-                </v-col>
-                <v-col
-                  cols="12"
-                  md="6">
-                  <v-btn
-                    class="mb-3"
-                    color="darker"
-                    text>
-                    <v-icon left>mdi-clock-outline</v-icon>
-                    {{ $t('home.new') }}
-                  </v-btn>
-                  <h2 class="text-h4 text--text lecture-title mb-3">{{ articles[0].title }}</h2>
-                  <p class="lecture-text">{{ articles[0].description }}</p>
-                </v-col>
-              </v-row>
-            </b-card>
-            <v-skeleton-loader
-              v-else
-              style="width: 100%"
-              type="image, card-heading, actions"/>
-          </v-col>
-          <v-col
-            cols="12"
-            md="10"
-            offset-md="1">
-            <v-row>
+        <v-col
+          cols="12"
+          md="10"
+          offset-md="1">
+          <b-card
+            v-if="articles.length"
+            :to="{ name: 'article', params: { url: articles[0].url }}"
+            fluid>
+            <v-row class="ma-0">
               <v-col
-                v-for="i in 2"
-                :key="`article-${i}`"
+                cols="12"
+                md="6"
+                class="d-flex pa-0">
+                <v-img
+                  id="first-article"
+                  :src="imageProxy(articles[0].banner, 617.15, 0)"/>
+              </v-col>
+              <v-col
                 cols="12"
                 md="6">
-                <b-article-card
-                  v-if="articles.length"
-                  :article="articles[i]"/>
-                <v-skeleton-loader
-                  v-else
-                  style="width: 100%"
-                  type="image, card-heading, actions"/>
+                <v-btn
+                  class="mb-3"
+                  color="darker"
+                  text>
+                  <v-icon left>mdi-clock-outline</v-icon>
+                  {{ $t('home.new') }}
+                </v-btn>
+                <h2 class="text-h4 text--text lecture-title mb-3">{{ articles[0].title }}</h2>
+                <p class="lecture-text">{{ articles[0].description }}</p>
               </v-col>
             </v-row>
-          </v-col>
-        </template>
+          </b-card>
+          <v-skeleton-loader
+            v-else
+            style="width: 100%"
+            type="image, card-heading, actions"/>
+        </v-col>
+        <v-col
+          cols="12"
+          md="10"
+          offset-md="1">
+          <v-row>
+            <v-col
+              v-for="i in 2"
+              :key="`article-${i}`"
+              cols="12"
+              md="6">
+              <b-article-card
+                v-if="articles.length"
+                :article="articles[i]"/>
+              <v-skeleton-loader
+                v-else
+                style="width: 100%"
+                type="image, card-heading, actions"/>
+            </v-col>
+          </v-row>
+        </v-col>
       </v-row>
     </v-container>
     <v-carousel
@@ -100,10 +102,10 @@
         :src="item.background !== undefined && item.background"
         class="gradient">
         <v-row
-          :class="['fill-height', 'white--text', 'safe', ...item.classes]"
+          class="fill-height white--text safe flex-column"
+          :class="item.classes"
           align="center"
-          justify="center"
-          style="flex-direction: column">
+          justify="center">
           <span class="display-2 mb-3">{{ item.title }}</span>
           <span class="headline mb-3 text-center ml-1 mr-2">{{ item.subtitle }}</span>
           <v-btn
@@ -255,3 +257,14 @@ export default {
   methods: { imageProxy }
 }
 </script>
+
+<style lang="stylus">
+#first-article
+  @media screen and (max-width: 960px)
+    border-top-right-radius: 20px
+  @media screen and (min-width: 961px)
+    border-bottom-left-radius: 20px
+
+  border-top-left-radius: 20px
+
+</style>

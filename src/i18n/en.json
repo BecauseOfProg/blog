@@ -16,6 +16,7 @@
   },
   "errors": {
     "unknownArticle": "The desired article is unknown.",
+    "unknownDevblog": "The desired devblog is unknown.",
     "pageNotFound": "The page wasn't found.",
     "unauthorized": "You must be authenticated in order to perform this action.",
     "forbidden": "You don't have the required permission to perform this action.",

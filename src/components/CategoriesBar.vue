@@ -2,7 +2,7 @@
   <v-app-bar
     v-if="$vuetify.breakpoint.mdAndUp"
     id="categories-bar"
-    style="margin-top: 56px"
+    style="margin-top: 56px; z-index: 4;"
     class="translucent"
     hide-on-scroll
     dark
@@ -99,7 +99,6 @@ export default {
   }
 }
 </script>
-
 
 <style lang="stylus" scoped>
 .v-menu__content

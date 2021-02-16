@@ -7,8 +7,7 @@
         <div class="mt-2">
           <v-avatar
             size="100"
-            tile
-          >
+            tile>
             <v-img
               style="border-radius: 12px"
               :src="member.picture"
@@ -37,12 +36,10 @@
         class="mr-0"
         :vertical="dividerDirection"/>
       <v-col>
-        <v-card-title
-          class="vcardtitle headline"
-          v-text="member.displayname"
-        />
+        <v-card-title class="vcardtitle headline">
+          {{ member.displayname }} (@{{ member.username }})
+        </v-card-title>
         <v-card-subtitle v-text="member.biography"/>
-
       </v-col>
     </div>
   </v-card>
