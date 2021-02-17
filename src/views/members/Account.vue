@@ -11,6 +11,17 @@
 
 <script>
 export default {
-  name: 'Account'
+  name: 'Account',
+  metaInfo() {
+    return {
+      title: this.$t('account.title'),
+      meta: [
+        {
+          property: 'og:title',
+          content: this.$t('account.title')
+        }
+      ]
+    }
+  }
 }
 </script>

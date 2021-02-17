@@ -8,6 +8,7 @@
     "socialNetworksMessage": "We regularly post news, tips and tricks. Follow us!",
     "allArticles": "All articles",
     "aboutMessage": "BecauseOfProg : developers gathered around common projects such as the blog.",
+    "shortDescription": "Programming and tech news blog",
     "more": "More...",
     "application": "Application",
     "projects": "Projects",
@@ -91,8 +92,8 @@
     "categoriesCaps": "CATEGORIES",
     "typesCaps": "TYPES",
     "followUs": "Follow us",
-    "category": "Category - {category}",
-    "type": "Type - {type}",
+    "category": "Category — {category}",
+    "type": "Type — {type}",
     "search": "Search: {search}",
     "noResults": "No results were found using this query. Try searching for other categories and/or keywords.",
     "loadMore": "Load more",
@@ -100,6 +101,7 @@
   },
   "devblog": {
     "title": "BecauseOfProg's DevBlog",
+    "meta": "BecauseOfProg's DevBlog in category {category}.",
     "description": "Read BecauseOfProg's technical news, what is going on behind the scenes, our last updates about our services...",
     "followUs": "Follow us on Twitter",
     "errors": {
@@ -175,6 +177,7 @@
   },
   "projects": {
     "title": "BecauseOfProg's projects",
+    "about": "Open-source programming projects created by passionated people.",
     "description": "As programming enthusiasts, we use every day open-source software, libraries and services.\nAs a team gathered by this same passion, we create our own open-source projects, for our needs, and for the rest of the community.",
     "projects": {
       "yt-podcast": {

@@ -6,6 +6,7 @@ import i18n from '@/plugins/i18n'
 import router from '@/plugins/router'
 import store from '@/store'
 import vuetify from '@/plugins/vuetify'
+import '@/plugins/meta'
 import '@/plugins/resource'
 import '@/plugins/service-worker'
 

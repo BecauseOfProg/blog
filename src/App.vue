@@ -212,6 +212,25 @@ export default {
         }
       })
     }
+  },
+  metaInfo() {
+    return {
+      title: 'BecauseOfProg',
+      meta: [
+        {
+          property: 'og:title',
+          content: 'BecauseOfProg'
+        },
+        {
+          property: 'og:description',
+          content: this.$t('global.shortDescription')
+        },
+        {
+          property: 'og:url',
+          content: `https://becauseofprog.fr${this.$router.currentRoute.fullPath}`
+        }
+      ]
+    }
   }
 }
 </script>

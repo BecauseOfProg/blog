@@ -371,6 +371,31 @@ export default {
         this.commentsLoading = false
       })
     }
+  },
+  metaInfo() {
+    if (this.loaded) {
+      return {
+        title: `${this.article.title} — BecauseOfProg`,
+        meta: [
+          {
+            property: 'og:title',
+            content: `${this.article.title} — BecauseOfProg`
+          },
+          {
+            property: 'og:description',
+            content: this.article.description
+          },
+          {
+            property: 'og:image',
+            content: this.article.banner
+          },
+          {
+            name: 'author',
+            content: `${this.article.author.displayname} (@${this.article.author.username})`
+          }
+        ]
+      }
+    }
   }
 }
 </script>

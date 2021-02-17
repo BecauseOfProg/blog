@@ -147,6 +147,21 @@ export default {
         },
       ]
     }
+  },
+  metaInfo() {
+    return {
+      title: this.$t('application.title'),
+      meta: [
+        {
+          property: 'og:title',
+          content: this.$t('application.title')
+        },
+        {
+          property: 'og:description',
+          content: this.$t('application.subtitle')
+        }
+      ]
+    }
   }
 }
 </script>

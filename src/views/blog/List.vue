@@ -219,6 +219,23 @@ export default {
     page() {
       this.fetchArticles()
     }
+  },
+  metaInfo() {
+    if (this.head.title !== '') {
+      return {
+        title: `${this.head.title} — BecauseOfProg`,
+        meta: [
+          {
+            property: 'og:title',
+            content: `${this.head.title} — BecauseOfProg`
+          },
+          {
+            property: 'og:image',
+            content: this.head.image
+          }
+        ]
+      }
+    }
   }
 }
 </script>

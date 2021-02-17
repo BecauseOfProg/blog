@@ -8,6 +8,7 @@
     "socialNetworksMessage": "Nous postons régulièrement des nouvelles, des tips et des astuces. Suivez-nous!",
     "allArticles": "Tous les articles",
     "aboutMessage": "La BecauseOfProg réunit plusieurs développeurs autour de projets communs, comme le blog!",
+    "shortDescription": "Blog de programmation et actualités technologiques",
     "more": "En savoir plus",
     "application": "Application",
     "projects": "Projets",
@@ -101,6 +102,7 @@
   },
   "devblog": {
     "title": "Le DevBlog de la BecauseOfProg",
+    "meta": "DevBlog de la BecauseOfProg dans la catégorie {category}.",
     "description": "Retrouvez l'actualité technique de la BecauseOfProg, ce qu'il se passe en coulisses, les dernières mises-à-jour de nos services...",
     "followUs": "Suivez-nous sur Twitter",
     "errors": {
@@ -172,6 +174,7 @@
   },
   "projects": {
     "title": "Les projets BecauseOfProg",
+    "about": "Des projets de programmation open-source créés par des passionnés",
     "description": "En tant que passionnés de programmation, nous utilisons au quotidien des logiciels, librairies et services open-source.\nEn tant qu'équipe réunie par cette même passion, nous créons des projets open-source, d'abord pour nos propres besoins, et pour le reste de la communauté.",
     "projects": {
       "yt-podcast": {

@@ -101,6 +101,17 @@ export default {
         })
       })
     }
+  },
+  metaInfo() {
+    return {
+      title: this.$t('devblog.title'),
+      meta: [
+        {
+          property: 'og:title',
+          content: this.$t('devblog.title')
+        }
+      ]
+    }
   }
 }
 </script>

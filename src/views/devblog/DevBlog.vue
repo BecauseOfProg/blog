@@ -117,6 +117,23 @@ export default {
     posts.get().then(response => {
       this.otherPosts = response.body.data
     })
+  },
+  metaInfo() {
+    if (this.loaded) {
+      return {
+        title: `${this.post.title} — BecauseOfProg`,
+        meta: [
+          {
+            property: 'og:title',
+            content: `${this.post.title} — BecauseOfProg`
+          },
+          {
+            property: 'og:description',
+            content: this.$t('devblog.title', { category: this.post.category })
+          }
+        ]
+      }
+    }
   }
 }
 </script>

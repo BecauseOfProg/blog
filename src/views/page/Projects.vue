@@ -126,6 +126,21 @@ export default {
       projects,
       languages
     }
+  },
+  metaInfo() {
+    return {
+      title: this.$t('global.projects'),
+      meta: [
+        {
+          property: 'og:title',
+          content: this.$t('global.projects')
+        },
+        {
+          property: 'og:description',
+          content: this.$t('projects.about')
+        }
+      ]
+    }
   }
 }
 </script>
