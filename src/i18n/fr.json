@@ -35,10 +35,9 @@
   },
   "mobileMenu": {
     "home": "Accueil",
-    "social": "Social",
     "articles": "Articles",
     "search": "Recherche",
-    "more": "Plus"
+    "projects": "Projets"
   },
   "theme": {
     "switchTheme": "Changer le thème",
@@ -169,7 +168,7 @@
   },
   "types": {
     "article": "Article",
-    "flash": "Flash",
+    "flash": "Dépêche",
     "tutorial": "Tutoriel"
   },
   "projects": {
@@ -187,7 +186,7 @@
       },
       "discord-bot": {
         "title": "Notre robot Discord",
-        "description": "bip-bip, utilisateur banni! Nous possédons un robot sur notre serveur Discord développé par nos soins!"
+        "description": "Nous possédons un robot Discord développé par nos soins pour jouer à des jeux divers et variés!"
       },
       "openweathermap-ruby": {
         "title": "Une implémentation de l'API d'OpenWeatherMap en Ruby",

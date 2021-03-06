@@ -35,10 +35,9 @@
   },
   "mobileMenu": {
     "home": "Home",
-    "social": "Social",
     "articles": "Articles",
     "search": "Search",
-    "more": "More"
+    "projects": "Projects"
   },
   "theme": {
     "switchTheme": "Switch theme",
@@ -190,7 +189,7 @@
       },
       "discord-bot": {
         "title": "Our Discord bot",
-        "description": "boop-boop, user banned! We own a robot on our Discord server, in-house developed!"
+        "description": "We own an in-house developed Discord robot to play various games!"
       },
       "openweathermap-ruby": {
         "title": "A Ruby implementation of the OpenWeatherMap API",

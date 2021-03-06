@@ -1,8 +1,7 @@
 <template>
   <main>
     <b-top-banner
-      title="global.projects"
-      icon="mdi-package-variant"/>
+      title="global.projects"/>
     <v-container class="page-body">
       <v-row>
         <v-col
@@ -10,6 +9,35 @@
           lg="7"
           offset-lg="1">
           <v-row>
+            <v-col
+              v-if="post.length !== 0"
+              cols="12"
+              md="8"
+              offset-md="2">
+              <router-link :to="{ name: 'devblog', params: { url: post.url }}">
+                <v-img
+                  v-ripple
+                  :src="post.banner"
+                  :alt="post.title"
+                  :aspect-ratio="18/9"
+                  class="b-card">
+                  <v-row
+                    style="height: 100%"
+                    class="darker-bg text-center pa-3 ma-0"
+                    justify="center"
+                    align="center">
+                    <v-col>
+                      <p class="white--text text-center ma-4">Sur notre devblog...</p>
+                      <h3 class="text-h3 mb-8 white--text ma-4">{{ post.title }}</h3>
+                      <span class="overline white--text">
+                        {{ $t('article.publishedBy', { author: post.author.displayname, date: dateToText(post.timestamp) }) }}
+                      </span>
+                      <span class="overline white--text">{{ post.category }}</span>
+                    </v-col>
+                  </v-row>
+                </v-img>
+              </router-link>
+            </v-col>
             <v-col
               v-for="project in projects"
               :key="project.name"
@@ -47,7 +75,7 @@
               </b-card>
             </v-col>
             <v-col
-              class="text-right"
+              :class="$vuetify.breakpoint.mdAndUp ? 'text-right' : 'text-center'"
               cols="12">
               <v-btn
                 href="https://github.com/BecauseOfProg"
@@ -109,6 +137,7 @@
 </template>
 
 <script>
+import { posts } from '@/utils/api'
 import { projects, languages } from '@/utils/data'
 
 export default {
@@ -123,9 +152,15 @@ export default {
         github: 'mdi-github',
         twitter: 'mdi-twitter'
       },
+      post: {},
       projects,
       languages
     }
+  },
+  mounted() {
+    posts.get({url: 'last'}).then(response => {
+      this.post = response.body.data
+    })
   },
   metaInfo() {
     return {

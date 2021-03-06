@@ -90,64 +90,6 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-carousel
-      :show-arrows="false"
-      hide-delimiter-background
-      interval="4000"
-      height="400px"
-      cycle>
-      <v-carousel-item
-        v-for="(item, i) in carousel2"
-        :key="`carousel2_${i}`"
-        :src="item.background !== undefined && item.background"
-        class="gradient">
-        <v-row
-          class="fill-height white--text safe flex-column"
-          :class="item.classes"
-          align="center"
-          justify="center">
-          <span class="display-2 mb-3">{{ item.title }}</span>
-          <span class="headline mb-3 text-center ml-1 mr-2">{{ item.subtitle }}</span>
-          <v-btn
-            v-if="item.button !== undefined"
-            :to="item.button.link"
-            class="gradient normal-weight"
-            color="white--text">
-            {{ item.button.label }}
-          </v-btn>
-        </v-row>
-      </v-carousel-item>
-    </v-carousel>
-    <v-container class="page-body">
-      <v-row>
-        <v-col
-          cols="12"
-          md="5"
-          lg="4"
-          xl="2"
-          offset-md="1"
-          offset-lg="0"
-          offset-xl="2">
-          twitter
-        </v-col>
-        <v-col
-          cols="12"
-          md="5"
-          lg="4"
-          xl="2">
-          insta
-        </v-col>
-        <v-col
-          cols="12"
-          md="5"
-          lg="4"
-          xl="2"
-          offset-md="1"
-          offset-lg="0">
-          mastodon
-        </v-col>
-      </v-row>
-    </v-container>
     <hr
       class="mt-2 mb-8"
       style="height: 15px; border: none; background: linear-gradient(90deg,#ff514c 0%,#ff9779 100%)">
@@ -191,7 +133,7 @@ import CategoriesBar from '@/components/CategoriesBar'
 import SocialIcons from '@/components/SocialIcons'
 
 import { imageProxy } from '@/utils/helpers'
-import { blogPosts } from '@/utils/api'
+import { blogPosts, posts } from '@/utils/api'
 import { categories, types } from '@/utils/data'
 
 export default {
@@ -205,15 +147,6 @@ export default {
           subtitle: 'Blog autour de la programmation créé par des passionnés',
         },
         {
-          background: 'https://i.cdn.becauseofprog.fr/cdn.becauseofprog.fr/syst-images/dev.jpg?w=1920',
-          title: 'Nos projets',
-          subtitle: 'Nous mettons à disposition outils et services gratuits',
-          button: {
-            label: 'En savoir plus',
-            link: '/page/projects'
-          }
-        },
-        {
           background: '/img/category/android.png',
           title: 'Notre application',
           subtitle: "La BecauseOfProg arrive sur vos écrans d'accueil : téléchargez notre application Android!",
@@ -223,21 +156,9 @@ export default {
           }
         },
         {
-          background: 'https://i.cdn.becauseofprog.fr/cdn.becauseofprog.fr/logos/v2-site.png?w=1920',
-          title: 'Sur notre devblog...',
-          subtitle: 'La V2 du site !',
-          button: {
-            label: 'Voir!',
-            link: '/devblog/v2-site-bop'
-          },
-          classes: ['darker-bg']
-        },
-      ],
-      carousel2: [
-        {
-          background: 'https://i.cdn.becauseofprog.fr/cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/assets/background-projects-5.jpg?w=1920',
+          background: 'https://i.cdn.becauseofprog.fr/cdn.becauseofprog.fr/syst-images/dev.jpg?w=1920',
           title: 'Nos projets',
-          subtitle: 'BecauseOfProg, c\'est aussi de nombreux projets',
+          subtitle: 'Nous mettons à disposition des outils et services open-sources',
           button: {
             label: 'En savoir plus',
             link: '/page/projects'
@@ -252,6 +173,19 @@ export default {
   mounted() {
     blogPosts.get().then(data => {
       this.articles = data.body.data
+    })
+    posts.get({url: 'last'}).then(response => {
+      let post = response.body.data
+      this.carousel.push({
+        background: post.banner,
+        title: 'Sur notre devblog...',
+        subtitle: `${post.title} (${post.category})`,
+        button: {
+          label: 'Voir!',
+          link: `/devblog/${post.url}`
+        },
+        classes: ['darker-bg']
+      })
     })
   },
   methods: { imageProxy }

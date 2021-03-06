@@ -94,6 +94,7 @@
         <!--<lang-switcher/>-->
         <user-menu/>
       </template>
+      <theme-switcher v-else/>
     </v-app-bar>
 
     <v-main :style="isDesktop ? 'padding-top: 56px' : ''">
@@ -109,7 +110,7 @@
       <v-btn
         v-for="item in mobileMenu"
         :key="item.name"
-        :to="item.route">
+        :to="{ name: item.route }">
         <span>{{ $t(item.name) }}</span>
         <v-icon>{{ item.icon }}</v-icon>
       </v-btn>
@@ -179,22 +180,22 @@ export default {
         {
           name: 'mobileMenu.home',
           icon: 'mdi-home-outline',
-          route: '/'
-        },
-        {
-          name: 'mobileMenu.social',
-          icon: 'mdi-twitter-retweet',
-          route: '/social'
+          route: 'home'
         },
         {
           name: 'mobileMenu.articles',
           icon: 'mdi-text-box-multiple-outline',
-          route: '/blog'
+          route: 'all-articles'
         },
         {
           name: 'mobileMenu.search',
           icon: 'mdi-magnify',
-          route: '/page/search'
+          route: 'search'
+        },
+        {
+          name: 'mobileMenu.projects',
+          icon: 'mdi-package-variant',
+          route: 'projects'
         }
       ]
 

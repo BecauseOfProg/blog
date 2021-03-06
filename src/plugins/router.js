@@ -16,11 +16,6 @@ let router = new Router({
       component: () => import(/* webpackChunkName: "blog" */ '@/views/blog/Home.vue')
     },
     {
-      path: '/social',
-      name: 'social',
-      component: () => import(/* webpackChunkName: "blog" */ '@/views/blog/Social.vue')
-    },
-    {
       path: '/blog',
       name: 'all-articles',
       component: () => import(/* webpackChunkName: "blog" */ '@/views/blog/List.vue')

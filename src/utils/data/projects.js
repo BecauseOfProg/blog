@@ -23,10 +23,10 @@ const projects = [
     name: 'discord-bot',
     icon: 'mdi-discord',
     color: 'teal',
-    language: 'Ruby',
+    language: 'Golang',
     links: [
       { name: 'discord', value: 'https://discord.becauseofprog.fr' },
-      { name: 'source', value: 'https://github.com/BecauseOfProg/boite-a-bois' }
+      { name: 'source', value: 'https://github.com/BecauseOfProg/XBOP' }
     ]
   },
   {
@@ -52,6 +52,10 @@ const languages = {
   Ruby: {
     icon: 'mdi-language-ruby',
     color: 'red'
+  },
+  Golang: {
+    icon: 'mdi-language-go',
+    color: 'cyan darken-1'
   }
 }
 

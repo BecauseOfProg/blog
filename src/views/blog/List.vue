@@ -35,7 +35,7 @@
                         <router-link :to="{ name: 'article', params: { url: article.url }}">
                           <v-img
                             v-ripple
-                            :src="article.banner"
+                            :src="imageProxy(article.banner, 896, 504)"
                             :alt="article.title"/>
                         </router-link>
                       </v-col>
@@ -147,6 +147,7 @@
 <script>
 import { blogPosts } from '@/utils/api'
 import { categories, types, getCategory, getType } from '@/utils/data'
+import { imageProxy } from '@/utils/helpers'
 import SocialIcons from '@/components/SocialIcons'
 import CategoriesChips from '@/components/CategoriesChips'
 import CategoriesBar from '@/components/CategoriesBar'
@@ -208,6 +209,7 @@ export default {
     this.fetchArticles()
   },
   methods: {
+    imageProxy,
     category(id) {
       return getCategory(id)
     },
