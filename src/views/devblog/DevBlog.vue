@@ -37,21 +37,20 @@
             offset-md="1">
             <b-card
               :style="$vuetify.breakpoint.mdAndUp && 'position: sticky; top: 80px; max-height: calc(100vh - 160px); overflow-y: scroll'">
-              <h3 class="headline">{{ $t('list.followUs') }}</h3>
+              <h3 class="headline mb-3">{{ $t('list.followUs') }}</h3>
               <social-icons big/>
-              <v-divider/>
+              <v-divider class="my-3"/>
 
               <h3 class="headline">{{ $t('global.about') }}</h3>
               <p>{{ $t('global.aboutMessage') }}</p>
               <v-btn
                 :to="{ name: 'about' }"
-                class="mb-2"
                 color="darker"
                 text>
                 <v-icon left>mdi-information-outline</v-icon>
                 {{ $t('global.more') }}
               </v-btn>
-              <v-divider/>
+              <v-divider class="my-3"/>
 
               <h3 class="headline">{{ $t('devblog.otherPosts') }}</h3>
               <template v-for="other in otherPosts">
@@ -86,9 +85,10 @@
 </template>
 
 <script>
-import SocialIcons from '@/components/SocialIcons'
-import {posts} from '@/utils/api'
 import MarkdownItVueLight from 'markdown-it-vue/dist/markdown-it-vue-light.umd.min.js'
+import SocialIcons from '@/components/SocialIcons'
+import { posts } from '@/utils/api'
+
 import 'markdown-it-vue/dist/markdown-it-vue.css'
 
 export default {

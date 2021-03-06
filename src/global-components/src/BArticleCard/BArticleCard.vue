@@ -6,18 +6,7 @@
         :alt="article.title"/>
     </template>
     <span class="headline lecture-title">
-      <v-tooltip
-        v-if="read"
-        bottom>
-        <template #activator="{ on }">
-          <v-icon
-            color="green"
-            v-on="on">
-            mdi-eye-check
-          </v-icon>
-        </template>
-        <span>{{ $t('article.wasRead') }}</span>
-      </v-tooltip>
+      <b-read-indicator :article="article.url"/>
       {{ article.title }}
     </span>
     <p class="lecture-text mt-2 mb-3">{{ article.description }}</p>
@@ -45,14 +34,15 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 import { imageProxy } from '@/utils/helpers'
 import { getCategory } from '@/utils/data'
 import BCard from '../BCard'
+import BReadIndicator from '../BReadIndicator'
 
 export default {
   name: 'BArticleCard',
   components: {
+    'b-read-indicator': BReadIndicator,
     'b-card': BCard
   },
   props: {
@@ -62,10 +52,6 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['isArticleRead']),
-    read() {
-      return this.isArticleRead(this.article.url)
-    },
     category() {
       return getCategory(this.article.category)
     }

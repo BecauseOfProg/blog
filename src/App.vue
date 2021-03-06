@@ -91,7 +91,7 @@
           </v-tooltip>
         </template>
         <theme-switcher/>
-        <lang-switcher/>
+        <!--<lang-switcher/>-->
         <user-menu/>
       </template>
     </v-app-bar>
@@ -150,12 +150,11 @@
 <script>
 import { mapState, mapMutations } from 'vuex'
 import ThemeSwitcher from '@/components/ThemeSwitcher'
-import LangSwitcher from '@/components/LangSwitcher'
 import UserMenu from '@/views/members/UserMenu'
 
 export default {
   name: 'App',
-  components: { ThemeSwitcher, UserMenu, LangSwitcher },
+  components: { ThemeSwitcher, UserMenu },
   data () {
     return {
       bottomNavigation: '',

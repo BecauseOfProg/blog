@@ -23,46 +23,57 @@
           <template v-if="articles.length">
             <v-scale-transition>
               <v-row>
-                <v-col
-                  v-for="(article, index) in articles"
-                  :key="article.url"
-                  cols="12"
-                  :md="index % 7 ? 4 : 8"
-                  :offset-md="index % 7 ? 0 : 2">
-                  <template v-if="index % 7">
-                    <b-article-card :article="article"/>
-                  </template>
-                  <template v-else>
-                    <router-link :to="{ name: 'article', params: { url: article.url }}">
-                      <v-img
-                        v-ripple
-                        :src="article.banner"
-                        :alt="article.title"
-                        class="b-card">
+                <template v-for="(article, index) in articles">
+                  <v-col
+                    v-if="index === 0"
+                    :key="article.url"
+                    cols="12">
+                    <v-row>
+                      <v-col
+                        cols="12"
+                        md="6">
+                        <router-link :to="{ name: 'article', params: { url: article.url }}">
+                          <v-img
+                            v-ripple
+                            :src="article.banner"
+                            :alt="article.title"/>
+                        </router-link>
+                      </v-col>
+                      <v-col
+                        cols="12"
+                        md="6"
+                        class="d-flex flex-column justify-center">
+                        <router-link
+                          :to="{ name: 'article', params: { url: article.url }}"
+                          class="text--text">
+                          <h3 class="text-h3 mb-8 lexture-title">
+                            <b-read-indicator :article="article.url"/>
+                            {{ article.title }}
+                          </h3>
+                        </router-link>
+                        <p class="lecture-text">{{ article.description }}</p>
                         <v-row
-                          style="height: 100%"
-                          class="darker-bg text-center pa-3 ma-0"
-                          justify="center"
-                          align="center">
-                          <v-col>
-                            <h3 class="text-h3 mb-8 white--text lexture-title ma-4">{{ article.title }}</h3>
-                            <p class="white--text lecture-text text-center ma-4">{{ article.description }}</p>
-                            <span class="overline white--text">
-                              {{ $t('article.publishedBy', { author: article.author.displayname, date: dateToText(article.timestamp) }) }}
-                            </span>
-                            <v-btn
-                              :to="{ name: 'category', params: { category: category(article.category).id }}"
-                              text
-                              color="white">
-                              <v-icon left>{{ category(article.category).icon }}</v-icon>
-                              {{ $t(`categories.${category(article.category).id}`) }}
-                            </v-btn>
-                          </v-col>
+                          class="d-flex justify-space-between ma-0">
+                          {{ $t('article.publishedBy', { author: article.author.displayname, date: dateToText(article.timestamp) }) }}
+                          <router-link
+                            v-ripple
+                            :to="{ name: 'category', params: { category: category(article.category).id }}"
+                            class="overline text--text">
+                            <v-icon>{{ category(article.category).icon }}</v-icon>
+                            {{ $t(`categories.${category(article.category).id}`) }}
+                          </router-link>
                         </v-row>
-                      </v-img>
-                    </router-link>
-                  </template>
-                </v-col>
+                      </v-col>
+                    </v-row>
+                  </v-col>
+                  <v-col
+                    v-else
+                    :key="article.url"
+                    :md="((index - 1) % 10) % 6 === 0 || (index - 1) % 10 === 0 ? 8 : 4"
+                    cols="12">
+                    <b-article-card :article="article"/>
+                  </v-col>
+                </template>
               </v-row>
             </v-scale-transition>
             <div class="text-center">
@@ -223,11 +234,11 @@ export default {
   metaInfo() {
     if (this.head.title !== '') {
       return {
-        title: `${this.head.title} — BecauseOfProg`,
+        title: `${this.$t.apply(this, this.head.title)} — BecauseOfProg`,
         meta: [
           {
             property: 'og:title',
-            content: `${this.head.title} — BecauseOfProg`
+            content: `${this.$t.apply(this, this.head.title)} — BecauseOfProg`
           },
           {
             property: 'og:image',
