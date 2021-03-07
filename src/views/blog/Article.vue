@@ -116,50 +116,70 @@
                   <v-col cols="12">
                     <b-card>
                       <h3 class="headline">{{ $t('article.comments.leaveComment') }}</h3>
-                      <v-row>
-                        <v-col
-                          cols="12"
-                          md="6">
-                          <v-text-field
-                            v-model="commentForm.username"
-                            :label="$t('article.comments.username')"
-                            color="light"
-                            type="text"
-                            hide-details
-                            outlined/>
-                        </v-col>
-                        <v-col
-                          cols="12"
-                          md="6">
-                          <v-text-field
-                            v-model="commentForm.email"
-                            :label="$t('article.comments.email')"
-                            color="light"
-                            type="email"
-                            hide-details
-                            outlined/>
-                        </v-col>
-                        <v-col cols="12">
-                          <v-textarea
-                            v-model="commentForm.content"
-                            :label="$t('article.comments.content')"
-                            color="light"
-                            hide-details
-                            outlined/>
-                        </v-col>
-                        <p class="ml-3 grey--text font-italic">{{ $t('article.comments.verification') }}</p>
-                        <v-col
-                          cols="12"
-                          class="text-right">
-                          <v-btn
-                            :loading="sendingComment"
-                            text
-                            color="darker">
-                            {{ $t('article.comments.send') }}
-                            <v-icon right>mdi-send</v-icon>
-                          </v-btn>
-                        </v-col>
-                      </v-row>
+                      <v-form
+                        ref="form"
+                        v-model="validComment">
+                        <v-row>
+                          <v-col
+                            cols="12"
+                            md="6"
+                            class="pb-0">
+                            <v-text-field
+                              v-model="commentForm.username"
+                              :label="$t('fields.username')"
+                              :rules="usernameRules"
+                              color="light"
+                              type="text"
+                              outlined>
+                              <template #message="{ message }">
+                                {{ $t(message) }}
+                              </template>
+                            </v-text-field>
+                          </v-col>
+                          <v-col
+                            cols="12"
+                            md="6"
+                            class="pb-0">
+                            <v-text-field
+                              v-model="commentForm.email"
+                              :label="$t('fields.email')"
+                              :rules="emailRules"
+                              color="light"
+                              type="email"
+                              outlined>
+                              <template #message="{ message }">
+                                {{ $t(message) }}
+                              </template>
+                            </v-text-field>
+                          </v-col>
+                          <v-col cols="12">
+                            <v-textarea
+                              v-model="commentForm.content"
+                              :label="$t('fields.content')"
+                              :rules="contentRules"
+                              color="light"
+                              outlined>
+                              <template #message="{ message }">
+                                {{ $t(message) }}
+                              </template>
+                            </v-textarea>
+                          </v-col>
+                          <p class="ml-3 grey--text font-italic">{{ $t('article.comments.verification') }}</p>
+                          <v-col
+                            cols="12"
+                            class="text-right">
+                            <v-btn
+                              :loading="sendingComment"
+                              :disabled="!validComment"
+                              color="darker"
+                              text
+                              @click="submitComment">
+                              {{ $t('article.comments.send') }}
+                              <v-icon right>mdi-send</v-icon>
+                            </v-btn>
+                          </v-col>
+                        </v-row>
+                      </v-form>
                       <v-divider/><br>
                       <h3 class="headline">{{ $t('article.comments.title') }}</h3>
                       <v-list v-if="comments.length">
@@ -281,6 +301,12 @@ import { blogPosts, comments } from '@/utils/api'
 import MarkdownItVueLight from 'markdown-it-vue/dist/markdown-it-vue-light.umd.min.js'
 import 'markdown-it-vue/dist/markdown-it-vue.css'
 
+const defaultCommentForm = {
+  username: '',
+  email: '',
+  content: ''
+}
+
 export default {
   name: 'Article',
   components: { CategoriesChips, MemberCard, SocialIcons, MarkdownItVueLight },
@@ -294,18 +320,23 @@ export default {
       commentsPages: 0,
       commentsLoading: false,
 
-      commentForm: {
-        username: '',
-        email: '',
-        content: ''
-      },
+      commentForm: Object.assign({}, defaultCommentForm),
+      usernameRules: [
+        v => !!v || 'fields.validation.usernameRequired',
+      ],
+      emailRules: [
+        v => !!v || 'fields.validation.emailRequired',
+        v => /.+@.+\..+/.test(v) || 'fields.validation.emailValidation',
+      ],
+      contentRules: [
+        v => !!v || 'fields.validation.contentRequired',
+      ],
+      validComment: false,
       sendingComment: false,
 
       categories,
       types
     }
-  },
-  created() {
   },
   mounted() {
     blogPosts.get({ url: this.$route.params.url }).then(response => {
@@ -369,6 +400,20 @@ export default {
         this.commentsPages = response.body.pages
         if (this.commentsPages === 0) this.commentsPage = 0
         this.commentsLoading = false
+      })
+    },
+    submitComment() {
+      this.sendingComment = true
+      comments.save({ post: this.$route.params.url }, this.commentForm).then(() => {
+        this.sendingComment = false
+        this.SHOW_SNACKBAR({
+          error: false,
+          message: this.$i18n.t('article.comments.confirmation')
+        })
+        this.commentForm = Object.assign({}, defaultCommentForm)
+        this.$refs.form.reset()
+      }, error => {
+        console.log(error)
       })
     }
   },

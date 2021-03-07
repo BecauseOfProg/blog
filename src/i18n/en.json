@@ -68,19 +68,26 @@
   },
   "loginDialog": {
     "login": "Login",
-    "mail": "Mail",
-    "password": "Password",
     "remember": "Remember me",
     "message": "To take advantage of some of the site's features and prevent spam, you must log in to your BecauseOfProg account.",
-    "emailRequired": "The mail address is required",
-    "emailValidation": "The mail address must be valid",
-    "passwordRequired": "The password is required",
-
     "messages": {
       "success": "Successfully logged in to your account.",
       "credentialsError": "Error : your mail address and/or password is incorrect",
       "tokenError": "Error : user token is incorrect",
       "logout": "Successfully logged out of your account."
+    }
+  },
+  "fields": {
+    "username": "Username",
+    "email": "Email address",
+    "password": "Password",
+    "content": "Content",
+    "validation": {
+      "emailRequired": "The mail address is required",
+      "emailValidation": "The mail address must be valid",
+      "passwordRequired": "The password is required",
+      "usernameRequired": "Please enter your username",
+      "contentRequired": "Please write a content"
     }
   },
   "home": {
@@ -120,11 +127,9 @@
       "title": "Readers' comments",
       "any": "No comments for the moment. Be the first to create one!",
       "leaveComment": "Leave a comment",
-      "username": "Username",
-      "email": "Email address",
-      "content": "Content",
       "send": "Send",
-      "verification": "Your comment will need to be verified by a moderator in order to get published."
+      "verification": "Your comment will need to be verified by a moderator in order to get published.",
+      "confirmation": "Your comment has been submitted! Wait for a moderator to review it."
     }
   },
   "social": {

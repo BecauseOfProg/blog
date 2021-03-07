@@ -28,7 +28,7 @@
             v-model="form.email"
             :rules="emailRules"
             prepend-inner-icon="mdi-email-outline"
-            :label="$t('loginDialog.mail')"
+            :label="$t('fields.email')"
             type="email"
             color="light"
             outlined
@@ -41,7 +41,7 @@
             v-model="form.password"
             :rules="passwordRules"
             prepend-inner-icon="mdi-key-variant"
-            :label="$t('loginDialog.password')"
+            :label="$t('fields.password')"
             :type="showPassword ? 'text' : 'password'"
             color="light"
             outlined
@@ -113,11 +113,11 @@ export default {
 
       form: Object.assign({}, defaultForm),
       emailRules: [
-        v => !!v || 'loginDialog.emailRequired',
-        v => /.+@.+\..+/.test(v) || 'loginDialog.emailValidation',
+        v => !!v || 'fields.validation.emailRequired',
+        v => /.+@.+\..+/.test(v) || 'fields.validation.emailValidation',
       ],
       passwordRules: [
-        v => !!v || 'loginDialog.passwordRequired',
+        v => !!v || 'fields.validation.passwordRequired',
       ]
     }
   },

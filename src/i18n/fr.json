@@ -68,20 +68,27 @@
   },
   "loginDialog": {
     "login": "Connexion",
-    "mail": "Adresse e-mail",
-    "password": "Mot de passe",
-    "showPassword": "Montrer le mot de passe",
-    "hidePassword": "Cacher le mot de passe",
     "remember": "Se souvenir de moi",
     "message": "Pour profiter de certaines fonctionnalités du site et empêcher le spam, vous devez vous connecter à votre compte BecauseOfProg.",
-    "emailRequired": "L'adresse email est requise",
-    "emailValidation": "L'adresse email doit être valide",
-    "passwordRequired": "Le mot de passe est requis",
-
     "messages": {
       "success": "Connexion à votre compte avec succès.",
       "tokenError": "Erreur : le jeton utilisateur est erroné.",
       "logout": "Déconnexion de votre compte avec succès."
+    }
+  },
+  "fields": {
+    "username": "Nom d'utilisateur",
+    "email": "Adresse e-mail",
+    "password": "Mot de passe",
+    "content": "Contenu",
+    "showPassword": "Montrer le mot de passe",
+    "hidePassword": "Cacher le mot de passe",
+    "validation": {
+      "emailRequired": "L'adresse email est requise",
+      "emailValidation": "L'adresse email doit être valide",
+      "passwordRequired": "Le mot de passe est requis",
+      "usernameRequired": "Veuillez rentrer un nom d'utilisateur",
+      "contentRequired": "Veuillez rédiger un contenu"
     }
   },
   "home": {
@@ -121,11 +128,9 @@
       "title": "Commentaires des lecteurs",
       "any": "Aucun commentaire pour le moment. Soyez le premier à en créer un!",
       "leaveComment": "Laisser un commentaire",
-      "username": "Nom d'utilisateur",
-      "email": "Adresse email",
-      "content": "Contenu",
       "send": "Envoyer",
-      "verification": "Votre commentaire devra être approuvé par un modérateur avant d'être publié."
+      "verification": "Votre commentaire devra être approuvé par un modérateur avant d'être publié.",
+      "confirmation": "Votre commentaire a bien été envoyé! Attendez qu'un modérateur le valide."
     }
   },
   "social": {
