@@ -2,7 +2,7 @@
   <v-card class="b-card">
     <div
       class="d-flex flex-no-wrap"
-      :class="rowOrCol">
+      :class="layout">
       <div class="d-flex flex-column justify-center align-center mt-2 ml-2 mr-2">
         <div class="mt-2">
           <v-avatar
@@ -34,12 +34,14 @@
       </div>
       <v-divider
         class="mr-0"
-        :vertical="dividerDirection"/>
+        :vertical="isDividerVertical"/>
       <v-col>
         <v-card-title class="vcardtitle headline">
           {{ member.displayname }} (@{{ member.username }})
         </v-card-title>
-        <v-card-subtitle v-text="member.biography"/>
+        <v-card-subtitle
+          class="text-justify"
+          v-text="member.biography"/>
       </v-col>
     </div>
   </v-card>
@@ -57,13 +59,13 @@ export default {
     }
   },
   computed: {
-    rowOrCol() {
+    layout() {
       return {
         'flex-column': this.$vuetify.breakpoint.xsOnly,
         'flex-row': this.$vuetify.breakpoint.smAndUp
       }
     },
-    dividerDirection() {
+    isDividerVertical() {
       if (this.$vuetify.breakpoint.xsOnly) return false
       return this.$vuetify.breakpoint.smAndUp;
     },

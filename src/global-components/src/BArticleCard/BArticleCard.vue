@@ -1,5 +1,7 @@
 <template>
-  <b-card :to="{ name: 'article', params: { url: article.url }}">
+  <b-card
+    :to="{ name: 'article', params: { url: article.url }}"
+    style="height: 100%">
     <template #image>
       <v-img
         :src="imageProxy(article.banner, 617, 347)"
@@ -10,26 +12,27 @@
       {{ article.title }}
     </span>
     <p class="lecture-text mt-2 mb-3">{{ article.description }}</p>
-    <!--    <p class="font-weight-light blue-grey&#45;&#45;text">{{ $t('article.publishedBy', { author: article.author.displayname, date: dateToText(article.timestamp) }) }}</p>-->
-    <v-chip class="mt-2">
-      <v-avatar left>
-        <v-img :src="article.author.picture"/>
-      </v-avatar>
-      {{ article.author.displayname }}
-    </v-chip>
+    <div>
+      <v-chip class="mt-2">
+        <v-avatar left>
+          <v-img :src="article.author.picture"/>
+        </v-avatar>
+        {{ article.author.displayname }}
+      </v-chip>
 
-    <v-chip class="mt-2">
-      {{ dateToText(article.timestamp) }}
-    </v-chip>
+      <v-chip class="mt-2">
+        {{ dateToText(article.timestamp) }}
+      </v-chip>
 
-    <v-chip
-      class="mt-2"
-      :to="{ name: 'category', params: { category: category.id }}">
-      <v-icon left>
-        {{ category.icon }}
-      </v-icon>
-      {{ $t(`categories.${category.id}`) }}
-    </v-chip>
+      <v-chip
+        class="mt-2"
+        :to="{ name: 'category', params: { category: category.id }}">
+        <v-icon left>
+          {{ category.icon }}
+        </v-icon>
+        {{ $t(`categories.${category.id}`) }}
+      </v-chip>
+    </div>
   </b-card>
 </template>
 

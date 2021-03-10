@@ -15,16 +15,21 @@
 .markdown-body
   h1, h2, h3, h4, h5, h6
     @extend .lecture-title
-  p
-    text-align: justify
+  p, ul, ol, li
     font-family: 'Merriweather', serif
     font-size: 15px !important
+  p
+    text-align: justify
+  a
+    color: var(--v-anchor-base) !important
   code
     color: #2a2b2d
     box-shadow: none
     display: block
     font-weight: normal
-  ol, ul
+  li+li
+    margin-top: .75rem
+  ol, ul, li
     color: var(--v-text-base)
   pre
     background: var(--v-background-base) !important

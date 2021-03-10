@@ -116,6 +116,19 @@
                   <v-col cols="12">
                     <b-card>
                       <h3 class="headline">{{ $t('article.comments.leaveComment') }}</h3>
+                      <a
+                        href="https://discord.becauseofprog.fr"
+                        target="_blank">
+                        <v-alert
+                          v-ripple
+                          border="left"
+                          colored-border
+                          color="#7289DA"
+                          icon="mdi-discord"
+                          elevation="2">
+                          {{ $t('article.comments.discord') }}
+                        </v-alert>
+                      </a>
                       <v-form
                         ref="form"
                         v-model="validComment">

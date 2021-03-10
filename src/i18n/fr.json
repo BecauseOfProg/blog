@@ -110,7 +110,7 @@
     "title": "Le DevBlog de la BecauseOfProg",
     "meta": "DevBlog de la BecauseOfProg dans la catégorie {category}.",
     "description": "Retrouvez l'actualité technique de la BecauseOfProg, ce qu'il se passe en coulisses, les dernières mises-à-jour de nos services...",
-    "followUs": "Suivez-nous sur Twitter",
+    "followUs": "Suivez-nous",
     "errors": {
       "loadFailed": "Le chargement des billets a échoué."
     },
@@ -125,6 +125,7 @@
     "linksMessage": "Nous partageons des liens vers des ressources, des blogs ou des articles intéressants, afin que vous puissiez vous aussi les découvrir.",
     "categories": "Catégories",
     "comments": {
+      "discord": "Poursuivez la discussion avec notre équipe et des dizaines de passionnés sur notre serveur Discord!",
       "title": "Commentaires des lecteurs",
       "any": "Aucun commentaire pour le moment. Soyez le premier à en créer un!",
       "leaveComment": "Laisser un commentaire",

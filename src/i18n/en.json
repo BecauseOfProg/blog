@@ -109,7 +109,7 @@
     "title": "BecauseOfProg's DevBlog",
     "meta": "BecauseOfProg's DevBlog in category {category}.",
     "description": "Read BecauseOfProg's technical news, what is going on behind the scenes, our last updates about our services...",
-    "followUs": "Follow us on Twitter",
+    "followUs": "Follow us",
     "errors": {
       "loadFailed": "Devblogs' loading failed."
     },
@@ -124,6 +124,7 @@
     "linksMessage": "We share links to interesting resources, blogs or articles so that you too can discover them.",
     "categories": "Categories",
     "comments": {
+      "discord": "Keep chatting with our team and dozens of enthusiasts on our Discord server!",
       "title": "Readers' comments",
       "any": "No comments for the moment. Be the first to create one!",
       "leaveComment": "Leave a comment",

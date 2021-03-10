@@ -18,6 +18,7 @@
                 target="_blank"
                 color="darker"
                 text>
+                <v-icon left>mdi-twitter</v-icon>
                 {{ $t('devblog.followUs') }}
               </v-btn>
             </template>
@@ -33,7 +34,7 @@
                   v-for="(post, index) in posts"
                   :key="post.url"
                   cols="12"
-                  :md="index % 3 === 0 ? 12 : 6">
+                  :md="index % 6 === 0 ? 12 : 6">
                   <b-card :to="{ name: 'devblog', params: { url: post.url } }">
                     <template #image>
                       <v-img
@@ -61,6 +62,7 @@
           <b-loading-screen v-else/>
         </v-col>
       </v-row>
+      <scroll-to-top :threshold="150"/>
     </v-container>
   </main>
 </template>
@@ -70,9 +72,11 @@ import { mapMutations } from 'vuex'
 
 import { imageProxy } from '@/utils/helpers'
 import { posts } from '@/utils/api'
+import ScrollToTop from '@/components/ScrollToTop'
 
 export default {
   name: 'DevBlog',
+  components: { ScrollToTop },
   data() {
     return {
       posts: [],

@@ -130,16 +130,7 @@
           </b-card>
         </v-col>
       </v-row>
-      <v-btn
-        :small="$vuetify.breakpoint.smAndDown"
-        color="light white--text"
-        fab
-        fixed
-        bottom
-        right
-        @click="$vuetify.goTo('.b-top-banner')">
-        <v-icon>mdi-chevron-up</v-icon>
-      </v-btn>
+      <scroll-to-top/>
     </v-container>
   </main>
 </template>
@@ -148,15 +139,17 @@
 import { blogPosts } from '@/utils/api'
 import { categories, types, getCategory, getType } from '@/utils/data'
 import { imageProxy } from '@/utils/helpers'
-import SocialIcons from '@/components/SocialIcons'
 import CategoriesChips from '@/components/CategoriesChips'
 import CategoriesBar from '@/components/CategoriesBar'
+import SocialIcons from '@/components/SocialIcons'
+import ScrollToTop from '@/components/ScrollToTop'
 
 export default {
   name: 'List',
-  components: { CategoriesChips, CategoriesBar, SocialIcons },
+  components: { CategoriesChips, CategoriesBar, ScrollToTop, SocialIcons },
   data() {
     return {
+      fab: false,
       head: {
         title: '',
         icon: '',
