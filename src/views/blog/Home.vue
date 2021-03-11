@@ -36,8 +36,8 @@
           md="10"
           offset-md="1">
           <b-card
-            v-if="articles.length"
-            :to="{ name: 'article', params: { url: articles[0].url }}"
+            v-if="lastPublications.length"
+            :to="{ name: 'publication', params: { url: lastPublications[0].url }}"
             fluid>
             <v-row class="ma-0">
               <v-col
@@ -45,8 +45,8 @@
                 md="6"
                 class="d-flex pa-0">
                 <v-img
-                  id="first-article"
-                  :src="imageProxy(articles[0].banner, 617.15, 0)"/>
+                  id="first-publication"
+                  :src="imageProxy(lastPublications[0].banner, 617.15, 0)"/>
               </v-col>
               <v-col
                 cols="12"
@@ -58,8 +58,8 @@
                   <v-icon left>mdi-clock-outline</v-icon>
                   {{ $t('home.new') }}
                 </v-btn>
-                <h2 class="text-h4 text--text lecture-title mb-3">{{ articles[0].title }}</h2>
-                <p class="lecture-text">{{ articles[0].description }}</p>
+                <h2 class="text-h4 text--text lecture-title mb-3">{{ lastPublications[0].title }}</h2>
+                <p class="lecture-text">{{ lastPublications[0].description }}</p>
               </v-col>
             </v-row>
           </b-card>
@@ -75,12 +75,12 @@
           <v-row>
             <v-col
               v-for="i in 2"
-              :key="`article-${i}`"
+              :key="`publication-${i}`"
               cols="12"
               md="6">
-              <b-article-card
-                v-if="articles.length"
-                :article="articles[i]"/>
+              <b-publication-card
+                v-if="lastPublications.length"
+                :publication="lastPublications[i]"/>
               <v-skeleton-loader
                 v-else
                 style="width: 100%"
@@ -90,9 +90,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <hr
-      class="mt-2 mb-8"
-      style="height: 15px; border: none; background: linear-gradient(90deg,#ff514c 0%,#ff9779 100%)">
+    <gradient-rule/>
     <v-container class="page-body">
       <v-col
         cols="12"
@@ -130,15 +128,16 @@
 
 <script>
 import CategoriesBar from '@/components/CategoriesBar'
+import GradientRule from '@/components/GradientRule'
 import SocialIcons from '@/components/SocialIcons'
 
 import { imageProxy } from '@/utils/helpers'
-import { blogPosts, posts } from '@/utils/api'
+import { publications, devblogs } from '@/utils/api'
 import { categories, types } from '@/utils/data'
 
 export default {
   name: 'Home',
-  components: { SocialIcons, CategoriesBar },
+  components: { CategoriesBar, GradientRule, SocialIcons },
   data() {
     return {
       carousel: [
@@ -165,24 +164,24 @@ export default {
           }
         },
       ],
-      articles: [],
+      lastPublications: [],
       categories,
       types
     }
   },
   mounted() {
-    blogPosts.get().then(data => {
-      this.articles = data.body.data
+    publications.get().then(data => {
+      this.lastPublications = data.body.data
     })
-    posts.get({url: 'last'}).then(response => {
-      let post = response.body.data
+    devblogs.get({url: 'last'}).then(response => {
+      let devblog = response.body.data
       this.carousel.push({
-        background: post.banner,
+        background: devblog.banner,
         title: 'Sur notre devblog...',
-        subtitle: `${post.title} (${post.category})`,
+        subtitle: `${devblog.title} (${devblog.category})`,
         button: {
           label: 'Voir!',
-          link: `/devblog/${post.url}`
+          link: `/devblog/${devblog.url}`
         },
         classes: ['darker-bg']
       })
@@ -193,7 +192,7 @@ export default {
 </script>
 
 <style lang="stylus">
-#first-article
+#first-publication
   @media screen and (max-width: 960px)
     border-top-right-radius: 20px
   @media screen and (min-width: 961px)

@@ -19,24 +19,24 @@
             color="darker"
             type="search"
             outlined
-            @keydown.enter="fetchArticles(null, true)"/>
-          <template v-if="articles.length">
+            @keydown.enter="fetchPublications(null, true)"/>
+          <template v-if="publications.length">
             <v-scale-transition>
               <v-row>
-                <template v-for="(article, index) in articles">
+                <template v-for="(publication, index) in publications">
                   <v-col
                     v-if="index === 0"
-                    :key="article.url"
+                    :key="publication.url"
                     cols="12">
                     <v-row>
                       <v-col
                         cols="12"
                         md="6">
-                        <router-link :to="{ name: 'article', params: { url: article.url }}">
+                        <router-link :to="{ name: 'publication', params: { url: publication.url }}">
                           <v-img
                             v-ripple
-                            :src="imageProxy(article.banner, 896, 504)"
-                            :alt="article.title"/>
+                            :src="imageProxy(publication.banner, 896, 504)"
+                            :alt="publication.title"/>
                         </router-link>
                       </v-col>
                       <v-col
@@ -44,23 +44,23 @@
                         md="6"
                         class="d-flex flex-column justify-center">
                         <router-link
-                          :to="{ name: 'article', params: { url: article.url }}"
+                          :to="{ name: 'publication', params: { url: publication.url }}"
                           class="text--text">
                           <h3 class="text-h3 mb-8 lexture-title">
-                            <b-read-indicator :article="article.url"/>
-                            {{ article.title }}
+                            <b-read-indicator :publication="publication.url"/>
+                            {{ publication.title }}
                           </h3>
                         </router-link>
-                        <p class="lecture-text">{{ article.description }}</p>
+                        <p class="lecture-text">{{ publication.description }}</p>
                         <v-row
                           class="d-flex justify-space-between ma-0">
-                          {{ $t('article.publishedBy', { author: article.author.displayname, date: dateToText(article.timestamp) }) }}
+                          {{ $t('publication.publishedBy', { author: publication.author.displayname, date: dateToText(publication.timestamp) }) }}
                           <router-link
                             v-ripple
-                            :to="{ name: 'category', params: { category: category(article.category).id }}"
+                            :to="{ name: 'category', params: { category: category(publication.category).id }}"
                             class="overline text--text">
-                            <v-icon>{{ category(article.category).icon }}</v-icon>
-                            {{ $t(`categories.${category(article.category).id}`) }}
+                            <v-icon>{{ category(publication.category).icon }}</v-icon>
+                            {{ $t(`categories.${category(publication.category).id}`) }}
                           </router-link>
                         </v-row>
                       </v-col>
@@ -68,24 +68,25 @@
                   </v-col>
                   <v-col
                     v-else
-                    :key="article.url"
+                    :key="publication.url"
                     :md="((index - 1) % 10) % 6 === 0 || (index - 1) % 10 === 0 ? 8 : 4"
                     cols="12">
-                    <b-article-card :article="article"/>
+                    <b-publication-card :publication="publication"/>
                   </v-col>
                 </template>
               </v-row>
             </v-scale-transition>
-            <div class="text-center">
-              <v-btn
-                v-if="params.page !== pages"
-                color="darker"
-                text
-                :loading="loading"
-                @click="fetchArticles">
-                {{ $t('list.loadMore') }}
-              </v-btn>
-            </div>
+            <v-progress-linear
+              v-if="loading"
+              class="mt-5"
+              color="darker"
+              indeterminate/>
+            <span
+              v-else-if="params.page !== pages"
+              v-intersect="onIntersect"/>
+            <gradient-rule
+              v-else
+              round/>
           </template>
           <template v-else-if="empty">
             <h3 class="text-center">{{ $t('list.noResults') }}</h3>
@@ -136,17 +137,18 @@
 </template>
 
 <script>
-import { blogPosts } from '@/utils/api'
+import { publications as api } from '@/utils/api'
 import { categories, types, getCategory, getType } from '@/utils/data'
 import { imageProxy } from '@/utils/helpers'
 import CategoriesChips from '@/components/CategoriesChips'
 import CategoriesBar from '@/components/CategoriesBar'
+import GradientRule from '@/components/GradientRule'
 import SocialIcons from '@/components/SocialIcons'
 import ScrollToTop from '@/components/ScrollToTop'
 
 export default {
   name: 'List',
-  components: { CategoriesChips, CategoriesBar, ScrollToTop, SocialIcons },
+  components: { CategoriesChips, CategoriesBar, GradientRule, ScrollToTop, SocialIcons },
   data() {
     return {
       fab: false,
@@ -159,7 +161,7 @@ export default {
         page: 0
       },
       search: '',
-      articles: [],
+      publications: [],
       loading: false,
       pages: 0,
       empty: false,
@@ -169,7 +171,7 @@ export default {
     }
   },
   mounted() {
-    this.head.title = ['global.allArticles']
+    this.head.title = ['global.allPublications']
     this.head.icon = 'mdi-text-box-multiple-outline'
 
     if (this.$route.params.category) {
@@ -199,23 +201,27 @@ export default {
       }
     }
 
-    this.fetchArticles()
+    this.fetchPublications()
   },
   methods: {
     imageProxy,
     category(id) {
       return getCategory(id)
     },
-    fetchArticles(_, reset = false) {
+    onIntersect (entries) {
+      let isIntersecting = entries[0].isIntersecting
+      if (isIntersecting && !this.loading) this.fetchPublications()
+    },
+    fetchPublications(_, reset = false) {
       this.loading = true
       if (reset) this.params.page = 1
       else this.params.page += 1
-      blogPosts.get(this.params).then(response => {
-        this.articles = reset ? response.body.data : this.articles = [
-          ...this.articles,
+      api.get(this.params).then(response => {
+        this.publications = reset ? response.body.data : [
+          ...this.publications,
           ...response.body.data
         ]
-        if (!this.articles.length) this.empty = true
+        if (!this.publications.length) this.empty = true
         this.pages = response.body.pages
         this.loading = false
       })
@@ -223,7 +229,7 @@ export default {
   },
   watch: {
     page() {
-      this.fetchArticles()
+      this.fetchPublications()
     }
   },
   metaInfo() {

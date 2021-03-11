@@ -27,37 +27,38 @@
         <v-col
           cols="12"
           md="7">
-          <template v-if="posts.length">
+          <template v-if="devblogs.length">
             <v-scale-transition>
               <v-row>
                 <v-col
-                  v-for="(post, index) in posts"
-                  :key="post.url"
+                  v-for="(devblog, index) in devblogs"
+                  :key="devblog.url"
                   cols="12"
                   :md="index % 6 === 0 ? 12 : 6">
-                  <b-card :to="{ name: 'devblog', params: { url: post.url } }">
+                  <b-card :to="{ name: 'devblog', params: { url: devblog.url } }">
                     <template #image>
                       <v-img
-                        :src="imageProxy(post.banner, 617, 347)"
-                        :alt="post.title"/>
+                        :src="imageProxy(devblog.banner, 617, 347)"
+                        :alt="devblog.title"/>
                     </template>
-                    <div>{{ post.category }}</div>
-                    <p class="display-1 text--primary">{{ post.title }}</p>
-                    <p>{{ $t('article.publishedBy', { author: post.author.displayname, date: dateToText(post.timestamp) }) }}</p>
+                    <div>{{ devblog.category }}</div>
+                    <p class="display-1 text--primary">{{ devblog.title }}</p>
+                    <p>{{ $t('publication.publishedBy', { author: devblog.author.displayname, date: dateToText(devblog.timestamp) }) }}</p>
                   </b-card>
                 </v-col>
               </v-row>
             </v-scale-transition>
-            <div class="text-center">
-              <v-btn
-                v-if="page !== pages"
-                color="darker"
-                text
-                :loading="loading"
-                @click="fetchPosts">
-                {{ $t('list.loadMore') }}
-              </v-btn>
-            </div>
+            <v-progress-linear
+              v-if="loading"
+              class="mt-5"
+              color="darker"
+              indeterminate/>
+            <span
+              v-else-if="page !== pages"
+              v-intersect="onIntersect"/>
+            <gradient-rule
+              v-else
+              round/>
           </template>
           <b-loading-screen v-else/>
         </v-col>
@@ -71,33 +72,43 @@
 import { mapMutations } from 'vuex'
 
 import { imageProxy } from '@/utils/helpers'
-import { posts } from '@/utils/api'
+import { devblogs as api } from '@/utils/api'
+import GradientRule from '@/components/GradientRule'
 import ScrollToTop from '@/components/ScrollToTop'
 
 export default {
   name: 'DevBlog',
-  components: { ScrollToTop },
+  components: { GradientRule, ScrollToTop },
   data() {
     return {
-      posts: [],
+      devblogs: [],
       page: 0,
       pages: 0,
       loading: false
     }
   },
   mounted() {
-    this.fetchPosts()
+    this.fetchDevblogs()
   },
   methods: {
     ...mapMutations(['SHOW_SNACKBAR']),
     imageProxy,
-    fetchPosts() {
+    onIntersect(entries) {
+      let isIntersecting = entries[0].isIntersecting
+      if (isIntersecting && !this.loading) this.fetchDevblogs()
+    },
+    fetchDevblogs() {
+      this.loading = true
       this.page += 1
-      posts.get({ page: this.page }).then(response => {
+      api.get({ page: this.page }).then(response => {
         this.pages = response.body.pages
-        this.posts = response.body.data
-        this.loading = true
+        this.devblogs = [
+          ...this.devblogs,
+          ...response.body.data
+        ]
+        this.loading = false
       }, error => {
+        this.loading = false
         console.log(error)
         this.SHOW_SNACKBAR({
           error: false,
