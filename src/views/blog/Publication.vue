@@ -51,8 +51,9 @@
                     class="mt-2 text-right">
                     <v-icon
                       left
+                      :color="$vuetify.theme.dark ? 'grey' : null"
                       class="mt-n1 mr-n0">mdi-clock-outline</v-icon>
-                    <span class="grey--text text--darken-2">
+                    <span :class="!$vuetify.theme.dark ? 'grey--text text--darken-2' : 'grey--text'">
                       {{ $t('publication.publishedBy', {
                         author: publication.author.displayname,
                         date: dateToText(publication.timestamp)
