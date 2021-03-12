@@ -23,7 +23,9 @@
             cols="12"
             lg="8">
             <b-card class="bordered">
-              <span style="font-size: 22px">« {{ publication.description }} »</span>
+              <span
+                style="font-size: 22px"
+                class="font-weight-bold">« {{ publication.description }} »</span>
               <template #actions>
                 <v-row>
                   <v-col cols="6">
@@ -46,9 +48,11 @@
                   </v-col>
                   <v-col
                     cols="6"
-                    class="text-right">
-                    <v-icon left>mdi-clock-outline</v-icon>
-                    <span>
+                    class="mt-2 text-right">
+                    <v-icon
+                      left
+                      class="mt-n1 mr-n0">mdi-clock-outline</v-icon>
+                    <span class="grey--text text--darken-2">
                       {{ $t('publication.publishedBy', {
                         author: publication.author.displayname,
                         date: dateToText(publication.timestamp)
