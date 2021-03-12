@@ -74,7 +74,8 @@
       "success": "Connexion à votre compte avec succès.",
       "tokenError": "Erreur : le jeton utilisateur est erroné.",
       "logout": "Déconnexion de votre compte avec succès."
-    }
+    },
+    "showPassword": "Afficher le mot de passe"
   },
   "fields": {
     "username": "Nom d'utilisateur",

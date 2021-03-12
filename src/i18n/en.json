@@ -75,7 +75,8 @@
       "credentialsError": "Error : your mail address and/or password is incorrect",
       "tokenError": "Error : user token is incorrect",
       "logout": "Successfully logged out of your account."
-    }
+    },
+    "showPassword": "Show password"
   },
   "fields": {
     "username": "Username",
