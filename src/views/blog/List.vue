@@ -2,23 +2,24 @@
   <main>
     <categories-bar/>
     <b-top-banner
-      :title="head.title"
       :icon="head.icon"
       :src="head.image"
+      :title="head.title"
       tall/>
     <v-container class="page-body">
       <v-row>
         <v-col
           cols="12"
-          lg="12">
+          md="10"
+          offset-md="1">
           <categories-chips include-all/>
           <v-text-field
             v-model="params.search"
             :label="`${$t('global.search')}...`"
-            prepend-inner-icon="mdi-magnify"
             color="darker"
-            type="search"
             outlined
+            prepend-inner-icon="mdi-magnify"
+            type="search"
             @keydown.enter="fetchPublications(null, true)"/>
           <template v-if="publications.length">
             <v-scale-transition>
@@ -35,14 +36,14 @@
                         <router-link :to="{ name: 'publication', params: { url: publication.url }}">
                           <v-img
                             v-ripple
-                            :src="imageProxy(publication.banner, 896, 504)"
-                            :alt="publication.title"/>
+                            :alt="publication.title"
+                            :src="imageProxy(publication.banner, 896, 504)"/>
                         </router-link>
                       </v-col>
                       <v-col
+                        class="d-flex flex-column justify-center"
                         cols="12"
-                        md="6"
-                        class="d-flex flex-column justify-center">
+                        md="6">
                         <router-link
                           :to="{ name: 'publication', params: { url: publication.url }}"
                           class="text--text">
@@ -54,7 +55,12 @@
                         <p class="lecture-text">{{ publication.description }}</p>
                         <v-row
                           class="d-flex justify-space-between ma-0">
-                          {{ $t('publication.publishedBy', { author: publication.author.displayname, date: dateToText(publication.timestamp) }) }}
+                          {{
+                            $t('publication.publishedBy', {
+                              author: publication.author.displayname,
+                              date: dateToText(publication.timestamp)
+                            })
+                          }}
                           <router-link
                             v-ripple
                             :to="{ name: 'category', params: { category: category(publication.category).id }}"
@@ -110,20 +116,20 @@
           <b-card>
             <v-row justify="center">
               <v-col
-                cols="5"
-                class="d-flex align-center flex-column mt-2">
+                class="d-flex align-center flex-column mt-2"
+                cols="5">
                 <h3 class="headline mb-3">{{ $t('list.followUs') }}</h3>
                 <social-icons big/>
               </v-col>
               <v-col
-                cols="5"
-                class="d-flex align-center flex-column mt-2">
+                class="d-flex align-center flex-column mt-2"
+                cols="5">
                 <h3 class="headline">{{ $t('global.about') }}</h3>
                 <p class="font-weight-light blue-grey--text text-center">{{ $t('global.aboutMessage') }}</p><br>
                 <v-btn
-                  text
+                  :to="{ name: 'about' }"
                   color="darker"
-                  :to="{ name: 'about' }">
+                  text>
                   {{ $t('global.more') }}
                 </v-btn>
               </v-col>
@@ -137,9 +143,9 @@
 </template>
 
 <script>
-import { publications as api } from '@/utils/api'
-import { categories, types, getCategory, getType } from '@/utils/data'
-import { imageProxy } from '@/utils/helpers'
+import {publications as api} from '@/utils/api'
+import {categories, getCategory, getType, types} from '@/utils/data'
+import {imageProxy} from '@/utils/helpers'
 import CategoriesChips from '@/components/CategoriesChips'
 import CategoriesBar from '@/components/CategoriesBar'
 import GradientRule from '@/components/GradientRule'
@@ -148,7 +154,7 @@ import ScrollToTop from '@/components/ScrollToTop'
 
 export default {
   name: 'List',
-  components: { CategoriesChips, CategoriesBar, GradientRule, ScrollToTop, SocialIcons },
+  components: {CategoriesChips, CategoriesBar, GradientRule, ScrollToTop, SocialIcons},
   data() {
     return {
       fab: false,
@@ -180,7 +186,7 @@ export default {
         category: this.$route.params.category
       }
       let category = getCategory(this.$route.params.category)
-      this.head.title = ['list.category', { category: this.$t(`categories.${category.id}`) }]
+      this.head.title = ['list.category', {category: this.$t(`categories.${category.id}`)}]
       this.head.icon = category.icon
       this.head.image = `/img/category/${category.id}.png`
     }
@@ -190,7 +196,7 @@ export default {
         type: this.$route.params.type
       }
       let type = getType(this.$route.params.type)
-      this.head.title = ['list.type', { type: this.$t(`types.${type.id}`) }]
+      this.head.title = ['list.type', {type: this.$t(`types.${type.id}`)}]
       this.head.icon = type.icon
       this.head.image = `/img/type/${type.id}.png`
     }
@@ -208,7 +214,7 @@ export default {
     category(id) {
       return getCategory(id)
     },
-    onIntersect (entries) {
+    onIntersect(entries) {
       let isIntersecting = entries[0].isIntersecting
       if (isIntersecting && !this.loading) this.fetchPublications()
     },
