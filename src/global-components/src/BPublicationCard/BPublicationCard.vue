@@ -1,27 +1,27 @@
 <template>
   <b-card
-    :to="{ name: 'article', params: { url: article.url }}"
+    :to="{ name: 'publication', params: { url: publication.url }}"
     style="height: 100%">
     <template #image>
       <v-img
-        :src="imageProxy(article.banner, 617, 347)"
-        :alt="article.title"/>
+        :src="imageProxy(publication.banner, 617, 347)"
+        :alt="publication.title"/>
     </template>
     <span class="headline lecture-title">
-      <b-read-indicator :article="article.url"/>
-      {{ article.title }}
+      <b-read-indicator :publication="publication.url"/>
+      {{ publication.title }}
     </span>
-    <p class="lecture-text mt-2 mb-3">{{ article.description }}</p>
+    <p class="lecture-text mt-2 mb-3">{{ publication.description }}</p>
     <div>
       <v-chip class="mt-2">
         <v-avatar left>
-          <v-img :src="article.author.picture"/>
+          <v-img :src="publication.author.picture"/>
         </v-avatar>
-        {{ article.author.displayname }}
+        {{ publication.author.displayname }}
       </v-chip>
 
       <v-chip class="mt-2">
-        {{ dateToText(article.timestamp) }}
+        {{ dateToText(publication.timestamp) }}
       </v-chip>
 
       <v-chip
@@ -43,20 +43,20 @@ import BCard from '../BCard'
 import BReadIndicator from '../BReadIndicator'
 
 export default {
-  name: 'BArticleCard',
+  name: 'BPublicationCard',
   components: {
     'b-read-indicator': BReadIndicator,
     'b-card': BCard
   },
   props: {
-    article: {
+    publication: {
       type: Object,
       required: true
     }
   },
   computed: {
     category() {
-      return getCategory(this.article.category)
+      return getCategory(this.publication.category)
     }
   },
   methods: {

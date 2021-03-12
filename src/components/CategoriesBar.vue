@@ -32,27 +32,27 @@
         elevation="0">
         <v-card-text>
           <v-progress-linear
-            v-if="categoryArticles[category.id] === undefined"
+            v-if="categoryPublications[category.id] === undefined"
             style="width: 100%"
             color="darker"
             indeterminate/>
           <v-row v-else>
             <v-col
-              v-for="article in categoryArticles[category.id]"
-              :key="article.url + 'menu'"
+              v-for="publication in categoryPublications[category.id]"
+              :key="publication.url + 'menu'"
               v-ripple
               cols="4">
-              <router-link :to="{ name: 'article', params: { url: article.url }}">
+              <router-link :to="{ name: 'publication', params: { url: publication.url }}">
                 <v-img
-                  :src="article.banner"
-                  :alt="article.title"
+                  :src="publication.banner"
+                  :alt="publication.title"
                   :aspect-ratio="16/9"/>
-                <h5 class="text-h5 my-2 text--text lecture-title">{{ article.title }}</h5>
-                <p class="text--primary lecture-text">{{ article.description }}</p>
+                <h5 class="text-h5 my-2 text--text lecture-title">{{ publication.title }}</h5>
+                <p class="text--primary lecture-text">{{ publication.description }}</p>
                 <span class="font-weight-light blue-grey--text">
-                  {{ article.author.displayname }}
+                  {{ publication.author.displayname }}
                   &mdash;
-                  {{ dateToText(article.timestamp) }}
+                  {{ dateToText(publication.timestamp) }}
                 </span>
               </router-link>
             </v-col>
@@ -60,7 +60,7 @@
               cols="12"
               class="text-right">
               <v-btn
-                v-if="categoryArticles[category.id].length === 3"
+                v-if="categoryPublications[category.id].length === 3"
                 :to="{ name: 'category', params: { category: category.id }}"
                 color="darker white--text">
                 {{ $t('list.loadMore') }}
@@ -76,21 +76,21 @@
 
 <script>
 import { categories } from '@/utils/data'
-import { blogPosts } from '@/utils/api'
+import { publications } from '@/utils/api'
 
 export default {
   data() {
     return {
-      categoryArticles: {},
+      categoryPublications: {},
       categories
     }
   },
   methods: {
     loadCategory(category) {
-      if (this.categoryArticles[category] === undefined) {
-        blogPosts.get({category}).then(data => {
-          this.categoryArticles = {
-            ...this.categoryArticles,
+      if (this.categoryPublications[category] === undefined) {
+        publications.get({category}).then(data => {
+          this.categoryPublications = {
+            ...this.categoryPublications,
             [category]: data.body.data.slice(0, 3)
           }
         })

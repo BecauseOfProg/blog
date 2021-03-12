@@ -10,15 +10,15 @@
           offset-lg="1">
           <v-row>
             <v-col
-              v-if="post.length !== 0"
+              v-if="devblog.length !== 0"
               cols="12"
               md="8"
               offset-md="2">
-              <router-link :to="{ name: 'devblog', params: { url: post.url }}">
+              <router-link :to="{ name: 'devblog', params: { url: devblog.url }}">
                 <v-img
                   v-ripple
-                  :src="post.banner"
-                  :alt="post.title"
+                  :src="devblog.banner"
+                  :alt="devblog.title"
                   :aspect-ratio="18/9"
                   class="b-card">
                   <v-row
@@ -28,11 +28,16 @@
                     align="center">
                     <v-col>
                       <p class="white--text text-center ma-4">Sur notre devblog...</p>
-                      <h3 class="text-h3 mb-8 white--text ma-4">{{ post.title }}</h3>
+                      <h3 class="text-h3 mb-8 white--text ma-4">{{ devblog.title }}</h3>
                       <span class="overline white--text">
-                        {{ $t('article.publishedBy', { author: post.author.displayname, date: dateToText(post.timestamp) }) }}
+                        {{
+                          $t('publication.publishedBy', {
+                            author: devblog.author.displayname,
+                            date: dateToText(devblog.timestamp)
+                          })
+                        }}
                       </span>
-                      <span class="overline white--text">{{ post.category }}</span>
+                      <span class="overline white--text">{{ devblog.category }}</span>
                     </v-col>
                   </v-row>
                 </v-img>
@@ -137,7 +142,7 @@
 </template>
 
 <script>
-import { posts } from '@/utils/api'
+import { devblogs } from '@/utils/api'
 import { projects, languages } from '@/utils/data'
 
 export default {
@@ -152,14 +157,14 @@ export default {
         github: 'mdi-github',
         twitter: 'mdi-twitter'
       },
-      post: {},
+      devblog: {},
       projects,
       languages
     }
   },
   mounted() {
-    posts.get({url: 'last'}).then(response => {
-      this.post = response.body.data
+    devblogs.get({url: 'last'}).then(response => {
+      this.devblog = response.body.data
     })
   },
   metaInfo() {

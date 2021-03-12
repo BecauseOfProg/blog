@@ -6,9 +6,9 @@
     "about": "À propos",
     "socialNetworks": "Nos réseaux sociaux",
     "socialNetworksMessage": "Nous postons régulièrement des nouvelles, des tips et des astuces. Suivez-nous!",
-    "allArticles": "Tous les articles",
+    "allPublications": "Toutes les publications",
     "aboutMessage": "La BecauseOfProg réunit plusieurs développeurs autour de projets communs, comme le blog!",
-    "shortDescription": "Blog de programmation et actualités technologiques",
+    "shortDescription": "Blog de programmation et actualités technologiques créé par des passionnés",
     "more": "En savoir plus",
     "application": "Application",
     "projects": "Projets",
@@ -16,7 +16,7 @@
     "devblog": "DevBlog"
   },
   "errors": {
-    "unknownArticle": "L'article souhaité est inconnu.",
+    "unknownPublication": "La publication souhaitée est inconnu.",
     "unknownDevblog": "Le devblog souhaité est inconnu.",
     "pageNotFound": "La page n'a pas été trouvée.",
     "unauthorized": "Vous devez être authentifié afin d'effectuer cette action.",
@@ -27,7 +27,7 @@
     "internalError": "Le serveur a rencontré une erreur inconnue. Nos équipes essayent activement de résoudre le problème."
   },
   "topBar": {
-    "articles": "Articles",
+    "publications": "Publications",
     "projects": "Projets",
     "application": "Application",
     "search": "Recherche",
@@ -35,7 +35,7 @@
   },
   "mobileMenu": {
     "home": "Accueil",
-    "articles": "Articles",
+    "publications": "Publications",
     "search": "Recherche",
     "projects": "Projets"
   },
@@ -58,8 +58,8 @@
   "userMenu": {
     "login": "Se connecter",
     "logout": "Déconnexion",
-    "writeArticle": "Écrire un article",
-    "articlesManagement": "Gérer les articles",
+    "writePublication": "Rédiger une publication",
+    "publicationsManagement": "Gérer les publications",
     "team": "Équipes",
     "accountConfig": "Gestion du compte",
     "myAccount": "Mon compte",
@@ -116,13 +116,13 @@
     },
     "otherPosts": "Nos autres billets"
   },
-  "article": {
-    "wasRead": "Vous avez consulté cet article.",
-    "shareArticle": "Partager l'article",
+  "publication": {
+    "wasRead": "Vous avez consulté cette publication.",
+    "sharePublication": "Partager la publication",
     "published": "Publié dans ",
     "publishedBy": "Publié par {author} le {date}",
     "links": "Les liens BecauseOfProg",
-    "linksMessage": "Nous partageons des liens vers des ressources, des blogs ou des articles intéressants, afin que vous puissiez vous aussi les découvrir.",
+    "linksMessage": "Nous partageons des liens vers des ressources, des blogs ou des publications intéressants, afin que vous puissiez vous aussi les découvrir.",
     "categories": "Catégories",
     "comments": {
       "discord": "Poursuivez la discussion avec notre équipe et des dizaines de passionnés sur notre serveur Discord!",
@@ -144,7 +144,7 @@
     "dashboard": {
       "title": "Tableau de bord"
     },
-    "posts": {
+    "publications": {
       "title": "Publications",
       "create": {
         "title": "Créer une publication",
@@ -217,15 +217,15 @@
     "subtitle": "Restez connecté à notre actualité",
     "list": {
       "title": "Accédez rapidement aux derniers titres",
-      "description": "Notre application est simple d'utilisation : accédez en un tapotement à toutes les catégories d'articles. Les bannières renforcent le contenu et permettent de connaître le contenu de l'article sans même lire le titre.<br><br>Nous avons optimisé les performances de l'application pour un <strong>chargement rapide</strong> et une <strong>utilisation fluide</strong>. Le contenu essentiel est gardé en cache pour le retrouver efficacement dès le chargement suivant."
+      "description": "Notre application est simple d'utilisation : accédez en un tapotement à toutes les catégories de publication. Les bannières renforcent le contenu et permettent de connaître le contenu de la publication sans même lire le titre.<br><br>Nous avons optimisé les performances de l'application pour un <strong>chargement rapide</strong> et une <strong>utilisation fluide</strong>. Le contenu essentiel est gardé en cache pour le retrouver efficacement dès le chargement suivant."
     },
-    "article": {
-      "title": "Lisez confortablement nos articles",
-      "description": "La présentation des articles est claire et va à l'essentiel : pas de popups agaçantes, de boutons de réseaux sociaux... <strong>Concentrez-vous sur la lecture de votre article</strong> dans une page optimisée uniquement pour cela.<br><i>En plus, nos articles sont écrits avec amour pour vous proposer le meilleur contenu <3</i>"
+    "publication": {
+      "title": "Lisez confortablement nos publications",
+      "description": "La présentation des publications est claire et va à l'essentiel : pas de popups agaçantes, de boutons de réseaux sociaux... <strong>Concentrez-vous sur la lecture de votre publication</strong> dans une page optimisée uniquement pour cela.<br><i>En plus, nos publications sont écrites avec amour pour vous proposer le meilleur contenu <3</i>"
     },
     "theme": {
       "title": "En clair... comme en foncé",
-      "description": "Vous aimez les journées ensoleillées d'été ? Nous disposons d'un thème clair. Vous préférez les cavernes sombres ? Nous avons également un thème sombre. Choisissez <strong>l'apparence qui vous plaît</strong> parmis nos deux magnifiques thèmes, et lisez vos articles confortablement.<br><br>Si vous le souhaitez, le thème peut s'adapter à celui de votre système. Fini les bidouillages indépendants dans chaque application pour ne pas vous détruire les yeux à l'ouverture."
+      "description": "Vous aimez les journées ensoleillées d'été ? Nous disposons d'un thème clair. Vous préférez les cavernes sombres ? Nous avons également un thème sombre. Choisissez <strong>l'apparence qui vous plaît</strong> parmis nos deux magnifiques thèmes, et lisez vos publications confortablement.<br><br>Si vous le souhaitez, le thème peut s'adapter à celui de votre système. Fini les bidouillages indépendants dans chaque application pour ne pas vous détruire les yeux à l'ouverture."
     },
     "privacy": {
       "title": "Pas de publicités. Pas de traçage. C'est aussi simple que ça.",
@@ -239,7 +239,7 @@
     },
     "pwa": {
       "title": "Installer une application vous incomode?",
-      "description": "Pas de panique. Grâce à notre application web progressive (PWA) directement installée sur becauseofprog.fr, vous pouvez ajouter le site sur votre écran d'accueil pour un accès facile à tous les articles. Vous ne profiterez cependant pas de futures fonctionnalités, telles que les notifications à la publication de nouveaux contenus.",
+      "description": "Pas de panique. Grâce à notre application web progressive (PWA) directement installée sur becauseofprog.fr, vous pouvez ajouter le site sur votre écran d'accueil pour un accès facile à tous les publications. Vous ne profiterez cependant pas de futures fonctionnalités, telles que les notifications à la publication de nouveaux contenus.",
       "browsers": {
         "chrome": {
           "title": "Sur Chrome (ou n'importe quel navigateur basé sur Chrome)",

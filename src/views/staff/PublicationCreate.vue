@@ -2,7 +2,7 @@
   <main>
     <b-top-banner
       icon="mdi-text-box-plus-outline"
-      title="staff.posts.create.title"/>
+      title="staff.publications.create.title"/>
     <v-container class="page-body">
       <v-form v-model="valid">
         <v-row>
@@ -100,7 +100,7 @@
               color="darker"
               @click="publish">
               <v-icon left>mdi-publish</v-icon>
-              {{ $t('staff.posts.create.publish')}}
+              {{ $t('staff.publications.create.publish')}}
             </v-btn>
           </v-col>
         </v-row>
@@ -123,7 +123,7 @@ import { mapState, mapMutations } from 'vuex'
 import { settings, categories, types } from '@/utils/data'
 
 export default {
-  name: 'CreateArticle',
+  name: 'CreatePublication',
   data() {
     return {
       form: {
@@ -146,7 +146,7 @@ export default {
   mounted() {
     /* eslint no-undef:0 */
     this.simplemde = new SimpleMDE({element: document.getElementById("md-editor")})
-    this.simplemde.value("## Créez votre article grâce au nouvel éditeur Markdown  \nNe vous inquiétez pas, l'éditeur est simple à prendre en main. Bonne rédaction!")
+    this.simplemde.value("## Créez votre publication grâce au nouvel éditeur Markdown  \nNe vous inquiétez pas, l'éditeur est simple à prendre en main. Bonne rédaction!")
   },
   computed: mapState(['user']),
   methods: {
@@ -176,14 +176,14 @@ export default {
         this.waiting = false
         this.SHOW_SNACKBAR({
           error: false,
-          message: 'staff.posts.create.success'
+          message: 'staff.publications.create.success'
         })
       }, error => {
         console.log(error)
         this.waiting = false
         this.SHOW_SNACKBAR({
           error: true,
-          message: 'staff.posts.create.error'
+          message: 'staff.publications.create.error'
         })
       })
     }

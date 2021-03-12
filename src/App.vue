@@ -26,7 +26,7 @@
       dense>
       <v-spacer v-if="isMobile"/>
       <router-link
-        :to="{ name: $route.name === 'article' && isMobile ? 'all-articles' : 'home' }"
+        :to="{ name: $route.name === 'publication' && isMobile ? 'all-publications' : 'home' }"
         class="d-flex align-center darker--text">
         <v-img
           alt="BecauseOfProg Logo"
@@ -61,7 +61,7 @@
             color="darker"
             text>
             <v-icon left>mdi-text-box-multiple-outline</v-icon>
-            {{ $t('topBar.articles') }}
+            {{ $t('topBar.publications') }}
           </v-btn>
           <v-btn
             to="/page/projects"
@@ -102,7 +102,7 @@
     </v-main>
 
     <v-bottom-navigation
-      v-if="isMobile && $route.name !== 'article'"
+      v-if="isMobile && $route.name !== 'publication'"
       v-model="bottomNavigation"
       color="darker"
       fixed
@@ -165,7 +165,7 @@ export default {
     }
   },
   mounted() {
-    this.LOAD_READ_ARTICLES()
+    this.LOAD_READ_PUBLICATIONS()
   },
   computed: {
     ...mapState(['snackbar']),
@@ -183,9 +183,9 @@ export default {
           route: 'home'
         },
         {
-          name: 'mobileMenu.articles',
+          name: 'mobileMenu.publications',
           icon: 'mdi-text-box-multiple-outline',
-          route: 'all-articles'
+          route: 'all-publications'
         },
         {
           name: 'mobileMenu.search',
@@ -202,11 +202,11 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(['LOAD_READ_ARTICLES']),
+    ...mapMutations(['LOAD_READ_PUBLICATIONS']),
     makeSearch() {
       this.showSearchField = false
       this.$router.push({
-        name: 'all-articles',
+        name: 'all-publications',
         query: {
           search: this.search
         }

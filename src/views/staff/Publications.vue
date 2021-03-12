@@ -1,11 +1,11 @@
 <template>
   <main>
     <b-top-banner
-      title="staff.posts.title"
+      title="staff.publications.title"
       icon="mdi-file-multiple-outline"/>
     <v-container class="page-body">
       <v-dialog
-        v-model="postCreate"
+        v-model="publicationCreate"
         fullscreen>
         <template #activator="{ on: dialog }">
           <v-tooltip top>
@@ -20,11 +20,11 @@
                 <v-icon>mdi-pencil-outline</v-icon>
               </v-btn>
             </template>
-            <span>Écrire un article</span>
+            <span>Rédiger une publication</span>
           </v-tooltip>
         </template>
         <v-card>
-          <post-create @close="postCreate = false"/>
+          <publication-create @close="publicationCreate = false"/>
         </v-card>
       </v-dialog>
     </v-container>
@@ -32,14 +32,14 @@
 </template>
 
 <script>
-import PostCreate from '@/views/staff/PostCreate'
+import PublicationCreate from '@/views/staff/PublicationCreate'
 
 export default {
-  name: 'Posts',
-  components: { PostCreate },
+  name: 'Publications',
+  components: { PublicationCreate },
   data() {
     return {
-      postCreate: false
+      publicationCreate: false
     }
   }
 }

@@ -1,4 +1,4 @@
-export * from './BArticleCard'
+export * from './BPublicationCard'
 export * from './BCard'
 export * from './BLoadingScreen'
 export * from './BReadIndicator'

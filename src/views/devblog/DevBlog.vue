@@ -10,23 +10,23 @@
             <b-card>
               <template #image>
                 <v-img
-                  :alt="post.title"
-                  :src="post.banner"/>
+                  :alt="devblog.title"
+                  :src="devblog.banner"/>
               </template>
               <div class="text-center mb-5">
-                <div>{{ post.category }}</div>
-                <h1 class="text-h2">{{ post.title }}</h1>
-                <p>{{
-                  $t('article.publishedBy', {
-                    author: post.author.displayname,
-                    date: dateToText(post.timestamp)
-                  })
-                }}</p>
+                <div>{{ devblog.category }}</div>
+                <h1 class="text-h2">{{ devblog.title }}</h1>
+                <p>
+                  {{ $t('publication.publishedBy', {
+                    author: devblog.author.displayname,
+                    date: dateToText(devblog.timestamp)
+                  }) }}
+                </p>
               </div>
 
               <markdown-it-vue-light
-                v-show="post && post.content"
-                :content="post.content"
+                v-show="devblog && devblog.content"
+                :content="devblog.content"
                 class="markdown-body mb-3"/>
             </b-card>
           </v-col>
@@ -53,14 +53,16 @@
               <v-divider class="my-3"/>
 
               <h3 class="headline">{{ $t('devblog.otherPosts') }}</h3>
-              <template v-for="other in otherPosts">
+              <template v-for="other in otherDevblogs">
                 <router-link
+                  v-if="other.url !== $route.params.url"
                   :key="other.url + 'link'"
                   :to="{ name: 'devblog', params: { url: other.url } }"
                   class="darker--text subtitle-1">
                   {{ other.title }}
                 </router-link>
                 <p
+                  v-if="other.url !== $route.params.url"
                   :key="other.url + 'author'"
                   class="mb-3">
                   {{ other.category }} &mdash; {{ dateToText(other.timestamp) }}
@@ -87,7 +89,7 @@
 <script>
 import MarkdownItVueLight from 'markdown-it-vue/dist/markdown-it-vue-light.umd.min.js'
 import SocialIcons from '@/components/SocialIcons'
-import { posts } from '@/utils/api'
+import { devblogs as api } from '@/utils/api'
 
 import 'markdown-it-vue/dist/markdown-it-vue.css'
 
@@ -96,15 +98,15 @@ export default {
   components: { SocialIcons, MarkdownItVueLight },
   data() {
     return {
-      post: {},
+      devblog: {},
       loaded: false,
 
-      otherPosts: []
+      otherDevblogs: []
     }
   },
   mounted() {
-    posts.get({url: this.$route.params.url}).then(response => {
-      this.post = response.body.data
+    api.get({url: this.$route.params.url}).then(response => {
+      this.devblog = response.body.data
       this.loaded = true
     }, () => {
       this.SHOW_SNACKBAR({
@@ -114,22 +116,22 @@ export default {
       this.$router.push({name: 'devblogs'})
     })
 
-    posts.get().then(response => {
-      this.otherPosts = response.body.data
+    api.get().then(response => {
+      this.otherDevblogs = response.body.data
     })
   },
   metaInfo() {
     if (this.loaded) {
       return {
-        title: `${this.post.title} — BecauseOfProg`,
+        title: `${this.devblog.title} — BecauseOfProg`,
         meta: [
           {
             property: 'og:title',
-            content: `${this.post.title} — BecauseOfProg`
+            content: `${this.devblog.title} — BecauseOfProg`
           },
           {
             property: 'og:description',
-            content: this.$t('devblog.title', { category: this.post.category })
+            content: this.$t('devblog.title', { category: this.devblog.category })
           }
         ]
       }

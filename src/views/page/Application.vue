@@ -112,7 +112,7 @@ export default {
           image: 'https://cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/assets/app/app_home_light.png'
         },
         {
-          name: 'article',
+          name: 'publication',
           image: 'https://cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/assets/app/app_article_light.png'
         },
         {

@@ -2,7 +2,7 @@ const defaults = {
   token: '',
   theme: 'auto',
   lang: 'fr',
-  'read-articles': ''
+  'read-publications': ''
 }
 
 function loadFromStorage(category, json = false) {

@@ -9,7 +9,7 @@
         mdi-eye-check
       </v-icon>
     </template>
-    <span>{{ $t('article.wasRead') }}</span>
+    <span>{{ $t('publication.wasRead') }}</span>
   </v-tooltip>
 </template>
 
@@ -19,15 +19,15 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'BReadIndicator',
   props: {
-    article: {
+    publication: {
       type: String,
       required: true,
     }
   },
   computed: {
-    ...mapGetters(['isArticleRead']),
+    ...mapGetters(['isPublicationRead']),
     read() {
-      return this.isArticleRead(this.article)
+      return this.isPublicationRead(this.publication)
     },
   }
 }

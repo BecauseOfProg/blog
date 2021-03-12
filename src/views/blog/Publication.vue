@@ -3,7 +3,7 @@
     <template v-if="loaded">
       <v-parallax
         :height="$vuetify.breakpoint.smAndDown ? 650 : 500"
-        :src="article.banner"
+        :src="publication.banner"
         dark>
         <v-row
           align="center"
@@ -15,7 +15,7 @@
             <span
               id="title"
               class="display-3 white--text ml-2 mr-2">
-              {{ article.title }}
+              {{ publication.title }}
             </span>
           </v-col>
           <v-col
@@ -23,7 +23,7 @@
             cols="12"
             lg="8">
             <b-card class="bordered">
-              <span style="font-size: 22px">« {{ article.description }} »</span>
+              <span style="font-size: 22px">« {{ publication.description }} »</span>
               <template #actions>
                 <v-row>
                   <v-col cols="6">
@@ -48,7 +48,12 @@
                     cols="6"
                     class="text-right">
                     <v-icon left>mdi-clock-outline</v-icon>
-                    <span>{{ $t('article.publishedBy', { author: article.author.displayname, date: dateToText(article.timestamp) }) }}</span>
+                    <span>
+                      {{ $t('publication.publishedBy', {
+                        author: publication.author.displayname,
+                        date: dateToText(publication.timestamp)
+                      }) }}
+                    </span>
                   </v-col>
                 </v-row>
               </template>
@@ -63,15 +68,15 @@
             lg="8"
             offset-lg="2">
             <b-card
-              id="article-content"
+              id="publication-content"
               class="bordered">
               <markdown-it-vue-light
-                v-show="article && article.content"
+                v-show="publication && publication.content"
                 class="markdown-body mb-3"
-                :content="article.content"/>
+                :content="publication.content"/>
               <v-divider/>
               <div class="text-center">
-                <br><h3 class="headline mb-2 text--text">{{ $t('article.shareArticle') }}</h3>
+                <br><h3 class="headline mb-2 text--text">{{ $t('publication.sharePublication') }}</h3>
                 <v-btn
                   v-for="share in shares"
                   :key="share.name"
@@ -84,7 +89,7 @@
                   {{ share.name }}
                 </v-btn>
                 <br><br><v-divider/><br>
-                <h2 class="headline mb-2 text--text">{{ $t('article.published') }}</h2>
+                <h2 class="headline mb-2 text--text">{{ $t('publication.published') }}</h2>
                 <v-chip>
                   <v-icon left>{{ type.icon }}</v-icon>
                   {{ $t(`types.${type.id}`) }}
@@ -94,7 +99,7 @@
                   {{ $t(`categories.${category.id}`) }}
                 </v-chip>
                 <v-chip
-                  v-for="label in article.labels"
+                  v-for="label in publication.labels"
                   :key="label">
                   {{ label }}
                 </v-chip>
@@ -111,11 +116,11 @@
                   <v-col
                     cols="12"
                     class="pt-0">
-                    <member-card :member="article.author"/>
+                    <member-card :member="publication.author"/>
                   </v-col>
                   <v-col cols="12">
                     <b-card>
-                      <h3 class="headline">{{ $t('article.comments.leaveComment') }}</h3>
+                      <h3 class="headline">{{ $t('publication.comments.leaveComment') }}</h3>
                       <a
                         href="https://discord.becauseofprog.fr"
                         target="_blank">
@@ -126,7 +131,7 @@
                           color="#7289DA"
                           icon="mdi-discord"
                           elevation="2">
-                          {{ $t('article.comments.discord') }}
+                          {{ $t('publication.comments.discord') }}
                         </v-alert>
                       </a>
                       <v-form
@@ -177,7 +182,7 @@
                               </template>
                             </v-textarea>
                           </v-col>
-                          <p class="ml-3 grey--text font-italic">{{ $t('article.comments.verification') }}</p>
+                          <p class="ml-3 grey--text font-italic">{{ $t('publication.comments.verification') }}</p>
                           <v-col
                             cols="12"
                             class="text-right">
@@ -187,14 +192,14 @@
                               color="darker"
                               text
                               @click="submitComment">
-                              {{ $t('article.comments.send') }}
+                              {{ $t('publication.comments.send') }}
                               <v-icon right>mdi-send</v-icon>
                             </v-btn>
                           </v-col>
                         </v-row>
                       </v-form>
                       <v-divider/><br>
-                      <h3 class="headline">{{ $t('article.comments.title') }}</h3>
+                      <h3 class="headline">{{ $t('publication.comments.title') }}</h3>
                       <v-list v-if="comments.length">
                         <v-list-item
                           v-for="comment in comments"
@@ -215,7 +220,7 @@
                       <p
                         v-else-if="!commentsLoading"
                         class="font-italic">
-                        {{ $t('article.comments.any') }}
+                        {{ $t('publication.comments.any') }}
                       </p>
                       <v-btn
                         v-if="commentsPage !== commentsPages"
@@ -263,8 +268,8 @@
                     cols="12"
                     class="pt-0">
                     <b-card gradient>
-                      <h3 class="headline white--text">{{ $t('article.links') }}</h3>
-                      <p>{{ $t('article.linksMessage') }}</p>
+                      <h3 class="headline white--text">{{ $t('publication.links') }}</h3>
+                      <p>{{ $t('publication.linksMessage') }}</p>
                       <template #actions>
                         <v-btn
                           text
@@ -287,7 +292,7 @@
                     cols="12"
                     class="pt-0">
                     <b-card>
-                      <h3 class="headline darker--text">{{ $t('article.categories') }}</h3>
+                      <h3 class="headline darker--text">{{ $t('publication.categories') }}</h3>
                       <categories-chips/>
                     </b-card>
                   </v-col>
@@ -310,7 +315,7 @@ import MemberCard from '@/components/MemberCard'
 import CategoriesChips from '@/components/CategoriesChips'
 
 import { categories, types, getCategory, getType } from '@/utils/data'
-import { blogPosts, comments } from '@/utils/api'
+import { publications as api, comments } from '@/utils/api'
 import MarkdownItVueLight from 'markdown-it-vue/dist/markdown-it-vue-light.umd.min.js'
 import 'markdown-it-vue/dist/markdown-it-vue.css'
 
@@ -321,11 +326,11 @@ const defaultCommentForm = {
 }
 
 export default {
-  name: 'Article',
+  name: 'Publication',
   components: { CategoriesChips, MemberCard, SocialIcons, MarkdownItVueLight },
   data() {
     return {
-      article: {},
+      publication: {},
       loaded: false,
 
       comments: [],
@@ -352,48 +357,48 @@ export default {
     }
   },
   mounted() {
-    blogPosts.get({ url: this.$route.params.url }).then(response => {
-      this.article = response.body.data
+    api.get({ url: this.$route.params.url }).then(response => {
+      this.publication = response.body.data
       this.loaded = true
-      this.addReadArticle(this.article.url)
+      this.addReadPublication(this.publication.url)
     }, () => {
       this.SHOW_SNACKBAR({
         error: true,
         message: this.$i18n.t('errors.unknownArticle')
       })
-      this.$router.push({ name: 'all-articles' })
+      this.$router.push({ name: 'all-publications' })
     })
     this.fetchComments()
   },
   computed: {
     category() {
-      return getCategory(this.article.category)
+      return getCategory(this.publication.category)
     },
     type() {
-      return getType(this.article.type)
+      return getType(this.publication.type)
     },
     shares() {
       if (this.loaded) {
         return [
           {
             name: 'Twitter', icon: 'mdi-twitter', color: 'blue lighten-2',
-            link: `https://twitter.com/intent/tweet?url=https://becauseofprog.fr/article/${this.article.url}&text=${this.article.title} (via @BecauseOfProg)`
+            link: `https://twitter.com/intent/tweet?url=https://becauseofprog.fr/article/${this.publication.url}&text=${this.publication.title} (via @BecauseOfProg)`
           },
           {
             name: 'Facebook', icon: 'mdi-facebook', color: 'blue darken-4',
-            link: `https://www.facebook.com/sharer/sharer.php?u=https://becauseofprog.fr/article/${this.article.url}`
+            link: `https://www.facebook.com/sharer/sharer.php?u=https://becauseofprog.fr/article/${this.publication.url}`
           },
           {
             name: 'Diaspora', icon: 'mdi-asterisk', color: 'purple darken-2',
-            link: `https://share.diasporafoundation.org/?title=${this.article.title}&url=https://becauseofprog.fr/article/${this.article.url}`
+            link: `https://share.diasporafoundation.org/?title=${this.publication.title}&url=https://becauseofprog.fr/article/${this.publication.url}`
           },
           {
             name: 'Mastodon', icon: 'mdi-mastodon', color: 'blue darken-2',
-            link: `web+mastodon://share?text=${this.article.title}%20-%20https://becauseofprog.fr/article/${this.article.url}`
+            link: `web+mastodon://share?text=${this.publication.title}%20-%20https://becauseofprog.fr/article/${this.publication.url}`
           },
           {
             name: 'Mail', icon: 'mdi-email-outline', color: 'dark',
-            link: `mailto:?subject=${this.article.title}&body=${this.article.description} Via BecauseOfProg : https://becauseofprog.fr/article/${this.article.url}`
+            link: `mailto:?subject=${this.publication.title}&body=${this.publication.description} Via BecauseOfProg : https://becauseofprog.fr/article/${this.publication.url}`
           }
         ]
       } else return []
@@ -401,7 +406,7 @@ export default {
   },
   methods: {
     ...mapMutations(['SHOW_SNACKBAR']),
-    ...mapActions(['addReadArticle']),
+    ...mapActions(['addReadPublication']),
     fetchComments() {
       this.commentsLoading = true
       this.commentsPage += 1
@@ -421,7 +426,7 @@ export default {
         this.sendingComment = false
         this.SHOW_SNACKBAR({
           error: false,
-          message: this.$i18n.t('article.comments.confirmation')
+          message: this.$i18n.t('publication.comments.confirmation')
         })
         this.commentForm = Object.assign({}, defaultCommentForm)
         this.$refs.form.reset()
@@ -433,23 +438,23 @@ export default {
   metaInfo() {
     if (this.loaded) {
       return {
-        title: `${this.article.title} — BecauseOfProg`,
+        title: `${this.publication.title} — BecauseOfProg`,
         meta: [
           {
             property: 'og:title',
-            content: `${this.article.title} — BecauseOfProg`
+            content: `${this.publication.title} — BecauseOfProg`
           },
           {
             property: 'og:description',
-            content: this.article.description
+            content: this.publication.description
           },
           {
             property: 'og:image',
-            content: this.article.banner
+            content: this.publication.banner
           },
           {
             name: 'author',
-            content: `${this.article.author.displayname} (@${this.article.author.username})`
+            content: `${this.publication.author.displayname} (@${this.publication.author.username})`
           }
         ]
       }

@@ -17,7 +17,7 @@ let router = new Router({
     },
     {
       path: '/blog',
-      name: 'all-articles',
+      name: 'all-publications',
       component: () => import(/* webpackChunkName: "blog" */ '@/views/blog/List.vue')
     },
     {
@@ -32,8 +32,8 @@ let router = new Router({
     },
     {
       path: '/article/:url',
-      name: 'article',
-      component: () => import(/* webpackChunkName: "blog" */ '@/views/blog/Article.vue')
+      name: 'publication',
+      component: () => import(/* webpackChunkName: "blog" */ '@/views/blog/Publication.vue')
     },
     {
       path: '/devblog',

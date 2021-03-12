@@ -6,9 +6,9 @@
     "about": "About us",
     "socialNetworks": "Our social networks",
     "socialNetworksMessage": "We regularly post news, tips and tricks. Follow us!",
-    "allArticles": "All articles",
+    "allPublications": "All publications",
     "aboutMessage": "BecauseOfProg : developers gathered around common projects such as the blog.",
-    "shortDescription": "Programming and tech news blog",
+    "shortDescription": "Programming and tech news blog created by passionated people",
     "more": "More...",
     "application": "Application",
     "projects": "Projects",
@@ -16,7 +16,7 @@
     "devblog": "DevBlog"
   },
   "errors": {
-    "unknownArticle": "The desired article is unknown.",
+    "unknownArticle": "The desired publication is unknown.",
     "unknownDevblog": "The desired devblog is unknown.",
     "pageNotFound": "The page wasn't found.",
     "unauthorized": "You must be authenticated in order to perform this action.",
@@ -27,7 +27,7 @@
     "internalError": "The server encountered an unknown error. Our teams are currently trying to overcome this problem."
   },
   "topBar": {
-    "articles": "Articles",
+    "publications": "Publications",
     "projects": "Projects",
     "application": "Application",
     "search": "Search",
@@ -35,7 +35,7 @@
   },
   "mobileMenu": {
     "home": "Home",
-    "articles": "Articles",
+    "publications": "Publications",
     "search": "Search",
     "projects": "Projects"
   },
@@ -58,8 +58,8 @@
   "userMenu": {
     "login": "Login",
     "logout": "Logout",
-    "writeArticle": "Write an article",
-    "articlesManagement": "Manage articles",
+    "writePublication": "Write a publication",
+    "publicationsManagement": "Manage publications",
     "team": "Teams",
     "accountConfig": "Account management",
     "myAccount": "My account",
@@ -115,9 +115,9 @@
     },
     "otherPosts": "Our other devblogs"
   },
-  "article": {
-    "wasRead": "You saw this article.",
-    "shareArticle": "Share the article",
+  "publication": {
+    "wasRead": "You saw this publication.",
+    "sharePublication": "Share the publication",
     "published": "Published in ",
     "publishedBy": "Published by {author} on {date}",
     "links": "BecauseOfProg's links",
@@ -150,10 +150,10 @@
     "posts": {
       "title": "Publications",
       "create": {
-        "title": "Create an article",
-        "publish": "Publish article",
-        "success": "Your article was successfully published!",
-        "error": "An error occurred in the upload of your article."
+        "title": "Create a publication",
+        "publish": "Release publication",
+        "success": "Your publication was successfully released!",
+        "error": "An error occurred in the upload of your publication."
       }
     }
   },
@@ -220,15 +220,15 @@
     "subtitle": "Stay connected to our news",
     "list": {
       "title": "Get quick access to the latest headlines",
-      "description": "Our application is easy to use: access all article categories with a tap. Banners reinforce the content and allow you to know the content of the article without even reading the title.<br><br> We have optimized the performance of the application for a <strong>fast loading</strong> and a <strong>fluid use</strong>. Essential content is cached so that it can be efficiently retrieved for a next use."
+      "description": "Our application is easy to use: access all publications categories with a tap. Banners reinforce the content and allow you to know the content of the publication without even reading the title.<br><br> We have optimized the performance of the application for a <strong>fast loading</strong> and a <strong>fluid use</strong>. Essential content is cached so that it can be efficiently retrieved for a next use."
     },
-    "article": {
-      "title": "Read comfortably our articles",
-      "description": "The presentation of the articles is clear and goes to the essentials: no annoying popups, no social network buttons... <stong>Focus on the reading of your article in a page only optimized for that. <br><i>In fact, our articles are written with love to offer you the best content <3</i>"
+    "publication": {
+      "title": "Read comfortably our publications",
+      "description": "The presentation of the publications is clear and goes to the essentials: no annoying popups, no social network buttons... <stong>Focus on the reading of your publication in a page only optimized for that. <br><i>In fact, our publications are written with love to offer you the best content <3</i>"
     },
     "theme": {
       "title": "In light... as in dark",
-      "description": "Do you like sunny summer days? We have a clear theme. Do you prefer dark caves? We also have a dark theme. Choose <strong>the look you like</strong> from our two beautiful themes, and read your articles comfortably.<br><br>If you wish, the theme can be adapted to your system. No more independent tweaks in each application in order not to destroy your eyes at the opening."
+      "description": "Do you like sunny summer days? We have a clear theme. Do you prefer dark caves? We also have a dark theme. Choose <strong>the look you like</strong> from our two beautiful themes, and read your publications comfortably.<br><br>If you wish, the theme can be adapted to your system. No more independent tweaks in each application in order not to destroy your eyes at the opening."
     },
     "privacy": {
       "title": "No ads. No tracking. It's as simple as that.",
@@ -242,7 +242,7 @@
     },
     "pwa": {
       "title": "Installing an application doesn't suit you?",
-      "description": "Don't panic. Thanks to our progressive web application (PWA) directly installed on becauseofprog.fr, you can add the site to your home screen for an easy access to all the articles. However, you won't benefit from future features, such as notifications when new content is published.",
+      "description": "Don't panic. Thanks to our progressive web application (PWA) directly installed on becauseofprog.fr, you can add the site to your home screen for an easy access to all the publications. However, you won't benefit from future features, such as notifications when new content is published.",
       "browsers": {
         "chrome": {
           "title": "On Chrome (or any Chrome-based browser)",

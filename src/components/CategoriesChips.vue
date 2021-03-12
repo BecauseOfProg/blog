@@ -2,10 +2,10 @@
   <v-col>
     <v-chip
       v-if="includeAll"
-      :to="{ name: 'all-articles' }"
+      :to="{ name: 'all-publications' }"
       active-class="darker white--text">
       <v-icon left>mdi-text-box-multiple-outline</v-icon>
-      {{ $t('global.allArticles') }}
+      {{ $t('global.allPublications') }}
     </v-chip>
     <v-chip
       v-for="category in categories"

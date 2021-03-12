@@ -1,3 +1,3 @@
-export * from './blog-posts'
+export * from './publications'
 export * from './comments'
-export * from './posts'
+export * from './devblogs'

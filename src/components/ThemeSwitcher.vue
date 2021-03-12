@@ -46,6 +46,7 @@ export default {
   methods: {
     ...mapActions(['setTheme']),
     applyTheme() {
+      console.log(this.settings.theme)
       const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
       if (prefersDark && this.settings.theme === 'auto') this.$vuetify.theme.dark = true
       else this.$vuetify.theme.dark = this.settings.theme === 'dark'

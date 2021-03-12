@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import readArticles from './modules/read-articles'
+import readPublications from './modules/read-publications'
 import settings from './modules/settings'
 import user from './modules/user'
 
@@ -29,5 +29,5 @@ const actions = {}
 
 export default new Vuex.Store({
   state, getters, mutations, actions,
-  modules: { readArticles, settings, user }
+  modules: { readPublications, settings, user }
 })

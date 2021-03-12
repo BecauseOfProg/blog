@@ -30,12 +30,12 @@
           offset-lg="1">
           <v-row>
             <v-col
-              v-for="article in articles"
-              :key="article.id"
+              v-for="publication in publications"
+              :key="publication.id"
               cols="12"
               md="6"
               lg="4">
-              <b-article-card :article="article"/>
+              <b-publication-card :publication="publication"/>
             </v-col>
           </v-row>
         </v-col>
@@ -46,24 +46,24 @@
 
 <script>
 import CategoriesChips from '@/components/CategoriesChips'
-import { blogPosts } from '@/utils/api'
+import { publications } from '@/utils/api'
 
 export default {
   name: 'Search',
   components: { CategoriesChips },
   data() {
     return {
-      articles: [],
+      publications: [],
       search: ''
     }
   },
   mounted() {
-    blogPosts.get().then(response => this.articles = response.body.data.slice(0, 3))
+    publications.get().then(response => this.publications = response.body.data.slice(0, 3))
   },
   methods: {
     makeSearch() {
       this.$router.push({
-        name: 'all-articles',
+        name: 'all-publications',
         query: {
           search: this.search
         }

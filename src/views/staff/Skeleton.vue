@@ -66,7 +66,7 @@
 
 <script>
 import Dashboard from './Dashboard'
-import Posts from './Posts'
+import Posts from './Publications'
 
 export default {
   name: 'Skeleton',
