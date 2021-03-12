@@ -1,10 +1,10 @@
 <template>
   <main>
     <b-top-banner
-      title="application.title"
+      image
       subtitle="application.subtitle"
       tall
-      image>
+      title="application.title">
       <application-download/>
     </b-top-banner>
     <div
@@ -15,22 +15,22 @@
       <v-container>
         <v-row>
           <v-col
-            cols="12"
-            md="3"
             :offset-md="1 - i % 2"
-            :order="i % 2 === 0 ? 1 : ($vuetify.breakpoint.mdAndUp ? 12 : 1)">
+            :order="i % 2 === 0 ? 1 : ($vuetify.breakpoint.mdAndUp ? 12 : 1)"
+            cols="12"
+            md="3">
             <v-img
-              :src="part.image"
-              :alt="$t(`application.${part.name}.title`)"/>
+              :alt="$t(`application.${part.name}.title`)"
+              :src="part.image"/>
           </v-col>
           <v-col
-            cols="12"
-            md="7"
             :offset-md="i % 2"
-            :order="i % 2 === 0 ? 12 : ($vuetify.breakpoint.mdAndUp ? 1 : 12)">
+            :order="i % 2 === 0 ? 12 : ($vuetify.breakpoint.mdAndUp ? 1 : 12)"
+            cols="12"
+            md="7">
             <v-row
-              style="height: 100%"
-              align="center">
+              align="center"
+              style="height: 100%">
               <v-col cols="12">
                 <p class="text-h4 mb-5">{{ $t(`application.${part.name}.title`) }}</p>
                 <p
@@ -83,7 +83,10 @@
                   <v-icon color="light">{{ browser.icon }}</v-icon>
                 </v-list-item-icon>
                 <v-list-item-content>
-                  <v-list-item-title class="mb-2">{{ $t(`application.pwa.browsers.${browser.name}.title`) }}</v-list-item-title>
+                  <v-list-item-title class="mb-2">{{
+                    $t(`application.pwa.browsers.${browser.name}.title`)
+                  }}
+                  </v-list-item-title>
                   <span v-html="$t(`application.pwa.browsers.${browser.name}.content`)"/>
                 </v-list-item-content>
               </v-list-item>
@@ -103,7 +106,7 @@ import ApplicationDownload from '@/components/ApplicationDownload'
 
 export default {
   name: 'Application',
-  components: { ApplicationDownload },
+  components: {ApplicationDownload},
   data() {
     return {
       imagedParts: [

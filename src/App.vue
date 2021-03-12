@@ -2,28 +2,28 @@
   <v-app>
     <v-snackbar
       v-model="snackbar.show"
+      right
       timeout="5000"
-      top
-      right>
+      top>
       {{ $t(snackbar.message) }}
       <template #action="{ attrs }">
         <v-btn
+          v-bind="attrs"
           color="darker"
           text
-          v-bind="attrs"
           @click="snackbar.show = false">
           {{ $t('global.close') }}
         </v-btn>
       </template>
     </v-snackbar>
     <div
-      style="height: 8px; width: 100%"
-      class="v-app-bar v-app-bar--fixed top-bar gradient"/>
+      class="v-app-bar v-app-bar--fixed top-bar gradient"
+      style="height: 8px; width: 100%"/>
     <v-app-bar
       id="app-navigation"
-      style="margin-top: 8px"
       app
-      dense>
+      dense
+      style="margin-top: 8px">
       <v-spacer v-if="isMobile"/>
       <router-link
         :to="{ name: $route.name === 'publication' && isMobile ? 'all-publications' : 'home' }"
@@ -31,9 +31,9 @@
         <v-img
           alt="BecauseOfProg Logo"
           class="shrink mr-2"
+          contain
           src="https://cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/assets/logos/bop.min.svg"
-          width="40"
-          contain/>
+          width="40"/>
         <v-toolbar-title class="font-weight-medium">
           BecauseOfProg
         </v-toolbar-title>
@@ -43,10 +43,10 @@
         <template v-if="showSearchField">
           <v-text-field
             v-model="search"
-            color="darker"
             :placeholder="$t('topBar.searchField')"
-            single-line
+            color="darker"
             hide-details
+            single-line
             @keydown.enter="makeSearch"/>
           <v-btn
             color="darker"
@@ -57,23 +57,23 @@
         </template>
         <template v-else>
           <v-btn
-            to="/blog"
             color="darker"
-            text>
+            text
+            to="/blog">
             <v-icon left>mdi-text-box-multiple-outline</v-icon>
             {{ $t('topBar.publications') }}
           </v-btn>
           <v-btn
-            to="/page/projects"
             color="darker"
-            text>
+            text
+            to="/page/projects">
             <v-icon left>mdi-package-variant</v-icon>
             {{ $t('topBar.projects') }}
           </v-btn>
           <v-btn
-            to="/page/app"
             color="darker"
-            text>
+            text
+            to="/page/app">
             <v-icon left>mdi-cellphone-iphone</v-icon>
             {{ $t('topBar.application') }}
           </v-btn>
@@ -82,8 +82,8 @@
               <v-btn
                 color="darker"
                 icon
-                @click="showSearchField = true"
-                v-on="on">
+                v-on="on"
+                @click="showSearchField = true">
                 <v-icon>mdi-magnify</v-icon>
               </v-btn>
             </template>
@@ -104,9 +104,9 @@
     <v-bottom-navigation
       v-if="isMobile && $route.name !== 'publication'"
       v-model="bottomNavigation"
+      app
       color="darker"
-      fixed
-      app>
+      fixed>
       <v-btn
         v-for="item in mobileMenu"
         :key="item.name"
@@ -117,8 +117,8 @@
     </v-bottom-navigation>
 
     <v-footer
-      class="gradient"
-      :style="isMobile ? 'margin-bottom: 65px' : ''">
+      :style="isMobile ? 'margin-bottom: 65px' : ''"
+      class="gradient">
       <v-row>
         <v-col cols="6">
           <a
@@ -149,14 +149,14 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex'
+import {mapMutations, mapState} from 'vuex'
 import ThemeSwitcher from '@/components/ThemeSwitcher'
 import UserMenu from '@/views/members/UserMenu'
 
 export default {
   name: 'App',
-  components: { ThemeSwitcher, UserMenu },
-  data () {
+  components: {ThemeSwitcher, UserMenu},
+  data() {
     return {
       bottomNavigation: '',
 
@@ -175,7 +175,7 @@ export default {
     isDesktop() {
       return !this.isMobile
     },
-    mobileMenu: function() {
+    mobileMenu: function () {
       return [
         {
           name: 'mobileMenu.home',

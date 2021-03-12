@@ -1,8 +1,8 @@
 <template>
   <main>
     <b-top-banner
-      title="global.devblog"
-      icon="mdi-iframe-outline"/>
+      icon="mdi-iframe-outline"
+      title="global.devblog"/>
     <v-container class="page-body">
       <v-row>
         <v-col
@@ -14,9 +14,9 @@
             <p class="text-justify">{{ $t('devblog.description') }}</p>
             <template #actions>
               <v-btn
+                color="darker"
                 href="https://twitter.com/BecauseOfProg"
                 target="_blank"
-                color="darker"
                 text>
                 <v-icon left>mdi-twitter</v-icon>
                 {{ $t('devblog.followUs') }}
@@ -33,17 +33,22 @@
                 <v-col
                   v-for="(devblog, index) in devblogs"
                   :key="devblog.url"
-                  cols="12"
-                  :md="index % 6 === 0 ? 12 : 6">
+                  :md="index % 6 === 0 ? 12 : 6"
+                  cols="12">
                   <b-card :to="{ name: 'devblog', params: { url: devblog.url } }">
                     <template #image>
                       <v-img
-                        :src="imageProxy(devblog.banner, 617, 347)"
-                        :alt="devblog.title"/>
+                        :alt="devblog.title"
+                        :src="imageProxy(devblog.banner, 617, 347)"/>
                     </template>
                     <div>{{ devblog.category }}</div>
                     <p class="display-1 text--primary">{{ devblog.title }}</p>
-                    <p>{{ $t('publication.publishedBy', { author: devblog.author.displayname, date: dateToText(devblog.timestamp) }) }}</p>
+                    <p>{{
+                      $t('publication.publishedBy', {
+                        author: devblog.author.displayname,
+                        date: dateToText(devblog.timestamp)
+                      })
+                    }}</p>
                   </b-card>
                 </v-col>
               </v-row>
@@ -69,16 +74,16 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import {mapMutations} from 'vuex'
 
-import { imageProxy } from '@/utils/helpers'
-import { devblogs as api } from '@/utils/api'
+import {imageProxy} from '@/utils/helpers'
+import {devblogs as api} from '@/utils/api'
 import GradientRule from '@/components/GradientRule'
 import ScrollToTop from '@/components/ScrollToTop'
 
 export default {
   name: 'DevBlog',
-  components: { GradientRule, ScrollToTop },
+  components: {GradientRule, ScrollToTop},
   data() {
     return {
       devblogs: [],
@@ -100,7 +105,7 @@ export default {
     fetchDevblogs() {
       this.loading = true
       this.page += 1
-      api.get({ page: this.page }).then(response => {
+      api.get({page: this.page}).then(response => {
         this.pages = response.body.pages
         this.devblogs = [
           ...this.devblogs,

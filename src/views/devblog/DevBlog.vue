@@ -17,10 +17,12 @@
                 <div>{{ devblog.category }}</div>
                 <h1 class="text-h2">{{ devblog.title }}</h1>
                 <p>
-                  {{ $t('publication.publishedBy', {
-                    author: devblog.author.displayname,
-                    date: dateToText(devblog.timestamp)
-                  }) }}
+                  {{
+                    $t('publication.publishedBy', {
+                      author: devblog.author.displayname,
+                      date: dateToText(devblog.timestamp)
+                    })
+                  }}
                 </p>
               </div>
 
@@ -89,13 +91,13 @@
 <script>
 import MarkdownItVueLight from 'markdown-it-vue/dist/markdown-it-vue-light.umd.min.js'
 import SocialIcons from '@/components/SocialIcons'
-import { devblogs as api } from '@/utils/api'
+import {devblogs as api} from '@/utils/api'
 
 import 'markdown-it-vue/dist/markdown-it-vue.css'
 
 export default {
   name: 'Post',
-  components: { SocialIcons, MarkdownItVueLight },
+  components: {SocialIcons, MarkdownItVueLight},
   data() {
     return {
       devblog: {},
@@ -131,7 +133,7 @@ export default {
           },
           {
             property: 'og:description',
-            content: this.$t('devblog.title', { category: this.devblog.category })
+            content: this.$t('devblog.title', {category: this.devblog.category})
           }
         ]
       }

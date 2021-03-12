@@ -17,15 +17,15 @@
               <router-link :to="{ name: 'devblog', params: { url: devblog.url }}">
                 <v-img
                   v-ripple
-                  :src="devblog.banner"
                   :alt="devblog.title"
                   :aspect-ratio="18/9"
+                  :src="devblog.banner"
                   class="b-card">
                   <v-row
-                    style="height: 100%"
+                    align="center"
                     class="darker-bg text-center pa-3 ma-0"
                     justify="center"
-                    align="center">
+                    style="height: 100%">
                     <v-col>
                       <p class="white--text text-center ma-4">Sur notre devblog...</p>
                       <h3 class="text-h3 mb-8 white--text ma-4">{{ devblog.title }}</h3>
@@ -50,8 +50,8 @@
               md="6">
               <b-card>
                 <h3
-                  class="headline"
-                  :class="`${project.color}--text`">
+                  :class="`${project.color}--text`"
+                  class="headline">
                   <v-icon
                     :color="project.color">
                     {{ project.icon }}
@@ -70,8 +70,8 @@
                     v-for="link in project.links"
                     :key="project.name + link.name"
                     :href="link.value"
-                    target="_blank"
                     color="darker"
+                    target="_blank"
                     text>
                     <v-icon left>{{ icons[link.name] }}</v-icon>
                     {{ $t(`projects.links.${link.name}`) }}
@@ -83,10 +83,10 @@
               :class="$vuetify.breakpoint.mdAndUp ? 'text-right' : 'text-center'"
               cols="12">
               <v-btn
-                href="https://github.com/BecauseOfProg"
-                target="_blank"
                 class="white--text"
-                color="darker">
+                color="darker"
+                href="https://github.com/BecauseOfProg"
+                target="_blank">
                 <v-icon left>{{ icons['github'] }}</v-icon>
                 {{ $t('projects.more') }}
               </v-btn>
@@ -102,16 +102,16 @@
               <p class="text-justify">{{ $t('projects.description') }}</p>
               <template #actions>
                 <v-btn
-                  text
                   color="white"
-                  href="https://github.com/BecauseOfProg">
+                  href="https://github.com/BecauseOfProg"
+                  text>
                   <v-icon left>{{ icons['github'] }}</v-icon>
                   GitHub
                 </v-btn>
                 <v-btn
-                  text
                   color="white"
-                  href="https://twitter.com/BecauseOfProg">
+                  href="https://twitter.com/BecauseOfProg"
+                  text>
                   <v-icon left>{{ icons['twitter'] }}</v-icon>
                   Twitter
                 </v-btn>
@@ -119,16 +119,16 @@
             </b-card>
           </v-col>
           <v-col
-            cols="12"
-            class="pt-0">
+            class="pt-0"
+            cols="12">
             <b-card>
               <h3 class="headline">{{ $t('projects.blog.title') }}</h3>
               <p class="text-justify">{{ $t('projects.blog.description') }}</p>
               <template #actions>
                 <v-btn
+                  color="darker"
                   href="https://github.com/BecauseOfProg/blog"
                   target="_blank"
-                  color="darker"
                   text>
                   {{ $t('projects.blog.discover') }}
                 </v-btn>
@@ -142,8 +142,8 @@
 </template>
 
 <script>
-import { devblogs } from '@/utils/api'
-import { projects, languages } from '@/utils/data'
+import {devblogs} from '@/utils/api'
+import {languages, projects} from '@/utils/data'
 
 export default {
   name: 'Projects',

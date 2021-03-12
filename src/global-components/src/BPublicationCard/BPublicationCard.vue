@@ -4,8 +4,8 @@
     style="height: 100%">
     <template #image>
       <v-img
-        :src="imageProxy(publication.banner, 617, 347)"
-        :alt="publication.title"/>
+        :alt="publication.title"
+        :src="imageProxy(publication.banner, 617, 347)"/>
     </template>
     <span class="headline lecture-title">
       <b-read-indicator :publication="publication.url"/>
@@ -25,8 +25,8 @@
       </v-chip>
 
       <v-chip
-        class="mt-2"
-        :to="{ name: 'category', params: { category: category.id }}">
+        :to="{ name: 'category', params: { category: category.id }}"
+        class="mt-2">
         <v-icon left>
           {{ category.icon }}
         </v-icon>
@@ -37,8 +37,8 @@
 </template>
 
 <script>
-import { imageProxy } from '@/utils/helpers'
-import { getCategory } from '@/utils/data'
+import {imageProxy} from '@/utils/helpers'
+import {getCategory} from '@/utils/data'
 import BCard from '../BCard'
 import BReadIndicator from '../BReadIndicator'
 

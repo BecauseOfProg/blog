@@ -1,7 +1,7 @@
 <template>
   <v-card
-    :to="to"
-    :class="{ 'b-card': true, 'b-card--tile': tile, gradient }">
+    :class="{ 'b-card': true, 'b-card--tile': tile, gradient }"
+    :to="to">
     <slot name="image"/>
     <v-card-text :class="{ 'pa-0': fluid }">
       <slot/>

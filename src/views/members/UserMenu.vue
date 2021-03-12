@@ -78,12 +78,12 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import {mapActions, mapGetters} from 'vuex'
 import LoginDialog from '@/components/LoginDialog'
 
 export default {
   name: 'UserMenu',
-  components: { LoginDialog },
+  components: {LoginDialog},
   computed: {
     ...mapGetters(['isAuthenticated']),
     user() {

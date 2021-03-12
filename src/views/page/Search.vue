@@ -1,23 +1,23 @@
 <template>
   <main>
     <b-top-banner
-      title="global.search"
-      icon="mdi-magnify"/>
+      icon="mdi-magnify"
+      title="global.search"/>
     <v-container class="page-body">
       <v-row>
         <v-col
           cols="12"
-          md="10"
           lg="8"
-          offset-md="1"
-          offset-lg="2">
+          md="10"
+          offset-lg="2"
+          offset-md="1">
           <b-card>
             <v-text-field
               v-model="search"
-              prepend-icon="mdi-magnify"
               :label="`${$t('global.search')}...`"
-              type="search"
               color="darker"
+              prepend-icon="mdi-magnify"
+              type="search"
               @keyup.enter="makeSearch"/>
             <h4>{{ $t('list.suggestedCategories') }}</h4>
             <categories-chips exclude-types/>
@@ -25,16 +25,16 @@
         </v-col>
         <v-col
           cols="12"
-          md="12"
           lg="10"
+          md="12"
           offset-lg="1">
           <v-row>
             <v-col
               v-for="publication in publications"
               :key="publication.id"
               cols="12"
-              md="6"
-              lg="4">
+              lg="4"
+              md="6">
               <b-publication-card :publication="publication"/>
             </v-col>
           </v-row>
@@ -46,11 +46,11 @@
 
 <script>
 import CategoriesChips from '@/components/CategoriesChips'
-import { publications } from '@/utils/api'
+import {publications} from '@/utils/api'
 
 export default {
   name: 'Search',
-  components: { CategoriesChips },
+  components: {CategoriesChips},
   data() {
     return {
       publications: [],

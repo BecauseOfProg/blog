@@ -4,9 +4,9 @@
       <v-tooltip bottom>
         <template #activator="{ on: tooltip }">
           <v-btn
+            v-bind="attrs"
             color="darker"
             icon
-            v-bind="attrs"
             v-on="{ ...menu, ...tooltip }">
             <v-icon>mdi-theme-light-dark</v-icon>
           </v-btn>
@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import {mapActions, mapState} from 'vuex'
 
 export default {
   name: 'ThemeSwitcher',

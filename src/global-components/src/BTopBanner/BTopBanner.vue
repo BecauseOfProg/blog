@@ -1,21 +1,22 @@
 <template>
   <v-parallax
-    :src="src"
+    :class="classes"
     :height="height"
-    :class="classes">
+    :src="src">
     <img
       v-if="image"
-      src="https://cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/assets/logos/bop.min.svg"
       alt="BecauseOfProg"
+      src="https://cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/assets/logos/bop.min.svg"
       width="200">
     <v-icon
       v-if="icon && tall"
       :class="{'mt-12': tall}"
       color="white"
-      size="70px">{{ icon }}</v-icon>
+      size="70px">{{ icon }}
+    </v-icon>
     <h1
-      class="white--text text-center"
-      :class="{'mt-12': $vuetify.breakpoint.smAndDown && !icon}">
+      :class="{'mt-12': $vuetify.breakpoint.smAndDown && !icon}"
+      class="white--text text-center">
       <template v-if="typeof title === 'object'">{{ $t.apply(this, title) }}</template>
       <template v-else>{{ $t(title) }}</template>
     </h1>
@@ -64,8 +65,7 @@ export default {
       if (this.image) {
         if (this.$vuetify.breakpoint.mdAndUp) return 450
         else return 500
-      }
-      else if (this.tall) return 300
+      } else if (this.tall) return 300
       else return 150
     }
   }

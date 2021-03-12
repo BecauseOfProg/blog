@@ -1,8 +1,8 @@
 <template>
   <main>
     <b-top-banner
-      title="staff.dashboard.title"
-      icon="mdi-view-dashboard-outline"/>
+      icon="mdi-view-dashboard-outline"
+      title="staff.dashboard.title"/>
     <v-container class="page-body"/>
   </main>
 </template>

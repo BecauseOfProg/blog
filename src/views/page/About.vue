@@ -1,8 +1,8 @@
 <template>
   <main>
     <b-top-banner
-      title="global.about"
-      icon="mdi-information-outline"/>
+      icon="mdi-information-outline"
+      title="global.about"/>
     <v-container class="page-body"/>
   </main>
 </template>

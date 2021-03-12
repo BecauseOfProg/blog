@@ -10,8 +10,8 @@
             <v-text-field
               v-model="form.title"
               :rules="rule"
-              label="Titre"
               color="light"
+              label="Titre"
               outlined
               required/>
           </v-col>
@@ -19,8 +19,8 @@
             <v-textarea
               v-model="form.description"
               :rules="rule"
-              label="Description"
               color="light"
+              label="Description"
               outlined
               required/>
           </v-col>
@@ -29,10 +29,10 @@
             md="6">
             <v-select
               v-model="form.category"
-              :rules="rule"
               :items="categories.map(category => category.id)"
-              label="Catégorie"
+              :rules="rule"
               color="light"
+              label="Catégorie"
               outlined
               required>
               <template #item="{ item }">
@@ -48,10 +48,10 @@
             md="6">
             <v-select
               v-model="form.type"
-              :rules="rule"
               :items="types.map(type => type.id)"
-              label="Type"
+              :rules="rule"
               color="light"
+              label="Type"
               outlined
               required>
               <template #item="{ item }">
@@ -68,8 +68,8 @@
             <v-text-field
               v-model="form.banner"
               :rules="rule"
-              label="Lien HTTPS vers la bannière"
               color="light"
+              label="Lien HTTPS vers la bannière"
               outlined
               required/>
           </v-col>
@@ -79,8 +79,8 @@
             <v-text-field
               v-model="form.labels"
               :rules="rule"
-              label="Mots-clés (séparés par une virgule)"
               color="light"
+              label="Mots-clés (séparés par une virgule)"
               outlined
               required/>
           </v-col>
@@ -88,29 +88,29 @@
             <textarea
               id="md-editor"
               cols="250"
-              rows="10"
-              name="md-editor"/>
+              name="md-editor"
+              rows="10"/>
           </v-col>
           <v-col
-            cols="12"
-            class="text-center">
+            class="text-center"
+            cols="12">
             <v-btn
-              :loading="waiting"
               :disabled="!valid"
+              :loading="waiting"
               color="darker"
               @click="publish">
               <v-icon left>mdi-publish</v-icon>
-              {{ $t('staff.publications.create.publish')}}
+              {{ $t('staff.publications.create.publish') }}
             </v-btn>
           </v-col>
         </v-row>
       </v-form>
       <v-btn
-        color="darker"
-        fixed
         bottom
-        right
+        color="darker"
         fab
+        fixed
+        right
         @click="$emit('close')">
         <v-icon>mdi-close</v-icon>
       </v-btn>
@@ -119,8 +119,8 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex'
-import { settings, categories, types } from '@/utils/data'
+import {mapMutations, mapState} from 'vuex'
+import {categories, settings, types} from '@/utils/data'
 
 export default {
   name: 'CreatePublication',

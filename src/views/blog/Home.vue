@@ -3,19 +3,19 @@
     <categories-bar/>
     <v-carousel
       :show-arrows="false"
-      interval="4000"
+      cycle
       height="400px"
       hide-delimiter-background
-      cycle>
+      interval="4000">
       <v-carousel-item
         v-for="(item, i) in carousel"
         :key="`carousel1_${i}`"
         :src="item.background === null ? '' : item.background"
         class="gradient">
         <v-row
-          class="fill-height white--text safe ma-0 flex-column"
           :class="item.classes"
           align="center"
+          class="fill-height white--text safe ma-0 flex-column"
           justify="center">
           <span class="display-2 mb-3">{{ item.title }}</span>
           <span class="headline mb-3 text-center ml-1 mr-2">{{ item.subtitle }}</span>
@@ -41,9 +41,9 @@
             fluid>
             <v-row class="ma-0">
               <v-col
+                class="d-flex pa-0"
                 cols="12"
-                md="6"
-                class="d-flex pa-0">
+                md="6">
                 <v-img
                   id="first-publication"
                   :src="imageProxy(lastPublications[0].banner, 617.15, 0)"/>
@@ -109,8 +109,8 @@
             <b-card>
               <template #image>
                 <v-img
-                  src="https://i.cdn.becauseofprog.fr/cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/assets/new-banner.png?w=724.167"
-                  height="200px">
+                  height="200px"
+                  src="https://i.cdn.becauseofprog.fr/cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/assets/new-banner.png?w=724.167">
                   <h1 class="white--text shadow">{{ $t('pages.aboutUs') }}</h1>
                 </v-img>
               </template>
@@ -131,13 +131,13 @@ import CategoriesBar from '@/components/CategoriesBar'
 import GradientRule from '@/components/GradientRule'
 import SocialIcons from '@/components/SocialIcons'
 
-import { imageProxy } from '@/utils/helpers'
-import { publications, devblogs } from '@/utils/api'
-import { categories, types } from '@/utils/data'
+import {imageProxy} from '@/utils/helpers'
+import {devblogs, publications} from '@/utils/api'
+import {categories, types} from '@/utils/data'
 
 export default {
   name: 'Home',
-  components: { CategoriesBar, GradientRule, SocialIcons },
+  components: {CategoriesBar, GradientRule, SocialIcons},
   data() {
     return {
       carousel: [
@@ -187,7 +187,7 @@ export default {
       })
     })
   },
-  methods: { imageProxy }
+  methods: {imageProxy}
 }
 </script>
 

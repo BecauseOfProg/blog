@@ -1,8 +1,8 @@
 <template>
   <main>
     <b-top-banner
-      icon="mdi-account-circle-outline"
-      :title="$t('account.title')"/>
+      :title="$t('account.title')"
+      icon="mdi-account-circle-outline"/>
     <v-container class="page-body">
       <h1>À venir</h1>
     </v-container>
