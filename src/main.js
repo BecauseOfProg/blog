@@ -19,6 +19,7 @@ import '@/css/index.styl'
 // Mixins & components
 import '@/global-components'
 import '@/plugins/luxon'
+import '@/plugins/plausible'
 
 Vue.config.productionTip = false
 
