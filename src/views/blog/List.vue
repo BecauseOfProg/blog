@@ -27,17 +27,17 @@
                 <template v-for="(publication, index) in publications">
                   <v-col
                     v-if="index === 0"
-                    :key="publication.url"
+                    :key="publication.slug"
                     cols="12">
                     <v-row>
                       <v-col
                         cols="12"
                         md="6">
-                        <router-link :to="{ name: 'publication', params: { url: publication.url }}">
+                        <router-link :to="{ name: 'publication', params: { slug: publication.slug }}">
                           <v-img
                             v-ripple
                             :alt="publication.title"
-                            :src="imageProxy(publication.banner, 896, 504)"/>
+                            :src="imageProxy(publication.illustration, 896, 504)"/>
                         </router-link>
                       </v-col>
                       <v-col
@@ -45,10 +45,10 @@
                         cols="12"
                         md="6">
                         <router-link
-                          :to="{ name: 'publication', params: { url: publication.url }}"
+                          :to="{ name: 'publication', params: { slug: publication.slug }}"
                           class="text--text">
                           <h3 class="text-h3 mb-8 lexture-title">
-                            <b-read-indicator :publication="publication.url"/>
+                            <b-read-indicator :publication="publication.slug"/>
                             {{ publication.title }}
                           </h3>
                         </router-link>
@@ -74,7 +74,7 @@
                   </v-col>
                   <v-col
                     v-else
-                    :key="publication.url"
+                    :key="publication.slug"
                     :md="((index - 1) % 10) % 6 === 0 || (index - 1) % 10 === 0 ? 8 : 4"
                     cols="12">
                     <b-publication-card :publication="publication"/>
@@ -88,7 +88,7 @@
               color="darker"
               indeterminate/>
             <span
-              v-else-if="params.page !== pages"
+              v-else-if="publications.length !== count"
               v-intersect="onIntersect"/>
             <gradient-rule
               v-else
@@ -154,7 +154,7 @@ import ScrollToTop from '@/components/ScrollToTop'
 
 export default {
   name: 'List',
-  components: {CategoriesChips, CategoriesBar, GradientRule, ScrollToTop, SocialIcons},
+  components: { CategoriesChips, CategoriesBar, GradientRule, ScrollToTop, SocialIcons },
   data() {
     return {
       fab: false,
@@ -164,12 +164,12 @@ export default {
         image: undefined
       },
       params: {
-        page: 0
+        skip: 0
       },
       search: '',
       publications: [],
+      count: 0,
       loading: false,
-      pages: 0,
       empty: false,
 
       categories,
@@ -220,15 +220,16 @@ export default {
     },
     fetchPublications(_, reset = false) {
       this.loading = true
-      if (reset) this.params.page = 1
-      else this.params.page += 1
+      if (reset) this.params.skip = 0
+      else this.params.skip = this.publications.length
       api.get(this.params).then(response => {
-        this.publications = reset ? response.body.data : [
+        this.publications = reset ? response.body : [
           ...this.publications,
-          ...response.body.data
+          ...response.body
         ]
         if (!this.publications.length) this.empty = true
-        this.pages = response.body.pages
+        console.log(response.headers.getAll())
+        this.count = parseInt(response.headers.get('Count'))
         this.loading = false
       })
     }

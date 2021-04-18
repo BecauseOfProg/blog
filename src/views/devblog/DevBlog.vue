@@ -57,15 +57,15 @@
               <h3 class="headline">{{ $t('devblog.otherPosts') }}</h3>
               <template v-for="other in otherDevblogs">
                 <router-link
-                  v-if="other.url !== $route.params.url"
-                  :key="other.url + 'link'"
-                  :to="{ name: 'devblog', params: { url: other.url } }"
+                  v-if="other.slug !== $route.params.slug"
+                  :key="other.slug + 'link'"
+                  :to="{ name: 'devblog', params: { slug: other.slug } }"
                   class="darker--text subtitle-1">
                   {{ other.title }}
                 </router-link>
                 <p
-                  v-if="other.url !== $route.params.url"
-                  :key="other.url + 'author'"
+                  v-if="other.slug !== $route.params.slug"
+                  :key="other.slug + 'author'"
                   class="mb-3">
                   {{ other.category }} &mdash; {{ dateToText(other.timestamp) }}
                 </p>
@@ -107,8 +107,8 @@ export default {
     }
   },
   mounted() {
-    api.get({url: this.$route.params.url}).then(response => {
-      this.devblog = response.body.data
+    api.get({slug: this.$route.params.slug}).then(response => {
+      this.devblog = response.body
       this.loaded = true
     }, () => {
       this.SHOW_SNACKBAR({
@@ -119,7 +119,7 @@ export default {
     })
 
     api.get().then(response => {
-      this.otherDevblogs = response.body.data
+      this.otherDevblogs = response.body
     })
   },
   metaInfo() {

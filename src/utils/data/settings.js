@@ -1,5 +1,5 @@
 const settings = {
-  api: 'https://api.becauseofprog.fr/v1',
+  api: 'http://localhost:5000/v3',
   rss_base: 'https://gh.becauseofprog.fr/rss-proxy/',
   selected_publication: 'linux-sur-android'
 }

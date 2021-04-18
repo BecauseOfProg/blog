@@ -3,7 +3,7 @@ import { loadFromStorage } from '@/utils/helpers'
 const state = []
 
 const getters = {
-  isPublicationRead: state => url => state.includes(url)
+  isPublicationRead: state => slug => state.includes(slug)
 }
 
 const mutations = {
@@ -12,16 +12,16 @@ const mutations = {
     let publications = loadFromStorage('read-publications').split(',')
     publications.forEach(publication => state.push(publication))
   },
-  ADD_READ_PUBLICATION(state, url) {
+  ADD_READ_PUBLICATION(state, slug) {
     console.log(state)
-    state.push(url)
+    state.push(slug)
   }
 }
 
 const actions = {
-  addReadPublication({ commit, getters, state }, url) {
-    if (!getters.isPublicationRead(url)) {
-      commit('ADD_READ_PUBLICATION', url)
+  addReadPublication({ commit, getters, state }, slug) {
+    if (!getters.isPublicationRead(slug)) {
+      commit('ADD_READ_PUBLICATION', slug)
       localStorage.setItem('read-publications', state.join(','))
     }
   }

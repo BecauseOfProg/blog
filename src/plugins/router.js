@@ -31,7 +31,7 @@ let router = new Router({
       component: () => import(/* webpackChunkName: "blog" */ '@/views/blog/List.vue')
     },
     {
-      path: '/article/:url',
+      path: '/article/:slug',
       name: 'publication',
       component: () => import(/* webpackChunkName: "blog" */ '@/views/blog/Publication.vue')
     },
@@ -41,7 +41,7 @@ let router = new Router({
       component: () => import(/* webpackChunkName: "devblog" */ '@/views/devblog/DevBlogs.vue')
     },
     {
-      path: '/devblog/:url',
+      path: '/devblog/:slug',
       name: 'devblog',
       component: () => import(/* webpackChunkName: "devblog" */ '@/views/devblog/DevBlog.vue')
     },

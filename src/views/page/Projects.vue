@@ -14,12 +14,12 @@
               cols="12"
               md="8"
               offset-md="2">
-              <router-link :to="{ name: 'devblog', params: { url: devblog.url }}">
+              <router-link :to="{ name: 'devblog', params: { slug: devblog.slug }}">
                 <v-img
                   v-ripple
                   :alt="devblog.title"
                   :aspect-ratio="18/9"
-                  :src="devblog.banner"
+                  :src="devblog.illustration"
                   class="b-card">
                   <v-row
                     align="center"
@@ -163,8 +163,8 @@ export default {
     }
   },
   mounted() {
-    devblogs.get({url: 'last'}).then(response => {
-      this.devblog = response.body.data
+    devblogs.get({ size: 1 }).then(response => {
+      this.devblog = response.body[0]
     })
   },
   metaInfo() {

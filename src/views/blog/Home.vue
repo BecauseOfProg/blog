@@ -37,7 +37,7 @@
           offset-md="1">
           <b-card
             v-if="lastPublications.length"
-            :to="{ name: 'publication', params: { url: lastPublications[0].url }}"
+            :to="{ name: 'publication', params: { slug: lastPublications[0].slug }}"
             fluid>
             <v-row class="ma-0">
               <v-col
@@ -46,7 +46,7 @@
                 md="6">
                 <v-img
                   id="first-publication"
-                  :src="imageProxy(lastPublications[0].banner, 617.15, 0)"/>
+                  :src="imageProxy(lastPublications[0].illustration, 617.15, 0)"/>
               </v-col>
               <v-col
                 cols="12"
@@ -137,7 +137,7 @@ import {categories, types} from '@/utils/data'
 
 export default {
   name: 'Home',
-  components: {CategoriesBar, GradientRule, SocialIcons},
+  components: { CategoriesBar, GradientRule, SocialIcons },
   data() {
     return {
       carousel: [
@@ -170,24 +170,24 @@ export default {
     }
   },
   mounted() {
-    publications.get().then(data => {
-      this.lastPublications = data.body.data
+    publications.get({ size: 3 }).then(data => {
+      this.lastPublications = data.body
     })
-    devblogs.get({url: 'last'}).then(response => {
-      let devblog = response.body.data
+    devblogs.get({ size: 1 }).then(response => {
+      let devblog = response.body[0]
       this.carousel.push({
-        background: devblog.banner,
+        background: devblog.illustration,
         title: 'Sur notre devblog...',
         subtitle: `${devblog.title} (${devblog.category})`,
         button: {
           label: 'Voir!',
-          link: `/devblog/${devblog.url}`
+          link: `/devblog/${devblog.slug}`
         },
         classes: ['darker-bg']
       })
     })
   },
-  methods: {imageProxy}
+  methods: { imageProxy }
 }
 </script>
 

@@ -3,7 +3,7 @@
     <template v-if="loaded">
       <v-parallax
         :height="$vuetify.breakpoint.smAndDown ? 650 : 500"
-        :src="publication.banner"
+        :src="publication.illustration"
         dark>
         <v-row
           align="center"
@@ -55,7 +55,7 @@
                       class="mt-n1 mr-n0">mdi-clock-outline</v-icon>
                     <span :class="!$vuetify.theme.dark ? 'grey--text text--darken-2' : 'grey--text'">
                       {{ $t('publication.publishedBy', {
-                        author: publication.author.displayname,
+                        author: author.displayname,
                         date: dateToText(publication.timestamp)
                       }) }}
                     </span>
@@ -103,11 +103,11 @@
                   <v-icon left>{{ category.icon }}</v-icon>
                   {{ $t(`categories.${category.id}`) }}
                 </v-chip>
-                <v-chip
+                <!--<v-chip
                   v-for="label in publication.labels"
                   :key="label">
                   {{ label }}
-                </v-chip>
+                </v-chip>-->
               </div>
             </b-card>
           </v-col>
@@ -121,7 +121,7 @@
                   <v-col
                     cols="12"
                     class="pt-0">
-                    <member-card :member="publication.author"/>
+                    <member-card :member="author"/>
                   </v-col>
                   <v-col cols="12">
                     <b-card>
@@ -228,7 +228,7 @@
                         {{ $t('publication.comments.any') }}
                       </p>
                       <v-btn
-                        v-if="commentsPage !== commentsPages"
+                        v-if="commentsCount !== comments.length"
                         color="darker"
                         text
                         :loading="commentsLoading"
@@ -320,7 +320,7 @@ import MemberCard from '@/components/MemberCard'
 import CategoriesChips from '@/components/CategoriesChips'
 
 import { categories, types, getCategory, getType } from '@/utils/data'
-import { publications as api, comments } from '@/utils/api'
+import { comments, publications, users } from '@/utils/api'
 import MarkdownItVueLight from 'markdown-it-vue/dist/markdown-it-vue-light.umd.min.js'
 import 'markdown-it-vue/dist/markdown-it-vue.css'
 
@@ -336,11 +336,11 @@ export default {
   data() {
     return {
       publication: {},
+      author: {},
       loaded: false,
 
       comments: [],
-      commentsPage: 0,
-      commentsPages: 0,
+      commentsCount: 0,
       commentsLoading: false,
 
       commentForm: Object.assign({}, defaultCommentForm),
@@ -362,10 +362,14 @@ export default {
     }
   },
   mounted() {
-    api.get({ url: this.$route.params.url }).then(response => {
-      this.publication = response.body.data
-      this.loaded = true
-      this.addReadPublication(this.publication.url)
+    publications.get({ slug: this.$route.params.slug }).then(response => {
+      this.publication = response.body
+      this.addReadPublication(this.publication.slug)
+
+      users.get({ username: this.publication.author }).then(response => {
+        this.author = response.body
+        this.loaded = true
+      })
     }, () => {
       this.SHOW_SNACKBAR({
         error: true,
@@ -387,23 +391,23 @@ export default {
         return [
           {
             name: 'Twitter', icon: 'mdi-twitter', color: 'blue lighten-2',
-            link: `https://twitter.com/intent/tweet?url=https://becauseofprog.fr/article/${this.publication.url}&text=${this.publication.title} (via @BecauseOfProg)`
+            link: `https://twitter.com/intent/tweet?url=https://becauseofprog.fr/article/${this.publication.slug}&text=${this.publication.title} (via @BecauseOfProg)`
           },
           {
             name: 'Facebook', icon: 'mdi-facebook', color: 'blue darken-4',
-            link: `https://www.facebook.com/sharer/sharer.php?u=https://becauseofprog.fr/article/${this.publication.url}`
+            link: `https://www.facebook.com/sharer/sharer.php?u=https://becauseofprog.fr/article/${this.publication.slug}`
           },
           {
             name: 'Diaspora', icon: 'mdi-asterisk', color: 'purple darken-2',
-            link: `https://share.diasporafoundation.org/?title=${this.publication.title}&url=https://becauseofprog.fr/article/${this.publication.url}`
+            link: `https://share.diasporafoundation.org/?title=${this.publication.title}&url=https://becauseofprog.fr/article/${this.publication.slug}`
           },
           {
             name: 'Mastodon', icon: 'mdi-mastodon', color: 'blue darken-2',
-            link: `web+mastodon://share?text=${this.publication.title}%20-%20https://becauseofprog.fr/article/${this.publication.url}`
+            link: `web+mastodon://share?text=${this.publication.title}%20-%20https://becauseofprog.fr/article/${this.publication.slug}`
           },
           {
             name: 'Mail', icon: 'mdi-email-outline', color: 'dark',
-            link: `mailto:?subject=${this.publication.title}&body=${this.publication.description} Via BecauseOfProg : https://becauseofprog.fr/article/${this.publication.url}`
+            link: `mailto:?subject=${this.publication.title}&body=${this.publication.description} Via BecauseOfProg : https://becauseofprog.fr/article/${this.publication.slug}`
           }
         ]
       } else return []
@@ -414,20 +418,18 @@ export default {
     ...mapActions(['addReadPublication']),
     fetchComments() {
       this.commentsLoading = true
-      this.commentsPage += 1
-      comments.get({ post: this.$route.params.url, page: this.commentsPage }).then(response => {
+      comments.get({ post_type: 'publication', post_slug: this.$route.params.slug, skip: this.comments.length }).then(response => {
         this.comments = [
           ...this.comments,
-          ...response.body.data
+          ...response.body
         ]
-        this.commentsPages = response.body.pages
-        if (this.commentsPages === 0) this.commentsPage = 0
+        this.commentsCount = parseInt(response.headers.get('Count'))
         this.commentsLoading = false
       })
     },
     submitComment() {
       this.sendingComment = true
-      comments.save({ post: this.$route.params.url }, this.commentForm).then(() => {
+      comments.save({ post_type: 'publication', post_slug: this.$route.params.slug }, this.commentForm).then(() => {
         this.sendingComment = false
         this.SHOW_SNACKBAR({
           error: false,

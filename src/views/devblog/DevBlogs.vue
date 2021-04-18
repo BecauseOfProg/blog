@@ -32,14 +32,14 @@
               <v-row>
                 <v-col
                   v-for="(devblog, index) in devblogs"
-                  :key="devblog.url"
+                  :key="devblog.slug"
                   :md="index % 6 === 0 ? 12 : 6"
                   cols="12">
-                  <b-card :to="{ name: 'devblog', params: { url: devblog.url } }">
+                  <b-card :to="{ name: 'devblog', params: { slug: devblog.slug } }">
                     <template #image>
                       <v-img
                         :alt="devblog.title"
-                        :src="imageProxy(devblog.banner, 617, 347)"/>
+                        :src="imageProxy(devblog.illustration, 617, 347)"/>
                     </template>
                     <div>{{ devblog.category }}</div>
                     <p class="display-1 text--primary">{{ devblog.title }}</p>
@@ -59,7 +59,7 @@
               color="darker"
               indeterminate/>
             <span
-              v-else-if="page !== pages"
+              v-else-if="devblogs.length !== count"
               v-intersect="onIntersect"/>
             <gradient-rule
               v-else
@@ -83,12 +83,11 @@ import ScrollToTop from '@/components/ScrollToTop'
 
 export default {
   name: 'DevBlog',
-  components: {GradientRule, ScrollToTop},
+  components: { GradientRule, ScrollToTop },
   data() {
     return {
       devblogs: [],
-      page: 0,
-      pages: 0,
+      count: 0,
       loading: false
     }
   },
@@ -104,12 +103,11 @@ export default {
     },
     fetchDevblogs() {
       this.loading = true
-      this.page += 1
-      api.get({page: this.page}).then(response => {
-        this.pages = response.body.pages
+      api.get({ skip: this.devblogs.length }).then(response => {
+        this.count = parseInt(response.headers.get('Count'))
         this.devblogs = [
           ...this.devblogs,
-          ...response.body.data
+          ...response.body
         ]
         this.loading = false
       }, error => {

@@ -39,12 +39,12 @@
           <v-row v-else>
             <v-col
               v-for="publication in categoryPublications[category.id]"
-              :key="publication.url + 'menu'"
+              :key="publication.slug + 'menu'"
               v-ripple
               cols="4">
-              <router-link :to="{ name: 'publication', params: { url: publication.url }}">
+              <router-link :to="{ name: 'publication', params: { slug: publication.slug }}">
                 <v-img
-                  :src="publication.banner"
+                  :src="publication.illustration"
                   :alt="publication.title"
                   :aspect-ratio="16/9"/>
                 <h5 class="text-h5 my-2 text--text lecture-title">{{ publication.title }}</h5>
@@ -88,10 +88,10 @@ export default {
   methods: {
     loadCategory(category) {
       if (this.categoryPublications[category] === undefined) {
-        publications.get({category}).then(data => {
+        publications.get({ category, size: 3 }).then(data => {
           this.categoryPublications = {
             ...this.categoryPublications,
-            [category]: data.body.data.slice(0, 3)
+            [category]: data.body
           }
         })
       }

@@ -1,14 +1,14 @@
 <template>
   <b-card
-    :to="{ name: 'publication', params: { url: publication.url }}"
+    :to="{ name: 'publication', params: { slug: publication.slug }}"
     style="height: 100%">
     <template #image>
       <v-img
         :alt="publication.title"
-        :src="imageProxy(publication.banner, 617, 347)"/>
+        :src="imageProxy(publication.illustration, 617, 347)"/>
     </template>
     <span class="headline lecture-title">
-      <b-read-indicator :publication="publication.url"/>
+      <b-read-indicator :publication="publication.slug"/>
       {{ publication.title }}
     </span>
     <p class="lecture-text mt-2 mb-3">{{ publication.description }}</p>

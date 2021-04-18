@@ -66,10 +66,10 @@
             cols="12"
             md="6">
             <v-text-field
-              v-model="form.banner"
+              v-model="form.illustration"
               :rules="rule"
               color="light"
-              label="Lien HTTPS vers la bannière"
+              label="Lien HTTPS vers l'illustration"
               outlined
               required/>
           </v-col>
@@ -77,7 +77,7 @@
             cols="12"
             md="6">
             <v-text-field
-              v-model="form.labels"
+              v-model="form.keywords"
               :rules="rule"
               color="light"
               label="Mots-clés (séparés par une virgule)"
@@ -131,8 +131,8 @@ export default {
         type: '',
         category: '',
         description: '',
-        labels: '',
-        banner: ''
+        keywords: '',
+        illustration: ''
       },
       rule: [v => !!v || 'Le champ est requis'],
       valid: false,
@@ -158,14 +158,14 @@ export default {
         type: this.form.type,
         category: this.form.category,
         description: this.form.description,
-        labels: this.form.labels.split(','),
-        banner: this.form.banner,
+        keywords: this.form.keywords.split(','),
+        illustration: this.form.illustration,
         content: this.simplemde.value()
       }
 
       /*eslint no-unused-vars:0*/
       this.$http.post(
-        settings.api + '/blog-posts',
+        settings.api + '/publications',
         data,
         {
           headers: {
