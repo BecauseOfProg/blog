@@ -228,8 +228,7 @@ export default {
           ...response.body
         ]
         if (!this.publications.length) this.empty = true
-        console.log(response.headers.getAll())
-        this.count = parseInt(response.headers.get('Count'))
+        this.count = parseInt(response.headers.map.count)
         this.loading = false
       })
     }

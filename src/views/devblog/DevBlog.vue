@@ -118,7 +118,7 @@ export default {
       this.$router.push({name: 'devblogs'})
     })
 
-    api.get().then(response => {
+    api.get({ size: 5 }).then(response => {
       this.otherDevblogs = response.body
     })
   },

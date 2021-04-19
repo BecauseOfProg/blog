@@ -104,7 +104,7 @@ export default {
     fetchDevblogs() {
       this.loading = true
       api.get({ skip: this.devblogs.length }).then(response => {
-        this.count = parseInt(response.headers.get('Count'))
+        this.count = parseInt(response.headers.map.count)
         this.devblogs = [
           ...this.devblogs,
           ...response.body
