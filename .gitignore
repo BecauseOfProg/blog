@@ -20,3 +20,6 @@ yarn-error.log*
 *.sln
 *.sw?
 *.local
+
+# Build files
+/components.d.ts
