@@ -27,6 +27,7 @@ jobs:
         remote-host: ${{ secrets.DEPLOY_HOST }}
         remote-user: ${{ secrets.DEPLOY_USER }}
         remote-password: ${{ secrets.DEPLOY_PASSWORD }}
-        remote_port: ${{ secrets.DEPLOY_PORT }}
+        remote-port: ${{ secrets.DEPLOY_PORT }}
         remote-path: "public_html"
         local-path: "dist"
+        sync: 'full'
