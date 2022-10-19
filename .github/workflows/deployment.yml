@@ -21,8 +21,6 @@ jobs:
 
     - run: npm install
     - run: npm run build
-    - run: ls
-    - run: ls dist/
     - uses: milanmk/actions-file-deployer@master
       with:
         remote-host: ${{ secrets.DEPLOY_HOST }}
