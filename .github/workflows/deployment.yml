@@ -21,13 +21,14 @@ jobs:
 
     - run: npm install
     - run: npm run build
-    
+    - run: ls
+    - run: ls dist/
     - uses: milanmk/actions-file-deployer@master
       with:
         remote-host: ${{ secrets.DEPLOY_HOST }}
         remote-user: ${{ secrets.DEPLOY_USER }}
         remote-password: ${{ secrets.DEPLOY_PASSWORD }}
         remote-port: ${{ secrets.DEPLOY_PORT }}
-        remote-path: "/www/"
+        remote-path: "/www"
         local-path: "./dist/"
         sync: 'full'
