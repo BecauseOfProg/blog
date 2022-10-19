@@ -110,7 +110,7 @@
               <template #image>
                 <v-img
                   height="200px"
-                  src="https://i.cdn.becauseofprog.fr/cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/assets/new-banner.png?w=724.167">
+                  :src="imageProxy('https://cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/assets/new-banner.png', 724.167)">
                   <h1 class="white--text shadow">{{ $t('pages.aboutUs') }}</h1>
                 </v-img>
               </template>
@@ -155,7 +155,7 @@ export default {
           }
         },
         {
-          background: 'https://i.cdn.becauseofprog.fr/cdn.becauseofprog.fr/syst-images/dev.jpg?w=1920',
+          background: 'https://p.cdn.becauseofprog.fr/1920x/https://cdn.becauseofprog.fr/syst-images/dev.jpg',
           title: 'Nos projets',
           subtitle: 'Nous mettons à disposition des outils et services open-sources',
           button: {

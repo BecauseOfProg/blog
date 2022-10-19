@@ -211,7 +211,7 @@
                           :key="comment.slug">
                           <v-list-item-avatar>
                             <v-img
-                              :src="`https://i.cdn.becauseofprog.fr/gravatar.com/avatar/${comment.encoded_email}`"
+                              :src="imageProxy(`https://gravatar.com/avatar/${comment.encoded_email}`)"
                               :alt="comment.username"/>
                           </v-list-item-avatar>
                           <v-list-item-content>
