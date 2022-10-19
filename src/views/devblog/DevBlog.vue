@@ -90,7 +90,7 @@
 
 <script>
 import MarkdownItVueLight from 'markdown-it-vue/dist/markdown-it-vue-light.umd.min.js'
-import SocialIcons from '@/components/SocialIcons'
+import SocialIcons from '@/components/SocialIcons.vue'
 import {devblogs as api} from '@/utils/api'
 
 import 'markdown-it-vue/dist/markdown-it-vue.css'

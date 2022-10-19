@@ -1,4 +1,4 @@
-import BReadIndicator from './BReadIndicator'
+import BReadIndicator from './BReadIndicator.vue'
 
 export { BReadIndicator }
 export default BReadIndicator

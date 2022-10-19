@@ -315,9 +315,9 @@
 <script>
 import { mapMutations, mapActions } from 'vuex'
 
-import SocialIcons from '@/components/SocialIcons'
-import MemberCard from '@/components/MemberCard'
-import CategoriesChips from '@/components/CategoriesChips'
+import SocialIcons from '@/components/SocialIcons.vue'
+import MemberCard from '@/components/MemberCard.vue'
+import CategoriesChips from '@/components/CategoriesChips.vue'
 
 import { categories, types, getCategory, getType } from '@/utils/data'
 import { publications as api, comments } from '@/utils/api'

@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import CategoriesChips from '@/components/CategoriesChips'
+import CategoriesChips from '@/components/CategoriesChips.vue'
 import {publications} from '@/utils/api'
 
 export default {

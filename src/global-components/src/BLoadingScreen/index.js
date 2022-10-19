@@ -1,4 +1,4 @@
-import BLoadingScreen from './BLoadingScreen'
+import BLoadingScreen from './BLoadingScreen.vue'
 import './BLoadingScreen.styl'
 
 export { BLoadingScreen }

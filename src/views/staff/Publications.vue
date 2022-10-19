@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import PublicationCreate from '@/views/staff/PublicationCreate'
+import PublicationCreate from '@/views/staff/PublicationCreate.vue'
 
 export default {
   name: 'Publications',

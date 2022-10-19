@@ -102,7 +102,7 @@
 </template>
 
 <script>
-import ApplicationDownload from '@/components/ApplicationDownload'
+import ApplicationDownload from '@/components/ApplicationDownload.vue'
 
 export default {
   name: 'Application',

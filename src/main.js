@@ -6,9 +6,11 @@ import i18n from '@/plugins/i18n'
 import router from '@/plugins/router'
 import store from '@/store'
 import vuetify from '@/plugins/vuetify'
+import plausible from '@/plugins/plausible'
+
 import '@/plugins/meta'
 import '@/plugins/resource'
-import '@/plugins/service-worker'
+// import '@/plugins/service-worker'
 
 // Styles
 import 'github-markdown-css/github-markdown.css'
@@ -19,14 +21,19 @@ import '@/css/index.styl'
 // Mixins & components
 import '@/global-components'
 import '@/plugins/luxon'
-import '@/plugins/plausible'
 
 Vue.config.productionTip = false
 
-new Vue({
+let app = new Vue({
   router,
   store,
   vuetify,
   i18n,
+  plausible,
   render: h => h(App)
-}).$mount('#app')
+});
+
+
+app.$mount('#app');
+
+

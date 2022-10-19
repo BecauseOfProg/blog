@@ -78,8 +78,8 @@ import {mapMutations} from 'vuex'
 
 import {imageProxy} from '@/utils/helpers'
 import {devblogs as api} from '@/utils/api'
-import GradientRule from '@/components/GradientRule'
-import ScrollToTop from '@/components/ScrollToTop'
+import GradientRule from '@/components/GradientRule.vue'
+import ScrollToTop from '@/components/ScrollToTop.vue'
 
 export default {
   name: 'DevBlog',

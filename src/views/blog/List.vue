@@ -146,11 +146,11 @@
 import {publications as api} from '@/utils/api'
 import {categories, getCategory, getType, types} from '@/utils/data'
 import {imageProxy} from '@/utils/helpers'
-import CategoriesChips from '@/components/CategoriesChips'
-import CategoriesBar from '@/components/CategoriesBar'
-import GradientRule from '@/components/GradientRule'
-import SocialIcons from '@/components/SocialIcons'
-import ScrollToTop from '@/components/ScrollToTop'
+import CategoriesChips from '@/components/CategoriesChips.vue'
+import CategoriesBar from '@/components/CategoriesBar.vue'
+import GradientRule from '@/components/GradientRule.vue'
+import SocialIcons from '@/components/SocialIcons.vue'
+import ScrollToTop from '@/components/ScrollToTop.vue'
 
 export default {
   name: 'List',

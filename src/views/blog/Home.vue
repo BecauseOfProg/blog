@@ -127,9 +127,9 @@
 </template>
 
 <script>
-import CategoriesBar from '@/components/CategoriesBar'
-import GradientRule from '@/components/GradientRule'
-import SocialIcons from '@/components/SocialIcons'
+import CategoriesBar from '@/components/CategoriesBar.vue'
+import GradientRule from '@/components/GradientRule.vue'
+import SocialIcons from '@/components/SocialIcons.vue'
 
 import {imageProxy} from '@/utils/helpers'
 import {devblogs, publications} from '@/utils/api'

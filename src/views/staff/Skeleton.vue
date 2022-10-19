@@ -65,8 +65,8 @@
 </template>
 
 <script>
-import Dashboard from './Dashboard'
-import Posts from './Publications'
+import Dashboard from './Dashboard.vue'
+import Posts from './Publications.vue'
 
 export default {
   name: 'Skeleton',

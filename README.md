@@ -35,8 +35,8 @@ Thank you for being interested in helping our blog to grow by expanding its code
 First, clone the repository from GitHub on your local machine : (this requires Git to be installed)
 
 ```bash
-git clone https://github.com/BecauseOfProg/blog-v4.git  # Using HTTP
-git clone git@github.com:BecauseOfProg/blog-v4          # Using SSH
+git clone https://github.com/BecauseOfProg/blog.git  # Using HTTP
+git clone git@github.com:BecauseOfProg/blog          # Using SSH
 ```
 
 Install the required dependencies using your favorite package manager :
@@ -46,11 +46,11 @@ npm i         # Using NPM
 yarn  # Using Yarn
 ```
 
-Then, run the application using the `serve` command : (Make sure you installed Vue CLI on your system)
+Then, run the application using the `dev` command :
 
 ```bash
-npm run serve  # Using NPM
-yarn serve     # Using Yarn
+npm run dev  # Using NPM
+yarn dev     # Using Yarn
 ```
 
 A web server will start with hot reload enabled, perfect to develop.
@@ -66,20 +66,9 @@ yarn build     # Using Yarn
 
 Files will be generated in the `dist` folder, and the entry point will be the `index.html` file.
 
-### Linting and fixing files
-
-To lint the files and check for formatting, run the `lint` command :
-
-```bash
-npm run lint  # Using NPM
-yarn lint     # Using Yarn
-```
-
-If a better formatting is available, new code will be written directly inside the concerned files.
-
 ### Customizing configuration
 
-If you want to customize the build configuration, check the [Configuration Reference](https://cli.vuejs.org/config/) on the Vue CLI documentation.
+If you want to customize the build configuration, check the [Configuration Reference](https://vitejs.dev/guide/) on the Vite documentation.
 
 ## 📜 Credits
 

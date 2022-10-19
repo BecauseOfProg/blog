@@ -1,8 +1,13 @@
-import Vue from 'vue'
-import { VuePlausible } from 'vue-plausible'
+import Plausible from 'plausible-tracker'
+import Vue from 'vue';
 
-Vue.use(VuePlausible, {
-    apiHost: 'https://plausible.noewen.com'
+Vue.use(Plausible);
+
+const plausible = new Plausible({
+    apiHost: 'https://plausible.noewen.com',
+    trackLocalhost: true
 })
 
-Vue.$plausible.enableAutoPageviews() // optional
+plausible.enableAutoPageviews();
+
+export default plausible;

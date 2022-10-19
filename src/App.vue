@@ -150,8 +150,8 @@
 
 <script>
 import {mapMutations, mapState} from 'vuex'
-import ThemeSwitcher from '@/components/ThemeSwitcher'
-import UserMenu from '@/views/members/UserMenu'
+import ThemeSwitcher from '@/components/ThemeSwitcher.vue'
+import UserMenu from '@/views/members/UserMenu.vue'
 
 export default {
   name: 'App',
