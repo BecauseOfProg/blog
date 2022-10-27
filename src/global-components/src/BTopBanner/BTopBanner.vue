@@ -6,7 +6,7 @@
     <img
       v-if="image"
       alt="BecauseOfProg"
-      src="https://cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/assets/logos/bop.min.svg"
+      src="https://becauseofprog.fr/assets/v2/sites/becauseofprog.fr/assets/logos/bop.min.svg"
       width="200">
     <v-icon
       v-if="icon && tall"

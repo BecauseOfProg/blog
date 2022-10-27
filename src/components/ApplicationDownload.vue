@@ -24,7 +24,7 @@
           <v-list-item
             v-for="arch in archs"
             :key="arch"
-            :href="`https://cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/app/app-${arch}-release.apk`">
+            :href="`https://becauseofprog.fr/assets/v2/sites/becauseofprog.fr/app/app-${arch}-release.apk`">
             <v-list-item-title>{{ arch }}</v-list-item-title>
           </v-list-item>
         </v-list>
@@ -38,7 +38,7 @@ export default {
   name: 'ApplicationDownload',
   data() {
     return {
-      universal: 'https://cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/app/app-universal-release.apk',
+      universal: 'https://becauseofprog.fr/assets/v2/sites/becauseofprog.fr/app/app-universal-release.apk',
       archs: [
         'armeabi-v7a',
         'arm64-v8a',

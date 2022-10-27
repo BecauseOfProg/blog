@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/assets/logos/bop.svg" width="200" />
+  <img src="https://becauseofprog.fr/assets/v2/sites/becauseofprog.fr/assets/logos/bop.svg" width="200" />
   <h1>BecauseOfProg's blog</h1>
   <a href="https://becauseofprog.fr">Website</a> &mdash; <a href="https://dev.becauseofprog.fr">Dev website</a> &mdash; <a href="https://trello.com/b/4ef4jlfC/blog-v3">Trello</a> &mdash; <a href="https://discord.becauseofprog.fr">Discord</a><br>
   <a href="https://app.netlify.com/sites/becauseofprog-dev/deploys">

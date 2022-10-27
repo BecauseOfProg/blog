@@ -112,15 +112,15 @@ export default {
       imagedParts: [
         {
           name: 'list',
-          image: 'https://cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/assets/app/app_home_light.png'
+          image: 'https://becauseofprog.fr/assets/v2/sites/becauseofprog.fr/assets/app/app_home_light.png'
         },
         {
           name: 'publication',
-          image: 'https://cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/assets/app/app_article_light.png'
+          image: 'https://becauseofprog.fr/assets/v2/sites/becauseofprog.fr/assets/app/app_article_light.png'
         },
         {
           name: 'theme',
-          image: 'https://cdn.becauseofprog.fr/v2/sites/becauseofprog.fr/assets/app/app_home_dark.png'
+          image: 'https://becauseofprog.fr/assets/v2/sites/becauseofprog.fr/assets/app/app_home_dark.png'
         }
       ],
       browsers: [
