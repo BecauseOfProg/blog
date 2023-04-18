@@ -24,7 +24,7 @@ export default defineConfig({
       '@/': join(PACKAGE_ROOT, 'src') + '/'
     }
   },
-  base: '',
+  base: '/',
   server: {
     fs: {
       strict: true
