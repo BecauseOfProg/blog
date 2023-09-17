@@ -1,83 +1,69 @@
-<div align="center">
-  <img src="https://becauseofprog.fr/assets/v2/sites/becauseofprog.fr/assets/logos/bop.svg" width="200" />
-  <h1>BecauseOfProg's blog</h1>
-  <a href="https://becauseofprog.fr">Website</a> &mdash; <a href="https://dev.becauseofprog.fr">Dev website</a> &mdash; <a href="https://trello.com/b/4ef4jlfC/blog-v3">Trello</a> &mdash; <a href="https://discord.becauseofprog.fr">Discord</a><br>
-  <a href="https://app.netlify.com/sites/becauseofprog-dev/deploys">
-    <img src="https://api.netlify.com/api/v1/badges/bc059206-9f7c-4906-9692-9d582aeadb61/deploy-status" alt="Netlify status"
-  </a>
-  <a href="https://discord.becauseofprog.fr">
-    <img src="https://img.shields.io/discord/272454426038370304?color=blue&label=discord" alt="Chat on Discord">
-  </a>
-  <a href="https://github.com/BecauseOfProg/blog/issues">
-    <img src="https://img.shields.io/github/issues/BecauseOfProg/blog" alt="Open issues">
-  </a>
-  <a href="https://github.com/BecauseOfProg/blog/releases">
-    <img src="https://img.shields.io/github/v/release/BecauseOfProg/blog" alt="Latest release">
-  </a>
-  <a href="./LICENSE">
-    <img src="https://img.shields.io/github/license/BecauseOfProg/blog" alt="License">
-  </a>
-</div>
+# bop-nuxt
 
-- [💻 Development](#-development)
-  - [Environment setup](#environment-setup)
-  - [Building the app](#building-the-app)
-  - [Linting and fixing files](#linting-and-fixing-files)
-  - [Customizing configuration](#customizing-configuration)
-- [📜 Credits](#-credits)
-- [🔐 License](#-license)
-
-## 💻 Development
-
-### Environment setup
-
-Thank you for being interested in helping our blog to grow by expanding its code !
-First, clone the repository from GitHub on your local machine : (this requires Git to be installed)
+## Build Setup
 
 ```bash
-git clone https://github.com/BecauseOfProg/blog.git  # Using HTTP
-git clone git@github.com:BecauseOfProg/blog          # Using SSH
+# install dependencies
+$ npm install
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production and launch server
+$ npm run build
+$ npm run start
+
+# generate static project
+$ npm run generate
 ```
 
-Install the required dependencies using your favorite package manager :
+For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
-```bash
-npm i         # Using NPM
-yarn  # Using Yarn
-```
+## Special Directories
 
-Then, run the application using the `dev` command :
+You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
 
-```bash
-npm run dev  # Using NPM
-yarn dev     # Using Yarn
-```
+### `assets`
 
-A web server will start with hot reload enabled, perfect to develop.
+The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
 
-### Building the app
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
 
-To get a built version of the blog ready to be served by an HTTP server, use the `build` command :
+### `components`
 
-```bash
-npm run build  # Using NPM
-yarn build     # Using Yarn
-```
+The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
 
-Files will be generated in the `dist` folder, and the entry point will be the `index.html` file.
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
 
-### Customizing configuration
+### `layouts`
 
-If you want to customize the build configuration, check the [Configuration Reference](https://vitejs.dev/guide/) on the Vite documentation.
+Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
 
-## 📜 Credits
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
 
-- Libraries : [VueJS](https://vuejs.org), [Vuetify](https://vuetifyjs.com)
-- Website design : [Gildas GH](https://github.com/Gildas-GH)
-- Maintainers : [Théo Vidal](https://github.com/theovidal), [Noéwen (kernoeb)](https://github.com/kernoeb)
 
-## 🔐 License
+### `pages`
 
-Copyright (C) 2021  BecauseOfProg
+This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
 
-Project under the [GNU GPL v3](./LICENSE) license.
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
+
+### `plugins`
+
+The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
+
+### `static`
+
+This directory contains your static files. Each file inside this directory is mapped to `/`.
+
+Example: `/static/robots.txt` is mapped as `/robots.txt`.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
+
+### `store`
+
+This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
