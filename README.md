@@ -1,4 +1,19 @@
-# bop-nuxt
+<div align="center">
+  <img src="https://becauseofprog.fr/assets/v2/sites/becauseofprog.fr/assets/logos/bop.svg" width="200" />
+  <h1>BecauseOfProg's blog</h1>
+  <a href="https://discord.becauseofprog.fr">
+    <img src="https://img.shields.io/discord/272454426038370304?color=blue&label=discord" alt="Chat on Discord">
+  </a>
+  <a href="https://github.com/BecauseOfProg/blog/issues">
+    <img src="https://img.shields.io/github/issues/BecauseOfProg/blog" alt="Open issues">
+  </a>
+  <a href="https://github.com/BecauseOfProg/blog/releases">
+    <img src="https://img.shields.io/github/v/release/BecauseOfProg/blog" alt="Latest release">
+  </a>
+  <a href="./LICENSE">
+    <img src="https://img.shields.io/github/license/BecauseOfProg/blog" alt="License">
+  </a>
+</div>
 
 ## Build Setup
 
