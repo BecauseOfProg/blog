@@ -157,7 +157,7 @@ export default {
           subtitle: 'Blog autour de la programmation créé par des passionnés'
         },
         {
-          background: 'https://p.cdn.becauseofprog.fr/1920x/https://becauseofprog.fr/assets/syst-images/dev.jpg',
+          background: '/img/others/blurry-code.png',
           title: 'Nos projets',
           subtitle: 'Nous mettons à disposition des outils et services open-sources',
           button: {
