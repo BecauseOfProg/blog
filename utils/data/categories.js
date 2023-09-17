@@ -6,8 +6,8 @@ const categories = [
   { id: 'programming', icon: 'mdi-code-tags' },
   { id: 'android', icon: 'mdi-android' },
   { id: 'linux', icon: 'mdi-linux' },
-  { id: 'windows', icon: 'mdi-microsoft-windows' },
-  { id: 'apple', icon: 'mdi-apple' }
+  { id: 'windows', icon: 'mdi-microsoft-windows' }
+  // { id: 'apple', icon: 'mdi-apple' }
 ]
 
 function getCategory (id) {
