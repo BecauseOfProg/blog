@@ -58,8 +58,23 @@ export default {
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
     // https://github.com/juliomrqz/nuxt-optimized-images
-    '@aceforth/nuxt-optimized-images'
+    '@aceforth/nuxt-optimized-images',
+    // https://pwa.nuxtjs.org/setup
+    '@nuxtjs/pwa'
   ],
+
+  pwa: {
+    meta: {
+      name: 'BecauseOfProg',
+      description: 'Blog de programmation et actualités technologiques créé par des passionnés',
+      lang: 'fr'
+    },
+    manifest: {
+      name: 'BecauseOfProg',
+      short_name: 'BecauseOfProg',
+      description: 'Blog de programmation et actualités technologiques créé par des passionnés'
+    }
+  },
 
   optimizedImages: {
     optimizeImages: true
@@ -71,8 +86,13 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@nuxtjs/i18n',
-    '@nuxt/http'
+    '@nuxt/http',
+    'vue-plausible'
   ],
+
+  plausible: {
+    apiHost: 'https://plausible.noewen.com'
+  },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
