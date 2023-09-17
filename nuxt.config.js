@@ -1,5 +1,4 @@
 import path from 'path'
-import { defineNuxtConfig } from '@nuxt/bridge'
 import colors from 'vuetify/es5/util/colors'
 
 const theme = {
@@ -12,14 +11,10 @@ const theme = {
   warning: colors.amber.base
 }
 
-export default defineNuxtConfig({
+export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   ssr: true,
-
-  bridge: {
-    nitro: false
-  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -134,4 +129,4 @@ export default defineNuxtConfig({
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }
-})
+}

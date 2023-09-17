@@ -1,14 +1,21 @@
 <template>
   <v-app dark>
-    <h1 v-if="error.statusCode === 404">
-      {{ pageNotFound }}
-    </h1>
-    <h1 v-else>
-      {{ otherError }}
-    </h1>
-    <NuxtLink to="/">
-      Home page
-    </NuxtLink>
+    <v-container class="pa-6">
+      <v-row justify="center" align-content="center">
+        <b-card>
+          <template #image>
+            <v-img width="500" src="https://i.kym-cdn.com/entries/icons/mobile/000/026/213/pablo.jpg" />
+          </template>
+
+          <h1 v-if="error.statusCode === 404">
+            {{ pageNotFound }}
+          </h1>
+          <h1 v-else>
+            {{ otherError }}
+          </h1>
+        </b-card>
+      </v-row>
+    </v-container>
   </v-app>
 </template>
 
@@ -24,13 +31,14 @@ export default {
   },
   data () {
     return {
-      pageNotFound: '404 Not Found',
-      otherError: 'An error occurred'
+      pageNotFound: 'Page non trouvée',
+      otherError: 'Erreur...'
     }
   },
   head () {
-    const title =
-      this.error.statusCode === 404 ? this.pageNotFound : this.otherError
+    const title = this.error.statusCode === 404
+      ? this.pageNotFound
+      : this.otherError
     return {
       title
     }
