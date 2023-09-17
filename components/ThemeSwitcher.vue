@@ -39,16 +39,8 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-
 export default {
   name: 'ThemeSwitcher',
-  computed: mapState(['settings']),
-  watch: {
-    'settings.theme' () {
-      this.applyTheme()
-    }
-  },
   mounted () {
     // eslint-disable-next-line nuxt/no-env-in-hooks
     if (process.client) {
@@ -67,11 +59,7 @@ export default {
 
       const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
       setTimeout(() => {
-        if (prefersDark && this.settings.theme === 'auto') {
-          this.$vuetify.theme.dark = true
-        } else {
-          this.$vuetify.theme.dark = this.settings.theme === 'dark'
-        }
+        this.$vuetify.theme.dark = prefersDark
       }, 0)
     },
     setTheme (theme) {

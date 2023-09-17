@@ -72,7 +72,7 @@
                           {{
                             $t('publication.publishedBy', {
                               author: publication.author.displayname,
-                              date: dateToText(publication.timestamp)
+                              date: timestampToText(publication.timestamp)
                             })
                           }}
                           <router-link
@@ -180,7 +180,6 @@ export default {
 
     publications.forEach((v) => {
       v.id = v.slug
-      v.timestamp = new Date(v.timestamp)
       v.author = authors.find(a => a.slug === v.authorId) || {}
     })
     this.publications = publications

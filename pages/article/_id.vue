@@ -68,7 +68,7 @@
                     <span :class="!$vuetify.theme.dark ? 'grey--text text--darken-2' : 'grey--text'">
                       {{ $t('publication.publishedBy', {
                         author: publication.author.displayname,
-                        date: dateToText(publication.timestamp)
+                        date: timestampToText(publication.timestamp)
                       }) }}
                     </span>
                   </v-col>

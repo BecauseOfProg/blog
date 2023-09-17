@@ -25,7 +25,7 @@
       </v-chip>
 
       <v-chip class="mt-2">
-        {{ dateToText(publication.timestamp) }}
+        {{ timestampToText(publication.timestamp) }}
       </v-chip>
 
       <v-chip

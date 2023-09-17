@@ -64,7 +64,6 @@ export default {
     const authors = await this.$content('members').where({ username: { $in: authorIds } }).fetch()
     lastPublications.forEach((v) => {
       v.id = v.slug
-      v.timestamp = new Date(v.timestamp)
       v.author = authors.find(a => a.slug === v.authorId) || {}
     })
     this.publications = lastPublications

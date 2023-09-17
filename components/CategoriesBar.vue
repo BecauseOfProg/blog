@@ -68,7 +68,7 @@
                 <span class="font-weight-light blue-grey--text">
                   {{ publication.author.displayname }}
                   &mdash;
-                  {{ dateToText(publication.timestamp) }}
+                  {{ timestampToText(publication.timestamp) }}
                 </span>
               </router-link>
             </v-col>
@@ -119,7 +119,6 @@ export default {
       categoryPublications[category.id] = publications[index]
       categoryPublications[category.id].forEach((v) => {
         v.id = v.slug
-        v.timestamp = new Date(v.timestamp)
         v.author = authors.find(a => a.slug === v.authorId) || {}
       })
     }

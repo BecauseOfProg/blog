@@ -20,21 +20,19 @@
     }
   ],
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "build": "nuxt2 build",
+    "dev": "nuxt2",
+    "generate": "nuxt2 generate",
     "lint": "npm run lint:js",
-    "lintfix": "npm run lint:js -- --fix"
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lintfix": "npm run lint:js -- --fix",
+    "start": "nuxt2 start"
   },
   "dependencies": {
     "@nuxt/content": "1.15.1",
     "@nuxt/http": "^0.6.4",
     "@nuxtjs/i18n": "7.3.1",
     "cookie-universal-nuxt": "^2.2.2",
-    "core-js": "3.32.2",
-    "luxon": "^3.4.3",
     "nuxt": "2.17.1",
     "vue": "2.7.14",
     "vue-server-renderer": "2.7.14",
@@ -44,15 +42,23 @@
   "devDependencies": {
     "@aceforth/nuxt-optimized-images": "^1.4.0",
     "@babel/eslint-parser": "7.22.15",
+    "@nuxt/bridge": "npm:@nuxt/bridge-edge@^3.0.0-28244705.131ac01",
     "@nuxtjs/eslint-config": "11.0.0",
     "@nuxtjs/eslint-module": "3.1.0",
     "@nuxtjs/vuetify": "1.12.3",
+    "core-js": "3.32.2",
     "eslint": "8.49.0",
     "eslint-plugin-nuxt": "4.0.0",
     "eslint-plugin-vue": "9.17.0",
+    "hookable": "^5.5.3",
     "imagemin-mozjpeg": "9.0.0",
     "imagemin-pngquant": "9.0.2",
     "imagemin-svgo": "9.0.0",
+    "node-fetch-native": "^1.4.0",
+    "nuxi": "^3.8.4",
     "webpack": "4.47.0"
+  },
+  "overrides": {
+    "node-fetch": "npm:node-fetch-native@latest"
   }
 }

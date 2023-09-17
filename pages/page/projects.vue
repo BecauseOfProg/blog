@@ -42,7 +42,7 @@
                         {{
                           $t('publication.publishedBy', {
                             author: devblog.author.displayname,
-                            date: dateToText(devblog.timestamp)
+                            date: timestampToText(devblog.timestamp)
                           })
                         }}
                       </span>
@@ -206,7 +206,6 @@ export default {
     const devblog = (await this.$content('devblogs').without(['body']).sortBy('timestamp', 'desc').limit(1).fetch())?.[0]
     if (devblog) {
       devblog.id = devblog.slug
-      devblog.timestamp = new Date(devblog.timestamp)
       this.devblog = devblog
     }
   },

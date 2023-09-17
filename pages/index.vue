@@ -145,14 +145,10 @@
 </template>
 
 <script>
-import CategoriesBar from '@/components/CategoriesBar.vue'
-import GradientRule from '@/components/GradientRule.vue'
-import SocialIcons from '@/components/SocialIcons.vue'
 import { categories, types } from '@/utils/data'
 
 export default {
   name: 'Home',
-  components: { CategoriesBar, GradientRule, SocialIcons },
   data () {
     return {
       carousel: [
@@ -182,7 +178,6 @@ export default {
     const authors = await this.$content('members').where({ username: { $in: authorIds } }).fetch()
     lastPublications.forEach((v) => {
       v.id = v.slug
-      v.timestamp = new Date(v.timestamp)
       v.author = authors.find(a => a.slug === v.authorId) || {}
     })
     this.lastPublications = lastPublications
