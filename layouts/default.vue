@@ -94,7 +94,6 @@
       <v-bottom-navigation
         v-model="bottomNavigation"
         app
-        background-color="#f5f5f5"
         color="darker"
         fixed
       >
