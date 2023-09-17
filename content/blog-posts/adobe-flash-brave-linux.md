@@ -14,7 +14,7 @@ timestamp: 1586780945
 **Adobe Flash Player** n'est par défaut pas fonctionnel sur le merveilleux navigateur [Brave](https://brave.com/bec202). 
 
 Comme moi, vous avez peut-être essayé d'installer Flash de différentes manières, en vain. Mais j'ai trouvé la solution ! :tada:
-(et oui, ça fait longtemps qu'il n'y a pas eu d'article posté ici!) 
+(et oui, ça fait longtemps qu'il n'y a pas eu d'article posté ici !) 
 
 ## Installer et configurer Flash
 

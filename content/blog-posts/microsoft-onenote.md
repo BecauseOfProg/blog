@@ -34,7 +34,7 @@ Vous connaissez peut-être des applications qui vous permettent de prendre des n
 
 ### Fonctionnalités
 
- Ah, ben enfin ! Les fonctionnalités, la partie la plus intéressante. Comme je l'ai cité cinq cents mille fois en haut, l'application regorge de fonctionnalités : celles de bases à savoir le gras, souligné, etc... mais aussi une personnalisation de la police d'écriture et de la taille, des listes avec ou sans puces et même des symboles et des mises en pages de titre directement intégrées ! Je ne parle même pas du fait que l'on peut insérer des tableaux entiers ou que l'on peut dessiner ! Et bien sûr comme dans 90% des applications de ce genre, on peut ajouter à tout cela des notes audio, des liens, des fichiers et des images.
+ Ah, ben enfin ! Les fonctionnalités, la partie la plus intéressante. Comme je l'ai cité cinq cents mille fois en haut, l'application regorge de fonctionnalités : celles de bases à savoir le gras, souligné, etc, mais aussi une personnalisation de la police d'écriture et de la taille, des listes avec ou sans puces et même des symboles et des mises en pages de titre directement intégrées ! Je ne parle même pas du fait que l'on peut insérer des tableaux entiers ou que l'on peut dessiner ! Et bien sûr comme dans 90% des applications de ce genre, on peut ajouter à tout cela des notes audio, des liens, des fichiers et des images.
 
  Si vous êtes avec un stylo et un écran tactile, pas de problème ! OneNote fournit des quadrillages et des couleurs de pages pour vos notes papier, mais pas trop...
 

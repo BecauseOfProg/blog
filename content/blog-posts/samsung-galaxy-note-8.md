@@ -72,7 +72,7 @@ Vous avez peut-être entendu parler de lui ces derniers jours : Le Samsung Galax
 
  Le Galaxy Note 8 est un excellent smartphone haut de gamme et cumule les points positifs sans se relâcher. Samsung a su donner une suite au Note 7 pourtant très dangereux.
 
- Il peut paraître cher mais c’est un haut de gamme, mais il faudra s’attendre à des prix de plus en plus grandissants.
+ Il peut paraître cher, mais c’est un haut de gamme, mais il faudra s’attendre à des prix de plus en plus grandissants.
 
  ![Do bigger things](https://becauseofprog.fr/assets/articles/note-8-do-bigger-things.jpg)
 

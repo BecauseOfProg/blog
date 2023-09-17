@@ -22,7 +22,7 @@ Bon, ça ne se fait pas en 1 étape. D'ailleurs, il est possible que vous n'en a
 Mais si vous suivez ce (petit) tutoriel, vous y arriverez facilement :)
 
 Tout d'abord, vérifiez que vous disposez d'une version de Windows 10 qui supportera **Bash**.  
-Pour cela, accédez au paramètres de votre ordinateur (depuis le menu démarrer par exemple).  
+Pour cela, accédez aux paramètres de votre ordinateur (depuis le menu Démarrer par exemple).  
 Cliquez ensuite sur "**Système**", puis **"Informations système"** (en bas à gauche).  
 Dans la partie de droite, vous devez avoir une version supérieure (ou égale) à **14393**.  
 Pour ma part, je suis à *14393.593*. Vous devez disposer d'un ordinateur **64bit** !
@@ -30,23 +30,23 @@ Pour ma part, je suis à *14393.593*. Vous devez disposer d'un ordinateur **64bi
 ![](http://img4.hostingpics.net/pics/373431821.png)
 
 Ensuite, retournez dans les Paramètres, puis accédez à **"Mise à jour et sécurité"**.  
-Cliquez ensuite sur **"Pour les développeurs"** (à gauche), puis cochez **"Mode développeur"**.
+Cliquez ensuite sur **"Pour les développeurs"** (à gauche), ensuite cochez **"Mode développeur"**.
 
 ![](http://i.imgur.com/7QzKNdN.png)  
-Voilà, ça c'est fait. Ne vous inquiétez pas, c'est bientôt terminé ;)  
-Ouvrez le menu démarrer et cherchez **"Activer ou désactiver des fonctionnalités Windows"**.
+Voilà, ça, c'est fait. Ne vous inquiétez pas, c'est bientôt terminé ;)  
+Ouvrez le menu Démarrer et cherchez **"Activer ou désactiver des fonctionnalités Windows"**.
 
-Cliquez dessus:  
+Cliquez dessus :  
 ![](http://i.imgur.com/SaNC5YQ.png)
 
-Une fenêtre comme celle-ci apparaît:
+Une fenêtre comme celle-ci apparaît :
 
 ![](http://i.imgur.com/N2cvrOK.png)
 
 Descendez un peu et cochez "**Sous-système Windows pour Linux"**, puis "**OK"**.
 
 Si votre ordinateur ne le fait pas automatiquement, **redémarrez** votre ordinateur (l'étape la plus ennuyante, je l'avoue).  
-Voilà. Maintenant ouvez le menu démarrer et cherchez **"Bash"**.  
+Voilà. Maintenant, ouvrez le menu Démarrer et cherchez **"Bash"**.  
 ![](http://i.imgur.com/TZaqBLN.png)
 
 ![](http://i.imgur.com/jALsHrC.png)
@@ -61,14 +61,11 @@ Lorsque l'installation est terminée, (re)cherchez **Bash** sur le menu démarre
 
 Et voilà ! 
 
-Notez que dans cet article je ne vais pas vous apprendre à utiliser **Linux**, pour cela cherchez par vous même, même si vous n'y connaissez absolument rien. 
-
 
 > Vous pouvez utiliser **Xming** (<https://sourceforge.net/projects/xming/>) pour disposer d'une interface graphique.
 > 
 >  
 
-Voilà, c'est tout pour moi :p  
-Merci d'avoir lu cet article, bonne continuation, et bonne installation de Bash ahah !  
+Voilà, c'est tout pour moi !  
 *kernoeb*  
  

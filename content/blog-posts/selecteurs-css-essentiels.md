@@ -51,7 +51,7 @@ Si vous faites un peu de CSS, vous devez savoir que pour appliquer un style, il 
 ### p h1
 
  Mettre deux balises côte à côte permet de sélectionner la balise de droite contenue dans la balise de gauche.  
- Exemple : p h1 -> sélectionne les h1 dans les p
+ Exemple : p h1 → sélectionne les h1 dans les p
 
 ```
      <h1>Titre</h1>  
@@ -194,7 +194,8 @@ Si vous faites un peu de CSS, vous devez savoir que pour appliquer un style, il 
 
 ### p:active
 
- Le fait de mettre :active après un élément ne va cibler celui-ci que si l’utilisateur clique dessus.
+ Le fait de mettre `:active` après un élément ne va cibler celui-ci que si l’utilisateur clique dessus.
+
 ```
      <p>  
  Paragraphe  

@@ -9,11 +9,11 @@ labels: ["open source", "f-droid"]
 timestamp: 1509904409
 ---
 
-Salut!  
+Salut !  
 Voici la liste (non-exhaustive) des applications **open source** que j'utilise ce mois-ci sur mon smartphone **Android** *(sous ResurrectionRemix)*
 
  *Toutes les applications que je vais afficher ici sont disponibles sur **F-Droid**, c'est donc pour ça que je n'afficherai pas le lien de téléchargement.  
- Voir mon article sur F-Droid: <https://becauseofprog.fr/blog/f-droid-open-source-23>*
+ Voir mon article sur F-Droid : <https://becauseofprog.fr/blog/f-droid-open-source-23>*
 
   
 
@@ -39,7 +39,7 @@ Voici la liste (non-exhaustive) des applications **open source** que j'utilise c
 
  11. **Firefox Focus :** navigateur internet axé sur la vie privée *[Voir l'article en question: <https://becauseofprog.fr/blog/firefox-focus-39>]*
 
- 12. **Hello Music:** Lecteur de musique/téléchargement musiques depuis YouTube
+ 12. **Hello Music :** Lecteur de musique/téléchargement musiques depuis YouTube
 
  13. **KDE Connect :** relier son smartphone Android à son PC Linux *[Voir l'article en question: <https://becauseofprog.fr/blog/kde-connect-linux-50>]*
 

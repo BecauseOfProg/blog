@@ -9,11 +9,11 @@ labels: ["Android", "Google", "Android O"]
 timestamp: 1490280484
 ---
 
-**À peu près 7 mois après la sortie de Android 7.0 dit Nougat, Google propose déjà un nouveau système d'exploitation pour téléphone mobiles en “Developer Preview” (aperçu développeur) nommé Android O.** Nous allons voir ensemble les nouveautés déjà annoncées, ainsi que la lettre mystérieuse “O”, qui fait sujet de débat sur les réseaux sociaux.
+**À peu près 7 mois après la sortie d'Android 7.0 dit Nougat, Google propose déjà un nouveau système d'exploitation pour téléphones mobiles en “Developer Preview” (aperçu développeur) nommé Android O.** Nous allons voir ensemble les nouveautés déjà annoncées, ainsi que la lettre mystérieuse “O”, qui fait sujet de débat sur les réseaux sociaux.
 
 ### Après Nougat, voici O
 
- Le dernier Android en date est donc Android 7.0, ou Nougat. Alors qu’il n’est pas encore disponible sur tous les appareils, Google a donc décidé de sortir un nouvel OS, contre toute attente du public, le 21 mars 2017.
+ Le dernier Android en date est donc Android 7.0, ou Nougat. Alors qu’il n’est pas encore disponible sur tous les appareils, Google a ainsi décidé de sortir un nouvel OS, contre toute attente du public, le 21 mars 2017.
 
  Si vous n’étiez pas au courant, chaque version d’Android possède un nom de sucrerie, pâtisserie, bonbon… Exemples avec 7.0 Nougat, 4.4 Kit Kat ou encore 5.1 Marshmallow.
 
@@ -25,7 +25,7 @@ timestamp: 1490280484
 
 #### Notifications
 
- Une énième refonte du système des notifications, pour cette fois-ci ajouter des catégories de notifications. Toutes celles qui sont relatives à un même thème seront rassemblées dans une même zone, et à vous de choisir si vous voulez les afficher, les notifier, etc...
+ Une énième refonte du système des notifications, pour cette fois-ci ajouter des catégories de notifications. Toutes celles qui sont relatives à un même thème seront rassemblées dans une même zone, et à vous de choisir si vous voulez les afficher, les notifier, etc.
 
 #### Icônes adaptives
 
@@ -43,11 +43,11 @@ timestamp: 1490280484
 
 #### Navigation par clavier
 
- Android O ne se transforme pas en ordinateur à moitié : en effet, dans les MàJ à venir, les touches de tabulation ainsi que les flèches directionnelles seront mises en place sur le clavier, ce qui va permettre de naviguer dans les applications et dans l’OS sans toucher les autres parties de son écran. Est-ce vraiment utile ? A voir.
+ Android O ne se transforme pas en ordinateur à moitié : en effet, dans les MàJ à venir, les touches de tabulation ainsi que les flèches directionnelles seront mises en place sur le clavier, ce qui va permettre de naviguer dans les applications et dans l’OS sans toucher les autres parties de son écran. Est-ce vraiment utile ? À voir.
 
 ### Conclusion
 
- Android O propose de nouvelles fonctionnalités intéressantes, mais pour l’instant ce n’est pas de la folie. Il est en Developer Preview, donc il va s’améliorer, mais pour l’instant je vous déconseille de l’installer, faute de nouveautés.
+ Android O propose de nouvelles fonctionnalités intéressantes, mais pour l’instant ce n’est pas de la folie. Il est en Developer Preview, donc il va s’améliorer, mais pour l’instant, je vous déconseille de l’installer, faute de nouveautés.
 
   
 

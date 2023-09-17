@@ -18,7 +18,7 @@ Qualcomm, une entreprise américaine spécialisée dans la technologie mobile av
  Les premiers appareils utilisant la nouvelle puce devraient arriver sur le marché à partir du second semestre, on vous tiendra au courant ;)
 
  
->  [@Qualcomm](https://twitter.com/Qualcomm) has announced an entry level,dual core chip,sd 205, which adds support for LTE.[#Qualcomm](https://twitter.com/hashtag/Qualcomm?src=hash) [#Snapdragon](https://twitter.com/hashtag/Snapdragon?src=hash) [#volte](https://twitter.com/hashtag/volte?src=hash) [#lte](https://twitter.com/hashtag/lte?src=hash) [pic.twitter.com/cjfjxTzi02](https://t.co/cjfjxTzi02)
+>  [@Qualcomm](https://twitter.com/Qualcomm) has announced an entry level, dual-core chip, sd 205, which adds support for LTE.[#Qualcomm](https://twitter.com/hashtag/Qualcomm?src=hash) [#Snapdragon](https://twitter.com/hashtag/Snapdragon?src=hash) [#volte](https://twitter.com/hashtag/volte?src=hash) [#lte](https://twitter.com/hashtag/lte?src=hash) [pic.twitter.com/cjfjxTzi02](https://t.co/cjfjxTzi02)
 > 
 >  — Sarthak (@Sarthaks21) [March 20, 2017](https://twitter.com/Sarthaks21/status/843740749145427968)  
 

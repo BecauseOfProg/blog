@@ -9,7 +9,7 @@ labels: ["PHP", "Programmation"]
 timestamp: 1493654184
 ---
 
-Vous avez peut-être conçu un site web qui accueille des utilisateurs ? Ces utilisateurs peuvent souvent être amenés à renseigner des informations telles que leur nom, leur email et une description. D'autres fois, c'est par l'URL. Aujourd'hui je vais vous apprendre a vous protéger des éventuelles attaques que cela peut causer.
+Vous avez peut-être conçu un site web qui accueille des utilisateurs ? Ces utilisateurs peuvent souvent être amenés à renseigner des informations telles que leur nom, leur email et une description. D'autres fois, c'est par l'URL. Aujourd'hui, je vais vous apprendre a vous protéger des éventuelles attaques que cela peut causer.
 
 ### Prérequis afin de lire le tutoriel
 
@@ -143,7 +143,7 @@ J'ai bien pensé ici à transformer le paramètre en chaîne de caractères afin
 ### Les paramètres $\_POST
 
 Le type de formulaire avec la méthode POST passe ses paramètres "derrière" la page : l'envoi est totalement invisible. Néanmoins, cela ne nous protège pas davantage.  
-Même si c'est caché, le formulaire en lui-même, en HTML, est visible par tous simplement par le biais de l'inspecteur de votre navigateur. Si quelqu'un de mal intentionné modifie un champ initialement prévu pour les nombres, et qu'il met un champ de texte normal, il faut à nouveau convertir le paramètre. Et bien sûr on garde la fonction *isset* pour vérifier qu'on nous envoie quelque chose.
+Même si c'est caché, le formulaire en lui-même, en HTML, est visible par tous simplement par le biais de l'inspecteur de votre navigateur. Si quelqu'un de mal intentionné modifie un champ initialement prévu pour les nombres, et qu'il met un champ de texte normal, il faut à nouveau convertir le paramètre. Et bien sûr, on garde la fonction *isset* pour vérifier qu'on nous envoie quelque chose.
 
 ```php
      <?php  
@@ -178,7 +178,7 @@ Sortie
 
 > Salut **Gérard** !
 
-   Vous me direz que ce n'est pas très grave, qu'un utilisateur a bien le droit de mettre son pseudo en gras. Maintenant, imaginez que l'utilisateur ai inséré d'autres balises, comme du JavaScript, et qu'il affiche son pseudo pendant que derrière vos cookies sont récupérés. Voyez l'impact que cela peut prendre. On l'appelle l'ovni la faille XSS. Il faut absolument empêcher cela. A partir de là vous avez 2 solutions :
+   Vous me direz que ce n'est pas très grave, qu'un utilisateur a bien le droit de mettre son pseudo en gras. Maintenant, imaginez que l'utilisateur ai inséré d'autres balises, comme du JavaScript, et qu'il affiche son pseudo pendant que derrière vos cookies sont récupérés. Voyez l'impact que cela peut prendre. On l'appelle l'ovni la faille XSS. Il faut absolument empêcher cela. À partir de là, vous avez 2 solutions :
 
  * Afficher le code HTML inséré
  * Le supprimer entièremment 

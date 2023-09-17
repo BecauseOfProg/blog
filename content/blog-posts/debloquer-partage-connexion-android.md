@@ -9,9 +9,9 @@ labels: ["Android", "téléphone", "opérateur", "smartphone"]
 timestamp: 1529935532
 ---
 
-En voulant partager votre connexion à un ami depuis votre téléphone mobile, vous avez sans doute remarqué que votre opérateur bloque l’accès à Internet sur l‘appareil utilisé par votre ami en vous demandant de payer.
+En voulant partager votre connexion à un ami depuis votre téléphone mobile, vous avez sans doute remarqué que votre opérateur bloque l’accès à Internet sur l'appareil utilisé par votre ami en vous demandant de payer.
 
- Je me suis longtemps demandé comment l‘opérateur parvient à différencier le trafic issu de votre téléphone de celui issu d’un partage de connexion (tethering en anglais), et j’ai fini par trouver :
+ Je me suis longtemps demandé comment l'opérateur parvient à différencier le trafic issu de votre téléphone de celui issu d’un partage de connexion (tethering en anglais), et j’ai fini par trouver :
 
  Google a introduit un changement dans Android 4.4 – que tout le monde a pris pour un bug, mais c’était bien une fonctionnalité – qui envoie les deux types de trafics dans deux routes différentes, ce qui aboutit à utiliser deux adresses IP différentes selon si la requête provient du téléphone ou du partage. Ces deux IP sont détectables par l’opérateur. Explications techniques sur le [blog de Daniel Pocock](https://danielpocock.com/android-betrays-tethering-data).
 

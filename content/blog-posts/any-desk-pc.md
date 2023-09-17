@@ -13,15 +13,15 @@ Bonjour à tous et à toutes,
  aujourd'hui, petit article rapide pour vous parler d'un **logiciel** très pratique que j'ai récemment découvert *(merci [@mentor6561](https://becauseofprog.fr/members/?view=15))*.
 
  Ce petit software pas piqué des hannetons, c'est **AnyDesk**, *l'alternative de TeamViewer, pour les connaisseurs.*  
- Mais l'interface est à mon goût plus simple d'utilisation, plus ergonomique, ainsi que **l'installation** (*même pas besoin de l'installer sur Windows!*)
+ Mais l'interface est à mon goût plus simple d'utilisation, plus ergonomique, ainsi que **l'installation** (*même pas besoin de l'installer sur Windows !*)
 
- Avec ce logiciel, vous serez en mesure de **contrôler** votre PC à distance, c'est-à-dire afficher le **contenu** de l'écran, utiliser la **souris** et le **clavier**, recevoir l'**audio** de l'ordinateur distant, synchroniser le **presse-papier**, etc...
+ Avec ce logiciel, vous serez en mesure de **contrôler** votre PC à distance, c'est-à-dire afficher le **contenu** de l'écran, utiliser la **souris** et le **clavier**, recevoir l'**audio** de l'ordinateur distant, synchroniser le **presse-papier**, etc.
 
- Autres avantages (*à vérifier tout de même, mais après 1 mois d'utilisation, ça me paraît correct*):
+ Autres avantages (*à vérifier tout de même, mais après 1 mois d'utilisation, ça me paraît correct*) :
 
  ![](https://becauseofprog.fr/assets/articles/AnyDesk/avantages-compressor.png)
 
- Il n'y a donc pas de **limite** de débit, pas de limites de transfert..  
+ Il n'y a donc pas de **limite** de débit, pas de limites de transfert...  
  En effet, vous pouvez **envoyer des fichiers** entre les deux appareils, avec un simple copier-coller ! 
 
  Le logiciel, comme dit précédemment existe aussi en **version portable**, ce qui facilite l'utilisation du logiciel sous Windows, par exemple.

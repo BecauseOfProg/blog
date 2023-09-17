@@ -28,7 +28,7 @@ Petit article très court pour vous montrer comment extraire (ripper) le contenu
   
 
  Après avoir installé ces paquets, **ouvrez** Asunder (*merci Captain Obvious*).  
- Mettez le **CD audio** de votre choix dans votre ordinateur (c'est mieux..)
+ Mettez le **CD audio** de votre choix dans votre ordinateur (c'est mieux...)
 
  Ici je teste un **CD** de Jean-Michel Jarre (*si si, vous connaissez forcément "Oxygène (Part IV)"*)
 
@@ -43,7 +43,7 @@ Petit article très court pour vous montrer comment extraire (ripper) le contenu
  Et voilà!  
  
 
- Merci d'avoir lu cet article;  
- Salutations!
+ Merci d'avoir lu cet article,  
+ Salutations !
 
  

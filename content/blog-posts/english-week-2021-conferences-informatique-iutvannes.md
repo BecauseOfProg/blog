@@ -9,7 +9,7 @@ labels: ["conférences", "IUT de Vannes", "cybersécurité", "intelligence artif
 timestamp: 1611843522
 ---
 
-A l’occasion de la 11e édition de la semaine anglaise à l’IUT de Vannes,  j'organise avec plusieurs étudiants du Bureau des Etudiants des conférences dans le thème de l’Informatique en anglais. 
+A l’occasion de la 11e édition de la semaine anglaise à l’IUT de Vannes,  j'organise avec plusieurs étudiants du Bureau des Étudiants des conférences dans le thème de l’Informatique en anglais. 
 
 De nombreux thèmes seront abordés comme la cybersécurité, à laquelle 4 conférences seront dédiées : une sur la cryptographie, sur le pentesting, le reverse engineering et les forensics.
 
@@ -18,6 +18,7 @@ Trois interventions seront dédiées à l’intelligence artificielle dont une s
 Les intervenants viennent d’Inde, des États-Unis, du Canada et de France et travaillent dans plusieurs entreprises et universités telles que IBM, le MIT, Sogeti, Orange et l’ISRO (agence spatiale indienne). Les conférences seront retransmises en direct sur Twitch pour que tout le monde puisse y assister de chez soi.
 
 ### Le planning
+
 * Mike Houziaux, « ethical hacker » à Orange Cyberdéfense présentera le pentesting (tests d’intrusion dans un système informatique) le mardi 2 février de 8h00 à 8h30.
 * Mathis Hammel, CTO de Sogeti, cryptographie, mardi 2 février de 8h45 à 9h30,
 * Siddharth Bisht, data scientist à IBM India fera une présentation générale de l’intelligence artificielle le mardi 2 février de 16h15 à 17h00,

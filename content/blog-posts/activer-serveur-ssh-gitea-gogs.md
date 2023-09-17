@@ -9,15 +9,15 @@ labels: ["git", "gitea", "gogs", "ssh", "développement", "configuration", "tuto
 timestamp: 1561220364
 ---
 
-Gitea et Gogs sont deux serveur Git open-source, à installer sur votre propre serveur. [Gitea](https://gitea.io/en-us/) est un fork de [Gogs](https://gogs.io/), mais les deux logiciels sont toujours très proches. Le serveur SSH est malheureusement très peu documenté, mais pourtant il est facile à configurer.
+Gitea et Gogs sont deux serveurs Git Open-Source, à installer sur votre propre serveur. [Gitea](https://gitea.io/en-us/) est un fork de [Gogs](https://gogs.io/), mais les deux logiciels sont toujours très proches. Le serveur SSH est malheureusement très peu documenté, mais pourtant il est facile à configurer.
 
 ### Pour commencer
 
-Dans ce tutoriel nous allons utiliser le port 22 (le port par défaut pour SSH). Il faut donc configurer sshd (le serveur SSH par défaut de nombreuses distributions, dont Debian) pour que celui-ci écoute sur un autre port (le 2222 par exemple).
+Dans ce tutoriel, nous allons utiliser le port 22 (le port par défaut pour SSH). Il faut donc configurer sshd (le serveur SSH par défaut de nombreuses distributions, dont Debian) pour que celui-ci écoute sur un autre port (le 2222 par exemple).
 
 Pour ce faire, ouvrez le fichier ``/etc/ssh/sshd_config`` (sous Debian) et changez la ligne qui contient `Port` (l'une des premières) : remplacez 22 par 2222.
 
-Cela donne  :
+Cela donne :
 ```Port 2222```
 
 Redémarrez ensuite le serveur SSH:
@@ -25,18 +25,18 @@ Redémarrez ensuite le serveur SSH:
 
 **Tips:**
 
-- Ne vous déconnectez pas du serveur et ouvrez un nouveau shell, ou vous ouvrirez une nouvelle connection SSH sur votre serveur **sur le port 2222**. Si vous parvenez à vous conencter tout va bien, et si nous n'y arrivez pas, vous pouvez toujours modifier la configuration SSH dans votre première fenêtre 
+- Ne vous déconnectez pas du serveur et ouvrez un nouveau shell, ou vous ouvrirez une nouvelle connection SSH sur votre serveur **sur le port 2222**. Si vous parvenez à vous connecter tout va bien, et si nous n'y arrivez pas, vous pouvez toujours modifier la configuration SSH dans votre première fenêtre 
 
-- Sous Linux, connectez vous à un port spécifique avec l'argument ``-p <port>``
+- Sous Linux, connectez-vous à un port spécifique avec l'argument ``-p <port>``
 
-### Etape 1 : Donner les permissions à Gitea/Gogs d'ouvrir un port
+### Étape 1 : Donner les permissions à Gitea/Gogs d'ouvrir un port
 
 Sur Linux, les ports spéciaux (de 0 à 1024) sont protégés et ne peuvent habituellement être ouverts que par des programmes ayant les permissions root. Il faut donc autoriser manuellement à Gitea/Gogs d'accéder au port 22 :
 
 ```sudo setcap CAP_NET_BIND_SERVICE=+eip /path/to/gitea```
 (dans mon cas l'exécutable Gitea était dans /etc/gitea)
 
-### Etape 2 : Configurer Gitea/Gogs
+### Étape 2 : Configurer Gitea/Gogs
 
 Je n'ai testé cette partie que sur Gitea, dans une configuration modifiée par un ami. Jusqu'à nouvel avis cela devrait marcher aussi avec Gogs. La seule documentation se trouve [ici pour Gitea](https://github.com/go-gitea/gitea/blob/master/custom/conf/app.ini.sample) et [ici pour Gogs](https://github.com/gogs/gogs/blob/master/conf/app.ini).
 
@@ -70,16 +70,16 @@ SSH_SERVER_CIPHERS = aes128-ctr, aes192-ctr, aes256-ctr, aes128-gcm@openssh.com,
 ; Les algorithmes d'échange de clés (n'y touchez pas) 
 ; N'a aucun effet sur le système (et donc sur sshd)
 SSH_SERVER_KEY_EXCHANGES = diffie-hellman-group1-sha1, diffie-hellman-group14-sha1, ecdh-sha2-nistp256, ecdh-sha2-nistp384, ecdh-sha2-nistp521, curve25519-sha256@libssh.org
-; Les MACs pour supporter la connextion SSH (n'y touchez pas) 
+; Les MACs pour supporter la connexion SSH (n'y touchez pas) 
 ; N'a aucun effet sur le système (et donc sur sshd)
 SSH_SERVER_MACS = hmac-sha2-256-etm@openssh.com, hmac-sha2-256, hmac-sha1, hmac-sha1-96
 ; Il y avait d'autres lignes de configuration SSH après mais elles ne sont pas importantes.
 ```
 
-Voici donc la configuration proposée. Assurez vous de ne rien avoir oublié et redémarrez Gitea/Gogs :
+Voici donc la configuration proposée. Assurez-vous de ne rien avoir oublié et redémarrez Gitea/Gogs :
 ``service gitea restart`` ou ``service gogs restart``
 Pour vérifier si Gitea est bien démarré
 ``service gitea status``
-Vous pouvez ensuite aller vérifier si le serveur SSH fonctionne bien!
+Vous pouvez ensuite aller vérifier si le serveur SSH fonctionne bien !
 
-N'hésitez pas à commenter ou à partager!
+N'hésitez pas à commenter ou à partager !

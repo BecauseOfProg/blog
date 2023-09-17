@@ -9,7 +9,7 @@ labels: ["open source", "android"]
 timestamp: 1530635699
 ---
 
-Le dernier "**MAAOS**" date de **Novembre 2017**.  
+Le dernier "**MAAOS**" date de **novembre 2017**.  
  La régularité n'est pas au rendez-vous.  
  *P.S: certaines applications doivent être déjà présentes dans l'article de novembre ;)*
 

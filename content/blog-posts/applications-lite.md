@@ -14,7 +14,7 @@ Nous avons présenté dans un article hier la nouvelle version du site mobile d�
  1) Facebook Lite
 ----------------
 
- L’application Facebook doit être l’application la plus lourde du Play Store! Mais c’est aussi l’application la plus utilisée par vos amis, on ne peut pas s’en passer! Créée pour les pays émergents où les téléphones sont très en retard par rapport aux nôtres, elle ne pèse qu’un megaoctet et demi, avec un design très sobre et déchargé des stories ou autres fonctionnalités peu utiles. Sur le Play Store, vous ne pourrez pas la télécharger dans les pays d’Europe. Mais vous pouvez la retrouver sur le site APKMirror, référence dans les APK où vous trouverez toutes les mises à jour de beaucoup d’applications du Play Store.
+ L’application Facebook doit être l’application la plus lourde du Play Store ! Mais c’est aussi l’application la plus utilisée par vos amis, on ne peut pas s’en passer ! Créée pour les pays émergents où les téléphones sont très en retard par rapport aux nôtres, elle ne pèse qu’un megaoctet et demi, avec un design très sobre et déchargé des stories ou autres fonctionnalités peu utiles. Sur le Play Store, vous ne pourrez pas la télécharger dans les pays d’Europe. Mais vous pouvez la retrouver sur le site APKMirror, référence dans les APK où vous trouverez toutes les mises à jour de beaucoup d’applications du Play Store.
 
  [![](https://lh3.googleusercontent.com/lLixN9tlQ7YiIXg3nj5LQ1OcrEuxNsEnXwSSYyZxLGiP6lDb24KrOvG3pWhGb7zj7Jc=h900)](https://lh3.googleusercontent.com/lLixN9tlQ7YiIXg3nj5LQ1OcrEuxNsEnXwSSYyZxLGiP6lDb24KrOvG3pWhGb7zj7Jc=h900)
 
@@ -32,7 +32,7 @@ Nous avons présenté dans un article hier la nouvelle version du site mobile d�
  3) Skype Lite
 -------------
 
- Encore une fois pour les pays émergents où le réseau est instable (oui c’est EXTREMEMENT redondant), Skype a créé Skype Lite. Là aussi, retour aux bases : Discussion instantanée et appels. Cette application inclut un mode sombre !
+ Encore une fois pour les pays émergents où le réseau est instable (oui c’est EXTRÊMEMENT redondant), Skype a créé Skype Lite. Là aussi, retour aux bases : Discussion instantanée et appels. Cette application inclut un mode sombre !
 
  <http://www.apkmirror.com/apk/skype/skype-lite/>
 
@@ -47,7 +47,7 @@ Nous avons présenté dans un article hier la nouvelle version du site mobile d�
 
  <http://www.apkmirror.com/apk/shazam-entertainment-limited/shazam-lite-discover-music/>
 
- Je ne me suis pas arrêté la et j’ai trouvé une version modifiée sur les forums de XDA Developpers qui marche bien :
+ Je ne me suis pas arrêté là et j’ai trouvé une version modifiée sur les forums de XDA Developers qui marche bien :
 
  <https://forum.xda-developers.com/android/apps-games/app-shazam-lite-region-restriction-t3477858>
 
@@ -56,16 +56,16 @@ Nous avons présenté dans un article hier la nouvelle version du site mobile d�
  5) Opera Mini
 -------------
 
- Enfin une application disponible normalement sur le Play Store! Ce navigateur Android qui inclut un bloqueur de pub vous permet de suivre et d’économiser votre data.
+ Enfin une application disponible normalement sur le Play Store ! Ce navigateur Android qui inclut un bloqueur de pub vous permet de suivre et d’économiser votre data.
 
  <https://play.google.com/store/apps/details?id=com.opera.mini.native&hl=fr>
 
  ![](https://lh3.googleusercontent.com/i_8o6pI7d8BYp_jGFLjyEAlY2AoeQCGdwZCOUgVq-Nr43QjaWdOvJE3ZsC08rj-eMg=h900)
 
- 6) NewPipe (Youtube)
+ 6) NewPipe (YouTube)
 --------------------
 
- Cette application qu’OrNicarZ vous avait présenté il y a quelques semaines est elle aussi une version Lite. Cette application officieuse vous permet de télécharger, regarder en arrière plan ou d’afficher la vidéo en popup.
+ Cette application qu’ornicarz vous avait présenté il y a quelques semaines est, elle aussi, une version Lite. Cette application officieuse vous permet de télécharger, regarder en arrière-plan ou d’afficher la vidéo en popup.
 
  Site officiel : <https://newpipe.schabi.org/>
 

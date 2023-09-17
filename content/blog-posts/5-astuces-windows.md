@@ -24,15 +24,15 @@ shutdown -s -t 00
 
 Analysons ensemble cette commande :
 
-shutdown est le programme que vous allez appeler, où que vous soyez il est **toujours** disponible dans l’invite de commande.
+`shutdown` est le programme que vous allez appeler, où que vous soyez, il est **toujours** disponible dans l’invite de commande.
 
--s indique à l’ordinateur qu’on souhaite l’éteindre (-r permet de redémarrer l’ordinateur et -g permet de redémarrer les applications enregistrées au redémarrage)
+`-s` indique à l’ordinateur qu’on souhaite l’éteindre (-r permet de redémarrer l’ordinateur et -g permet de redémarrer les applications enregistrées au redémarrage)
 
--t 00 indique le délai avant l’extinction. Le délai doit s’exprimer en secondes !
+`-t 00` indique le délai avant l’extinction. Le délai doit s’exprimer en secondes !
 
-Vous avez lancé une extinction programmée mais vous voulez l’annuler ? Entrez simplement shutdown -a pour l’annuler !
+Vous avez lancé une extinction programmée, mais vous voulez l’annuler ? Entrez simplement `shutdown -a` pour l’annuler !
 
-Voilà, maintenant vous savez comment éteindre ou redémarrer votre ordinateur de façon programmée ou immédiate ! De plus, cette technique fonctionne aussi avec les raccourcis, je vous conseille donc de créer un raccourci pour éteindre votre ordinateur plus rapidement !
+Voilà, maintenant, vous savez comment éteindre ou redémarrer votre ordinateur de façon programmée ou immédiate ! De plus, cette technique fonctionne aussi avec les raccourcis, je vous conseille donc de créer un raccourci pour éteindre votre ordinateur plus rapidement !
 
  
 
@@ -73,11 +73,11 @@ puis suivez les instructions indiquées ! ^^
 5/ Organiser ses dossiers facilement et efficacement
 ----------------------------------------------------
 
-Vos dossiers ne sont jamais organisés ? Pleins de raccourcis de jeux sont dans un seul et même dossier mais ils ne sont pas triés ?
+Vos dossiers ne sont jamais organisés ? Pleins de raccourcis de jeux sont dans un seul et même dossier, mais ils ne sont pas triés ?
 
-Cette astuce est très simple à réaliser mais faites tout de même très attention :
+Cette astuce est très simple à réaliser, mais faites tout de même très attention :
 
-La technique que je vais vous montrer ne supporte pas tout le temps les raccourcis Steam, uPlay, Origin, etc… Du moins tous les raccourcis **web**. Il vous faudra donc créer un raccourci vers **l’exécutable** de votre jeu.
+La technique que je vais vous montrer ne supporte pas tout le temps les raccourcis Steam, uPlay, Origin, etc. Du moins tous les raccourcis **web**. Il vous faudra donc créer un raccourci vers **l’exécutable** de votre jeu.
 
 Voici comment nous allons procéder :
 

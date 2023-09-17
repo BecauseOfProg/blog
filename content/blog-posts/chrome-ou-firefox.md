@@ -20,7 +20,7 @@ timestamp: 1491413339
 ### Performances
 
  Chrome est plus rapide que son concurrent, ce qui est un bon point pour les personnes qui veulent aller très vite dans leurs déplacements.  
- Cette rapidité ne s'applique que sur le navigateur : il aura tendance à plus mobiliser la mémoire RAM ou le processeur de votre ordinateur et ce, même en arrière-plan.
+ Cette rapidité ne s'applique que sur le navigateur : il aura tendance à plus mobiliser la mémoire RAM ou le processeur de votre ordinateur, et ce, même en arrière-plan.
 
  Firefox implémente également un mode économie de données sur son application mobile qui, comme dit dans son nom, va économiser votre forfait de 4G, ce qui évite d'avoir une grosse facture à la fin du mois, surtout si vous avez un petit forfait qui est débloqué.
 
@@ -57,7 +57,7 @@ timestamp: 1491413339
 
 ### Favoris
 
- Firefox permet de créer beaucoup de catégories pour ranger ses favoris (d'ailleurs ils sont nommés "Marques-pages"). Vous pouvez y mettre dans votre barre personnelle, sur celle d'un autre appareil ou simplement mettre une "étiquette" à un site. Chrome reste simple à ce propos, mais c'est aussi un bon point car chez son concurrent, on peut se perdre dans ses options et compagnie.
+ Firefox permet de créer beaucoup de catégories pour ranger ses favoris (d'ailleurs, ils sont nommés "Marques-pages"). Vous pouvez y mettre dans votre barre personnelle, sur celle d'un autre appareil ou simplement mettre une "étiquette" à un site. Chrome reste simple à ce propos, mais c'est aussi un bon point, car chez son concurrent, on peut se perdre dans ses options et compagnie.
 
 ### Conclusion
 

@@ -17,7 +17,7 @@ Pour commencer, je vous conseille une nouvelle fois de revenir sur Firefox, en e
 
 
  * Better TweetDeck : Si vous utilisez TweetDeck, le site web de Twitter qui permet de se connecter à plusieurs comptes à la fois et de gérer les flux en plusieurs colonnes, cet addon vous permettra de personnaliser le site à volonté.
- * Le module Cocktail vous permet de consulter les programmes des différentes chaines de télévision françaises depuis votre navigateur. Il utilise le service de Molotov Tv, qui requiert normalement le téléchargement d’une application dédiée (application qui ne fait qu’afficher une page web…). L’addon est maintenu par son auteur mais ne suit pas forcément tous les changements de Molotov qui peuvent bloquer l’affichage du site.
+ * Le module Cocktail vous permet de consulter les programmes des différentes chaines de télévision françaises depuis votre navigateur. Il utilise le service de Molotov Tv, qui requiert normalement le téléchargement d’une application dédiée (application qui ne fait qu’afficher une page web…). L’addon est maintenu par son auteur, mais ne suit pas forcément tous les changements de Molotov qui peuvent bloquer l’affichage du site.
  * Dark Mode vous permet d’inverser la couleur des sites internets pour les lire sur un fond noir, utile pour reposer ses yeux
  * Grammalecte est un correcteur d’orthographe, de conjugaison et de grammaire pour le navigateur, très utile pour corriger des messages sans passer par un éditeur de texte pour le corriger.
  * uBlock Origin vous permet de bloquer les publicités et les pisteurs sur internet. Il est moins lourd et plus flexible qu’AdBlock
@@ -34,5 +34,5 @@ Pour commencer, je vous conseille une nouvelle fois de revenir sur Firefox, en e
 
  * Privacy Settings pour désactiver des fonctionnalités du navigateur pouvant exposer des informations personnelles.
  * Cookie AutoDelete vous permet de gérer les cookies de votre navigateur et de les supprimer automatiquement.
- * uMatrix est une extension bien plus compliquer à maitriser mais très utile. Elle permet de sélectionner les ressources et les domaines à charger. On peut par exemple bloquer les images, les vidéos d’un site, ou alors sélectionner sur quels sites votre navigateur peut se connecter.
-  N'hésitez pas à suggérer d'autres extensions en commentaire!
+ * uMatrix est une extension bien plus compliquer à maitriser, mais très utile. Elle permet de sélectionner les ressources et les domaines à charger. On peut par exemple bloquer les images, les vidéos d’un site, ou alors sélectionner sur quels sites votre navigateur peut se connecter.
+  N'hésitez pas à suggérer d'autres extensions en commentaire !

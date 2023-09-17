@@ -18,7 +18,7 @@ timestamp: 1495537045
 
  **Altice** est un groupe multinational regroupant des câblo-opérateurs, des opérateurs de télécommunications et des entreprises de communications, créée par Patrick Drahi en 2001.
 
- En Avril 2014, ***Altice*** rachète **SFR**, mais SFR garde son nom.  
+ En avril 2014, ***Altice*** rachète **SFR**, mais SFR garde son nom.  
  ![Logo d'Altice actuel](https://becauseofprog.fr/assets/articles/sfr-change-de-nom-2.png)
 
  

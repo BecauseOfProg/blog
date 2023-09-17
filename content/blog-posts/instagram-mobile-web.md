@@ -16,5 +16,5 @@ Hier, le site internet mobile d’Instagram a été mis à jour. Les utilisateur
   Un nouveau look pour le site
 ----------------------------
 
- Désormais, le site web mobile d‘Instagram permet de faire presque tout ce que l’on peut faire sur l’application : voir le fil d’actualité, commenter, voir ses notifications, gérer son profil et ses abonnements… néanmoins, pour ne pas alourdir la taille du site, certaines fonctionnalités ont été volontairement retirées : les messages privés (c’est pas une grande perte), les filtres, les stories et surtout l’envoi de vidéos.
+ Désormais, le site web mobile d'Instagram permet de faire presque tout ce que l’on peut faire sur l’application : voir le fil d’actualité, commenter, voir ses notifications, gérer son profil et ses abonnements… néanmoins, pour ne pas alourdir la taille du site, certaines fonctionnalités ont été volontairement retirées : les messages privés (c’est pas une grande perte), les filtres, les stories et surtout l’envoi de vidéos.
 

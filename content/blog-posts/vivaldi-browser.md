@@ -17,7 +17,7 @@ Des **navigateurs** Internet, il en existe une multitude.
 
  Mais **Vivaldi**, c'est quoi ?
 
-#### **- Une navigation plus rapide:**
+#### **- Une navigation plus rapide :**
 
  **Speed Dial**  
  *Liens rapides et visuels vers vos sites préférés, accessibles à partir de chaque nouvel onglet.*
@@ -98,7 +98,7 @@ Des **navigateurs** Internet, il en existe une multitude.
 
  **Son histoire:**
 
- Crée en Janvier 2015, **Vivaldi** est crée par l'ex-PDG de Opera: Jon Stephenson von Tetzchner.  
+ En janvier 2015, **Vivaldi** est créé par l'ex-PDG de Opera : Jon Stephenson von Tetzchner.  
  Disponible sous Windows, Linux et MacOS.
 
  **Vivaldi** a commencé en tant que site web communautaire pour remplacer ***My Opera***, arrêté par Opera en mars 2014. Le créateur de Vivaldi, a été mécontent de cette décision, et lance donc Vivaldi Community à la place de ***My Opera***, Vivaldi Community fournissant des forums de discussion, ainsi qu'un blog.
@@ -106,17 +106,17 @@ Des **navigateurs** Internet, il en existe une multitude.
  Fin 2015, **Vivaldi Technologies** lance une première version bêta de Vivaldi. 
 
  
->  Petite vidéo à propos de cela *(anglais)* : [https://youtu.be/HQR2Vxz\_UVE](https://youtu.be/HQR2Vxz_UVE)
+>  Petite vidéo à propos de cela *(anglais)* : [https://youtu.be/HQR2Vxz_UVE](https://youtu.be/HQR2Vxz_UVE)
 > 
 >    
 
  Aussi simple d'utilisation, **Vivaldi** se démarque par ses options originales et intéressantes.  
- Les mises-à-jour sont fréquentes mais pas excessives, et apportent toujours quelque chose de bon.
+ Les mises-à-jour sont fréquentes, mais pas excessives, et apportent toujours quelque chose de bon.
 
  Dans son premier article, [**mentor6561**](https://becauseofprog.fr/members/?view=15) parlait de **Ecosia**: <https://becauseofprog.fr/blog/ecosia-le-moteur-de-demain-31>  
- et dernièrement, Vivaldi a ajouté Ecosia dans sa liste de moteurs de recherche *(article anglais)*:  
+ et dernièrement, Vivaldi a ajouté Ecosia dans sa liste de moteurs de recherche *(article anglais)* :  
    
- Autre (grand) **avantage** de Vivaldi (*non disponible directement sous Opera*):  
+ Autre (grand) **avantage** de Vivaldi (*non disponible directement sous Opera*) :  
  Les **extensions** chrome sont disponibles !  
  Vous pouvez en effet installer n'importe quelle extension, vu que Vivaldi est lui aussi basé sur **Chromium** !
 

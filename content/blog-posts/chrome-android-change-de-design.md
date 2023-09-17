@@ -29,6 +29,6 @@ Google a récemment publié, dans sa version de développement, une mise à jour
 
 ### Vers du design iOS chez Google ?
 
- On peut alors se demander si le design iOS ne va pas remplacer le fameux Material Design au long terme. La réponse est bien sûr que non : celui-ci, créé par Google, est et sera encore omniprésent sur Android, mais il faudra s’attendre à une fusion avec iOS au long terme. Il faudra alors s’adapter et ainsi avoir de nouvelles habitudes.
+ On peut alors se demander si le design iOS ne va pas remplacer le fameux Material Design au long terme. La réponse est bien sûr que non : celui-ci, créé par Google, est et sera encore omniprésent sur Android, mais il faudra s’attendre à une fusion avec iOS au long terme. Il faudra ainsi s’adapter et ainsi avoir de nouvelles habitudes.
 
  

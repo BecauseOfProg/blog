@@ -57,7 +57,7 @@ Bonjour à toutes et à tous !
  - **lichess** : Fan d'échecs ? Utilisez Lichess, pas chess.org (mention spéciale à @Naudard)  
  Site officiel : [lichess.org](https://lichess.org/)  
  Téléchargement : [play.google.com/store/apps/details?id=org.lichess.mobileapp](https://play.google.com/store/apps/details?id=org.lichess.mobileapp)  
- *P.S: si vous voulez faire une petite partie, vous pouvez me retrouver sous le pseudo "ornicarz" (vieux pseudo..)*
+ *P.S: si vous voulez faire une petite partie, vous pouvez me retrouver sous le pseudo "ornicarz" (vieux pseudo...)*
 
  - **Magisk Manager** : Gestionnaire d'accès super-utilisateur (root) et magasin de modules nécessitant cet accès root  
  Code source : [github.com/topjohnwu/Magisk](https://github.com/topjohnwu/Magisk)  
@@ -146,7 +146,7 @@ Bonjour à toutes et à tous !
   
 
  Merci d'avoir lu cet article !  
- J'espère vous avoir fait découvrir de nouvelles applications..
+ J'espère vous avoir fait découvrir de nouvelles applications...
 
  Vous pouvez toujours me contacter sur le Discord BOP ou sur Wire pour plus d'informations,
 
