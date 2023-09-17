@@ -1,23 +1,5 @@
 <template>
   <v-app>
-    <v-snackbar
-      v-model="snackbar.show"
-      right
-      timeout="5000"
-      top
-    >
-      {{ $t(snackbar.message) }}
-      <template #action="{ attrs }">
-        <v-btn
-          v-bind="attrs"
-          color="darker"
-          text
-          @click="snackbar.show = false"
-        >
-          {{ $t('global.close') }}
-        </v-btn>
-      </template>
-    </v-snackbar>
     <div
       class="v-app-bar v-app-bar--fixed top-bar gradient"
       style="height: 8px; width: 100%"

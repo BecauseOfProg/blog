@@ -79,8 +79,7 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
-import ScrollToTop from '@/components/ScrollToTop.vue'
+import ScrollToTop from '~/components/ScrollToTop.vue'
 
 export default {
   name: 'DevBlog',
@@ -92,6 +91,16 @@ export default {
       pages: 0
     }
   },
+  async fetch () {
+    const devblogs = await this.$content('devblogs').without(['body']).sortBy('timestamp', 'desc').fetch()
+    const authorIds = [...new Set(devblogs.map(v => v.authorId))]
+    const authors = await this.$content('members').where({ username: { $in: authorIds } }).fetch()
+    devblogs.forEach((v) => {
+      v.id = v.slug
+      v.author = authors.find(a => a.slug === v.authorId)
+    })
+    this.devblogs = devblogs
+  },
   head () {
     return {
       title: this.$t('devblog.title'),
@@ -102,19 +111,6 @@ export default {
         }
       ]
     }
-  },
-  methods: {
-    ...mapMutations(['SHOW_SNACKBAR'])
-  },
-  async fetch () {
-    const devblogs = await this.$content('devblogs').without(['body']).sortBy('timestamp', 'desc').fetch()
-    const authorIds = [...new Set(devblogs.map(v => v.authorId))]
-    const authors = await this.$content('members').where({ username: { $in: authorIds } }).fetch()
-    devblogs.forEach((v) => {
-      v.id = v.slug
-      v.author = authors.find(a => a.slug === v.authorId)
-    })
-    this.devblogs = devblogs
   }
 }
 </script>

@@ -237,7 +237,7 @@
 </template>
 
 <script>
-import { mapMutations, mapActions } from 'vuex'
+import { mapActions } from 'vuex'
 import { categories, types, getCategory, getType } from '@/utils/data'
 
 export default {
@@ -331,7 +331,6 @@ export default {
     this.addReadPublication(this.publication.id)
   },
   methods: {
-    ...mapMutations(['SHOW_SNACKBAR']),
     ...mapActions('read-publications', ['addReadPublication'])
   }
 }
