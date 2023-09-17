@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/rawpixel-660359-unsplash.jpg
 type: tutorial
 authorId: gildasgh
 category: android
-labels: ["Android", " t\u00e9l\u00e9phone", " op\u00e9rateur", " smartphone"]
+labels: ["Android", "téléphone", "opérateur", "smartphone"]
 timestamp: 1529935532
 ---
 

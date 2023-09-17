@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/md-example.jpg
 type: tutorial
 authorId: theovld
 category: web
-labels: ["HTML", "CSS", "D\u00e9veloppement"]
+labels: ["HTML", "CSS", "Développement"]
 timestamp: 1494162497
 ---
 

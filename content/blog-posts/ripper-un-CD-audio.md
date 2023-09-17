@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/cdaudio/cdaudio.png
 type: article
 authorId: kernoeb
 category: linux
-labels: ["CD", " Linux"]
+labels: ["CD", "Linux"]
 timestamp: 1518437848
 ---
 

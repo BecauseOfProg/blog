@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/bop-article.png
 type: article
 authorId: gildasgh
 category: windows
-labels: ["windows", " s\u00e9curit\u00e9"]
+labels: ["windows", "sécurité"]
 timestamp: 1532616394
 ---
 

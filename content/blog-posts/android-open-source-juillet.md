@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/applis-open-source-juillet-2018
 type: article
 authorId: kernoeb
 category: android
-labels: ["open source", " android"]
+labels: ["open source", "android"]
 timestamp: 1530635699
 ---
 

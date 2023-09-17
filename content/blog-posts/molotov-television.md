@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/molotov.jpg
 type: article
 authorId: gildasgh
 category: software
-labels: ["Molotov", "TV", "T\u00e9l\u00e9vision", "Android", "iPhone", "iPad"]
+labels: ["Molotov", "TV", "Tévision", "Android", "iPhone", "iPad"]
 timestamp: 1493915006
 ---
 

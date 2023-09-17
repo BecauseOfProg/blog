@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/rambox-vos-services-dans-1-app-
 type: article
 authorId: gildasgh
 category: software
-labels: ["linux", " windows", " rambox", " logiciel", " software"]
+labels: ["linux", "windows", "rambox", "logiciel", "software"]
 timestamp: 1503497906
 ---
 

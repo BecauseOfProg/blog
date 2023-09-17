@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/onenote/onenote-1.jpg
 type: article
 authorId: theovld
 category: software
-labels: ["Software", "Microsoft", "Modernit\u00e9", "Simplicit\u00e9", "Android", "iOS"]
+labels: ["Software", "Microsoft", "Modernité", "Simplicité", "Android", "iOS"]
 timestamp: 1494424843
 ---
 

@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/gitea-gogs-ssh.png
 type: tutorial
 authorId: gildasgh
 category: programming
-labels: ["git", "gitea", "gogs", "ssh", "d\u00e9veloppement", "configuration", "tutoriel"]
+labels: ["git", "gitea", "gogs", "ssh", "développement", "configuration", "tutoriel"]
 timestamp: 1561220364
 ---
 

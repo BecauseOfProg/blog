@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/phare-woaw.jpg
 type: article
 authorId: gildasgh
 category: hardware
-labels: ["Google", "Photographie", "Smartphone", "T\u00e9l\u00e9phonie", "Hardware"]
+labels: ["Google", "Photographie", "Smartphone", "Téléphonie", "Hardware"]
 timestamp: 1493301869
 ---
 

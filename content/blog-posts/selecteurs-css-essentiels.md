@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/courses/css/selectors.PNG
 type: tutorial
 authorId: theovld
 category: web
-labels: ["CSS", "D\u00e9veloppement"]
+labels: ["CSS", "Développement"]
 timestamp: 1493748790
 ---
 

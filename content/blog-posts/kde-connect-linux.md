@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/kdeconnect-wallpaller.png
 type: article
 authorId: kernoeb
 category: linux
-labels: ["Linux", " KDE", " Logiciel"]
+labels: ["Linux", "KDE", "Logiciel"]
 timestamp: 1507474978
 ---
 

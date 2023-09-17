@@ -6,7 +6,7 @@ banner: https://becauseofprog.fr/assets/articles/protonvpn.png
 type: article
 authorId: stengarlis
 category: web
-labels: ["Web", "S\u00e9curit\u00e9"]
+labels: ["Web", "Sécurité"]
 timestamp: 1497970798
 ---
 

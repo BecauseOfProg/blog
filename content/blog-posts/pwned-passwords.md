@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/Searching-for-a-Pwned-Password.
 type: flash
 authorId: gildasgh
 category: security
-labels: ["pwned passwords", " haveibeenpawned", " troyhunt"]
+labels: ["pwned passwords", "haveibeenpawned", "troyhunt"]
 timestamp: 1519325328
 ---
 

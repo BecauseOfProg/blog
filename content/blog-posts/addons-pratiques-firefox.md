@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/addons-firefox.png
 type: article
 authorId: gildasgh
 category: software
-labels: ["firefox", " addons"]
+labels: ["firefox", "addons"]
 timestamp: 1516456001
 ---
 

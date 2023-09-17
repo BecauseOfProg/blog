@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/instagram-mobile-web.png
 type: article
 authorId: gildasgh
 category: web
-labels: ["Instagram", "M\u00e0J", "Software", "Android", "Web", "Webapp"]
+labels: ["Instagram", "MàJ", "Software", "Android", "Web", "Webapp"]
 timestamp: 1494516475
 ---
 

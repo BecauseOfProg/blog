@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/LinuxDeploy/linuxsurandroid-min
 type: article
 authorId: kernoeb
 category: android
-labels: ["Android", " Linux", " VNC"]
+labels: ["Android", "Linux", "VNC"]
 timestamp: 1510153420
 ---
 

@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/sfr.png
 type: article
 authorId: kernoeb
 category: web
-labels: ["T\u00e9l\u00e9com", "SFR", "Op\u00e9rateur", "Internet", "T\u00e9l\u00e9phonie"]
+labels: ["Télécom", "SFR", "Opérateur", "Internet", "Téléphonie"]
 timestamp: 1495537045
 ---
 

@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/snapdragon-205.jpg
 type: article
 authorId: gildasgh
 category: hardware
-labels: ["T\u00e9l\u00e9phonie", "4G", "Mobile", "Processeur", "Hardware"]
+labels: ["Téléphonie", "4G", "Mobile", "Processeur", "Hardware"]
 timestamp: 1490370237
 ---
 

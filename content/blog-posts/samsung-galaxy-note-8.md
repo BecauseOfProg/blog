@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/note-8-banner.jpg
 type: article
 authorId: theovld
 category: android
-labels: ["Software", "Hardware", "T\u00e9l\u00e9phonie", "Samsung", "Android"]
+labels: ["Software", "Hardware", "Téléphonie", "Samsung", "Android"]
 timestamp: 1503511086
 ---
 

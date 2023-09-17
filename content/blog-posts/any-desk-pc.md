@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/AnyDesk/anydesk-compressor.png
 type: article
 authorId: kernoeb
 category: software
-labels: ["Linux", " Windows", " MacOS", " Logiciel", " AnyDesk"]
+labels: ["Linux", "Windows", "MacOS", "Logiciel", "AnyDesk"]
 timestamp: 1512236019
 ---
 

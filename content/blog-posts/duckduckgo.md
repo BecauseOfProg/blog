@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/duckduckgo.png
 type: article
 authorId: stengarlis
 category: web
-labels: ["DuckDuckGo", "Web", "Recherche", "S\u00e9curit\u00e9"]
+labels: ["DuckDuckGo", "Web", "Recherche", "Sécurité"]
 timestamp: 1491990482
 ---
 

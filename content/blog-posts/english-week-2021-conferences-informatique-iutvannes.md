@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/v2/sites/becauseofprog.fr/articles/engli
 type: article
 authorId: gildasgh
 category: security
-labels: ["conf\u00e9rences", "IUT de Vannes", "cybers\u00e9curit\u00e9", "intelligence artificielle", "data science"]
+labels: ["conférences", "IUT de Vannes", "cybersécurité", "intelligence artificielle", "data science"]
 timestamp: 1611843522
 ---
 

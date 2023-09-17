@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/36apps.png
 type: article
 authorId: kernoeb
 category: android
-labels: ["open source", " f-droid"]
+labels: ["open source", "f-droid"]
 timestamp: 1509904409
 ---
 

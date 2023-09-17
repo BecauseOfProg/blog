@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/firefox-nightly-addons-change-1
 type: article
 authorId: gildasgh
 category: software
-labels: ["mozilla", "firefox", " nightly", "addon", "api"]
+labels: ["mozilla", "firefox", "nightly", "addon", "api"]
 timestamp: 1503169756
 ---
 

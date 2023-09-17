@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/trierfichiers.png
 type: article
 authorId: kernoeb
 category: software
-labels: ["Windows", " Linux", " Logiciel"]
+labels: ["Windows", "Linux", "Logiciel"]
 timestamp: 1519061181
 ---
 

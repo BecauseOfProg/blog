@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/googlefeed/googlefeed.png
 type: flash
 authorId: theovld
 category: software
-labels: ["Google", "News", "Feed", "Actualit\u00e9s"]
+labels: ["Google", "News", "Feed", "Actualités"]
 timestamp: 1505410290
 ---
 

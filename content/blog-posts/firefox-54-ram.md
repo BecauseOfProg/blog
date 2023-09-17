@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/mozilla-firefox.jpg
 type: article
 authorId: gildasgh
 category: software
-labels: ["Software", "Google", "Mozilla", "Rapidit\u00e9", "Navigation"]
+labels: ["Software", "Google", "Mozilla", "Rapidité", "Navigation"]
 timestamp: 1497873378
 ---
 

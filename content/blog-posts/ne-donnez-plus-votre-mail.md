@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/donnez-plus.png
 type: article
 authorId: kernoeb
 category: security
-labels: ["spam", " mail", " sms"]
+labels: ["spam", "mail", "sms"]
 timestamp: 1530694885
 ---
 

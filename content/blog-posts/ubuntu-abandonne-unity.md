@@ -5,7 +5,7 @@ banner: https://becauseofprog.fr/assets/articles/ubuntu-unity.jpg
 type: article
 authorId: gildasgh
 category: linux
-labels: ["Ubuntu", "Linux", "Unity", "Mobile", "T\u00e9l\u00e9phonie"]
+labels: ["Ubuntu", "Linux", "Unity", "Mobile", "Téléphonie"]
 timestamp: 1491994359
 ---
 
