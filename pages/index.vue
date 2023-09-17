@@ -195,6 +195,11 @@ export default {
         classes: ['darker-bg']
       })
     }
+  },
+  head () {
+    return {
+      title: this.$t('mobileMenu.home')
+    }
   }
 }
 </script>
