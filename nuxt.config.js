@@ -87,8 +87,13 @@ export default {
     '@nuxt/content',
     '@nuxtjs/i18n',
     '@nuxt/http',
-    'vue-plausible'
+    'vue-plausible',
+    '@nuxtjs/sitemap'
   ],
+
+  sitemap: {
+    hostname: 'https://becauseofprog.fr'
+  },
 
   plausible: {
     apiHost: 'https://plausible.noewen.com'
