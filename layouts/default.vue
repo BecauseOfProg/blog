@@ -161,15 +161,18 @@ export default {
       meta: [
         {
           property: 'og:title',
-          content: 'BecauseOfProg'
+          content: 'BecauseOfProg',
+          hid: 'og:title'
         },
         {
           property: 'og:description',
-          content: this.$t('global.shortDescription')
+          content: this.$t('global.shortDescription'),
+          hid: 'og:description'
         },
         {
           property: 'og:url',
-          content: `https://becauseofprog.fr${this.$router.currentRoute.fullPath}`
+          content: `https://becauseofprog.fr${this.$router.currentRoute.fullPath}`,
+          hid: 'og:url'
         }
       ]
     }

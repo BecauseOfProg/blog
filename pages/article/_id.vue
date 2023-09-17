@@ -265,7 +265,8 @@ export default {
         meta: [
           {
             property: 'og:title',
-            content: this.publication.title
+            content: this.publication.title,
+            hid: 'og:title'
           },
           {
             property: 'description',
@@ -274,15 +275,18 @@ export default {
           },
           {
             property: 'og:description',
-            content: this.publication.description
+            content: this.publication.description,
+            hid: 'og:description'
           },
           {
             property: 'og:image',
-            content: this.publication.banner
+            content: this.publication.banner,
+            hid: 'og:image'
           },
           {
             name: 'author',
-            content: `${this.publication.author.displayname} (@${this.publication.author.username})`
+            content: `${this.publication.author.displayname} (@${this.publication.author.username})`,
+            hid: 'author'
           }
         ]
       }
