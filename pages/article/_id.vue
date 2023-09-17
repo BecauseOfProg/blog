@@ -261,11 +261,16 @@ export default {
   head () {
     if (this.loaded) {
       return {
-        title: `${this.publication.title} — BecauseOfProg`,
+        title: this.publication.title,
         meta: [
           {
             property: 'og:title',
-            content: `${this.publication.title} — BecauseOfProg`
+            content: this.publication.title
+          },
+          {
+            property: 'description',
+            content: this.publication.description,
+            hid: 'description'
           },
           {
             property: 'og:description',

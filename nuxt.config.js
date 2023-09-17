@@ -26,7 +26,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Blog de programmation et actualités technologiques créé par des passionnés' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
