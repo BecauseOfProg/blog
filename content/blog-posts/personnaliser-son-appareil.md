@@ -18,13 +18,13 @@ Vous en avez marre des applications ou services de base qui restent classiques e
 
  Changez d'écran d'accueil avec un Launcher personnalisé ! Celui-là est sûrement très connu, mais je tenais à vous le présenter.
 
- Nova Launcher permet donc de personnaliser les couleurs de l'interface, la liste d'applications, les icônes, les gestes… Ses paramètres sont très complets ! Il propose aussi une fonction similaire à Force Touch (ou 3D touch j'en sais rien moi :c ) sur Apple, qui signifie que vous avez accès à certaines actions intra-applis au simple appui prolongé. Une version premium existe et permet de débloquer des fonctions avancées telles que les indicateurs de non lus sur les applications (qui sont très pratiques). Quelques captures d'écrans de ses paramètres et de ma configuration personnelle.
+ Nova Launcher permet donc de personnaliser les couleurs de l'interface, la liste d'applications, les icônes, les gestes… Ses paramètres sont très complets ! Il propose aussi une fonction similaire à Force Touch (ou 3D touch j'en sais rien moi :c) sur Apple, qui signifie que vous avez accès à certaines actions intra-applis au simple appui prolongé. Une version premium existe et permet de débloquer des fonctions avancées telles que les indicateurs de non lus sur les applications (qui sont très pratiques). Quelques captures d'écrans de ses paramètres et de ma configuration personnelle.
 
  ![](https://lh5.googleusercontent.com/CC-RpAmdRngW0AFH1ZetgLtFt5N_kDXd2nwo_2_bIWhym7LXWohqmzxn_b0p79BVeYKyiM0ijxEVENbzfUz8Eg7DGzbNhlHTIWIjS56IsnQhM3qNSLHgyUPUsCQsQOZn8T1F47mb)![](https://lh6.googleusercontent.com/XwXOm4rennKjrfjchNIL-y1xGvrGdGntpsmq1eWVOJklmURv9-i0aOhOQ-KzglzPb-ZGnO9wMxpxDlxS7uGZPYp3DCdSWfY2H5s-oK54HDdM-h8EvvastHy4ZyZMF1jQS7AeE35c)**![](https://lh3.googleusercontent.com/bObI9-sWAwhEw2vsKQMn16ilmOKv3PdCxsXF2MiUCky82uymjgKYN25HuK3EEs18loNFBcNvf9DjIjcOW3xvA5FF06Mul3m86WuKXSrOExqvU6aRxvqyPD8usDtFAKUS8QyDrXCQ)**
 
 ### Arrow Launcher
 
- Signé Microsoft, ce lanceur se base sur une interface moderne et épurée et des fonctions comme chez Apple. Swipez vers le haut pour activer les fonctions et raccourcis rapides et naviguer tout à gauche pour accéder à des widgets tels que les contacts, rappels, agenda, etc… Propose une application pour les fonds d'écrans, un booster de mémoire, une modification des icônes et une recherche des applications. L'appui prolongé sur les icônes n'est malheureusement pas supporté. (Force Touch)
+ Signé Microsoft, ce lanceur se base sur une interface moderne et épurée et des fonctions comme chez Apple. Swipez vers le haut pour activer les fonctions et raccourcis rapides et naviguer tout à gauche pour accéder à des widgets tels que les contacts, rappels, agenda, etc. Propose une application pour les fonds d'écrans, un booster de mémoire, une modification des icônes et une recherche des applications. L'appui prolongé sur les icônes n'est malheureusement pas supporté. (Force Touch)
 
  ![](https://lh5.googleusercontent.com/JHwahe8mXjWnPha6j9lmcv3WL6OO_ovHWknHbvcw1v_h1zh0EMDJnxeEhfc6WeoqR-t8VZ74VV0h90LJqPEv9g4712EAfJiY-SPXicUEZNQyII0Mmk7Oh3HTlbJCtLs27HX9vIIS)![](https://lh4.googleusercontent.com/x0uqslai7gV2g0UIzSaJoDoiHdIv0oWy8s7Q2Q5SLCgS8IFMup0jNI8Ut5CYutENRv7GbMOTGqCaCt2R4HTJUEHxT65ULgnhmrHmzEV9ImOGqpf0Y7bvYTzbexF94uaWN-LHyik6)![](https://lh4.googleusercontent.com/Q43hNyat5ALxssb16npdOWmnow89_gohL0ygG-MrmAmhcnrWJsvetmO-FkZMgGN57ncgF-KWiGLUxkctQ8N-9O9Z0DU9N-bdPs8dOA2wqnNQsmyHm453hA9KfBhockMSOHE9cLql)
 
@@ -75,7 +75,7 @@ Vous en avez marre des applications ou services de base qui restent classiques e
  Conclusion
 ==========
 
- Le principal atout d’Android, c’est qu’il regorge d’applications pour personnaliser son téléphone comme vous le souhaitez. C’est à vous de choisir ce qui vous plaît le mieux et n’ayez pas peur qu’elles peuvent vous voler des informations ou autres ! (certaines oui mais c’est rare et généralement elles sont de médiocre qualité).
+ Le principal atout d’Android, c’est qu’il regorge d’applications pour personnaliser son téléphone comme vous le souhaitez. C’est à vous de choisir ce qui vous plaît le mieux et n’ayez pas peur qu’elles peuvent vous voler des informations ou autres ! (certaines oui, mais c’est rare et généralement elles sont de médiocre qualité).
 
  **Sur ce, ENJOIE !**
 

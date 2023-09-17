@@ -9,7 +9,7 @@ labels: ["PHP", "Programmation"]
 timestamp: 1493654184
 ---
 
-Vous avez peut-être conçu un site web qui accueille des utilisateurs ? Ces utilisateurs peuvent souvent être amenés à renseigner des informations telles que leur nom, leur email et une description. D'autres fois, c'est par l'URL. Aujourd'hui, je vais vous apprendre a vous protéger des éventuelles attaques que cela peut causer.
+Vous avez peut-être conçu un site web qui accueille des utilisateurs ? Ces utilisateurs peuvent souvent être amenés à renseigner des informations telles que leur nom, leur email et une description. D'autres fois, c'est par l'URL. Aujourd'hui, je vais vous apprendre à vous protéger des éventuelles attaques que cela peut causer.
 
 ### Prérequis afin de lire le tutoriel
 
@@ -103,7 +103,7 @@ Premier exemple, si vous voulez faire une boucle qui tourne le nombre de fois qu
 
    Ici, la boucle ne s'exécutera pas plus de 40 fois, ce qui évitera le crash de la page.
 
-Deuxième exemple, si vous avez un code qui s'affiche selon des données précises du paramètre, tel que des options, vous devrez alors des tests avec la condition *switch (non, pas la console de Nintendo)*.
+Deuxième exemple, si vous avez un code qui s'affiche selon des données précises du paramètre, telles que des options, vous devrez alors des tests avec la condition *switch (non, pas la console de Nintendo)*.
 
 ```php
      <?php  
@@ -178,7 +178,7 @@ Sortie
 
 > Salut **Gérard** !
 
-   Vous me direz que ce n'est pas très grave, qu'un utilisateur a bien le droit de mettre son pseudo en gras. Maintenant, imaginez que l'utilisateur ai inséré d'autres balises, comme du JavaScript, et qu'il affiche son pseudo pendant que derrière vos cookies sont récupérés. Voyez l'impact que cela peut prendre. On l'appelle l'ovni la faille XSS. Il faut absolument empêcher cela. À partir de là, vous avez 2 solutions :
+   Vous me direz que ce n'est pas très grave, qu'un utilisateur a bien le droit de mettre son pseudo en gras. Maintenant, imaginez que l'utilisateur ait inséré d'autres balises, comme du JavaScript, et qu'il affiche son pseudo pendant que derrière vos cookies sont récupérés. Voyez l'impact que cela peut prendre. On l'appelle l'ovni la faille XSS. Il faut absolument empêcher cela. À partir de là, vous avez 2 solutions :
 
  * Afficher le code HTML inséré
  * Le supprimer entièremment 

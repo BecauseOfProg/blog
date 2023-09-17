@@ -13,7 +13,7 @@ timestamp: 1491992662
 
 ### Windows Vista, c'est officiellement fini!
 
- Microsoft a annoncé que depuis le 11 Avril 2017, Vista ne serait plus mit à jour. Cet OS mal aimé et très peu optimisé (très gourmand en RAM) tourne actuellement sur 1,1% des PC Windows selon StartCounter. Il a été commercialisé le 30 janvier 2007, il y a tout pile 10 ans!
+ Microsoft a annoncé que depuis le 11 avril 2017, Vista ne serait plus mis à jour. Cet OS mal aimé et très peu optimisé (très gourmand en RAM) tourne actuellement sur 1,1% des PC Windows selon StartCounter. Il a été commercialisé le 30 janvier 2007, il y a tout pile 10 ans !
 
  
 >  *"Si vous continuez d'utiliser Windows Vista après la fin du support, votre ordinateur fonctionnera encore, mais il pourrait devenir plus vulnérable face aux risques de sécurité et aux virus*" - Microsoft

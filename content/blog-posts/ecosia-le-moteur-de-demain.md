@@ -9,7 +9,7 @@ labels: ["Internet", "Web", "Recherche", "Ecologie"]
 timestamp: 1495282160
 ---
 
-Vous souhaitez faire une recherche internet ? Vous ouvrez Google, et vous vous lancez. Mais saviez-vous que chaque recherche internet en utilisant le moteur de recherche de google, produit environ 7g de CO2. Depuis le 1er janvier 2017, le moteur de recherche a déjà rejeté environ 200 000 000g de CO2. Mais vous pouvez remédier à cela en utilisant **Ecosia**: Vos recherches permettent de planter des arbres !
+Vous souhaitez faire une recherche internet ? Vous ouvrez Google, et vous vous lancez. Mais saviez-vous que chaque recherche internet en utilisant le moteur de recherche de Google, produit environ 7g de CO2. Depuis le 1er janvier 2017, le moteur de recherche a déjà rejeté approximativement 200 000 000g de CO2. Mais vous pouvez remédier à cela en utilisant **Ecosia**: Vos recherches permettent de planter des arbres !
 
   
 
@@ -24,9 +24,9 @@ Vous souhaitez faire une recherche internet ? Vous ouvrez Google, et vous vous l
 
  **Un moteur en expansion**
 
- Existant depuis 2009, **Ecosia** connaît une véritable expansion depuis quelques années. Il a été traduit dans de nombreuses langues, pour permettre une expansion mondiale. À ce jour **Ecosia** compte plus de 5.5 Millions d'utilisateurs, et environ 8 Millions d'arbres planté à ce jour.
+ Existant depuis 2009, **Ecosia** connaît une véritable expansion depuis quelques années. Il a été traduit dans de nombreuses langues, pour permettre une expansion mondiale. À ce jour **Ecosia** compte plus de 5.5 Millions d'utilisateurs, et environ 8 Millions d'arbres plantés à ce jour.
 
- Ce projet est ambitieux: ils comptent planter 1 milliard d'abres d'ici 2020 ! Bien qu'à ce jour il n'en soit qu'à 0.8%, il est fort probable que le moteur de recherche accueille encore plus d'utilisateur d'ici 2020, et puisse planter beaucoup plus d'arbres !
+ Ce projet est ambitieux : ils comptent planter 1 milliard d'arbres d'ici à 2020 ! Bien qu'à ce jour, il n'en soit qu'à 0.8%, il est fort probable que le moteur de recherche accueille encore plus d'utilisateur d'ici à 2020, et puisse planter beaucoup plus d'arbres !
 
  **Quelques astuces et informations**
 

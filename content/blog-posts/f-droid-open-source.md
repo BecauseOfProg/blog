@@ -15,7 +15,7 @@ timestamp: 1493815740
 Connaissez-vous l'application **Play Store** installée sous votre smartphone Android ? (anciennement Android Market).   
 Comme vous le savez sûrement, elle propose un énorme choix **d'applications**, gratuites ou non, que vous pouvez télécharger en 2 clics...  
 Cependant, la plupart de ces applications ne donnent pas le **code source** de celle-ci.   
-Si vous êtes un "*pro-linux*", vous préférez sûrement des applications **libres de droit** et/ou de modification.
+Si vous êtes un "*pro-linux*", vous préférez certainement des applications **libres de droit** et/ou de modification.
 
   
 ![](https://upload.wikimedia.org/wikipedia/commons/4/47/F-Droid_screenshot_05.png)

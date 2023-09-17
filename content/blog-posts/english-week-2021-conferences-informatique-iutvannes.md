@@ -9,7 +9,7 @@ labels: ["conférences", "IUT de Vannes", "cybersécurité", "intelligence artif
 timestamp: 1611843522
 ---
 
-A l’occasion de la 11e édition de la semaine anglaise à l’IUT de Vannes,  j'organise avec plusieurs étudiants du Bureau des Étudiants des conférences dans le thème de l’Informatique en anglais. 
+À l’occasion de la 11e édition de la semaine anglaise à l’IUT de Vannes, j'organise avec plusieurs étudiants du Bureau des Étudiants des conférences dans le thème de l’Informatique en anglais. 
 
 De nombreux thèmes seront abordés comme la cybersécurité, à laquelle 4 conférences seront dédiées : une sur la cryptographie, sur le pentesting, le reverse engineering et les forensics.
 

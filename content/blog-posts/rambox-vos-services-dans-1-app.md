@@ -15,9 +15,9 @@ Utilisateurs de Linux, vous connaissiez peut-être l'application Franz, qui rass
  ![Logo de Rambox](https://becauseofprog.fr/assets/articles/rambox-vos-services-dans-1-app-2.png)
 
    
- Nous avons découvert une autre application qui fait la même chose, mais qui propose 89 logiciels, tous disponibles en forme de web-app par leur développeurs. Rambox est une application open-source disponible sur GNU/Linux, Windows et MacOS qui propose de se connecter à vos services préférés et de pouvoir y accéder par des onglets, comme sur un navigateur. La différence? Votre navigateur principal (Firefox, Chrome) n'est pas inondé d'onglets de réseaux sociaux ou d'emails!
+ Nous avons découvert une autre application qui fait la même chose, mais qui propose 89 logiciels, tous disponibles en forme de web-app par leurs développeurs. Rambox est une application open-source disponible sur GNU/Linux, Windows et MacOS qui propose de se connecter à vos services préférés et de pouvoir y accéder par des onglets, comme sur un navigateur. La différence ? Votre navigateur principal (Firefox, Chrome) n'est pas inondé d'onglets de réseaux sociaux ou d'emails !
 
- Entre des applications fréquemment utilisées comme Twitter, GMail ou FB Messenger, il propose aussi ProtonMail et plusieurs logiciels décentralisés : on choisit sur quel serveur Rambox doit se connecter : Mastodon, Matrix (avec Riot.im) ou Roundcube!
+ Entre des applications fréquemment utilisées comme Twitter, GMail ou FB Messenger, il propose aussi ProtonMail et plusieurs logiciels décentralisés : on choisit sur quel serveur Rambox doit se connecter : Mastodon, Matrix (avec Riot.im) ou Roundcube !
 
  ![Screenshot de Rambox : Interface](https://becauseofprog.fr/assets/articles/rambox-vos-services-dans-1-app-1.png)  
  *Rambox : Interface principale (sur ElementaryOS)*

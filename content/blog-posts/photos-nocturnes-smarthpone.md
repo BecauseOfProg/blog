@@ -9,9 +9,9 @@ labels: ["Google", "Photographie", "Smartphone", "Téléphonie", "Hardware"]
 timestamp: 1493301869
 ---
 
-Selon le classement de DxOMark, Google est actuellement le leader de la photographie sur mobile, il a dépassé Apple [avec le premier smartphone Pixel](https://www.presse-citron.net/tout-ce-que-vous-devez-savoir-sur-les-smartphones-pixel-de-google/). Mais même avec ces capteur il est habituellement impossible de prendre des photos de nuit ou de très haute qualité. Il faut soit utiliser un vrai appareil photo de bonne qualité ou alors d'être très déterminé et courageux.
+Selon le classement de DxOMark, Google est actuellement le leader de la photographie sur mobile, il a dépassé Apple [avec le premier smartphone Pixel](https://www.presse-citron.net/tout-ce-que-vous-devez-savoir-sur-les-smartphones-pixel-de-google/). Mais même avec ce capteur, il est habituellement impossible de prendre des photos de nuit ou de très haute qualité. Il faut soit utiliser un vrai appareil photo de bonne qualité ou alors d'être très déterminé et courageux.
 
-Mais Florian Kainz, un employé de Google a réussi à prendre des photos de très bonne qualité la nuit avec un smartphone! Pour prendre la photo, Florian Kainz a utilisé une application qui lui permettait de contrôler les différents paramètres tels que le temps d’exposition et l’ISO. Il a pris jusqu’à 64 photos de manière successive. Elles ont été combinées et il y a eu beaucoup de traitements, qui sont détaillés dans un post du blog de Google.
+Mais Florian Kainz, un employé de Google a réussi à prendre des photos de très bonne qualité la nuit avec un smartphone ! Pour prendre la photo, Florian Kainz a utilisé une application qui lui permettait de contrôler les différents paramètres tels que le temps d’exposition et l’ISO. Il a pris jusqu’à 64 photos de manière successive. Elles ont été combinées et il y a eu beaucoup de traitements, qui sont détaillés dans un post du blog de Google.
 
 Cette technique sera peut-être présente dans le prochain Pixel :D
 

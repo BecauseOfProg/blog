@@ -12,7 +12,7 @@ timestamp: 1550425960
 Bonjour à toutes et à tous !  
  Après plus de 6 mois d'absence, je fais mon "come back" avec un nouveau MAAOS.
 
- Comme d'habitude, peu de bla-bla superfétatoire, voyons la liste des applications open-source (et respectueuses de la vie privée!) que j'utilise quotidiennement. (Pour les habitués, il va y avoir probablement redondance de l'information, mais sachez que la répétition est l'amie de la mémoire).
+ Comme d'habitude, peu de bla-bla superfétatoire, voyons la liste des applications open-source (et respectueuses de la vie privée !) que j'utilise quotidiennement. (Pour les habitués, il va y avoir probablement redondance de l'information, mais sachez que la répétition est l'amie de la mémoire).
 
  Vous trouverez plus d'informations (source, téléchargement, etc.) en cliquant sur le lien qui suit le nom de l'application. Et dans un élan de générosité, j'ai trié les noms dans l'ordre alphabétique.
 

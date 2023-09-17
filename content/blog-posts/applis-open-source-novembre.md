@@ -23,7 +23,7 @@ Voici la liste (non-exhaustive) des applications **open source** que j'utilise c
 
  3. **Amaze :** gestionnaire de fichiers
 
- 4. **ApkTrack :** Mises à jours applications du Play Store
+ 4. **ApkTrack :** Mises à jour applications du Play Store
 
  5. **Batch Uninstaller :** Désinstalleur d'application simple et rapide 
 

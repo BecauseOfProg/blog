@@ -26,4 +26,4 @@ timestamp: 1491990482
 
  **Test du moteur de recherche :**
 
- J’ai testé le moteur pendant une semaine et franchement c’est sans déception. Très pratique et rapide. Cependant sur certaines recherches, impossible de trouver le site dans le navigateur et je dirais que c’est le seul point faible.
+ J’ai testé le moteur pendant une semaine et franchement, c'est sans déception. Très pratique et rapide. Cependant, sur certaines recherches, impossible de trouver le site dans le navigateur et je dirais que c’est le seul point faible.

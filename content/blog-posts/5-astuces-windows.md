@@ -41,14 +41,14 @@ Voilà, maintenant, vous savez comment éteindre ou redémarrer votre ordinateur
 
 Marre de voir la barre de recherche Cortana dans votre barre des tâches ? Vous pouvez l’enlever !
 
-Faites tout simplement clic droit sur votre barre des tâches et pointez l’option « Cortana » et cliquez sur « Masqué » ! Vous pouvez tout de même choisir de n’afficher que l’icône ;). Vous pouvez d’ailleurs aussi masquer le bouton « Applications actives » qui sert simplement de multitâche et de gérer vos bureaux.
+Faites tout simplement clic droit sur votre barre des tâches et pointez l’option « Cortana » et cliquez sur « Masqué » ! Vous pouvez tout de même choisir de n’afficher que l’icône ;). Vous pouvez d’ailleurs aussi masquer le bouton « Applications actives » qui sert de multitâche et de gérer vos bureaux.
 
 3/ Mode nuit sur Windows 10 Creator Update
 ------------------------------------------
 
-Vous connaissez sûrement déjà f.lux qui a fait un carton sur Windows, mais vous pouvez le ranger si vous avez mis à jour votre Windows 10 vers la mise à jour « Creator Update » qui ajoute une fonction « Mode nuit » !
+Vous connaissez sûrement déjà `f.lux` qui a fait un carton sur Windows, mais vous pouvez le ranger si vous avez mis à jour votre Windows 10 vers la mise à jour « Creator Update » qui ajoute une fonction « Mode nuit » !
 
-J’ai moi-même pris du temps à la trouver, il faut dire qu’elle est bien cachée ! Seul inconvénient de cette méthode Made In Microsoft c’est qu’on doit indiquer sa géolocalisation presque non-stop pour qu’il trouve quand l’activer. Après, vous pouvez le configurer pour qu’il se mette en route à une heure bien précise, à vous de voir !
+J’ai moi-même pris du temps à la trouver, il faut dire qu’elle est bien cachée ! Seul inconvénient de cette méthode Made In Microsoft, c’est qu’on doit indiquer sa géolocalisation presque non-stop pour qu’il trouve quand l’activer. Après, vous pouvez le configurer pour qu’il se mette en route à une heure bien précise, à vous de voir !
 
 Pour activer cette option, allez dans les « Paramètres »,
 ensuite dans « Système », et dans « Affichage »,

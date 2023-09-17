@@ -19,7 +19,7 @@ En voulant partager votre connexion à un ami depuis votre téléphone mobile, v
 
  Malgré tout, on peut revenir aux paramètres antérieurs à Android 4.4 en quelques étapes, et sans débloquer les droits administrateur du téléphone (sans root). Voici la procédure :
 
- 1. Dans votre téléphone, activez le « mode développeur » en allant dans les paramètres, puis dans A propos du téléphone et en cliquant plusieurs fois sur le numéro de build
+ 1. Dans votre téléphone, activez le « mode développeur » en allant dans les paramètres, puis dans À propos du téléphone et en cliquant plusieurs fois sur le numéro de build
  2. Activez le débogage USB dans Paramètres > Options pour les développeurs
  3. Installez Android Debug Bridge sur votre ordinateur. Voir [ce tutoriel de FrAndroid.](http://www.frandroid.com/android/rom-custom-2/403222_comment-telecharger-les-outils-adb-et-fastboot-sur-windows-macos-et-linux)
  4. Connectez votre téléphone à votre ordinateur via un câble USB, puis dans une ligne de commande de votre PC, démarrez un shell avec « `adb shell` ». Ceci ouvre une connexion entre votre PC et votre téléphone et vous permet d’effectuer des actions sur votre téléphone depuis votre ordinateur.
@@ -32,7 +32,7 @@ En voulant partager votre connexion à un ami depuis votre téléphone mobile, v
  Si c’est votre téléphone, vous pouvez le modifier et le personnaliser comme vous pouvez installer des applications ou désactiver le bluetooth. Vous n’avez pas besoin de permission de votre opérateur pour faire cela.
 
  L’ARCEP (l’autorité de régulation des télécoms en France) souhaite d’ailleurs interdire aux opérateurs de limiter l’utilisation du partage de connexion.  
- « les clauses limitant l’utilisation du mode modem et interdisant l’utilisation des cartes SIM dans tout terminal mobile » seront supprimées des contrats d’ici l’automne 2018 (page 66 du [Rapport sur l’état d’internet en France, édition 2018](https://www.arcep.fr/uploads/tx_gspublication/rapport-etat-internet-2018_conf050618.pdf))  
+ « Les clauses limitant l’utilisation du mode modem et interdisant l’utilisation des cartes SIM dans tout terminal mobile » seront supprimées des contrats d'ici à l'automne 2018 (page 66 du [Rapport sur l’état d’internet en France, édition 2018](https://www.arcep.fr/uploads/tx_gspublication/rapport-etat-internet-2018_conf050618.pdf))  
  
 
  Vous pouvez maintenant partager votre connexion à loisir, mais attention au hors-forfait !  

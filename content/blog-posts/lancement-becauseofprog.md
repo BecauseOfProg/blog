@@ -15,9 +15,9 @@ La BecauseOfProg va enfin se lancer officiellement, ce qui voudra dire que certa
 
 ### Sommaire :
 
-* [Présentation](#presentation)
-* [Date de lancement](#date)
-* [Services](#services)
+* Présentation
+* Date de lancement
+* Services
 
 
 Mais dis-moi Jammy, c'est quoi la BecauseOfProg ?

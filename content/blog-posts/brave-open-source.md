@@ -10,12 +10,12 @@ timestamp: 1494162273
 ---
 
 J'ai découvert ce **navigateur** très peu connu récemment.  
-Voici mon histoire (Inintéressante/20):
+Voici mon histoire (Inintéressante/20) :
 
 J'étais sur **Mastodon** (Instance officielle de la **BOP** : <http://social.becauseofprog.fr>). Cherchant un nouveau navigateur, vu qu'**Opera** commençait à me lasser, je demande aux Mastonautes dans le *Fil Public Global* de me conseiller un navigateur Internet, basé sur **Chromium**, mais, justement, "pas" Chromium.  
 Dans 90% des cas, on me conseille **Vivaldi** (article prochainement). Mais, un toot est différent. On me conseille "**Brave**".   
 Ne connaissant absolument pas, je me dirige sur mon navigateur Internet pour avoir quelques renseignements.  
-Je tombe sur cette vidéo, qui me donne envie d'en savoir plus (*je ne suis pourtant pas fan d'IOS..*):  
+Je tombe sur cette vidéo, qui me donne envie d'en savoir plus (*je ne suis pourtant pas fan d'iOS...*) :  
   
 <https://youtu.be/kHWf6hRV-GM>
 

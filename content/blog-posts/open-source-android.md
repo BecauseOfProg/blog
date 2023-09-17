@@ -23,8 +23,8 @@ J'utilise **LineageOS**, système d'exploitation pour smartphones et tablettes b
 *CyanogenMod*, qui n'existe plus. RIP.
 
 LineageOS est **open source**, et facile à installer ;)  
-De quoi satisfaire même les gens qui s'en fichent de l'open source, sachez qu'avec LineageOS, vous aurez un smarthone (
-ou une tablette) mis-à-jour vers la **dernière version **d'Android (*pour la plupart des modèles, allez pas installer
+De quoi satisfaire même les gens qui s'en fichent de l'open source, sachez qu'avec LineageOS, vous aurez un smartphone (
+ou une tablette) mis-à-jour vers la **dernière version **d'Android (*pour la plupart des modèles, n'allez pas installer
 LineageOS sur le vieux smartphone de vos parents qui date de 1789*).
 
 J'ai par exemple **Android Nougat** sur mon smartphone (*Moto E4G*).  
@@ -194,7 +194,7 @@ Play Store: <https://play.google.com/store/apps/details?id=com.artifex.mupdfdemo
 F-Droid: <https://f-droid.org/repository/browse/?fdid=com.artifex.mupdfdemo>
 
 Pour conclure, c'est "**presque**" possible.  
-Sachez que votre smartphone en lui même ne l'est pas...  
+Sachez que votre smartphone en lui-même ne l'est pas...  
 *Et vous ne trouverez pas de jeux à la Supercell en open source...*
 
 Il existe bien d'autres applications open source, je vous ai présenté ici les plus importantes.  

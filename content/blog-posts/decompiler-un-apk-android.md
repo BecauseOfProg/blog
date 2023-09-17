@@ -20,7 +20,7 @@ Petit article rapide, mais efficace.
 
  Un .**apk** est en effet compilé. Si on suit la logique, il faudrait donc le... **décompiler** !* *
 
- *Selon notre ami Wikipedia, un "**décompilateur**" est un outil servant à reconstituer, partiellement ou totalement, le code source d’un logiciel à partir d’un programme exécutable alors dans un format binaire.*
+ *Selon notre ami Wikipédia, un "**décompilateur**" est un outil servant à reconstituer, partiellement ou totalement, le code source d’un logiciel à partir d’un programme exécutable alors dans un format binaire.*
 
  
 >  *Vous me suivez toujours ? ![wink](https://cdn.ckeditor.com/4.6.2/full/plugins/smiley/images/wink_smile.png "wink")*
@@ -30,11 +30,11 @@ Petit article rapide, mais efficace.
  Il vous faut... une **application**. Oui. Une application pour décompiler une **application**.
 
  
->  Note: Il vaut mieux être "**root**" pour utiliser cette application, sans quoi l'application risque de ne pas fonctionner
+>  Note : Il vaut mieux être "**root**" pour utiliser cette application, sans quoi l'application risque de ne pas fonctionner
  
    *- " Bon, ok, si vous le dites, et j'utilise quoi pour faire ça ? "*
 
- -** ApkTool**** (**Téléchargement ici: [androidfilehost.com](https://www.androidfilehost.com/?w=files&flid=149532) - ArmV7 dans la plupart des cas, vérifiez tout de même**)**
+ -** ApkTool**** (**Téléchargement ici : [androidfilehost.com](https://www.androidfilehost.com/?w=files&flid=149532) - ArmV7 dans la plupart des cas, vérifiez tout de même**)**
 
  
 >  Note: Vous pouvez normalement utiliser ApkTool sous Windows & Linux, plus de renseignements ici: [Cliquer ici](https://ibotpeaches.github.io/Apktool/install/)
@@ -45,13 +45,13 @@ Petit article rapide, mais efficace.
 
  ![](https://www1-lw.xda-cdn.com/files/2017/03/apktool_menu.png) ![](https://www1-lw.xda-cdn.com/files/2017/03/apktool_settings.png) ![](https://www1-lw.xda-cdn.com/files/2017/03/apktool_shortpress_folder.png)
 
- Bon, l'application n'est pas parfaite. Il peut y a voir des bugs. Mais pour ma part elle fonctionne très bien. Dites vous que c'est déjà incroyable une application comme ça.
+ Bon, l'application n'est pas parfaite. Il peut y a voir des bugs. Mais pour ma part elle fonctionne très bien. Dites-vous que c'est déjà incroyable une application comme ça.
 
  Au lancement de l'application, je vous conseille d'aller directement dans les **paramètres** de l'app, et régler le mode **root**, sélectionner **l'AAPT*** et la version de l'application **ApkTool** que vous souhaitez utiliser lors de la décompilation.
 
- ******Il s'agît d'une partie du SDK qui permet d'ouvrir, de créer, modifier des archives .zip compatibles*
+ ******Il s'agit d'une partie du SDK qui permet d'ouvrir, de créer, modifier des archives .zip compatibles*
 
- L'utilisation est simple, il vous faut un .**apk** (format de fichier d'une application sous Android, d'un paquet). Ensuite, cliquez dessus, et faites "*Decompile all*", en supposant que vous voulez tout décompiler. 
+ L'utilisation est simple, il vous faut un .**apk** (format de fichier d'une application sous Android, d'un paquet). Ensuite, cliquez dessus, et faites "*Decompile all*", en supposant que vous vouliez tout décompiler. 
 
  Vous pouvez ensuite modifier ce que vous voulez, ou juste voir ce qu'il y a l'intérieur de l'appli (*je ne vous expliquerai pas les différentes parties d'une application dans cet article*), ensuite, vous pouvez recompiler l'application.
 
@@ -59,7 +59,7 @@ Petit article rapide, mais efficace.
 
  ![](https://www1-lw.xda-cdn.com/files/2017/03/apktool_compiling.png)
 
- Pour plus de renseignements, voici deux articles qui m'ont bien aidé à faire.. cet article x)
+ Pour plus de renseignements, voici deux articles qui m'ont bien aidé à faire... cet article x)
 
  Téléchargements et sources
 

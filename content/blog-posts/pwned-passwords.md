@@ -15,7 +15,7 @@ Après avoir créé le site "Have I Been Pwned", sur lequel on peut vérifier si
 
  Vous pouvez tester si un mot de passe est inclus dans la liste sur la page dédiée: [haveibeenpwned.com/Passwords ](https://haveibeenpwned.com/Passwords)(à faire, évidemment, depuis un appareil de confiance et pas sur une tablette à la Fnac)
 
- La liste de mots de passes est aussi disponible au téléchargement. Chaque mot de passe est mis à côté de son nombre d'occurences, et ils sont tous chiffrés avec l'algorithme de hachage SHA-1. Comme l'explique Troy Hunt sur son blog, le chiffrement SHA-1 est vulnérable et les mots de passes peuvent être déchiffrés aisément. L'atout est de "ne pas voir directement le mot de passe en clair".
+ La liste de mots de passes est aussi disponible au téléchargement. Chaque mot de passe est mis à côté de son nombre d'occurrences, et ils sont tous chiffrés avec l'algorithme de hachage SHA-1. Comme l'explique Troy Hunt sur son blog, le chiffrement SHA-1 est vulnérable et les mots de passes peuvent être déchiffrés aisément. L'atout est de "ne pas voir directement le mot de passe en clair".
 
  Cette liste peut être utilisée pour interdire aux utilisateurs d'utiliser un mot de passe vulnérable, comme le fait remarquer notre développeur Whaxion, en complément de détecter les mots du dictionnaire ou les suites logiques ou répétitives (aaaa, abc123).
 

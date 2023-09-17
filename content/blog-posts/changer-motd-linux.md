@@ -9,7 +9,7 @@ labels: ["linux", "astuce"]
 timestamp: 1505582277
 ---
 
-Quand vous vous connectez dans un terminal sur le système GNU/Linux, vous pouvez voir un message de bienvenue, généralement en anglais avec les propriétés du système, ou alors un message de l'administrateur de la machine. Sauf que c'est vous le propriétaire de la machine, alors nous allons apprendre à changer ce message !
+Quand vous vous connectez dans un terminal sur le système GNU/Linux, vous pouvez voir un message de bienvenue, généralement en anglais avec les propriétés du système, ou alors un message de l'administrateur de la machine. Sauf que c'est vous le propriétaire de la machine, ainsi nous allons apprendre à changer ce message !
 
   
 
