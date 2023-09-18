@@ -74,7 +74,6 @@ export default {
   margin-bottom: 3px;
 }
 .b-card p {
-  margin: 0;
   color: var(--v-text-base);
 }
 .b-card .v-card__actions button {

@@ -1,7 +1,7 @@
 ---
 title: "Ubuntu sous Windows 10 ?"
 description: "Installer Bash sur un environnement Windows, c'est impossible ? C'est ce que nous allons voir dans cet article."
-banner: /img/articles/ubuntu-windows10/ubuntu-on-windows.jpg
+banner: /img/articles/ubuntu-windows10/ubuntu-on-windows.webp
 type: article
 authorId: kernoeb
 category: windows

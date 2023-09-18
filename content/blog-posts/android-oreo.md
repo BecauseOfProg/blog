@@ -15,6 +15,6 @@ timestamp: 1503341729
 
  Pour rappel, un **Oreo** est un biscuit chocolaté se composant de 2 plaquettes rondes avec au centre de la crème, et qui existe en version Chocolat blanc, Caramel et d'autres.
 
- ![](/img/articles/android-oreo/oreo.jpg)
+ ![](/img/articles/android-oreo/oreo.webp)
 
  Un petit rappel, pour connaître les nouvelles fonctionnalités d’Android Oreo, **nous vous invitons à [lire cet article](https://becauseofprog.fr/blog/android-o-8) disponible sur la BecauseOfProg, par Exybore.**

@@ -1,7 +1,7 @@
 ---
 title: "Chrome Android change de design : vers du iOS chez Google ?"
 description: "Chrome Dev sur Android change de design : il s'inspire beaucoup du style de iOS."
-banner: /img/articles/chrome-android-change-de-design/chrome-dev-banner.jpg
+banner: /img/articles/chrome-android-change-de-design/chrome-dev-banner.webp
 type: flash
 authorId: theovld
 category: android

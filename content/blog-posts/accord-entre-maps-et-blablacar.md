@@ -1,7 +1,7 @@
 ---
 title: "Google Maps affiche désormais les trajets BlaBlaCar"
 description: "Google Maps affiche désormais les trajets BlaBlaCar"
-banner: /img/articles/accord-entre-maps-et-blablacar/accord-entre-maps-et-blablacar.jpg
+banner: /img/articles/accord-entre-maps-et-blablacar/accord-entre-maps-et-blablacar.webp
 type: flash
 authorId: theovld
 category: software

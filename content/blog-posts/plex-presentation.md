@@ -24,7 +24,7 @@ C'est les vacances et c'est le moment ou l'on regarde le plus de films et série
  
 >  Voici une vidéo vous expliquant comment installer Plex:
 > 
->  [![](/img/articles/plex-presentation/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCg2fJDR0ZGTM8pWyJcTX9Nl0k2wQ)](https://www.youtube.com/watch?v=u9w_VPuyA-8)
+>  [![](/img/articles/plex-presentation/hqdefault.webp?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCg2fJDR0ZGTM8pWyJcTX9Nl0k2wQ)](https://www.youtube.com/watch?v=u9w_VPuyA-8)
 > 
 >   Sachez aussi que l'interface de Plex est moderne et facile à prendre en main.  
 

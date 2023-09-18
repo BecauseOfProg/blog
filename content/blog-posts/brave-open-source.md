@@ -1,7 +1,7 @@
 ---
 title: "Brave, un navigateur rapide basé sur Chromium !"
 description: "Rapide, sécurisé, bloqueur de pub intégré, open source et disponible sur tous vos appareils !"
-banner: /img/articles/brave-open-source/brave.jpg
+banner: /img/articles/brave-open-source/brave.webp
 type: article
 authorId: kernoeb
 category: software
@@ -31,7 +31,7 @@ Interface épurée, simple, **ergonomique**. Pas d'outils parasites *inutiles*. 
 Un **bloqueur de pub** intégré modifiable, des options intéressantes (*pas comme mon histoire du début*)...  
 Et pour cela, pas besoin de chercher bien loin, une seule icône en haut à droite, tout simplement l'icône officielle de **Brave** : 
 
-![](/img/articles/brave-open-source/photo.jpg)
+![](/img/articles/brave-open-source/photo.webp)
   
 Très **rapide**, il dispose d'options intéressantes, jamais testées pour ma part, comme **Brave Payments** et **Brave Sync**.  
 
@@ -53,7 +53,7 @@ C'est "possible", mais compliqué. Je ne vous expliquerai pas la méthode ici.
 **Sur Android.**  
 C'est mon navigateur **par défaut**. Il ressemble comme deux gouttes d'eau à Chrome, mais avec le bloqueur de pub intégré. Je vous le conseille, il est très rapide, pas d'options encore une fois inutiles comme certains navigateurs (pas de météo, actualités, etc.)  
 
-![](/img/articles/brave-open-source/1493914011810146067519.jpg)
+![](/img/articles/brave-open-source/1493914011810146067519.webp)
 
 
 > *Tout simplement.*

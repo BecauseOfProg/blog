@@ -70,7 +70,7 @@ Des **navigateurs** Internet, il en existe une multitude.
 
 #### **- Signets, raccourcis ergonomiques, et une personnalisation incroyable du logiciel !**
 
- ![](/img/articles/vivaldi-browser/6.jpg)
+ ![](/img/articles/vivaldi-browser/6.webp)
 
  ![](/img/articles/vivaldi-browser/1.webp)
 
@@ -80,11 +80,11 @@ Des **navigateurs** Internet, il en existe une multitude.
 
  *Personnalisation incroyable / nombre de thèmes infinis !*
 
- ![Paramètres de Vivaldi](/img/articles/vivaldi-browser/5.jpg)
+ ![Paramètres de Vivaldi](/img/articles/vivaldi-browser/5.webp)
 
  *Paramètres très complets..*
 
- ![](/img/articles/vivaldi-browser/4.jpg)
+ ![](/img/articles/vivaldi-browser/4.webp)
 
  *Système de notes ! :o*
 

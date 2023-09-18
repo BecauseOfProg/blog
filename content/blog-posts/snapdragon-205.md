@@ -1,7 +1,7 @@
 ---
 title: "La 4G bientôt sur les téléphones entrée de gamme?"
 description: "La 4G arrivera sûrement sur les téléphones entrée de gamme, pour les pays en développement nottamment"
-banner: /img/articles/snapdragon-205/snapdragon-205.jpg
+banner: /img/articles/snapdragon-205/snapdragon-205.webp
 type: article
 authorId: gildasgh
 category: hardware

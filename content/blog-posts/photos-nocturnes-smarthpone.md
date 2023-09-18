@@ -1,7 +1,7 @@
 ---
 title: "Des photos nocturnes avec un smartphone!?"
 description: "Un ingénieur Google tente actuellement de prendre des photos de nuit avec son smartphone d'aussi bonne qualité qu'avec un appareil photo numérique !"
-banner: /img/articles/photos-nocturnes-smarthpone/phare-woaw.jpg
+banner: /img/articles/photos-nocturnes-smarthpone/phare-woaw.webp
 type: article
 authorId: gildasgh
 category: hardware
@@ -20,15 +20,15 @@ L'histoire
 
 L'année derniere, Florian Kainz a pris une photo nocturne du Golden Gate Bridge avec un DSLR. L’image était réussie, et un collègue lui a mis au défi de prendre la même photo avec un smartphone.
 
-[![](/img/articles/photos-nocturnes-smarthpone/Golden-Gate-SF-Google.jpg)](/img/articles/photos-nocturnes-smarthpone/Golden-Gate-SF-Google.jpg)
+[![](/img/articles/photos-nocturnes-smarthpone/Golden-Gate-SF-Google.webp)](/img/articles/photos-nocturnes-smarthpone/Golden-Gate-SF-Google.webp)
 
 *Canon 1DX, Zeiss Otus 28mm f/1.4 ZE*En acceptant celui-ci, l’employé de Google a peut-être trouvé le moyen d’améliorer significativement la qualité des photos prises la nuit avec les smartphones.
 
-[![](/img/articles/photos-nocturnes-smarthpone/Golden-Gate-SF-Google-1.jpg)](/img/articles/photos-nocturnes-smarthpone/Golden-Gate-SF-Google-1.jpg)
+[![](/img/articles/photos-nocturnes-smarthpone/Golden-Gate-SF-Google-1.webp)](/img/articles/photos-nocturnes-smarthpone/Golden-Gate-SF-Google-1.webp)
 
 *Photo prise avec un Nexus 6P en appliquant la nouvelle technique de Florian Kainz* 
 
-[![](/img/articles/photos-nocturnes-smarthpone/Golden-Gate-SF-Google-3.jpg)](/img/articles/photos-nocturnes-smarthpone/Golden-Gate-SF-Google-3.jpg)
+[![](/img/articles/photos-nocturnes-smarthpone/Golden-Gate-SF-Google-3.webp)](/img/articles/photos-nocturnes-smarthpone/Golden-Gate-SF-Google-3.webp)
 
 *Google Nexus 6P*Cette technique révolutionnaire n'est tout de même pas optimisée, elle demande un long traitement sur ordinateur de bureau, et une procédure très lourde. Il pense qu'avec « le bon logiciel, un téléphone devrait être en mesure de traiter les images en interne, et si des étapes telles que des masques de peinture à la main peuvent être éliminées, il peut être possible de faire des photographies point-et-shoot dans des conditions de lumière très faible ».
 

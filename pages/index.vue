@@ -128,7 +128,7 @@
               <template #image>
                 <v-img
                   height="200px"
-                  src="/img/new-banner.png"
+                  src="/img/new-banner.webp"
                 >
                   <h1 class="white--text shadow">
                     {{ $t('pages.aboutUs') }}

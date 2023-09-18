@@ -56,6 +56,7 @@
     "imagemin-mozjpeg": "9.0.0",
     "imagemin-pngquant": "9.0.2",
     "imagemin-svgo": "9.0.0",
+    "remark-breaks": "^2.0.2",
     "webpack": "4.47.0"
   }
 }

@@ -1,7 +1,7 @@
 ---
 title: "Molotov : La TV de partout sauf sur une télévision"
 description: "Molotov, une façon radicalement nouvelle de regarder la télévision. Gratuitement."
-banner: /img/articles/molotov-television/molotov.jpg
+banner: /img/articles/molotov-television/molotov.webp
 type: article
 authorId: gildasgh
 category: software

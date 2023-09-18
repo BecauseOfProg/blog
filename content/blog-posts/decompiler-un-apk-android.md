@@ -1,7 +1,7 @@
 ---
 title: "Décompiler un apk, impossible ?"
 description: "Vous vous demandez si l'on peut explorer une application Android... Voici comment faire !"
-banner: /img/articles/decompiler-un-apk-android/decompiler-un-apk.jpg
+banner: /img/articles/decompiler-un-apk-android/decompiler-un-apk.webp
 type: tutorial
 authorId: kernoeb
 category: android

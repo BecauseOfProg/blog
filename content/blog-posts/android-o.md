@@ -1,7 +1,7 @@
 ---
 title: "Android O : OS prometteur ?"
 description: "Google a dévoilé un nouvel OS en Developer Preview : vaut-il le coup ?"
-banner: /img/articles/android-o/android-o.jpg
+banner: /img/articles/android-o/android-o.webp
 type: article
 authorId: theovld
 category: android

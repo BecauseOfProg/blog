@@ -1,3 +1,8 @@
+.nuxt-content img {
+  max-width: min(100%, 400px);
+  height: auto;
+}
+
 .lecture-title,
 .nuxt-content h1,
 .nuxt-content h2,
@@ -36,6 +41,11 @@
 .nuxt-content li,
 .lecture-text {
   font-size: 15px !important;
+}
+
+.nuxt-content ul {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .nuxt-content p,

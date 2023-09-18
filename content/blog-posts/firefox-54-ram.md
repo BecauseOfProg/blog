@@ -1,7 +1,7 @@
 ---
 title: "Firefox 54 adopte une meilleure gestion de la RAM"
 description: "Firefox 54 adopte un mode multi-processus moins gourmand en RAM."
-banner: /img/articles/firefox-54-ram/mozilla-firefox.jpg
+banner: /img/articles/firefox-54-ram/mozilla-firefox.webp
 type: article
 authorId: gildasgh
 category: software
@@ -18,7 +18,7 @@ Désormais, Firefox s'appuie sur quatre processus pour exécuter les onglets du 
 
 > En traitant chaque onglet par un processus distinct, nous optimisons l’usage du hardware de l’ordinateur, en conséquence de quoi Firefox est capable de naviguer sur le Web de manière encore plus fluide - Nick Nguyen, chef de produit Firefox. Il affirme que Firefox 54 est « la version la plus aboutie » jamais produite par Mozilla !
 > 
-> ![Comparaison de la gestion des processus sur Firefox et sur Chrome](/img/articles/firefox-54-ram/mozilla-firefox.jpg)  
+> ![Comparaison de la gestion des processus sur Firefox et sur Chrome](/img/articles/firefox-54-ram/mozilla-firefox.webp)  
 Gestion des prossecus de Chrome et de Firefox (Crédit : Mozilla)
 
 Depuis son lancement en 2008, Chrome a adopté le mode multi-processus, et consomme globalement beaucoup plus de mémoire que les autres navigateurs.

@@ -1,7 +1,7 @@
 ---
 title: "Le Material Design sur vos sites web"
 description: "Le Material Design, créé par Google, est célèbre grâce à son interface moderne et épurée. Voici un tutoriel pour que vous puissiez y intégrer sur vos sites webs."
-banner: /img/articles/material-design-web/md-example.jpg
+banner: /img/articles/material-design-web/md-example.webp
 type: tutorial
 authorId: theovld
 category: web
@@ -11,7 +11,7 @@ timestamp: 1494162497
 
 Le Material Design est un type de design créé par Google et qui a la particularité d'être très moderne et épuré. On le voit de plus en plus dans les applications Android et sur les sites web. Aujourd'hui, nous allons voir comment faire notre propre site avec des frameworks basés sur le Material Design.
 
- ![](/img/articles/material-design-web/freebie___weather_app_ui_design_by_graphberry-d8m33wj.webp)![ups](/img/articles/material-design-web/md-example.jpg)
+ ![](/img/articles/material-design-web/freebie___weather_app_ui_design_by_graphberry-d8m33wj.webp)![ups](/img/articles/material-design-web/md-example.webp)
 
  *Exemples d'applications en Material Design et principe général*
 

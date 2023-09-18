@@ -26,7 +26,7 @@ timestamp: 1495537045
 > 
 >   Le fameux logo rouge de **SFR** disparaîtra lui aussi, et donnera sa place à un « a », comme *Altice*.
 
- ![Le fameux logo de SFR](/img/articles/sfr-change-de-nom-altice/sfr-change-de-nom-1.jpg)
+ ![Le fameux logo de SFR](/img/articles/sfr-change-de-nom-altice/sfr-change-de-nom-1.webp)
 
  Cela fait assez longtemps que SFR envisage d'abandonner sa marque, mais il a fallu quelques mois pour que cela devienne officiel.
 

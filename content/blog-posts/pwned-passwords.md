@@ -1,7 +1,7 @@
 ---
 title: "Pwned Passwords: une liste de 501 millions de mots de passes leakés"
 description: "Troy Hunt met en ligne la version 2 de 'Pwned Passwords', une liste des mots de passes publiés lors de différents hacks"
-banner: /img/articles/pwned-passwords/Searching-for-a-Pwned-Password.jpg
+banner: /img/articles/pwned-passwords/Searching-for-a-Pwned-Password.webp
 type: flash
 authorId: gildasgh
 category: security

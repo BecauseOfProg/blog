@@ -17,7 +17,9 @@ La finalisation du rachat de Yahoo par le géant américain de la télécommunic
 
   
 
- ![Verizon](/img/articles/rachat-yahoo/rachat-yahoo-verizon.webp)Suite au rachat, Verizon va fusionner Yahoo! et le portail AOL pour donner naissance à Oath. C'est aussi la fin du pionnier d'internet Yahoo créé en 1994 par David Filo & Jerry Yang puis racheter en 2009 par Microsoft.
+![Verizon](/img/articles/rachat-yahoo/rachat-yahoo-verizon.webp)
+ 
+Suite au rachat, Verizon va fusionner Yahoo! et le portail AOL pour donner naissance à Oath. C'est aussi la fin du pionnier d'internet Yahoo créé en 1994 par David Filo & Jerry Yang puis racheter en 2009 par Microsoft.
 
   
 
