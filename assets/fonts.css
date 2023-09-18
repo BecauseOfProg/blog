@@ -1,0 +1,74 @@
+.lecture-title,
+.nuxt-content h1,
+.nuxt-content h2,
+.nuxt-content h3,
+.nuxt-content h4,
+.nuxt-content h5,
+.nuxt-content h6 {
+  color: var(--v-text-base);
+  padding-top: 5px;
+  line-height: 2.2rem !important;
+}
+
+.lecture-title.display-3,
+.nuxt-content h1.display-3,
+.nuxt-content h2.display-3,
+.nuxt-content h3.display-3,
+.nuxt-content h4.display-3,
+.nuxt-content h5.display-3,
+.nuxt-content h6.display-3 {
+  line-height: 4rem !important;
+}
+
+.lecture-title-bloc {
+  font-family: 'Lora', serif;
+  color: var(--v-text-base);
+  line-height: 1.9rem !important;
+}
+
+.lecture-title-bloc.display-3 {
+  line-height: 3.7rem !important;
+}
+
+.nuxt-content p,
+.nuxt-content ul,
+.nuxt-content ol,
+.nuxt-content li,
+.lecture-text {
+  font-size: 15px !important;
+}
+
+.nuxt-content p,
+.lecture-text {
+  text-align: justify;
+}
+
+.nuxt-content a {
+  color: var(--v-anchor-base) !important;
+}
+
+.nuxt-content code {
+  color: #2a2b2d;
+  box-shadow: none;
+  display: block;
+  font-weight: normal;
+}
+
+.nuxt-content li + li {
+  margin-top: 0.75rem;
+}
+
+.nuxt-content ol,
+.nuxt-content ul,
+.nuxt-content li {
+  color: var(--v-text-base);
+}
+
+.nuxt-content pre {
+  background: var(--v-background-base) !important;
+  color: var(--v-text-base);
+}
+
+.lecture-text {
+  line-height: 1.5rem !important;
+}
