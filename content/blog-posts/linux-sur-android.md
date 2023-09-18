@@ -1,7 +1,7 @@
 ---
 title: "Installer Linux sur son appareil Android avec Linux Deploy ! [ROOT]"
 description: "Tutoriel simple pour installer Linux sur Android avec une connexion VNC."
-banner: https://becauseofprog.fr/assets/articles/LinuxDeploy/linuxsurandroid-min.png
+banner: /img/articles/linux-sur-android/linuxsurandroid-min.png
 type: article
 authorId: kernoeb
 category: android
@@ -25,12 +25,12 @@ Avant toute chose, sachez que votre appareil Android doit être **rooté** (*pos
 
 #### 2) Configuration
 
- ![](https://becauseofprog.fr/assets/articles/LinuxDeploy/linuxandroid-deploy1.png)
+ ![](/img/articles/linux-sur-android/linuxandroid-deploy1.png)
 
  Comme indiqué ci-dessus, vérifiez que votre appareil est rooté, que vous êtes connecté à Internet.  
  Ensuite, cliquez sur le bouton **Paramètres** (*en bas à droite*).
 
- ![](https://becauseofprog.fr/assets/articles/LinuxDeploy/linuxandroid-deploy2.png)
+ ![](/img/articles/linux-sur-android/linuxandroid-deploy2.png)
 
  Choisissez les options que vous souhaitez (*pour ma part, j'ai choisi **Ubuntu** au lieu de Debian*).  
  Choisissez le "**Chemin d'installation**".
@@ -39,7 +39,7 @@ Avant toute chose, sachez que votre appareil Android doit être **rooté** (*pos
 
  Descendez ensuite en bas, jusqu'à trouver "**SSH**" et "**GUI**".
 
- ![](https://becauseofprog.fr/assets/articles/LinuxDeploy/linuxandroid-deploy3.png)
+ ![](/img/articles/linux-sur-android/linuxandroid-deploy3.png)
 
  Activez la connexion SSH si vous le souhaitez.  
  Activez ensuite le **GUI** (*interface graphique*).
@@ -57,7 +57,7 @@ Avant toute chose, sachez que votre appareil Android doit être **rooté** (*pos
 
  L'application devrait vous demander une vérification ROOT, mais cela dépend de quel système de root vous utilisez. 
 
- ![](https://becauseofprog.fr/assets/articles/LinuxDeploy/magisk-min.png)
+ ![](/img/articles/linux-sur-android/magisk-min.png)
 
  *PS: Si vous avez une erreur, recliquez sur les 3 points en haut à droite, puis "Configurer". Sinon, réessayez depuis le début..*
 
@@ -72,7 +72,7 @@ Avant toute chose, sachez que votre appareil Android doit être **rooté** (*pos
 
  Et voilà, vous devriez apercevoir quelque chose comme ceci:
 
- ![](https://becauseofprog.fr/assets/articles/LinuxDeploy/linuxandroid-deploy4.png)
+ ![](/img/articles/linux-sur-android/linuxandroid-deploy4.png)
 
  Vous pouvez modifier l'utilisation du curseur dans les paramètres de l'application VNC (*sur bVNC, cliquez sur les 3 points affichés sur votre droite, puis "Input Mode"*).
 

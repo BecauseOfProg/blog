@@ -1,7 +1,7 @@
 ---
 title: "Débloquer le partage de connexion sur Android"
 description: "Depuis Android 4.4, votre opérateur peut détecter si vous utilisez un partage de connexion, et le bloquer. Nous allons voir comment revenir aux réglages d'avant."
-banner: https://becauseofprog.fr/assets/articles/rawpixel-660359-unsplash.jpg
+banner: /img/articles/debloquer-partage-connexion-android/rawpixel-660359-unsplash.jpg
 type: tutorial
 authorId: gildasgh
 category: android

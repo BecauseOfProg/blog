@@ -1,7 +1,7 @@
 ---
 title: "Android Oreo"
 description: "Nous avons enfin après beaucoup d’attente et après une éclipse au-dessus des États-Unis, le nom du nouveau système d’Android, Android Oreo !"
-banner: https://becauseofprog.fr/assets/articles/android-o-oreo.png
+banner: /img/articles/android-oreo/android-o-oreo.png
 type: flash
 authorId: stengarlis
 category: android
@@ -15,6 +15,6 @@ timestamp: 1503341729
 
  Pour rappel, un **Oreo** est un biscuit chocolaté se composant de 2 plaquettes rondes avec au centre de la crème, et qui existe en version Chocolat blanc, Caramel et d'autres.
 
- ![](https://becauseofprog.fr/assets/articles/oreo.jpg)
+ ![](/img/articles/android-oreo/oreo.jpg)
 
  Un petit rappel, pour connaître les nouvelles fonctionnalités d’Android Oreo, **nous vous invitons à [lire cet article](https://becauseofprog.fr/blog/android-o-8) disponible sur la BecauseOfProg, par Exybore.**

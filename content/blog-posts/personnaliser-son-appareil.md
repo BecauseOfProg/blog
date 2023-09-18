@@ -1,7 +1,7 @@
 ---
 title: "Personnaliser son appareil Android : 7 applications pratiques "
 description: "Le système Android est riche en applications qui permettent de personnaliser comme vous voulez votre téléphone. Voici-en 7."
-banner: https://becauseofprog.fr/assets/courses/android/personnaliser-son-appareil.jpg
+banner: /img/articles/personnaliser-son-appareil/personnaliser-son-appareil.jpg
 type: tutorial
 authorId: theovld
 category: android

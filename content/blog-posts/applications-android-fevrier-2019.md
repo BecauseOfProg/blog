@@ -1,7 +1,7 @@
 ---
 title: "Mes Applications Android Open Source - Février 2019"
 description: "Découvrez de nouvelles applis open-source à utiliser sur vos appareils Android !"
-banner: https://becauseofprog.fr/assets/articles/MAAOS_3.png
+banner: /img/articles/applications-android-fevrier-2019/MAAOS_3.png
 type: article
 authorId: kernoeb
 category: android

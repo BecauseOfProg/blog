@@ -1,7 +1,7 @@
 ---
 title: "DuckDuckGo, un moteur de recherche qui protège votre vie privée."
 description: "Présentation de DuckDuckGo, un navigateur concurrent de Google qui prône la vie privée de ses utilisateurs."
-banner: https://becauseofprog.fr/assets/articles/duckduckgo.png
+banner: /img/articles/duckduckgo/duckduckgo.png
 type: article
 authorId: stengarlis
 category: web

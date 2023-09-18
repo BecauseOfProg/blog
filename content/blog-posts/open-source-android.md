@@ -1,7 +1,7 @@
 ---
 title: "Passer totalement à l'open source sur son smartphone Android, c'est possible ?"
 description: "Utiliser un smartphone 100% open-source ?"
-banner: https://becauseofprog.fr/assets/articles/androidopensource.png
+banner: /img/articles/open-source-android/androidopensource.png
 type: article
 authorId: kernoeb
 category: android
@@ -32,7 +32,7 @@ Des options non disponibles sur l'Android de base. En plus, comme je disais, les
 sur les dernières versions disponibles, mais elles sont aussi **fréquentes**, et non obligatoires. C'est à **vous** de
 choisir si **vous **voulez mettre à jour votre appareil (*pas comme certaines firmes connues qui les obligent*).
 
-![LineageOS](https://becauseofprog.fr/assets/articles/opensource-android/14.png)
+![LineageOS](/img/articles/open-source-android/14.png)
 
 Dans cet article, je ne vous parlerais pas trop de l'OS, je me concentrerais davantage sur les applications.  
 Mais, un article sur **LineageOS** est prévu dans le futur, de quoi intéresser nombreux de nos lecteurs, qui utilisent
@@ -58,7 +58,7 @@ Son poids très léger.
 Moins de 2Mo l'apk.
 
 Son interface simple, sobre.  
-![](https://becauseofprog.fr/assets/articles/opensource-android/7.png)![](https://becauseofprog.fr/assets/articles/opensource-android/8.png)
+![](/img/articles/open-source-android/7.png)![](/img/articles/open-source-android/8.png)
 
 *(Images tirées du Google Play Store)*
 
@@ -77,7 +77,7 @@ YouTube ne possède pas !
 >
 >
 
-![](https://becauseofprog.fr/assets/articles/opensource-android/6.png)
+![](/img/articles/open-source-android/6.png)
 
 *Thème sombre de l'application.*
 
@@ -109,7 +109,7 @@ Si vous avez un serveur XMPP (***Extensible Messaging and Presence Protocol*** (
 extensible de présence et de messagerie »), essayez "**Conversations**". Pourtant payant sur le Play Store, il est
 gratuit sur F-Droid. Il propose un abonnement (8 euros/an, dont 6 mois gratuits) si vous n'avez pas de serveur XMPP.
 
-![](https://becauseofprog.fr/assets/articles/opensource-android/4-1.png) ![](https://becauseofprog.fr/assets/articles/opensource-android/5.png)
+![](/img/articles/open-source-android/4-1.png) ![](/img/articles/open-source-android/5.png)
 
 D'autres alternatives existent: <https://droid-break.info> pour plus d'info.
 
@@ -125,9 +125,9 @@ Des options assez sympathiques, comme l'envoi de GIF, messages éphémères, des
 J'aimerais l'utiliser plus souvent, mais malheureusement, elle est peu connue, donc je n'ai pas beaucoup d'amis (*déjà
 de base, je n'ai pas d'amis*) qui l'utilisent.
 
-![](https://becauseofprog.fr/assets/articles/opensource-android/13.png)
+![](/img/articles/open-source-android/13.png)
 
-![](https://becauseofprog.fr/assets/articles/opensource-android/12.png)
+![](/img/articles/open-source-android/12.png)
 
 Plus de renseignements sur <https://wire.com>.
 
@@ -142,7 +142,7 @@ Très complète, très belle, très simple.
 Disponible sur le Play Store: <https://play.google.com/store/apps/details?id=com.kabouzeid.gramophone&hl=fr>  
 et sur le dépôt *IzzyOnDroid* sur F-Droid (*voir le dépôt plus haut*).
 
-![](https://becauseofprog.fr/assets/articles/opensource-android/9.png) ![](https://becauseofprog.fr/assets/articles/opensource-android/11.png) ![](https://becauseofprog.fr/assets/articles/opensource-android/10.png)
+![](/img/articles/open-source-android/9.png) ![](/img/articles/open-source-android/11.png) ![](/img/articles/open-source-android/10.png)
 
 #### **Lecteur vidéo / Video player**:
 
@@ -168,7 +168,7 @@ K9-Material: <https://fossdroid.com/a/k9-material-unofficial.html>
 ou <https://f-droid.org/repository/browse/?fdid=com.fsck.k9.material>
 ou <https://github.com/scoute-dich/K9-MailClient/blob/HEAD/README.md>
 
-![](https://becauseofprog.fr/assets/articles/opensource-android/1.png)
+![](/img/articles/open-source-android/1.png)
 
 #### **ES Explorateur de Fichiers / File Explorer**:
 
@@ -178,7 +178,7 @@ et **efficace**. Efficace et pas cher (*gratuit*), c'est **Amaze** que j'préfè
 Play Store: <https://play.google.com/store/apps/details?id=com.amaze.filemanager>  
 F-Droid: <https://f-droid.org/repository/browse/?fdid=com.amaze.filemanager>
 
-![](https://becauseofprog.fr/assets/articles/opensource-android/2.png) ![](https://becauseofprog.fr/assets/articles/opensource-android/3.png) ![](https://becauseofprog.fr/assets/articles/opensource-android/4.png)
+![](/img/articles/open-source-android/2.png) ![](/img/articles/open-source-android/3.png) ![](/img/articles/open-source-android/4.png)
 
 #### **Google Maps:**
 

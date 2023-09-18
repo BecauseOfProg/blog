@@ -1,7 +1,7 @@
 ---
 title: "Extraire le contenu d'un CD Audio sous Linux!"
 description: "Qui se sert de CD en 2018 ? ;)"
-banner: https://becauseofprog.fr/assets/articles/cdaudio/cdaudio.png
+banner: /img/articles/ripper-un-CD-audio/cdaudio.png
 type: article
 authorId: kernoeb
 category: linux
@@ -32,7 +32,7 @@ Petit article très court pour vous montrer comment extraire (ripper) le contenu
 
  Ici je teste un **CD** de Jean-Michel Jarre (*si si, vous connaissez forcément "Oxygène (Part IV)"*)
 
- ![](https://becauseofprog.fr/assets/articles/cdaudio/asunder1.png)
+ ![](/img/articles/ripper-un-CD-audio/asunder1.png)
 
  Dans **"Préférences"**, **"Encodeur"** cochez le **format** que vous souhaitez (*je vous conseille le .flac, un codec libre de compression audio sans perte de qualité*).
 

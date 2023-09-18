@@ -1,7 +1,7 @@
 ---
 title: "Plex: Visionnez vos films, facilement!"
 description: "Plex, une belle alternative à Netflix."
-banner: https://becauseofprog.fr/assets/articles/plex-presentation-article-1.png
+banner: /img/articles/plex-presentation/plex-presentation-article-1.png
 type: article
 authorId: davall
 category: software
@@ -24,11 +24,11 @@ C'est les vacances et c'est le moment ou l'on regarde le plus de films et série
  
 >  Voici une vidéo vous expliquant comment installer Plex:
 > 
->  [![](https://i.ytimg.com/vi/u9w_VPuyA-8/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCg2fJDR0ZGTM8pWyJcTX9Nl0k2wQ)](https://www.youtube.com/watch?v=u9w_VPuyA-8)
+>  [![](/img/articles/plex-presentation/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCg2fJDR0ZGTM8pWyJcTX9Nl0k2wQ)](https://www.youtube.com/watch?v=u9w_VPuyA-8)
 > 
 >   Sachez aussi que l'interface de Plex est moderne et facile à prendre en main.  
  Voici une image pour vous le prouver!  
- ![](https://image.noelshack.com/fichiers/2017/18/1493704026-capture-d-ecran-2017-05-02-a-07-43-03.png)
+ ![](/img/articles/plex-presentation/1493704026-capture-d-ecran-2017-05-02-a-07-43-03.png)
 
  Si vous souhaitez vous procurer Plex, voici les différents liens:  
  

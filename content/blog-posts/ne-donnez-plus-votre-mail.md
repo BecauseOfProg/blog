@@ -1,7 +1,7 @@
 ---
 title: "Ne donnez plus votre Mail et votre Numéro de Téléphone!"
 description: "Marre de recevoir des spams ? De donner votre numéro de téléphone ?"
-banner: https://becauseofprog.fr/assets/articles/donnez-plus.png
+banner: /img/articles/ne-donnez-plus-votre-mail/donnez-plus.png
 type: article
 authorId: kernoeb
 category: security
@@ -30,7 +30,7 @@ timestamp: 1530694885
 
 ##### - **GetNada**:
 
- ![](https://becauseofprog.fr/assets/courses/Screenshot-2018-7-4%20Nada%20-%20temporary%20email.png)  
+ ![](/img/articles/ne-donnez-plus-votre-mail/Screenshot-2018-7-4%20Nada%20-%20temporary%20email.png)  
  *Avantages:  
  - **Rapidité** de création et d'ouverture  
  - Interface **simple**  
@@ -41,7 +41,7 @@ timestamp: 1530694885
    
 ##### - **Anonbox**:
 
- ![](https://becauseofprog.fr/assets/courses/Screenshot-2018-7-4%20anonbox%20Chaos%20Computer%20Club.png)  
+ ![](/img/articles/ne-donnez-plus-votre-mail/Screenshot-2018-7-4%20anonbox%20Chaos%20Computer%20Club.png)  
  *Avantages:  
  - Disponible avec le proxy **Tor**  
  - Très **rapide**  
@@ -50,7 +50,7 @@ timestamp: 1530694885
    
 ##### - **Temp-Mail**:
 
- ![](https://becauseofprog.fr/assets/courses/Screenshot-2018-7-4%20Email%20temporaire%20%E2%80%93%20Email%20%C3%A0%20usage%20unique%20-%20Email%20anonyme.png)  
+ ![](/img/articles/ne-donnez-plus-votre-mail/Screenshot-2018-7-4%20Email%20temporaire%20%E2%80%93%20Email%20%C3%A0%20usage%20unique%20-%20Email%20anonyme.png)  
  <https://temp-mail.org/fr/>
 
   
@@ -61,7 +61,7 @@ timestamp: 1530694885
  Ces sites paraissent "**faux**", mais fonctionnent *(sinon je n'en parlerais pas lol).*  
  Liste de **services** fonctionnels:  
  - <https://www.receive-sms-online.info/>  
- [![](https://becauseofprog.fr/assets/courses/Screenshot-2018-7-4%20Receive%20SMS%20Online%20for%20FREE%20NO%20Registration%20UK,Romania,USA,Spain,France,Germany,Russia.png)](https://www.receive-sms-online.info/)  
+ [![](/img/articles/ne-donnez-plus-votre-mail/Screenshot-2018-7-4%20Receive%20SMS%20Online%20for%20FREE%20NO%20Registration%20UK,Romania,USA,Spain,France,Germany,Russia.png)](https://www.receive-sms-online.info/)  
  - <https://getfreesmsnumber.com/>  
  - <https://smsreceivefree.com/>  
  - et bien d'autres...  

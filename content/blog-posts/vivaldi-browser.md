@@ -1,7 +1,7 @@
 ---
 title: "Vivaldi, le meilleur navigateur Internet ?"
 description: "Vivaldi, navigateur basé sur Opera & Chromium, beau, simple et rapide :)"
-banner: https://becauseofprog.fr/assets/articles/vivaldi.png
+banner: /img/articles/vivaldi-browser/vivaldi.png
 type: article
 authorId: kernoeb
 category: software
@@ -13,7 +13,7 @@ Des **navigateurs** Internet, il en existe une multitude.
  Dans mon article sur **[Brave](https://becauseofprog.fr/blog/brave-open-source-27) *(voir l'article)***, je vous parlais de la communauté **Mastodon** qui m'avait conseillé ce navigateur.  
  Je vous avais promis de parler d'un autre navigateur *(plus connu)* qui m'a été présenté *(je le connaissais déjà avant, à l'époque où celui-ci buggait pas mal)*...
 
-### **VIVALDI** ![](https://becauseofprog.fr/assets/articles/vivaldi/logo.png)
+### **VIVALDI** ![](/img/articles/vivaldi-browser/logo.png)
 
  Mais **Vivaldi**, c'est quoi ?
 
@@ -70,27 +70,27 @@ Des **navigateurs** Internet, il en existe une multitude.
 
 #### **- Signets, raccourcis ergonomiques, et une personnalisation incroyable du logiciel !**
 
- ![](https://becauseofprog.fr/assets/articles/vivaldi/6.jpg)
+ ![](/img/articles/vivaldi-browser/6.jpg)
 
- ![](https://becauseofprog.fr/assets/articles/vivaldi/1.png)
+ ![](/img/articles/vivaldi-browser/1.png)
 
  *(ApproachingNirvana <3)*
 
- ![](https://becauseofprog.fr/assets/articles/vivaldi/2.png)
+ ![](/img/articles/vivaldi-browser/2.png)
 
  *Personnalisation incroyable / nombre de thèmes infinis !*
 
- ![Paramètres de Vivaldi](https://becauseofprog.fr/assets/articles/vivaldi/5.jpg)
+ ![Paramètres de Vivaldi](/img/articles/vivaldi-browser/5.jpg)
 
  *Paramètres très complets..*
 
- ![](https://becauseofprog.fr/assets/articles/vivaldi/4.jpg)
+ ![](/img/articles/vivaldi-browser/4.jpg)
 
  *Système de notes ! :o*
 
  *et de recherche rapide :*
 
- ![](https://becauseofprog.fr/assets/articles/vivaldi/3.gif)
+ ![](/img/articles/vivaldi-browser/3.gif)
 
   
 

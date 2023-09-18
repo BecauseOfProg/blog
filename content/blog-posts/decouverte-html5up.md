@@ -1,7 +1,7 @@
 ---
 title: "HTML5 UP : des templates prêts à l'emploi"
 description: "HTML5UP, site de templates pour des sites webs responsive en HTML et CSS"
-banner: https://becauseofprog.fr/assets/articles/html5up.jpg
+banner: /img/articles/decouverte-html5up/html5up.jpg
 type: article
 authorId: stengarlis
 category: web

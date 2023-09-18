@@ -1,7 +1,7 @@
 ---
 title: "Ecosia, le moteur de recherche de demain "
 description: "Naviguer écolo ? C'est possible avec Ecosia."
-banner: https://becauseofprog.fr/assets/articles/ecosia.png
+banner: /img/articles/ecosia-le-moteur-de-demain/ecosia.png
 type: article
 authorId: rondouflex
 category: web

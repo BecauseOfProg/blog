@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://becauseofprog.fr/assets/v2/sites/becauseofprog.fr/assets/logos/bop.svg" width="200" />
+  <img src="static/img/bop.svg" width="200" />
   <h1>BecauseOfProg's blog</h1>
   <a href="https://discord.becauseofprog.fr">
     <img src="https://img.shields.io/discord/272454426038370304?color=blue&label=discord" alt="Chat on Discord">

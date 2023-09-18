@@ -128,7 +128,7 @@
               <template #image>
                 <v-img
                   height="200px"
-                  :src="'https://becauseofprog.fr/assets/v2/sites/becauseofprog.fr/assets/new-banner.png'"
+                  src="/img/new-banner.png"
                 >
                   <h1 class="white--text shadow">
                     {{ $t('pages.aboutUs') }}

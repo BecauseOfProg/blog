@@ -1,7 +1,7 @@
 ---
 title: "Samsung Galaxy Note 8 : les nouveautés"
 description: "La conférence Unpacked du Mercredi 23 août a dévoilé les nouveautés du dernier smartphone Samsung."
-banner: https://becauseofprog.fr/assets/articles/note-8-banner.jpg
+banner: /img/articles/samsung-galaxy-note-8/note-8-banner.jpg
 type: article
 authorId: theovld
 category: android
@@ -15,7 +15,7 @@ Vous avez peut-être entendu parler de lui ces derniers jours : Le Samsung Galax
 
  Tout d'abord, le Galaxy Note 8 sera proposé en quatre coloris : noir, gris, doré ou bleu. Pas de blanc cette fois-ci.
 
- ![Coloris Note 8](https://becauseofprog.fr/assets/articles/note-8-coloris.jpg)
+ ![Coloris Note 8](/img/articles/samsung-galaxy-note-8/note-8-coloris.jpg)
 
  
 >  Photo non officielle des différents coloris
@@ -26,7 +26,7 @@ Vous avez peut-être entendu parler de lui ces derniers jours : Le Samsung Galax
 
  Le Galaxy Note 8 sera équipé d'un processeur Exynos 8895, ce qui permet des rendus graphiques impressionnants, même lorsqu'ils sont en 3D. Il embarque aussi un CPU octo-core cadencé à 2,3 GHz. Le tout est couplé avec 6 Go de RAM.
 
- ![](https://becauseofprog.fr/assets/articles/exynos-8895.jpg)
+ ![](/img/articles/samsung-galaxy-note-8/exynos-8895.jpg)
 
  
 >  Samsung Exynos, processeur du Note 8
@@ -49,7 +49,7 @@ Vous avez peut-être entendu parler de lui ces derniers jours : Le Samsung Galax
 
  Le téléphone est équipé d’Android 7.1.1 Nougat avec une interface Samsung Experience, mais prévoit une mise à jour vers Android 8.0 Oreo (qui s’apprête à sortir) : vous pouvez dès à présent voir quelles sont les nouveautés de cet OS.
 
- ![Android Oreo](https://becauseofprog.fr/assets/articles/android-o-oreo.png)
+ ![Android Oreo](/img/articles/samsung-galaxy-note-8/android-o-oreo.png)
 
  
 >  Android Oreo
@@ -74,7 +74,7 @@ Vous avez peut-être entendu parler de lui ces derniers jours : Le Samsung Galax
 
  Il peut paraître cher, mais c’est un haut de gamme, mais il faudra s’attendre à des prix de plus en plus grandissants.
 
- ![Do bigger things](https://becauseofprog.fr/assets/articles/note-8-do-bigger-things.jpg)
+ ![Do bigger things](/img/articles/samsung-galaxy-note-8/note-8-do-bigger-things.jpg)
 
  
 >  Do bigger things, with the new Samsung Galaxy Note 8. Yeah.

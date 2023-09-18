@@ -1,7 +1,7 @@
 ---
 title: "Windows : 5 astuces pour vous faciliter la vie !"
 description: "Simplifiez-vous la vie avec ces 5 astuces disponibles sur Windows!"
-banner: https://becauseofprog.fr/assets/courses/windows/5-astuces.png
+banner: /img/articles/5-astuces-windows/5-astuces.png
 type: tutorial
 authorId: davall
 category: windows
@@ -82,15 +82,15 @@ La technique que je vais vous montrer ne supporte pas tout le temps les raccourc
 Voici comment nous allons procéder :
 
  * Créez tout d’abord un dossier, placez-y ensuite vos raccourcis à l’intérieur.
-![](https://img4.hostingpics.net/pics/172709jeux1.png)
+![](/img/articles/5-astuces-windows/172709jeux1.png)
 
  * Faites ensuite un clic droit sur le fond du dossier (pas sur un raccourci attention !)
  * Sélectionnez « Regroupez par » et cliquez sur « Autres… »
- ![](http://i.imgur.com/pGUT0m1.png)
+ ![](/img/articles/5-astuces-windows/pGUT0m1.png)
 
  * Dans la liste, cherchez « Commentaires » et cochez-le.
  * Sélectionnez encore une fois « Regroupez par » et cliquez cette fois-ci sur « Commentaires »
  * Normalement, vos raccourcis devraient tous être triés au même endroit, dans un groupe « Non spécifié ».
  * Désormais, faites clic droit sur le raccourci que vous souhaitez modifier, cliquez sur « Propriétés » et dans l’onglet « Raccourci » modifiez le « Commentaire » de votre raccourci (je vous conseille de mettre #steam pour tous vos jeux Steam et #uplay pour tous vos jeux uPlay, comme ça ils sont tous triés par plateforme ! ^^)
- * ![](https://img4.hostingpics.net/pics/496132jeux3.png)
+ * ![](/img/articles/5-astuces-windows/496132jeux3.png)
 Voilà ! Vous avez désormais un dossier propre et bien rangé ! Cela fonctionne avec tous les autres fichiers en temps normal ! Faites jouer votre esprit créatif ! ^^

@@ -1,7 +1,7 @@
 ---
 title: "Protéger son site des attaques par formulaires"
 description: "Protéger son site des attaques de base : failles de sécurité dans ses formulaires HTML qui redirigent vers du traitement PHP."
-banner: https://becauseofprog.fr/assets/syst-icons/https.png
+banner: /img/articles/proteger-site-formulaires/https.png
 type: tutorial
 authorId: theovld
 category: programming

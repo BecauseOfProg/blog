@@ -4,7 +4,7 @@
       <v-row justify="center" align-content="center">
         <b-card>
           <template #image>
-            <v-img width="500" src="https://i.kym-cdn.com/entries/icons/mobile/000/026/213/pablo.jpg" />
+            <v-img width="500" src="/img/others/pablo.jpg" />
           </template>
 
           <h1 v-if="error.statusCode === 404">

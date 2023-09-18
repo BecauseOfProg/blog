@@ -1,7 +1,7 @@
 ---
 title: "Le Material Design sur vos sites web"
 description: "Le Material Design, créé par Google, est célèbre grâce à son interface moderne et épurée. Voici un tutoriel pour que vous puissiez y intégrer sur vos sites webs."
-banner: https://becauseofprog.fr/assets/articles/md-example.jpg
+banner: /img/articles/material-design-web/md-example.jpg
 type: tutorial
 authorId: theovld
 category: web
@@ -11,7 +11,7 @@ timestamp: 1494162497
 
 Le Material Design est un type de design créé par Google et qui a la particularité d'être très moderne et épuré. On le voit de plus en plus dans les applications Android et sur les sites web. Aujourd'hui, nous allons voir comment faire notre propre site avec des frameworks basés sur le Material Design.
 
- ![](https://www.anthedesign.fr/w2015/wp-content/uploads/2016/01/freebie___weather_app_ui_design_by_graphberry-d8m33wj.png)![ups](https://becauseofprog.fr/assets/articles/md-example.jpg)
+ ![](/img/articles/material-design-web/freebie___weather_app_ui_design_by_graphberry-d8m33wj.png)![ups](/img/articles/material-design-web/md-example.jpg)
 
  *Exemples d'applications en Material Design et principe général*
 
@@ -19,7 +19,7 @@ Le Material Design est un type de design créé par Google et qui a la particula
 
  Le premier framework nous parvient directement de Google puisque c'est celui de base, c'est un peu la référence dans le Material Design. Il comporte beaucoup d'éléments personnalisables ainsi que des animations faites en JavaScript. Il repose sur un système de grille et de layout qui facilite la conception du site.
 
- ![](https://cdn3.tnwcdn.com/wp-content/blogs.dir/1/files/2015/07/1foCgfXyJv5FjACTnEXpc0A.png)![](https://becauseofprog.fr/assets/articles/mdl2.PNG)
+ ![](/img/articles/material-design-web/1foCgfXyJv5FjACTnEXpc0A.png)![](https://becauseofprog.fr/assets/articles/mdl2.PNG)
 
  *Exemples de sites construits avec Material Design Lite*
 

@@ -1,7 +1,7 @@
 ---
 title: "Microsoft OneNote : Des notes rapides et riches"
 description: "OneNote, application par excellence pour vos prises de notes et vos checklists."
-banner: https://becauseofprog.fr/assets/articles/onenote/onenote-1.jpg
+banner: /img/articles/microsoft-onenote/onenote-1.jpg
 type: article
 authorId: theovld
 category: software
@@ -11,7 +11,7 @@ timestamp: 1494424843
 
 Vous connaissez peut-être des applications qui vous permettent de prendre des notes rapidement, d'organiser vos choses à faire ou simplement d'inventer les dessins les plus fous. Aujourd'hui je vais vous présenter l'application OneNote, qui nous parvient directement de chez Microsoft, qui a la particularité d'être extrêmement riche en fonctionnalités mais aussi... en portabilité.
 
- ![](https://becauseofprog.fr/assets/articles/onenote/onenote-1.jpg)
+ ![](/img/articles/microsoft-onenote/onenote-1.jpg)
 
 ### Performance et ergonomie
 
@@ -21,7 +21,7 @@ Vous connaissez peut-être des applications qui vous permettent de prendre des n
 
  ![](https://becauseofprog.fr/assets/articles/onenote/onenote-2.PNG)
 
- ![](https://becauseofprog.fr/assets/articles/onenote/onenote-4.png)
+ ![](/img/articles/microsoft-onenote/onenote-4.png)
 
  *Interface de l'application sur PC et smartphone Android*
 
@@ -40,7 +40,7 @@ Vous connaissez peut-être des applications qui vous permettent de prendre des n
 
  ![](https://becauseofprog.fr/assets/articles/onenote/onenote-3.PNG)
 
- ![](https://becauseofprog.fr/assets/articles/onenote/onenote-5.png)
+ ![](/img/articles/microsoft-onenote/onenote-5.png)
 
  *Ecriture d'une note sur PC et smartphone Android*
 

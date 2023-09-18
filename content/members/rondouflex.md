@@ -2,7 +2,7 @@
 username: rondouflex
 displayname: Malo
 timestamp: 1493330400
-picture: https://becauseofprog.fr/assets/v2/sites/becauseofprog.fr/pictures/rondouflex.png
+picture: /img/members/rondouflex.png
 description: "Je suis un génie incompris !"
 biography: ""
 location : "France"

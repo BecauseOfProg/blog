@@ -1,7 +1,7 @@
 ---
 title: "F-Droid, un Play Store alternatif open source ?"
 description: "Un App Store concurrentiel à Play Store qui se démarque par ses applications libres !"
-banner: https://becauseofprog.fr/assets/articles/fdroid.png
+banner: /img/articles/f-droid-open-source/fdroid.png
 type: article
 authorId: kernoeb
 category: android
@@ -18,7 +18,7 @@ Cependant, la plupart de ces applications ne donnent pas le **code source** de c
 Si vous êtes un "*pro-linux*", vous préférez certainement des applications **libres de droit** et/ou de modification.
 
   
-![](https://upload.wikimedia.org/wikipedia/commons/4/47/F-Droid_screenshot_05.png)
+![](/img/articles/f-droid-open-source/F-Droid_screenshot_05.png)
 
 
 > **F-Droid, une interface simple et rapide.**

@@ -1,7 +1,7 @@
 ---
 title: "Trouver rapidement ce qui prend de la place sur votre ordinateur ! [Windows/Linux]"
 description: "Trier ses fichiers volumineux efficacement!"
-banner: https://becauseofprog.fr/assets/articles/trierfichiers.png
+banner: /img/articles/trouver-gros-fichiers/trierfichiers.png
 type: article
 authorId: kernoeb
 category: software
@@ -27,7 +27,7 @@ Trier les fichiers sur son ordinateur est parfois complexe.
  Son atout principal ?  
  Une arborescence visuelle colorée vous permet de repérer en un coup d'œil les fichiers volumineux et les grandes collections de fichiers plus petits (*ce que WinDirStat faisait tout aussi bien*).
 
- ![](https://becauseofprog.fr/assets/articles/wiztree1.png)
+ ![](/img/articles/trouver-gros-fichiers/wiztree1.png)
 
  Cliquez juste sur "**Analyser**", patientez quelques secondes et le tour est joué !  
  Triez par Taille/Date/Nombre d'éléments en fonction de ce que vous souhaitez faire...
@@ -45,7 +45,7 @@ Trier les fichiers sur son ordinateur est parfois complexe.
 
  La meilleure alternative pour Linux est Baobab !
 
- ![](https://becauseofprog.fr/assets/articles/baobab_xenial.png)  
+ ![](/img/articles/trouver-gros-fichiers/baobab_xenial.png)  
  
  Source de l'image : [ubuntu-fr.org](http://ubuntu-fr.org/)
 

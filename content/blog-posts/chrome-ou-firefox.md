@@ -1,7 +1,7 @@
 ---
 title: "Navigateur web : Chrome ou Firefox ?"
 description: "Le grand comparatif des deux plus gros navigateurs web"
-banner: https://becauseofprog.fr/assets/articles/chrome-ou-firefox.jpg
+banner: /img/articles/chrome-ou-firefox/chrome-ou-firefox.jpg
 type: article
 authorId: theovld
 category: software
@@ -13,7 +13,7 @@ timestamp: 1491413339
  Chacun des deux présentent ses avantages et inconvénients qui peuvent plaire ou non à certains types d'usagers.  
  Nous allons donc étudier ensemble ces deux navigateurs assez intéressants.
 
- ![KRAUME VErSSUSSE FAÏREFAUXE](http://cdn.makeuseof.com/wp-content/uploads/2016/04/chrome-vs-firefox-2016-994x400.jpg?187d39)
+ ![KRAUME VErSSUSSE FAÏREFAUXE](/img/articles/chrome-ou-firefox/chrome-vs-firefox-2016-994x400.jpg?187d39)
 
  [*(voir source image)*](http://www.makeuseof.com/tag/chrome-vs-firefox-in-2016-which-browser-is-right-for-you/)
 
@@ -46,7 +46,7 @@ timestamp: 1491413339
 
  Chrome dispose aussi d'un mode "Caster" simple à utiliser, si vous avez chez vous un Chromecast ou une Smart TV. Vous cliquez et ça marche. Mais, car Chrome est avant tout Google, il aura plus tendance à vous espionner, afin de savoir où vous allez et ainsi vous proposer des publicités ciblées.
 
- ![Synchronisation](https://www.it-connect.fr/wp-content-itc/uploads/2016/03/Synchronisation.png)
+ ![Synchronisation](/img/articles/chrome-ou-firefox/Synchronisation.png)
 
  [*(voir source image)*](https://www.it-connect.fr/sauvegarde-ou-synchronisation/)
 

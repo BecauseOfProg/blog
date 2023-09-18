@@ -1,7 +1,7 @@
 ---
 title: "Snapdrop : L'alternative à Airdrop sur Android et PC"
 description: "Vous la cherchiez sûrement : voici l'alternative à Airdrop disponible sur tous les supports : iOS, MacOS, Android, Windows et Linux"
-banner: https://becauseofprog.fr/assets/articles/snapdrop-2.png
+banner: /img/articles/snapdrop-alternative-airdrop/snapdrop-2.png
 type: article
 authorId: gildasgh
 category: web

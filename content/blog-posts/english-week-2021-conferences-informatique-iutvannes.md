@@ -1,7 +1,7 @@
 ---
 title: "Une semaine de conférences à l'IUT de Vannes"
 description: "Découvrez l'Intelligence Artificielle, la Cybersécurité, le Développement de Jeux Vidéos et la Data Science du 2 au 4 février 2021, dans 9 conférences en anglais et en ligne"
-banner: https://becauseofprog.fr/assets/v2/sites/becauseofprog.fr/articles/english-week-2021-iutvannes.png
+banner: /img/articles/english-week-2021-conferences-informatique-iutvannes/english-week-2021-iutvannes.png
 type: article
 authorId: gildasgh
 category: security

@@ -1,7 +1,7 @@
 ---
 title: "Ubuntu sous Windows 10 ?"
 description: "Installer Bash sur un environnement Windows, c'est impossible ? C'est ce que nous allons voir dans cet article."
-banner: https://becauseofprog.fr/assets/articles/ubuntu-on-windows.jpg
+banner: /img/articles/ubuntu-windows10/ubuntu-on-windows.jpg
 type: article
 authorId: kernoeb
 category: windows
@@ -27,29 +27,29 @@ Cliquez ensuite sur "**Système**", puis **"Informations système"** (en bas à 
 Dans la partie de droite, vous devez avoir une version supérieure (ou égale) à **14393**.  
 Pour ma part, je suis à *14393.593*. Vous devez disposer d'un ordinateur **64bit** !
 
-![](http://img4.hostingpics.net/pics/373431821.png)
+![](/img/articles/ubuntu-windows10/373431821.png)
 
 Ensuite, retournez dans les Paramètres, puis accédez à **"Mise à jour et sécurité"**.  
 Cliquez ensuite sur **"Pour les développeurs"** (à gauche), ensuite cochez **"Mode développeur"**.
 
-![](http://i.imgur.com/7QzKNdN.png)  
+![](/img/articles/ubuntu-windows10/7QzKNdN.png)  
 Voilà, ça, c'est fait. Ne vous inquiétez pas, c'est bientôt terminé ;)  
 Ouvrez le menu Démarrer et cherchez **"Activer ou désactiver des fonctionnalités Windows"**.
 
 Cliquez dessus :  
-![](http://i.imgur.com/SaNC5YQ.png)
+![](/img/articles/ubuntu-windows10/SaNC5YQ.png)
 
 Une fenêtre comme celle-ci apparaît :
 
-![](http://i.imgur.com/N2cvrOK.png)
+![](/img/articles/ubuntu-windows10/N2cvrOK.png)
 
 Descendez un peu et cochez "**Sous-système Windows pour Linux"**, puis "**OK"**.
 
 Si votre ordinateur ne le fait pas automatiquement, **redémarrez** votre ordinateur (l'étape la plus ennuyante, je l'avoue).  
 Voilà. Maintenant, ouvrez le menu Démarrer et cherchez **"Bash"**.  
-![](http://i.imgur.com/TZaqBLN.png)
+![](/img/articles/ubuntu-windows10/TZaqBLN.png)
 
-![](http://i.imgur.com/jALsHrC.png)
+![](/img/articles/ubuntu-windows10/jALsHrC.png)
 
 Puis faites ce qui est demandé, soit Tapez « **o** » dans la console (tapez pas trop fort, elle est fragile).
 
@@ -57,7 +57,7 @@ Patientez... (cela peut durer plusieurs minutes, ne vous inquiétez pas).
 
 Lorsque l'installation est terminée, (re)cherchez **Bash** sur le menu démarrer, et, incroyable, vous devriez apercevoir cela:
 
-![](http://i.imgur.com/gKhrlVs.png)
+![](/img/articles/ubuntu-windows10/gKhrlVs.png)
 
 Et voilà ! 
 
