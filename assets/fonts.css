@@ -59,9 +59,11 @@
 
 .nuxt-content code {
   color: #2a2b2d;
-  box-shadow: none;
+  box-shadow: none!important;
+  text-shadow: none!important;
   display: block;
   font-weight: normal;
+  background-color: transparent!important;
 }
 
 .nuxt-content li + li {
