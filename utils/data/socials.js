@@ -1,11 +1,14 @@
+import { mdiWeb, mdiTwitter, mdiMastodon, mdiGithub, mdiInstagram, mdiReddit } from '@mdi/js'
+import { mdiDiscord } from '../icons'
+
 const socials = [
-  { id: 'website', name: 'Site web', icon: 'mdi-web', color: 'darker', link: '' },
-  { id: 'twitter', name: 'Twitter', icon: 'mdi-twitter', color: 'light-blue', link: 'https://twitter.com/' },
-  { id: 'discord', name: 'Discord', icon: 'mdi-discord', color: '#7289DA', link: '' },
-  { id: 'mastodon', name: 'Mastodon', icon: 'mdi-mastodon', color: 'blue', link: '' },
-  { id: 'github', name: 'GitHub', icon: 'mdi-github', color: '#24292e', link: 'https://github.com/' },
-  { id: 'instagram', name: 'Instagram', icon: 'mdi-instagram', color: '#E1306C', link: 'https://instagram.com/' },
-  { id: 'reddit', name: 'Reddit', icon: 'mdi-reddit', color: 'deep-orange ', link: 'https://reddit.com/u/' }
+  { id: 'website', name: 'Site web', icon: mdiWeb, color: 'darker', link: '' },
+  { id: 'twitter', name: 'Twitter', icon: mdiTwitter, color: 'light-blue', link: 'https://twitter.com/' },
+  { id: 'discord', name: 'Discord', icon: mdiDiscord, color: '#7289DA', link: '' },
+  { id: 'mastodon', name: 'Mastodon', icon: mdiMastodon, color: 'blue', link: '' },
+  { id: 'github', name: 'GitHub', icon: mdiGithub, color: '#24292e', link: 'https://github.com/' },
+  { id: 'instagram', name: 'Instagram', icon: mdiInstagram, color: '#E1306C', link: 'https://instagram.com/' },
+  { id: 'reddit', name: 'Reddit', icon: mdiReddit, color: 'deep-orange ', link: 'https://reddit.com/u/' }
 ]
 
 const bopSocials = [

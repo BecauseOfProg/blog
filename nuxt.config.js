@@ -60,8 +60,16 @@ export default {
     // https://github.com/juliomrqz/nuxt-optimized-images
     '@aceforth/nuxt-optimized-images',
     // https://pwa.nuxtjs.org/setup
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    // https://google-fonts.nuxtjs.org/getting-started/setup
+    '@nuxtjs/google-fonts'
   ],
+
+  googleFonts: {
+    families: {
+      Roboto: true
+    }
+  },
 
   pwa: {
     meta: {
@@ -111,6 +119,10 @@ export default {
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     treeShake: true,
+    defaultAssets: false,
+    icons: {
+      iconfont: 'mdiSvg'
+    },
     customVariables: ['~/assets/variables.scss'],
     theme: {
       themes: {

@@ -1,13 +1,15 @@
+import { mdiWeb, mdiLockOutline, mdiEarth, mdiSim, mdiCodeTags, mdiAndroid, mdiLinux, mdiMicrosoftWindows } from '@mdi/js'
+
 const categories = [
-  { id: 'software', icon: 'mdi-web' },
-  { id: 'security', icon: 'mdi-lock-outline' },
-  { id: 'web', icon: 'mdi-earth' },
-  { id: 'hardware', icon: 'mdi-sim' },
-  { id: 'programming', icon: 'mdi-code-tags' },
-  { id: 'android', icon: 'mdi-android' },
-  { id: 'linux', icon: 'mdi-linux' },
-  { id: 'windows', icon: 'mdi-microsoft-windows' }
-  // { id: 'apple', icon: 'mdi-apple' }
+  { id: 'software', icon: mdiWeb },
+  { id: 'security', icon: mdiLockOutline },
+  { id: 'web', icon: mdiEarth },
+  { id: 'hardware', icon: mdiSim },
+  { id: 'programming', icon: mdiCodeTags },
+  { id: 'android', icon: mdiAndroid },
+  { id: 'linux', icon: mdiLinux },
+  { id: 'windows', icon: mdiMicrosoftWindows }
+  // { id: 'apple', icon: mdiApple }
 ]
 
 function getCategory (id) {

@@ -9,7 +9,7 @@
         color="green darken-1 white--text"
       >
         <v-icon left>
-          mdi-android
+          {{ mdiAndroid }}
         </v-icon>
         {{ $t('application.download.download') }} ≈18Mo
       </v-btn>
@@ -40,6 +40,8 @@
 </template>
 
 <script>
+import { mdiAndroid } from '@mdi/js'
+
 export default {
   name: 'ApplicationDownload',
   data () {
@@ -50,7 +52,8 @@ export default {
         'arm64-v8a',
         'x86',
         'x86_64'
-      ]
+      ],
+      mdiAndroid
     }
   }
 }

@@ -7,7 +7,7 @@
       active-class="darker white--text"
     >
       <v-icon left>
-        mdi-text-box-multiple-outline
+        {{ mdiTextBoxMultipleOutline }}
       </v-icon>
       {{ $t('global.allPublications') }}
     </v-chip>
@@ -41,6 +41,7 @@
 </template>
 
 <script>
+import { mdiTextBoxMultipleOutline } from '@mdi/js'
 import { categories, types } from '@/utils/data'
 
 export default {
@@ -58,7 +59,8 @@ export default {
   data () {
     return {
       categories,
-      types
+      types,
+      mdiTextBoxMultipleOutline
     }
   }
 }

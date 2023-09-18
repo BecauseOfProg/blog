@@ -24,7 +24,7 @@
             :label="`${$t('global.search')}...`"
             color="darker"
             outlined
-            prepend-inner-icon="mdi-magnify"
+            :prepend-inner-icon="mdiMagnify"
             type="search"
           />
           <template v-if="publications.length">
@@ -145,6 +145,7 @@
 </template>
 
 <script>
+import { mdiMagnify, mdiTextBoxMultipleOutline } from '@mdi/js'
 import { categories, getCategory, types } from '@/utils/data'
 
 export default {
@@ -163,12 +164,14 @@ export default {
       empty: false,
 
       categories,
-      types
+      types,
+
+      mdiMagnify
     }
   },
   async fetch () {
     this.head.title = ['global.allPublications']
-    this.head.icon = 'mdi-text-box-multiple-outline'
+    this.head.icon = mdiTextBoxMultipleOutline
 
     const publications = await this.$content('blog-posts')
       .without(['body'])

@@ -1,7 +1,9 @@
+import { mdiFileDocumentOutline, mdiFlash, mdiPlayCircleOutline } from '@mdi/js'
+
 const types = [
-  { id: 'article', icon: 'mdi-file-document-outline' },
-  { id: 'flash', icon: 'mdi-flash' },
-  { id: 'tutorial', icon: 'mdi-play-circle-outline' }
+  { id: 'article', icon: mdiFileDocumentOutline },
+  { id: 'flash', icon: mdiFlash },
+  { id: 'tutorial', icon: mdiPlayCircleOutline }
 ]
 
 function getType (id) {

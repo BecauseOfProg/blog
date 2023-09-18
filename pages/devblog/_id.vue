@@ -91,7 +91,7 @@
           >
             <v-btn color="darker white--text">
               <v-icon left>
-                mdi-github
+                {{ mdiGithub }}
               </v-icon>
               {{ $t('projects.more') }}
             </v-btn>
@@ -104,6 +104,7 @@
 </template>
 
 <script>
+import { mdiGithub } from '@mdi/js'
 import SocialIcons from '@/components/SocialIcons.vue'
 
 export default {
@@ -112,7 +113,8 @@ export default {
   data () {
     return {
       devblog: null,
-      otherDevblogs: []
+      otherDevblogs: [],
+      mdiGithub
     }
   },
   async fetch () {

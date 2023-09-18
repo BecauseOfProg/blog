@@ -10,12 +10,14 @@
       right
       @click="$vuetify.goTo('.b-top-banner')"
     >
-      <v-icon>mdi-chevron-up</v-icon>
+      <v-icon>{{ mdiChevronUp }}</v-icon>
     </v-btn>
   </v-scale-transition>
 </template>
 
 <script>
+import { mdiChevronUp } from '@mdi/js'
+
 export default {
   name: 'ScrollToTop',
   props: {
@@ -26,7 +28,8 @@ export default {
   },
   data () {
     return {
-      active: false
+      active: false,
+      mdiChevronUp
     }
   },
   mounted () {

@@ -183,19 +183,21 @@
 </template>
 
 <script>
+import { mdiTwitter, mdiGithub, mdiWeb, mdiXml, mdiTextBoxMultipleOutline } from '@mdi/js'
 import { languages, projects } from '@/utils/data'
+import { mdiDiscord } from '~/utils/icons'
 
 export default {
   name: 'Projects',
   data () {
     return {
       icons: {
-        documentation: 'mdi-text-box-multiple-outline',
-        source: 'mdi-xml',
-        discord: 'mdi-discord',
-        website: 'mdi-web',
-        github: 'mdi-github',
-        twitter: 'mdi-twitter'
+        documentation: mdiTextBoxMultipleOutline,
+        source: mdiXml,
+        discord: mdiDiscord,
+        website: mdiWeb,
+        github: mdiGithub,
+        twitter: mdiTwitter
       },
       devblog: {},
       projects,

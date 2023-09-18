@@ -1,7 +1,7 @@
 <template>
   <main>
     <b-top-banner
-      icon="mdi-iframe-outline"
+      :icon="mdiCodeBracesBox"
       title="global.devblog"
     />
     <v-container class="page-body">
@@ -26,7 +26,7 @@
                 text
               >
                 <v-icon left>
-                  mdi-twitter
+                  {{ mdiTwitter }}
                 </v-icon>
                 {{ $t('devblog.followUs') }}
               </v-btn>
@@ -79,6 +79,7 @@
 </template>
 
 <script>
+import { mdiCodeBracesBox, mdiTwitter } from '@mdi/js'
 import ScrollToTop from '~/components/ScrollToTop.vue'
 
 export default {
@@ -88,7 +89,9 @@ export default {
     return {
       devblogs: [],
       page: 0,
-      pages: 0
+      pages: 0,
+      mdiTwitter,
+      mdiCodeBracesBox
     }
   },
   async fetch () {

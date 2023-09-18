@@ -42,7 +42,7 @@
               icon
               @click="showSearchField = false"
             >
-              <v-icon>mdi-close</v-icon>
+              <v-icon>{{ mdiClose }}</v-icon>
             </v-btn>
           </template>
           <template v-else>
@@ -52,7 +52,7 @@
               to="/blog"
             >
               <v-icon left>
-                mdi-text-box-multiple-outline
+                {{ mdiTextBoxMultipleOutline }}
               </v-icon>
               {{ $t('topBar.publications') }}
             </v-btn>
@@ -62,7 +62,7 @@
               to="/page/projects"
             >
               <v-icon left>
-                mdi-package-variant
+                {{ mdiPackageVariant }}
               </v-icon>
               {{ $t('topBar.projects') }}
             </v-btn>
@@ -74,7 +74,7 @@
                   v-on="on"
                   @click="showSearchField = true"
                 >
-                  <v-icon>mdi-magnify</v-icon>
+                  <v-icon>{{ mdiMagnify }}</v-icon>
                 </v-btn>
               </template>
               <span>{{ $t('topBar.search') }}</span>
@@ -139,6 +139,7 @@
 </template>
 
 <script>
+import { mdiClose, mdiPackageVariant, mdiHomeOutline, mdiMagnify, mdiTextBoxMultipleOutline } from '@mdi/js'
 import { mapMutations, mapState } from 'vuex'
 import ThemeSwitcher from '@/components/ThemeSwitcher.vue'
 
@@ -151,7 +152,12 @@ export default {
       bottomNavigation: '',
 
       showSearchField: false,
-      search: ''
+      search: '',
+
+      mdiClose,
+      mdiTextBoxMultipleOutline,
+      mdiPackageVariant,
+      mdiMagnify
     }
   },
   head () {
@@ -188,22 +194,22 @@ export default {
       return [
         {
           name: 'mobileMenu.home',
-          icon: 'mdi-home-outline',
+          icon: mdiHomeOutline,
           route: 'index'
         },
         {
           name: 'mobileMenu.publications',
-          icon: 'mdi-text-box-multiple-outline',
+          icon: mdiTextBoxMultipleOutline,
           route: 'blog'
         },
         {
           name: 'mobileMenu.search',
-          icon: 'mdi-magnify',
+          icon: mdiMagnify,
           route: 'page-search'
         },
         {
           name: 'mobileMenu.projects',
-          icon: 'mdi-package-variant',
+          icon: mdiPackageVariant,
           route: 'page-projects'
         }
       ]

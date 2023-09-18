@@ -30,7 +30,7 @@
             v-if="value"
             left
           >
-            mdi-chevron-down
+            {{ mdiChevronDown }}
           </v-icon>
           {{ $t(`categories.${category.id}`) }}
         </v-btn>
@@ -83,7 +83,7 @@
               >
                 {{ $t('list.loadMore') }}
                 <v-icon right>
-                  mdi-chevron-right
+                  {{ mdiChevronRight }}
                 </v-icon>
               </v-btn>
             </v-col>
@@ -95,13 +95,16 @@
 </template>
 
 <script>
+import { mdiChevronDown, mdiChevronRight } from '@mdi/js'
 import { categories } from '@/utils/data'
 
 export default {
   data () {
     return {
       categoryPublications: {},
-      categories
+      categories,
+      mdiChevronDown,
+      mdiChevronRight
     }
   },
   async fetch () {

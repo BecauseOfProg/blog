@@ -1,7 +1,10 @@
+import { mdiRssBox, mdiBookMultipleOutline, mdiWeatherPartlyLightning, mdiLanguageMarkdown, mdiLanguagePython, mdiLanguageRuby, mdiLanguageGo } from '@mdi/js'
+import { mdiDiscord } from '~/utils/icons'
+
 const projects = [
   {
     name: 'yt-podcast',
-    icon: 'mdi-rss-box',
+    icon: mdiRssBox,
     color: 'orange',
     language: 'Python',
     links: [
@@ -11,7 +14,7 @@ const projects = [
   },
   {
     name: 'api',
-    icon: 'mdi-book-multiple-outline',
+    icon: mdiBookMultipleOutline,
     color: 'light',
     language: 'Markdown',
     links: [
@@ -21,7 +24,7 @@ const projects = [
   },
   {
     name: 'discord-bot',
-    icon: 'mdi-discord',
+    icon: mdiDiscord,
     color: 'teal',
     language: 'Golang',
     links: [
@@ -31,7 +34,7 @@ const projects = [
   },
   {
     name: 'openweathermap-ruby',
-    icon: 'mdi-weather-partly-lightning',
+    icon: mdiWeatherPartlyLightning,
     color: 'red',
     language: 'Ruby',
     links: [
@@ -42,19 +45,19 @@ const projects = [
 
 const languages = {
   Markdown: {
-    icon: 'mdi-language-markdown',
+    icon: mdiLanguageMarkdown,
     color: 'grey'
   },
   Python: {
-    icon: 'mdi-language-python',
+    icon: mdiLanguagePython,
     color: 'blue'
   },
   Ruby: {
-    icon: 'mdi-language-ruby',
+    icon: mdiLanguageRuby,
     color: 'red'
   },
   Golang: {
-    icon: 'mdi-language-go',
+    icon: mdiLanguageGo,
     color: 'cyan darken-1'
   }
 }

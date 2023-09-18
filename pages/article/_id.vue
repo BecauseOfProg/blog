@@ -63,7 +63,7 @@
                       :color="$vuetify.theme.dark ? 'grey' : null"
                       class="mt-n1 mr-n0"
                     >
-                      mdi-clock-outline
+                      {{ mdiClockOutline }}
                     </v-icon>
                     <span :class="!$vuetify.theme.dark ? 'grey--text text--darken-2' : 'grey--text'">
                       {{ $t('publication.publishedBy', {
@@ -197,7 +197,7 @@
                           href="https://twitter.com/BecauseOfProg"
                         >
                           <v-icon left>
-                            mdi-twitter
+                            {{ mdiTwitter }}
                           </v-icon>
                           Twitter
                         </v-btn>
@@ -207,7 +207,7 @@
                           href="#!"
                         >
                           <v-icon left>
-                            mdi-rss
+                            {{ mdiRss }}
                           </v-icon>
                           RSS
                         </v-btn>
@@ -237,6 +237,7 @@
 </template>
 
 <script>
+import { mdiTwitter, mdiRss, mdiClockOutline, mdiFacebook, mdiAsterisk, mdiMastodon, mdiEmailOutline } from '@mdi/js'
 import { mapActions } from 'vuex'
 import { categories, types, getCategory, getType } from '@/utils/data'
 
@@ -247,7 +248,10 @@ export default {
       publication: {},
       loaded: false,
       categories,
-      types
+      types,
+      mdiClockOutline,
+      mdiTwitter,
+      mdiRss
     }
   },
   async fetch () {
@@ -304,31 +308,31 @@ export default {
         return [
           {
             name: 'Twitter',
-            icon: 'mdi-twitter',
+            icon: mdiTwitter,
             color: 'blue lighten-2',
             link: `https://twitter.com/intent/tweet?url=https://becauseofprog.fr/article/${this.publication.id}&text=${this.publication.title} (via @BecauseOfProg)`
           },
           {
             name: 'Facebook',
-            icon: 'mdi-facebook',
+            icon: mdiFacebook,
             color: 'blue darken-4',
             link: `https://www.facebook.com/sharer/sharer.php?u=https://becauseofprog.fr/article/${this.publication.id}`
           },
           {
             name: 'Diaspora',
-            icon: 'mdi-asterisk',
+            icon: mdiAsterisk,
             color: 'purple darken-2',
             link: `https://share.diasporafoundation.org/?title=${this.publication.title}&url=https://becauseofprog.fr/article/${this.publication.id}`
           },
           {
             name: 'Mastodon',
-            icon: 'mdi-mastodon',
+            icon: mdiMastodon,
             color: 'blue darken-2',
             link: `web+mastodon://share?text=${this.publication.title}%20-%20https://becauseofprog.fr/article/${this.publication.id}`
           },
           {
             name: 'Mail',
-            icon: 'mdi-email-outline',
+            icon: mdiEmailOutline,
             color: 'dark',
             link: `mailto:?subject=${this.publication.title}&body=${this.publication.description} Via BecauseOfProg : https://becauseofprog.fr/article/${this.publication.id}`
           }

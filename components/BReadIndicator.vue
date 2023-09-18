@@ -8,7 +8,7 @@
         color="green"
         v-on="on"
       >
-        mdi-eye-check
+        {{ mdiEyeCheck }}
       </v-icon>
     </template>
     <span>{{ $t('publication.wasRead') }}</span>
@@ -17,6 +17,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import { mdiEyeCheck } from '@mdi/js'
 
 export default {
   name: 'BReadIndicator',
@@ -24,6 +25,11 @@ export default {
     publication: {
       type: String,
       required: true
+    }
+  },
+  data () {
+    return {
+      mdiEyeCheck
     }
   },
   computed: {

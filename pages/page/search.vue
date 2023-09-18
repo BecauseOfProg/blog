@@ -1,7 +1,7 @@
 <template>
   <main>
     <b-top-banner
-      icon="mdi-magnify"
+      :icon="mdiMagnify"
       title="global.search"
     />
     <v-container class="page-body">
@@ -18,7 +18,7 @@
               v-model="search"
               :label="`${$t('global.search')}...`"
               color="darker"
-              prepend-icon="mdi-magnify"
+              :prepend-icon="mdiMagnify"
               type="search"
               @keyup.enter="makeSearch"
             />
@@ -50,12 +50,15 @@
 </template>
 
 <script>
+import { mdiMagnify } from '@mdi/js'
+
 export default {
   name: 'Search',
   data () {
     return {
       publications: [],
-      search: ''
+      search: '',
+      mdiMagnify
     }
   },
   async fetch () {

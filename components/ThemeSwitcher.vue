@@ -9,7 +9,7 @@
             icon
             v-on="{ ...menu, ...tooltip }"
           >
-            <v-icon>mdi-theme-light-dark</v-icon>
+            <v-icon>{{ mdiThemeLightDark }}</v-icon>
           </v-btn>
         </template>
         <span>{{ $t('theme.switchTheme') }}</span>
@@ -18,19 +18,19 @@
     <v-list>
       <v-list-item @click="setTheme('auto')">
         <v-list-item-icon>
-          <v-icon>mdi-theme-light-dark</v-icon>
+          <v-icon>{{ mdiThemeLightDark }}</v-icon>
         </v-list-item-icon>
         <v-list-item-title>{{ $t('theme.auto') }}</v-list-item-title>
       </v-list-item>
       <v-list-item @click="setTheme('light')">
         <v-list-item-icon>
-          <v-icon>mdi-weather-sunny</v-icon>
+          <v-icon>{{ mdiWeatherSunny }}</v-icon>
         </v-list-item-icon>
         <v-list-item-title>{{ $t('theme.light') }}</v-list-item-title>
       </v-list-item>
       <v-list-item @click="setTheme('dark')">
         <v-list-item-icon>
-          <v-icon>mdi-weather-night</v-icon>
+          <v-icon>{{ mdiWeatherNight }}</v-icon>
         </v-list-item-icon>
         <v-list-item-title>{{ $t('theme.dark') }}</v-list-item-title>
       </v-list-item>
@@ -39,8 +39,17 @@
 </template>
 
 <script>
+import { mdiThemeLightDark, mdiWeatherSunny, mdiWeatherNight } from '@mdi/js'
+
 export default {
   name: 'ThemeSwitcher',
+  data () {
+    return {
+      mdiThemeLightDark,
+      mdiWeatherSunny,
+      mdiWeatherNight
+    }
+  },
   mounted () {
     // eslint-disable-next-line nuxt/no-env-in-hooks
     if (process.client) {

@@ -70,7 +70,7 @@
                   text
                 >
                   <v-icon left>
-                    mdi-clock-outline
+                    {{ mdiClockOutline }}
                   </v-icon>
                   {{ $t('home.new') }}
                 </v-btn>
@@ -145,6 +145,7 @@
 </template>
 
 <script>
+import { mdiClockOutline } from '@mdi/js'
 import { categories, types } from '@/utils/data'
 
 export default {
@@ -168,7 +169,8 @@ export default {
       ],
       lastPublications: null,
       categories,
-      types
+      types,
+      mdiClockOutline
     }
   },
   async fetch () {

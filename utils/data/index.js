@@ -1,6 +1,5 @@
 export * from './blogroll'
 export * from './categories'
-export * from './feeds'
 export * from './projects'
 export * from './settings'
 export * from './socials'
