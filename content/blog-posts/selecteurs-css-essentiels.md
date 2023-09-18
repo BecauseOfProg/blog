@@ -1,7 +1,7 @@
 ---
 title: "Les sélecteurs CSS essentiels"
 description: "Le CSS marche sur un système de sélection des éléments : voici les principaux sélecteurs qui peuvent vous aider dans des situations difficiles."
-banner: https://becauseofprog.fr/assets/courses/css/selectors.PNG
+banner: /img/articles/selecteurs-css-essentiels/banner.webp
 type: tutorial
 authorId: theovld
 category: web

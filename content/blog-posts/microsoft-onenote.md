@@ -19,9 +19,9 @@ Vous connaissez peut-être des applications qui vous permettent de prendre des n
 
  L'interface est simple à prendre en main mais pourtant très riche avec beaucoup de fonctionnalités, mais nous allons y revenir plus tard. L'application a un style Metro/Windows10, c'est-à-dire d'une à deux couleurs maximum et épuré, qui donne un look très moderne sans rentrer dans l'espace-temps du futur. Les boutons sont accessibles rapidement et un menu latéral est disponible pour d'autres fonctionnalités.
 
- ![](https://becauseofprog.fr/assets/articles/onenote/onenote-2.PNG)
+ ![](/img/articles/microsoft-onenote/onenote-2.webp)
 
- ![](/img/articles/microsoft-onenote/onenote-4.png)
+ ![](/img/articles/microsoft-onenote/onenote-4.webp)
 
  *Interface de l'application sur PC et smartphone Android*
 
@@ -38,9 +38,9 @@ Vous connaissez peut-être des applications qui vous permettent de prendre des n
 
  Si vous êtes avec un stylo et un écran tactile, pas de problème ! OneNote fournit des quadrillages et des couleurs de pages pour vos notes papier, mais pas trop...
 
- ![](https://becauseofprog.fr/assets/articles/onenote/onenote-3.PNG)
+ ![](/img/articles/microsoft-onenote/onenote-3.webp)
 
- ![](/img/articles/microsoft-onenote/onenote-5.png)
+ ![](/img/articles/microsoft-onenote/onenote-5.webp)
 
  *Ecriture d'une note sur PC et smartphone Android*
 

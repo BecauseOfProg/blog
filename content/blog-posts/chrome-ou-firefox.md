@@ -46,7 +46,7 @@ timestamp: 1491413339
 
  Chrome dispose aussi d'un mode "Caster" simple à utiliser, si vous avez chez vous un Chromecast ou une Smart TV. Vous cliquez et ça marche. Mais, car Chrome est avant tout Google, il aura plus tendance à vous espionner, afin de savoir où vous allez et ainsi vous proposer des publicités ciblées.
 
- ![Synchronisation](/img/articles/chrome-ou-firefox/Synchronisation.png)
+ ![Synchronisation](/img/articles/chrome-ou-firefox/Synchronisation.webp)
 
  [*(voir source image)*](https://www.it-connect.fr/sauvegarde-ou-synchronisation/)
 

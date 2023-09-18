@@ -1,7 +1,7 @@
 ---
 title: "Le site mobile d’Instagram mis à jour : Une application ultra-Lite"
 description: "Hier, le site internet mobile d’Instagram a été mis à jour. Les utilisateurs peuvent désormais poster des photos sans l’application Instagram du Play Store et utiliser ce site comme application android"
-banner: /img/articles/instagram-mobile-web/instagram-mobile-web.png
+banner: /img/articles/instagram-mobile-web/instagram-mobile-web.webp
 type: article
 authorId: gildasgh
 category: web

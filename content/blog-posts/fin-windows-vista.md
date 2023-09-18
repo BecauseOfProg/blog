@@ -1,7 +1,7 @@
 ---
 title: "RIP Windows Vista"
 description: "Le support de Windows Vista et de Internet Explorer est désormais fini"
-banner: /img/articles/fin-windows-vista/rip-windows-vista.png
+banner: /img/articles/fin-windows-vista/rip-windows-vista.webp
 type: article
 authorId: gildasgh
 category: windows
@@ -9,7 +9,7 @@ labels: ["Windows", "Vista", "RIP", "IE9", "Internet Explorer", "Microsoft"]
 timestamp: 1491992662
 ---
 
- ![Boîte Windows Vista Ultimate](/img/articles/fin-windows-vista/boite-windows-vista-ultimate_00FA000000043641.png)
+ ![Boîte Windows Vista Ultimate](/img/articles/fin-windows-vista/boite-windows-vista-ultimate_00FA000000043641.webp)
 
 ### Windows Vista, c'est officiellement fini!
 

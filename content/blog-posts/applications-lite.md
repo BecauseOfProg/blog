@@ -1,7 +1,7 @@
 ---
 title: "Les applications “Lite”"
 description: "Les lite apps, applications de taille réduite et performances optimisées sont à la mode chez les grandes firmes qui ont des applications bien trop lourdes pour les téléphones et le réseau Indien. En voici une liste, et comment les télécharger !"
-banner: /img/articles/applications-lite/lite-apps.png
+banner: /img/articles/applications-lite/lite-apps.webp
 type: article
 authorId: gildasgh
 category: software
@@ -69,7 +69,7 @@ Nous avons présenté dans un article hier la nouvelle version du site mobile d�
 
  Site officiel : <https://newpipe.schabi.org/>
 
- ![](/img/articles/applications-lite/2.png)
+ ![](/img/articles/applications-lite/2.webp)
 
  7) YouTube Go
 -------------

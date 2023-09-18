@@ -11,7 +11,7 @@ timestamp: 1494162497
 
 Le Material Design est un type de design créé par Google et qui a la particularité d'être très moderne et épuré. On le voit de plus en plus dans les applications Android et sur les sites web. Aujourd'hui, nous allons voir comment faire notre propre site avec des frameworks basés sur le Material Design.
 
- ![](/img/articles/material-design-web/freebie___weather_app_ui_design_by_graphberry-d8m33wj.png)![ups](/img/articles/material-design-web/md-example.jpg)
+ ![](/img/articles/material-design-web/freebie___weather_app_ui_design_by_graphberry-d8m33wj.webp)![ups](/img/articles/material-design-web/md-example.jpg)
 
  *Exemples d'applications en Material Design et principe général*
 
@@ -19,7 +19,7 @@ Le Material Design est un type de design créé par Google et qui a la particula
 
  Le premier framework nous parvient directement de Google puisque c'est celui de base, c'est un peu la référence dans le Material Design. Il comporte beaucoup d'éléments personnalisables ainsi que des animations faites en JavaScript. Il repose sur un système de grille et de layout qui facilite la conception du site.
 
- ![](/img/articles/material-design-web/1foCgfXyJv5FjACTnEXpc0A.png)![](https://becauseofprog.fr/assets/articles/mdl2.PNG)
+ ![](/img/articles/material-design-web/1foCgfXyJv5FjACTnEXpc0A.webp)![](/img/articles/material-design-web/md2.webp)
 
  *Exemples de sites construits avec Material Design Lite*
 
@@ -29,7 +29,7 @@ Le Material Design est un type de design créé par Google et qui a la particula
   
   Après cela, allez sur <https://getmdl.io/components/index.html> et commencez à créer votre site ! Choisissez les éléments que vous voulez placer et ajoutez-les à votre guise. Je vous conseille de commencer par "layout" qui va vous permettre de structurer votre en-tête, votre pied de page ainsi que le contenu principal de votre site.
 
- ![](https://becauseofprog.fr/assets/articles/mdl-doc1.PNG)![](https://becauseofprog.fr/assets/articles/mdl-doc2.PNG)
+ ![](/img/articles/material-design-web/mdl-doc1.webp)![](/img/articles/material-design-web/mdl-doc2.webp)
 
  *Documentation de Material Design Lite*
 
@@ -39,7 +39,7 @@ Le Material Design est un type de design créé par Google et qui a la particula
 
  Materialize est aussi un framework CSS mais il est moins compliqué à pratiquer que Material Design Lite. Il se base aussi sur un système de grille mais n'a pas de "layout". Cela permet un peu plus de flexibilité. Il faudra par contre intégrer manuellement le JavaScript pour certaines fonctions.
 
- ![](https://becauseofprog.fr/assets/articles/materialize1.PNG)![](https://becauseofprog.fr/assets/articles/materialize2.PNG)
+ ![](/img/articles/material-design-web/materialize1.webp)![](/img/articles/material-design-web/materialize2.webp)
 
  *Exemples de sites web construits avec Materialize*
 
@@ -50,7 +50,7 @@ Le Material Design est un type de design créé par Google et qui a la particula
   <!DOCTYPE html> <html> <head> <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/> <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script> <script type="text/javascript" src="js/materialize.min.js"></script> <meta name="viewport" content="width=device-width, initial-scale=1.0"/> </head> <body> <!-- Contenu de la page --> </body> </html> Après cela, vous pouvez commencer à explorer le framework ainsi que ses composants ! Le principal avantage que vous avez, c'est que la documentation est en grande partie en français.  
  Je vous conseille d'abord de commencer par "Color" afin de comprendre le système des couleurs de Materialize, puis ensuite par "Grid" pour comprendre le système de grille.
 
- ![](https://becauseofprog.fr/assets/articles/materialize-doc1.PNG)![](https://becauseofprog.fr/assets/articles/materialize-doc2.PNG)
+ ![](/img/articles/material-design-web/materialize-doc1.webp)![](/img/articles/material-design-web/materialize-doc2.webp)
 
  *Captures d'écran de la documentation Materialize*
 
@@ -60,11 +60,11 @@ Le Material Design est un type de design créé par Google et qui a la particula
 
  Vous avez maintenant votre framework CSS. Ajoutez donc des icônes pour rendre cela plus joyeux ! La stylesheet des icônes est déjà intégrée de base avec le code source que vous avez copié. Rendez-vous donc sur <https://www.materialpalette.com/icons>, choisissez l'icône qui vous plaît et copiez le code donné avec. Vous pouvez également ajouter les classes *right* et *left* pour l'alignement, et *tiny*, *small*, *medium* ou *large* pour les tailles.
 
- ![](https://becauseofprog.fr/assets/articles/mdi.PNG)![](https://becauseofprog.fr/assets/articles/mdi2.PNG)
+ ![](/img/articles/material-design-web/mdi.webp)![](/img/articles/material-design-web/mdi2.webp)
 
  *Interface de Material Design Icons*
 
- ![](https://becauseofprog.fr/assets/articles/mdi-usage.PNG)
+ ![](/img/articles/material-design-web/mdi-usage.webp)
 
  *Utilisation des icônes sur le menu de la BecauseOfProg*
 

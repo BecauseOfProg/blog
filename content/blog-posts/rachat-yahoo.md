@@ -1,7 +1,7 @@
 ---
 title: "Le rachat de Yahoo"
 description: "La finalisation du rachat de Yahoo par le géant américain de la télécommunication Verizon a été finalisé mardi dernier."
-banner: /img/articles/rachat-yahoo/yahoo.png
+banner: /img/articles/rachat-yahoo/yahoo.webp
 type: flash
 authorId: stengarlis
 category: web
@@ -17,7 +17,7 @@ La finalisation du rachat de Yahoo par le géant américain de la télécommunic
 
   
 
- ![Verizon](/img/articles/rachat-yahoo/rachat-yahoo-verizon.png)Suite au rachat, Verizon va fusionner Yahoo! et le portail AOL pour donner naissance à Oath. C'est aussi la fin du pionnier d'internet Yahoo créé en 1994 par David Filo & Jerry Yang puis racheter en 2009 par Microsoft.
+ ![Verizon](/img/articles/rachat-yahoo/rachat-yahoo-verizon.webp)Suite au rachat, Verizon va fusionner Yahoo! et le portail AOL pour donner naissance à Oath. C'est aussi la fin du pionnier d'internet Yahoo créé en 1994 par David Filo & Jerry Yang puis racheter en 2009 par Microsoft.
 
   
 

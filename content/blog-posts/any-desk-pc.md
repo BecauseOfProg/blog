@@ -1,7 +1,7 @@
 ---
 title: "Contrôler son PC à distance avec AnyDesk !"
 description: "Une application non open-source pour contrôler son ordinateur à distance facilement et rapidement !"
-banner: /img/articles/any-desk-pc/anydesk-compressor.png
+banner: /img/articles/any-desk-pc/anydesk-compressor.webp
 type: article
 authorId: kernoeb
 category: software
@@ -19,7 +19,7 @@ Bonjour à tous et à toutes,
 
  Autres avantages (*à vérifier tout de même, mais après 1 mois d'utilisation, ça me paraît correct*) :
 
- ![](/img/articles/any-desk-pc/avantages-compressor.png)
+ ![](/img/articles/any-desk-pc/avantages-compressor.webp)
 
  Il n'y a donc pas de **limite** de débit, pas de limites de transfert...  
  En effet, vous pouvez **envoyer des fichiers** entre les deux appareils, avec un simple copier-coller ! 

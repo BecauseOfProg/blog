@@ -1,7 +1,7 @@
 ---
 title: "Lancement de la BecauseOfProg !"
 description: "Le grand lancement de la BecauseOfProg ! "
-banner: /img/articles/lancement-becauseofprog/bop-lancement.png
+banner: /img/articles/lancement-becauseofprog/bop-lancement.webp
 type: article
 authorId: theovld
 category: web

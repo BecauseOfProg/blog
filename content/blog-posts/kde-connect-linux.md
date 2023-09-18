@@ -1,7 +1,7 @@
 ---
 title: "KDE Connect - Connecter son PC Linux à son smartphone Android"
 description: "Synchronisez votre appareil Android avec votre PC Linux ! "
-banner: /img/articles/kde-connect-linux/kdeconnect-wallpaller.png
+banner: /img/articles/kde-connect-linux/kdeconnect-wallpaller.webp
 type: article
 authorId: kernoeb
 category: linux
@@ -54,7 +54,7 @@ Dans le cas **contraire**, saisissez une à une ces 3 commandes:
 
  Votre smartphone et votre PC doivent être connectés à la **même box Internet** (Ethernet/Wi-Fi).
 
- ![](/img/articles/kde-connect-linux/kdeconnect-2.png) ![](/img/articles/kde-connect-linux/kdeconnect-3.png)
+ ![](/img/articles/kde-connect-linux/kdeconnect-2.webp) ![](/img/articles/kde-connect-linux/kdeconnect-3.webp)
 
  Cliquez sur "**Rafraîchir**" si votre smartphone n'est pas trouvé, puis cliquez sur "**Demander un appairement**".  
  Vous devriez recevoir une notification sur votre smartphone, cliquez sur "**Accepter**". (*sans blague...*)
@@ -63,11 +63,11 @@ Dans le cas **contraire**, saisissez une à une ces 3 commandes:
 
  Depuis l'application, vous pouvez **envoyer des fichiers**, contrôler les **actions multimédia**, et contrôler la **souris** et le **clavier** du PC.
 
- ![](/img/articles/kde-connect-linux/kdeconnect-4.png) ![](/img/articles/kde-connect-linux/kdeconnect-5.png)
+ ![](/img/articles/kde-connect-linux/kdeconnect-4.webp) ![](/img/articles/kde-connect-linux/kdeconnect-5.webp)
 
  Inversement, vous pouvez envoyer des fichiers depuis votre ordinateur vers le smartphone, directement depuis le gestionnaire de fichiers:
 
- ![](/img/articles/kde-connect-linux/kdeconnect-6.png)
+ ![](/img/articles/kde-connect-linux/kdeconnect-6.webp)
 
  ou depuis l'icône présent dans votre barre des tâches, qui vous permet aussi d'**envoyer des SMS**, et consulter le niveau actuel de la **batterie** du smartphone.
 

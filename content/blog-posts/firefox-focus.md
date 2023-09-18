@@ -1,7 +1,7 @@
 ---
 title: "Firefox Focus, un mini-navigateur qui préserve votre vie privée."
 description: "Un navigateur open-source crée par Mozilla."
-banner: /img/articles/firefox-focus/firefox-focus.png
+banner: /img/articles/firefox-focus/firefox-focus.webp
 type: article
 authorId: kernoeb
 category: software
@@ -11,11 +11,11 @@ timestamp: 1500663327
 
 Si vous recherchez un petit navigateur Internet simple, rapide, bloqueur de pubs et de traqueurs, **open-source** et qui préserve votre **vie privée**, je vous conseille cette application disponible sur Android & IOS, développée par Mozilla: **Firefox Focus**.
 
- ![](/img/articles/firefox-focus/firefox-focus-1.png)
+ ![](/img/articles/firefox-focus/firefox-focus-1.webp)
 
- ![](/img/articles/firefox-focus/firefox-focus-2.png)
+ ![](/img/articles/firefox-focus/firefox-focus-2.webp)
 
- ![](/img/articles/firefox-focus/firefox-focus-3.png)
+ ![](/img/articles/firefox-focus/firefox-focus-3.webp)
 
  Après quelques tests, on ne peut pas nier que le navigateur est rapide, que ce soit l'ouverture ou le chargement des pages. 
 
@@ -26,7 +26,7 @@ Si vous recherchez un petit navigateur Internet simple, rapide, bloqueur de pubs
  
 >  *Et comme le dit si bien ce commentaire:*
 > 
->  ![](/img/articles/firefox-focus/firefox-focus-4.png)
+>  ![](/img/articles/firefox-focus/firefox-focus-4.webp)
 > 
 >    
 

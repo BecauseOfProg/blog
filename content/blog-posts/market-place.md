@@ -1,7 +1,7 @@
 ---
 title: "Le Facebook Market Place"
 description: "Après une sortie au Etats-Unis, Market Place débarque en Europe dans quelques jours !"
-banner: /img/articles/market-place/marketplace.png
+banner: /img/articles/market-place/marketplace.webp
 type: flash
 authorId: stengarlis
 category: web

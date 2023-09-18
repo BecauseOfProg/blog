@@ -1,7 +1,7 @@
 ---
 title: "Comment activer le serveur SSH de Gitea ou de Gogs?"
 description: "Voici comment configurer le serveur SSH intégré dans Gogs et Gitea, pour pouvoir gérer et mettre à jour vos dépôts en toute simplicité, comme sur GitHub."
-banner: /img/articles/activer-serveur-ssh-gitea-gogs/gitea-gogs-ssh.png
+banner: /img/articles/activer-serveur-ssh-gitea-gogs/gitea-gogs-ssh.webp
 type: tutorial
 authorId: gildasgh
 category: programming

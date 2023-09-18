@@ -1,7 +1,7 @@
 ---
 title: "Android Oreo"
 description: "Nous avons enfin après beaucoup d’attente et après une éclipse au-dessus des États-Unis, le nom du nouveau système d’Android, Android Oreo !"
-banner: /img/articles/android-oreo/android-o-oreo.png
+banner: /img/articles/android-oreo/android-o-oreo.webp
 type: flash
 authorId: stengarlis
 category: android

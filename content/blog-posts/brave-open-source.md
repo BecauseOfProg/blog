@@ -22,11 +22,11 @@ Je tombe sur cette vidéo, qui me donne envie d'en savoir plus (*je ne suis pour
 J'apprends que ce navigateur est disponible sous (presque) toutes les plateformes, en passant par PC et smartphones.  
 Je l'installe alors depuis mon PC sous Linux ElementaryOS Loki.  
 
-![](/img/articles/brave-open-source/Capture_d_cran_du_2017_05_04_16_56_05.png)
+![](/img/articles/brave-open-source/Capture-d-cran-du-2017-05-04-16-56-05.webp)
 
 Interface épurée, simple, **ergonomique**. Pas d'outils parasites *inutiles*. Et il est **open source** !  
   
-![](/img/articles/brave-open-source/Capture_d_cran_du_2017_05_04_17_33_52.png)  
+![](/img/articles/brave-open-source/Capture-d-cran-du-2017-05-04-17-33-52.webp)  
 
 Un **bloqueur de pub** intégré modifiable, des options intéressantes (*pas comme mon histoire du début*)...  
 Et pour cela, pas besoin de chercher bien loin, une seule icône en haut à droite, tout simplement l'icône officielle de **Brave** : 
@@ -35,11 +35,11 @@ Et pour cela, pas besoin de chercher bien loin, une seule icône en haut à droi
   
 Très **rapide**, il dispose d'options intéressantes, jamais testées pour ma part, comme **Brave Payments** et **Brave Sync**.  
 
-![](/img/articles/brave-open-source/dnmOrro.png)  
+![](/img/articles/brave-open-source/dnmOrro.webp)  
 
 *- Brave Payments*  
 
-![](/img/articles/brave-open-source/5S0JNI6.png)  
+![](/img/articles/brave-open-source/5S0JNI6.webp)  
   
 Voici une vidéo de **présentation** (en anglais, mais une image vaut mille mots, je vous laisse faire le calcul vu que la vidéo est en 30fps) :  
 <https://youtu.be/kLiLOkzLetE>  
@@ -60,5 +60,4 @@ C'est mon navigateur **par défaut**. Il ressemble comme deux gouttes d'eau à C
 
 Voilà, c'est la fin de cet article, je vous conseille de l'essayer si ça vous intéresse !  
 Merci d'avoir lu :)  
-**Cordialement**, OrNicarZ.  
-![](/img/articles/brave-open-source/brave_logo_2color_512x.png)
+**Cordialement**, OrNicarZ.

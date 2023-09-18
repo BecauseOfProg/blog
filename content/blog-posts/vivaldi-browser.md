@@ -1,7 +1,7 @@
 ---
 title: "Vivaldi, le meilleur navigateur Internet ?"
 description: "Vivaldi, navigateur basé sur Opera & Chromium, beau, simple et rapide :)"
-banner: /img/articles/vivaldi-browser/vivaldi.png
+banner: /img/articles/vivaldi-browser/vivaldi.webp
 type: article
 authorId: kernoeb
 category: software
@@ -13,7 +13,7 @@ Des **navigateurs** Internet, il en existe une multitude.
  Dans mon article sur **[Brave](https://becauseofprog.fr/blog/brave-open-source-27) *(voir l'article)***, je vous parlais de la communauté **Mastodon** qui m'avait conseillé ce navigateur.  
  Je vous avais promis de parler d'un autre navigateur *(plus connu)* qui m'a été présenté *(je le connaissais déjà avant, à l'époque où celui-ci buggait pas mal)*...
 
-### **VIVALDI** ![](/img/articles/vivaldi-browser/logo.png)
+### **VIVALDI** ![](/img/articles/vivaldi-browser/logo.webp)
 
  Mais **Vivaldi**, c'est quoi ?
 
@@ -72,11 +72,11 @@ Des **navigateurs** Internet, il en existe une multitude.
 
  ![](/img/articles/vivaldi-browser/6.jpg)
 
- ![](/img/articles/vivaldi-browser/1.png)
+ ![](/img/articles/vivaldi-browser/1.webp)
 
  *(ApproachingNirvana <3)*
 
- ![](/img/articles/vivaldi-browser/2.png)
+ ![](/img/articles/vivaldi-browser/2.webp)
 
  *Personnalisation incroyable / nombre de thèmes infinis !*
 

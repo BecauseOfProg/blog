@@ -1,7 +1,7 @@
 ---
 title: "Android dévoile le nom de son nouveau système ce soir !"
 description: "Android dévoile ce soir le nom du nouveau système Android !"
-banner: /img/articles/android-o-le-nom-ce-soir/android-o-ce-soir.png
+banner: /img/articles/android-o-le-nom-ce-soir/android-o-ce-soir.webp
 type: flash
 authorId: stengarlis
 category: android

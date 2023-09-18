@@ -1,7 +1,7 @@
 ---
 title: "SFR change de nom : Altice."
 description: "La marque SFR prend le nom de sa maison-mère, Altice."
-banner: /img/articles/sfr-change-de-nom-altice/sfr.png
+banner: /img/articles/sfr-change-de-nom-altice/sfr.webp
 type: article
 authorId: kernoeb
 category: web
@@ -19,7 +19,7 @@ timestamp: 1495537045
  **Altice** est un groupe multinational regroupant des câblo-opérateurs, des opérateurs de télécommunications et des entreprises de communications, créée par Patrick Drahi en 2001.
 
  En avril 2014, ***Altice*** rachète **SFR**, mais SFR garde son nom.  
- ![Logo d'Altice actuel](/img/articles/sfr-change-de-nom-altice/sfr-change-de-nom-2.png)
+ ![Logo d'Altice actuel](/img/articles/sfr-change-de-nom-altice/sfr-change-de-nom-2.webp)
 
  
 >  Le logo d'Altice actuel

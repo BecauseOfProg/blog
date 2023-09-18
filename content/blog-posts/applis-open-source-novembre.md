@@ -1,7 +1,7 @@
 ---
 title: "Mes applis Android Open-Source - Novembre 2017 "
 description: "Une liste non-exhaustive des applications open-source du F-Droid que j'utilise ce mois-ci ! "
-banner: /img/articles/applis-open-source-novembre/36apps.png
+banner: /img/articles/applis-open-source-novembre/36apps.webp
 type: article
 authorId: kernoeb
 category: android

@@ -1,7 +1,7 @@
 ---
 title: "Mes applis Android Open-Source - Juillet 2018"
 description: "Liste non exhaustive des applications open-source que j'utilise en juillet 2018!"
-banner: /img/articles/android-open-source-juillet/applis-open-source-juillet-2018.png
+banner: /img/articles/android-open-source-juillet/applis-open-source-juillet-2018.webp
 type: article
 authorId: kernoeb
 category: android

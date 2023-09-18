@@ -1,7 +1,7 @@
 ---
 title: "Contourner le mot de passe admin Windows"
 description: "Comment créer, modifier et supprimer des administrateurs Windows sans avoir le mot de passe admin?"
-banner: /img/articles/bypass-windows-admin-password/bop-article.png
+banner: /img/articles/bypass-windows-admin-password/bop-article.webp
 type: article
 authorId: gildasgh
 category: windows

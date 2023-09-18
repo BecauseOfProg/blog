@@ -1,7 +1,7 @@
 ---
 title: "Les addons pratiques pour Firefox"
 description: "Voici une liste personnelle d’addons utiles et pratiques que j’utilise sur Firefox 57 Quantum."
-banner: /img/articles/addons-pratiques-firefox/addons-firefox.png
+banner: /img/articles/addons-pratiques-firefox/addons-firefox.webp
 type: article
 authorId: gildasgh
 category: software

@@ -23,7 +23,7 @@ Petit article rapide, mais efficace.
  *Selon notre ami Wikipédia, un "**décompilateur**" est un outil servant à reconstituer, partiellement ou totalement, le code source d’un logiciel à partir d’un programme exécutable alors dans un format binaire.*
 
  
->  *Vous me suivez toujours ? ![wink](/img/articles/decompiler-un-apk-android/wink_smile.png "wink")*
+>  *Vous me suivez toujours ? ![wink](/img/articles/decompiler-un-apk-android/wink_smile.webp "wink")*
  
    En supposant que oui, c'est désormais **possible**, rapidement et facilement.
 
@@ -43,7 +43,7 @@ Petit article rapide, mais efficace.
 
  **Voici un aperçu bref de l'application. **
 
- ![](/img/articles/decompiler-un-apk-android/apktool_menu.png) ![](/img/articles/decompiler-un-apk-android/apktool_settings.png) ![](/img/articles/decompiler-un-apk-android/apktool_shortpress_folder.png)
+ ![](/img/articles/decompiler-un-apk-android/apktool_menu.avif) ![](/img/articles/decompiler-un-apk-android/apktool_settings.avif) ![](/img/articles/decompiler-un-apk-android/apktool_shortpress_folder.avif)
 
  Bon, l'application n'est pas parfaite. Il peut y a voir des bugs. Mais pour ma part elle fonctionne très bien. Dites-vous que c'est déjà incroyable une application comme ça.
 
@@ -55,9 +55,9 @@ Petit article rapide, mais efficace.
 
  Vous pouvez ensuite modifier ce que vous voulez, ou juste voir ce qu'il y a l'intérieur de l'appli (*je ne vous expliquerai pas les différentes parties d'une application dans cet article*), ensuite, vous pouvez recompiler l'application.
 
- Rien de bien compliqué, le plus dur étant de savoir parler un minimum **anglais** ![laugh](/img/articles/decompiler-un-apk-android/teeth_smile.png "laugh")
+ Rien de bien compliqué, le plus dur étant de savoir parler un minimum **anglais** ![laugh](/img/articles/decompiler-un-apk-android/teeth_smile.webp "laugh")
 
- ![](/img/articles/decompiler-un-apk-android/apktool_compiling.png)
+ ![](/img/articles/decompiler-un-apk-android/apktool_compiling.avif)
 
  Pour plus de renseignements, voici deux articles qui m'ont bien aidé à faire... cet article x)
 

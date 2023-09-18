@@ -13,7 +13,7 @@ Molotov est un service de télévision qui permet de regarder la télévision gr
 
 On remarque depuis maintenant plusieurs années que les jeunes sont bien moins intéressés par la télévision sur téléviseur, préfèrent la regarder sur internet ou ne pas la regarder. Pourtant, les chaînes de télévision peinent à lancer des applications pour reconquérir les jeunes, soit remplies de publicités soit mal construites.
 
-![Molotov sur Android](/img/articles/molotov-television/1_omsDh0svO0H_S2zPC3CI1A.png)
+![Molotov sur Android](/img/articles/molotov-television/1_omsDh0svO0H_S2zPC3CI1A.webp)
 
 Molotov est donc un service qui permet de regarder la télévision en direct et en replay sur certaines chaines gratuitement, sur Windows, Mac, Linux, sur smartphones : Iphone, iPad et Android mais aussi sur des télévisions : AppleTV, Nvidia Shield, Télévisions Samsung, LG et Sony, depuis leurs boutiques d'applications respectives !
 

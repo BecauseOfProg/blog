@@ -1,7 +1,7 @@
 ---
 title: "Protéger son site des attaques par formulaires"
 description: "Protéger son site des attaques de base : failles de sécurité dans ses formulaires HTML qui redirigent vers du traitement PHP."
-banner: /img/articles/proteger-site-formulaires/https.png
+banner: /img/articles/proteger-site-formulaires/https.webp
 type: tutorial
 authorId: theovld
 category: programming

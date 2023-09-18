@@ -1,7 +1,7 @@
 ---
 title: "Passer totalement à l'open source sur son smartphone Android, c'est possible ?"
 description: "Utiliser un smartphone 100% open-source ?"
-banner: /img/articles/open-source-android/androidopensource.png
+banner: /img/articles/open-source-android/androidopensource.webp
 type: article
 authorId: kernoeb
 category: android
@@ -32,7 +32,7 @@ Des options non disponibles sur l'Android de base. En plus, comme je disais, les
 sur les dernières versions disponibles, mais elles sont aussi **fréquentes**, et non obligatoires. C'est à **vous** de
 choisir si **vous **voulez mettre à jour votre appareil (*pas comme certaines firmes connues qui les obligent*).
 
-![LineageOS](/img/articles/open-source-android/14.png)
+![LineageOS](/img/articles/open-source-android/14.webp)
 
 Dans cet article, je ne vous parlerais pas trop de l'OS, je me concentrerais davantage sur les applications.  
 Mais, un article sur **LineageOS** est prévu dans le futur, de quoi intéresser nombreux de nos lecteurs, qui utilisent
@@ -58,7 +58,7 @@ Son poids très léger.
 Moins de 2Mo l'apk.
 
 Son interface simple, sobre.  
-![](/img/articles/open-source-android/7.png)![](/img/articles/open-source-android/8.png)
+![](/img/articles/open-source-android/7.webp)![](/img/articles/open-source-android/8.webp)
 
 *(Images tirées du Google Play Store)*
 
@@ -77,7 +77,7 @@ YouTube ne possède pas !
 >
 >
 
-![](/img/articles/open-source-android/6.png)
+![](/img/articles/open-source-android/6.webp)
 
 *Thème sombre de l'application.*
 
@@ -109,7 +109,7 @@ Si vous avez un serveur XMPP (***Extensible Messaging and Presence Protocol*** (
 extensible de présence et de messagerie »), essayez "**Conversations**". Pourtant payant sur le Play Store, il est
 gratuit sur F-Droid. Il propose un abonnement (8 euros/an, dont 6 mois gratuits) si vous n'avez pas de serveur XMPP.
 
-![](/img/articles/open-source-android/4-1.png) ![](/img/articles/open-source-android/5.png)
+![](/img/articles/open-source-android/4-1.webp) ![](/img/articles/open-source-android/5.webp)
 
 D'autres alternatives existent: <https://droid-break.info> pour plus d'info.
 
@@ -125,9 +125,9 @@ Des options assez sympathiques, comme l'envoi de GIF, messages éphémères, des
 J'aimerais l'utiliser plus souvent, mais malheureusement, elle est peu connue, donc je n'ai pas beaucoup d'amis (*déjà
 de base, je n'ai pas d'amis*) qui l'utilisent.
 
-![](/img/articles/open-source-android/13.png)
+![](/img/articles/open-source-android/13.webp)
 
-![](/img/articles/open-source-android/12.png)
+![](/img/articles/open-source-android/12.webp)
 
 Plus de renseignements sur <https://wire.com>.
 
@@ -142,7 +142,7 @@ Très complète, très belle, très simple.
 Disponible sur le Play Store: <https://play.google.com/store/apps/details?id=com.kabouzeid.gramophone&hl=fr>  
 et sur le dépôt *IzzyOnDroid* sur F-Droid (*voir le dépôt plus haut*).
 
-![](/img/articles/open-source-android/9.png) ![](/img/articles/open-source-android/11.png) ![](/img/articles/open-source-android/10.png)
+![](/img/articles/open-source-android/9.webp) ![](/img/articles/open-source-android/11.webp) ![](/img/articles/open-source-android/10.webp)
 
 #### **Lecteur vidéo / Video player**:
 
@@ -168,7 +168,7 @@ K9-Material: <https://fossdroid.com/a/k9-material-unofficial.html>
 ou <https://f-droid.org/repository/browse/?fdid=com.fsck.k9.material>
 ou <https://github.com/scoute-dich/K9-MailClient/blob/HEAD/README.md>
 
-![](/img/articles/open-source-android/1.png)
+![](/img/articles/open-source-android/1.webp)
 
 #### **ES Explorateur de Fichiers / File Explorer**:
 
@@ -178,7 +178,7 @@ et **efficace**. Efficace et pas cher (*gratuit*), c'est **Amaze** que j'préfè
 Play Store: <https://play.google.com/store/apps/details?id=com.amaze.filemanager>  
 F-Droid: <https://f-droid.org/repository/browse/?fdid=com.amaze.filemanager>
 
-![](/img/articles/open-source-android/2.png) ![](/img/articles/open-source-android/3.png) ![](/img/articles/open-source-android/4.png)
+![](/img/articles/open-source-android/2.webp) ![](/img/articles/open-source-android/3.webp) ![](/img/articles/open-source-android/4.webp)
 
 #### **Google Maps:**
 

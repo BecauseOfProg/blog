@@ -1,7 +1,7 @@
 ---
 title: "Changer le message du jour sur Linux"
 description: "Voici comment changer simplement le message qui s'affiche lors de la connexion à un utilisateur Linux :D"
-banner: /img/articles/changer-motd-linux/changer-motd-linux-4.png
+banner: /img/articles/changer-motd-linux/changer-motd-linux-4.webp
 type: tutorial
 authorId: gildasgh
 category: linux
@@ -31,7 +31,7 @@ Quand vous vous connectez dans un terminal sur le système GNU/Linux, vous pouve
  Vous aurez à modifier un, et un seul fichier : /etc/profile.d/motd.sh qui contient lui aussi des commandes bash que vous pouvez personnaliser à volonté ! Par exemple, voici un petit script pour choisir un texte à afficher parmi une liste au hasard :
 
 ```bash
-   #! /bin/bash MSGS=("Message 1" "Le deuxième" "Et le dernier!") MSG=${MSGS[$RANDOM % ${#MSGS[@]} ]} echo "Bienvenue! $MSG";  ![Capture d'écran du MOTD du terminal.](/img/articles/changer-motd-linux/change-motd-linux-1.png)
+   #! /bin/bash MSGS=("Message 1" "Le deuxième" "Et le dernier!") MSG=${MSGS[$RANDOM % ${#MSGS[@]} ]} echo "Bienvenue! $MSG";  ![Capture d'écran du MOTD du terminal.](/img/articles/changer-motd-linux/change-motd-linux-1.webp)
 ```
 
  Vous savez maintenant comment faire, soyez créatifs ! Bon weekend !

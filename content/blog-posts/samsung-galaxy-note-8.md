@@ -49,7 +49,7 @@ Vous avez peut-être entendu parler de lui ces derniers jours : Le Samsung Galax
 
  Le téléphone est équipé d’Android 7.1.1 Nougat avec une interface Samsung Experience, mais prévoit une mise à jour vers Android 8.0 Oreo (qui s’apprête à sortir) : vous pouvez dès à présent voir quelles sont les nouveautés de cet OS.
 
- ![Android Oreo](/img/articles/samsung-galaxy-note-8/android-o-oreo.png)
+ ![Android Oreo](/img/articles/samsung-galaxy-note-8/android-o-oreo.webp)
 
  
 >  Android Oreo

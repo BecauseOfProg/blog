@@ -1,7 +1,7 @@
 ---
 title: "Installer Adobe Flash Player sur Brave Browser (Linux)"
 description: "Installer Adobe Flash Player sur Brave (Linux) peut s'avérer difficile ! Voici un article donnant une méthode facile et rapide pour le faire !"
-banner: /img/articles/adobe-flash-brave-linux/flashplayer-install.png
+banner: /img/articles/adobe-flash-brave-linux/flashplayer-install.webp
 type: tutorial
 authorId: kernoeb
 category: linux
@@ -61,11 +61,11 @@ Utilisez cette commande pour ouvrir Brave `/usr/bin/brave-browser-stable --ppapi
 
 7. **Cliquez** sur la petite fenêtre Flash
 
-![image-20200318192531227](/img/articles/adobe-flash-brave-linux/adobe-flash-1.png)
+![image-20200318192531227](/img/articles/adobe-flash-brave-linux/adobe-flash-1.webp)
 
 8. **Autorisez**
 
-![image-20200318192548978](/img/articles/adobe-flash-brave-linux/adobe-flash-2.png)
+![image-20200318192548978](/img/articles/adobe-flash-brave-linux/adobe-flash-2.webp)
 
 Et voilà, au prochain démarrage de Brave, Flash Player fonctionnera.
 

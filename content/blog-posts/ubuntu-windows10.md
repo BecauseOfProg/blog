@@ -27,29 +27,29 @@ Cliquez ensuite sur "**Système**", puis **"Informations système"** (en bas à 
 Dans la partie de droite, vous devez avoir une version supérieure (ou égale) à **14393**.  
 Pour ma part, je suis à *14393.593*. Vous devez disposer d'un ordinateur **64bit** !
 
-![](/img/articles/ubuntu-windows10/373431821.png)
+![](/img/articles/ubuntu-windows10/373431821.webp)
 
 Ensuite, retournez dans les Paramètres, puis accédez à **"Mise à jour et sécurité"**.  
 Cliquez ensuite sur **"Pour les développeurs"** (à gauche), ensuite cochez **"Mode développeur"**.
 
-![](/img/articles/ubuntu-windows10/7QzKNdN.png)  
+![](/img/articles/ubuntu-windows10/7QzKNdN.webp)  
 Voilà, ça, c'est fait. Ne vous inquiétez pas, c'est bientôt terminé ;)  
 Ouvrez le menu Démarrer et cherchez **"Activer ou désactiver des fonctionnalités Windows"**.
 
 Cliquez dessus :  
-![](/img/articles/ubuntu-windows10/SaNC5YQ.png)
+![](/img/articles/ubuntu-windows10/SaNC5YQ.webp)
 
 Une fenêtre comme celle-ci apparaît :
 
-![](/img/articles/ubuntu-windows10/N2cvrOK.png)
+![](/img/articles/ubuntu-windows10/N2cvrOK.webp)
 
 Descendez un peu et cochez "**Sous-système Windows pour Linux"**, puis "**OK"**.
 
 Si votre ordinateur ne le fait pas automatiquement, **redémarrez** votre ordinateur (l'étape la plus ennuyante, je l'avoue).  
 Voilà. Maintenant, ouvrez le menu Démarrer et cherchez **"Bash"**.  
-![](/img/articles/ubuntu-windows10/TZaqBLN.png)
+![](/img/articles/ubuntu-windows10/TZaqBLN.webp)
 
-![](/img/articles/ubuntu-windows10/jALsHrC.png)
+![](/img/articles/ubuntu-windows10/jALsHrC.webp)
 
 Puis faites ce qui est demandé, soit Tapez « **o** » dans la console (tapez pas trop fort, elle est fragile).
 
@@ -57,7 +57,7 @@ Patientez... (cela peut durer plusieurs minutes, ne vous inquiétez pas).
 
 Lorsque l'installation est terminée, (re)cherchez **Bash** sur le menu démarrer, et, incroyable, vous devriez apercevoir cela:
 
-![](/img/articles/ubuntu-windows10/gKhrlVs.png)
+![](/img/articles/ubuntu-windows10/gKhrlVs.webp)
 
 Et voilà ! 
 

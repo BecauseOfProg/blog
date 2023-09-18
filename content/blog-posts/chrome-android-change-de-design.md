@@ -15,13 +15,13 @@ Google a récemment publié, dans sa version de développement, une mise à jour
 
  Déjà sur la page d’accueil tout est mieux organisé : les sites les plus visités en mosaïque en haut avec des nouvelles ciblées plus bas. Le menu tout en bas propose des onglets qu’on a déjà l’habitude de visiter : il s’agit des téléchargements, favoris et de l’historique.
 
- ![Page d'accueil Chrome](/img/articles/chrome-android-change-de-design/chrome-new-design-accueil.png)![Téléchargements](/img/articles/chrome-android-change-de-design/chrome-new-design-downloads.png)
+ ![Page d'accueil Chrome](/img/articles/chrome-android-change-de-design/chrome-new-design-accueil.webp)![Téléchargements](/img/articles/chrome-android-change-de-design/chrome-new-design-downloads.webp)
 
- ![Favoris](/img/articles/chrome-android-change-de-design/chrome-new-design-favoris.png)![Historique](/img/articles/chrome-android-change-de-design/chrome-new-design-historique.png)
+ ![Favoris](/img/articles/chrome-android-change-de-design/chrome-new-design-favoris.webp)![Historique](/img/articles/chrome-android-change-de-design/chrome-new-design-historique.webp)
 
  Dès lors que l’on va sur une page, la navigation ne change pas tellement, simplement que la barre d’actions est désormais en bas.
 
- ![Navigation](/img/articles/chrome-android-change-de-design/chrome-new-design-navigation.png)
+ ![Navigation](/img/articles/chrome-android-change-de-design/chrome-new-design-navigation.webp)
 
  On peut alors glisser celle-ci vers le haut pour avoir accès rapidement à la page d’accueil.
 

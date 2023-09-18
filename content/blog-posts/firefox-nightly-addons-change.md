@@ -1,7 +1,7 @@
 ---
 title: "Firefox 57 : Les extensions sont toutes cassées!"
 description: "La Fondation Mozilla, qui édite Firefox, a annoncé le changement complet du fonctionnement des addons sur la version 57 de son navigateur. Explications."
-banner: /img/articles/firefox-nightly-addons-change/firefox-nightly-addons-change-1.png
+banner: /img/articles/firefox-nightly-addons-change/firefox-nightly-addons-change-1.webp
 type: article
 authorId: gildasgh
 category: software
