@@ -33,14 +33,20 @@ export default {
     }
   },
   mounted () {
-    document.addEventListener('scroll', (event) => {
-      if (typeof window === 'undefined') { return }
-      const top = window.pageYOffset || event.target.scrollTop || 0
-      this.active = top > this.threshold
-    })
+    document.addEventListener('scroll', this.checkScroll)
   },
   beforeDestroy () {
-    document.removeEventListener('scroll', () => {})
+    document.removeEventListener('scroll', this.checkScroll)
+  },
+  methods: {
+    checkScroll (event) {
+      if (typeof window === 'undefined') {
+        return
+      }
+
+      const top = window.pageYOffset || event.target.scrollTop || 0
+      this.active = top > this.threshold
+    }
   }
 }
 </script>
