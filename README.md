@@ -10,8 +10,8 @@
   <a href="https://github.com/BecauseOfProg/blog/releases">
     <img src="https://img.shields.io/github/v/release/BecauseOfProg/blog" alt="Latest release">
   </a>
-  <a href="./LICENSE">
-    <img src="https://img.shields.io/github/license/BecauseOfProg/blog" alt="License">
+  <a href="https://deepscan.io/dashboard#view=project&tid=12018&pid=25535&bid=800503">
+    <img src="https://deepscan.io/api/teams/12018/projects/25535/branches/800503/badge/grade.svg" alt="DeepScan grade">
   </a>
 </div>
 
