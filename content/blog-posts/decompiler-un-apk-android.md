@@ -9,64 +9,53 @@ labels: ["Android", "Astuce", "Apk"]
 timestamp: 1490547048
 ---
 
-Petit article rapide, mais efficace.
+*Article mis à jour le 23/09/2023*
 
- Présentation
-============
+### JADX
 
- Vous avez toujours voulu voir à l'intérieur d'une application **Android**, un "**.apk**", l'extraire pour voir ce qu'il y a dedans ? ![](https://lh5.ggpht.com/aCdAa44RDJNrNx2ZtN93_CsTV19w-NjBnbXI7B15PuqH0uAizyD-GEkvHqFaigGBqw=w300)
+> Téléchargement ici : [github.com/skylot/jadx](https://github.com/skylot/jadx)
 
- C'est pas aussi simple qu'un vulgaire **.zip** ... 
+Jadx est un outil en ligne de commande ou graphique qui permet de récupérer le code source d'une application Android.
 
- Un .**apk** est en effet compilé. Si on suit la logique, il faudrait donc le... **décompiler** !* *
+Pour l'utiliser, il suffit de lancer la commande suivante :
 
- *Selon notre ami Wikipédia, un "**décompilateur**" est un outil servant à reconstituer, partiellement ou totalement, le code source d’un logiciel à partir d’un programme exécutable alors dans un format binaire.*
+```bash
+jadx monApk.apk
+```
 
- 
->  *Vous me suivez toujours ? ![wink](/img/articles/decompiler-un-apk-android/wink_smile.webp "wink")*
- 
-   En supposant que oui, c'est désormais **possible**, rapidement et facilement.
+Vous pouvez aussi utiliser l'interface graphique en lançant la commande suivante :
 
- Il vous faut... une **application**. Oui. Une application pour décompiler une **application**.
+```bash
+jadx-gui
+```
 
- 
->  Note : Il vaut mieux être "**root**" pour utiliser cette application, sans quoi l'application risque de ne pas fonctionner
- 
-   *- " Bon, ok, si vous le dites, et j'utilise quoi pour faire ça ? "*
+### ApkTool
 
- -** ApkTool**** (**Téléchargement ici : [androidfilehost.com](https://www.androidfilehost.com/?w=files&flid=149532) - ArmV7 dans la plupart des cas, vérifiez tout de même**)**
+> Téléchargement ici : [apktool.org](https://apktool.org/)
 
- 
->  Note: Vous pouvez normalement utiliser ApkTool sous Windows & Linux, plus de renseignements ici: [Cliquer ici](https://ibotpeaches.github.io/Apktool/install/)
+À la différence de JADX, ApkTool permet surtout de récupérer les ressources de l'application (images, fichiers de configuration, etc.).
 
-   Aperçu
+L'avantage est que l'on peut modifier ces ressources et recompiler l'application pour obtenir un apk modifié.
 
- **Voici un aperçu bref de l'application. **
+Le code obtenu ne sera pas en Java, mais en Smali, un langage de bas niveau proche de l'assembleur.
 
- ![](/img/articles/decompiler-un-apk-android/apktool_menu.avif) ![](/img/articles/decompiler-un-apk-android/apktool_settings.avif) ![](/img/articles/decompiler-un-apk-android/apktool_shortpress_folder.avif)
+Après avoir installé ApkTool, il suffit de lancer la commande suivante :
 
- Bon, l'application n'est pas parfaite. Il peut y a voir des bugs. Mais pour ma part elle fonctionne très bien. Dites-vous que c'est déjà incroyable une application comme ça.
+```bash
+apktool d monApk.apk
+```
 
- Au lancement de l'application, je vous conseille d'aller directement dans les **paramètres** de l'app, et régler le mode **root**, sélectionner **l'AAPT*** et la version de l'application **ApkTool** que vous souhaitez utiliser lors de la décompilation.
+### Decompiler.com
 
- ******Il s'agit d'une partie du SDK qui permet d'ouvrir, de créer, modifier des archives .zip compatibles*
+> Site web : [decompiler.com](https://www.decompiler.com/)
 
- L'utilisation est simple, il vous faut un .**apk** (format de fichier d'une application sous Android, d'un paquet). Ensuite, cliquez dessus, et faites "*Decompile all*", en supposant que vous vouliez tout décompiler. 
+Si vous ne voulez pas installer de logiciel, vous pouvez utiliser le site Decompiler.com.
 
- Vous pouvez ensuite modifier ce que vous voulez, ou juste voir ce qu'il y a l'intérieur de l'appli (*je ne vous expliquerai pas les différentes parties d'une application dans cet article*), ensuite, vous pouvez recompiler l'application.
+Il vous suffit d'uploader votre apk et de le télécharger une fois décompilé.
 
- Rien de bien compliqué, le plus dur étant de savoir parler un minimum **anglais** ![laugh](/img/articles/decompiler-un-apk-android/teeth_smile.webp "laugh")
+### Annexes, pour aller plus loin
 
- ![](/img/articles/decompiler-un-apk-android/apktool_compiling.avif)
-
- Pour plus de renseignements, voici deux articles qui m'ont bien aidé à faire... cet article x)
-
- Téléchargements et sources
-
- <https://www.xda-developers.com/decompile-and-modify-apks-on-the-go-with-apktool-for-android/>
-
- <https://ibotpeaches.github.io/Apktool/install/>
-
- Merci :)
-
- **Cordialement**, ex-OrNicarZ 
+- https://book.hacktricks.xyz/mobile-pentesting/android-app-pentesting/apk-decompilers
+- https://apktool.org/docs/the-basics/building
+- https://book.hacktricks.xyz/mobile-pentesting/android-app-pentesting/frida-tutorial
+- https://github.com/frida/frida
