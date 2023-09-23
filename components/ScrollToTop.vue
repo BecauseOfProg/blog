@@ -38,6 +38,9 @@ export default {
       const top = window.pageYOffset || event.target.scrollTop || 0
       this.active = top > this.threshold
     })
+  },
+  beforeDestroy () {
+    document.removeEventListener('scroll', () => {})
   }
 }
 </script>
