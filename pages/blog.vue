@@ -67,7 +67,7 @@
                           {{ publication.description }}
                         </p>
                         <v-row
-                          class="d-flex justify-space-between ma-0"
+                          class="d-flex justify-space-between ma-0 text--secondary"
                         >
                           {{
                             $t('publication.publishedBy', {
