@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import { mdiThemeLightDark, mdiWeatherSunny, mdiWeatherNight } from '@mdi/js'
+import { mdiThemeLightDark, mdiWeatherNight, mdiWeatherSunny } from '@mdi/js'
 
 export default {
   name: 'ThemeSwitcher',
@@ -66,13 +66,28 @@ export default {
         return
       }
 
-      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
       setTimeout(() => {
-        this.$vuetify.theme.dark = prefersDark
+        this.$set(this.$vuetify.theme, 'dark', this.prefersDark())
       }, 0)
     },
+    /**
+     * Returns true if auto theme is dark
+     * @returns {boolean}
+     */
+    prefersDark () {
+      return !!(window && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    },
+    /**
+     * Set theme
+     * @param {'auto'|'dark'|'light'} theme
+     */
     setTheme (theme) {
-      this.$set(this.$vuetify.theme, 'dark', theme === 'dark')
+      this.$set(this.$vuetify.theme, 'dark',
+        theme === 'auto'
+          ? this.prefersDark()
+          : theme === 'dark'
+      )
+
       this.$cookies.set('theme', theme, {
         path: '/',
         maxAge: 60 * 60 * 24 * 365
