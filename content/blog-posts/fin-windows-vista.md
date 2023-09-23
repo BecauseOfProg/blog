@@ -21,4 +21,4 @@ timestamp: 1491992662
 >   Pour le successeur de Windows Vista, le bien-aimé Windows 7, la fin de tout support est programmée pour le 14 janvier 2020. Actuellement, sa part d'utilisateurs est de 48,41 %. La forme de Redmont conseille donc de passer sur Windows 10 si la configuration de l'ordinateur le permet.
 
  Par ailleurs, le support d'**Internet Explorer 9** se termine, et nous vous avons fait un article pour vous conseiller un nouveau navigateur web il y a quelques jours :  
- ["Navigateur web : Chrome ou Firefox ?"](https://becauseofprog.cf/blog/chrome-ou-firefox-15) 
+ [Navigateur web : Chrome ou Firefox ?](/article/chrome-ou-firefox) 

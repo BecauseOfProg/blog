@@ -11,7 +11,7 @@ timestamp: 1510153420
 
 Avant toute chose, sachez que votre appareil Android doit être **rooté** (*posséder toutes les permissions sur le système*).  
    
- Installer** Linux sur Android**, cela peut faire peur, mais la manipulation est en fait **très simple **! ;)
+ Installer **Linux sur Android**, cela peut faire peur, mais la manipulation est en fait **très simple **! ;)
 
 #### 1) Installer Linux Deploy
 
@@ -81,5 +81,3 @@ Avant toute chose, sachez que votre appareil Android doit être **rooté** (*pos
   
 
  *Si vous avez des questions, n'hésitez pas à me contacter sur le Discord BOP, je serais heureux de vous aider :)*
-
- Cordialement, ornicarz ;)

@@ -13,7 +13,7 @@
       <b-read-indicator :publication="publication.id" />
       {{ publication.title }}
     </span>
-    <p class="lecture-text mt-2 mb-3">
+    <p class="lecture-text mt-2 mb-3 text--secondary">
       {{ publication.description }}
     </p>
     <div>

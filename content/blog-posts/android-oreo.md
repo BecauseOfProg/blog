@@ -17,4 +17,4 @@ timestamp: 1503341729
 
  ![](/img/articles/android-oreo/oreo.webp)
 
- Un petit rappel, pour connaître les nouvelles fonctionnalités d’Android Oreo, **nous vous invitons à [lire cet article](https://becauseofprog.fr/blog/android-o-8) disponible sur la BecauseOfProg, par Exybore.**
+ Un petit rappel, pour connaître les nouvelles fonctionnalités d’Android Oreo, **nous vous invitons à [lire cet article](/article/android-o) disponible sur la BecauseOfProg, par Exybore.**

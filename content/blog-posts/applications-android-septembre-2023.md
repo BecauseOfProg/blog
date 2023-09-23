@@ -1,5 +1,5 @@
 ---
-title: "Mes Applications Android Open Source - Septembre 2023"
+title: "Mes applications Android Open Source - Septembre 2023"
 description: "Découvrez de nouvelles applis open-source à utiliser sur vos appareils Android !"
 banner: /img/articles/applications-android-septembre-2023/banner-open-source-september-2023.webp
 type: article

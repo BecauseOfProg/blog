@@ -16,6 +16,7 @@
           <b-card>
             <v-text-field
               v-model="search"
+              autofocus
               :label="`${$t('global.search')}...`"
               color="darker"
               :prepend-icon="mdiMagnify"

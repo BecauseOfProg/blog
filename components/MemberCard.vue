@@ -30,7 +30,9 @@
                 :href="social.link + social.value"
                 v-on="on"
               >
-                <v-icon>{{ social.icon }}</v-icon>
+                <v-icon :size="social.size || 24">
+                  {{ social.icon }}
+                </v-icon>
               </v-btn>
             </template>
             <span>{{ social.name }}</span>

@@ -9,7 +9,7 @@ labels: ["Android", "Live"]
 timestamp: 1503312414
 ---
 
-Ce soir, le nom officiel d’**Android O** sera disponible ! **Google** a déjà dévoilé quelques fonctionnalités comme les nouvelles notifications ([voir l'article dédié](https://becauseofprog.fr/blog/android-o-8)).
+Ce soir, le nom officiel d’**Android O** sera disponible ! **Google** a déjà dévoilé quelques fonctionnalités comme les nouvelles notifications ([voir l'article dédié](/article/android-o)).
 
  **Google doit dévoiler dans [un live, sur Youtube](https://www.youtube.com/watch?v=PiW2k-80Ruo), sa nouvelle version d’Android,** ce lundi à 20h30 en France, 14h30 heure de New York lors d’une éclipse solaire qui couvrira le ciel des États-Unis.
 

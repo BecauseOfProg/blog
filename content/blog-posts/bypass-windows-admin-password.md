@@ -95,7 +95,7 @@ votre ordinateur, d'autres personnes malintentionnées pourraient le faire (surt
 obtenir un accès administrateur et par la suite faire ce qu'il veut de l'ordinateur.
 
 Il vaut mieux prévenir que guérir. Les seules solutions pour empêcher à quiconque d'accéder à vos fichiers et de modifier
-les utilisateurs est de chiffrer le disque dur ou de changer de système d'exploitation (comme Linux ou MacOS). Chiffrer
+les utilisateurs est de chiffrer le disque dur ou de changer de système d'exploitation (comme Linux ou macOS). Chiffrer
 revient à rendre illisible un message ou des données, sauf avec une clé de chiffrement qui permet de chiffrer et de
 déchiffrer les données. La clé de chiffrement, dans le cas présenté ci-dessus serait votre mot de passe et sans
 celui-ci, aucun moyen de se connecter à votre session même en changeant le mot de passe avec net user, ou de regarder

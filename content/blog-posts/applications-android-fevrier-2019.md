@@ -1,5 +1,5 @@
 ---
-title: "Mes Applications Android Open Source - Février 2019"
+title: "Mes applications Android Open Source - Février 2019"
 description: "Découvrez de nouvelles applis open-source à utiliser sur vos appareils Android !"
 banner: /img/articles/applications-android-fevrier-2019/MAAOS_3.webp
 type: article

@@ -77,7 +77,7 @@
                 <h2 class="text-h4 text--text lecture-title mb-3">
                   {{ lastPublications[0].title }}
                 </h2>
-                <p class="lecture-text">
+                <p class="lecture-text text--secondary">
                   {{ lastPublications[0].description }}
                 </p>
               </v-col>

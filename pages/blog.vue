@@ -21,6 +21,7 @@
           <categories-chips include-all />
           <v-text-field
             v-model="search"
+            autofocus
             :label="`${$t('global.search')}...`"
             color="darker"
             outlined
@@ -44,6 +45,7 @@
                         <router-link :to="{ name: 'article-id', params: { id: publication.id }}">
                           <v-img
                             v-ripple
+                            style="border-radius: 20px"
                             :alt="publication.title"
                             :src="publication.banner"
                           />
@@ -58,28 +60,22 @@
                           :to="{ name: 'article-id', params: { id: publication.id }}"
                           class="text--text"
                         >
-                          <h3 class="text-h3 mb-8 lexture-title">
+                          <h3 class="text-h3 mb-5">
                             <b-read-indicator :publication="publication.id" />
                             {{ publication.title }}
                           </h3>
                         </router-link>
-                        <p class="lecture-text">
+                        <p class="lecture-text text--secondary">
                           {{ publication.description }}
                         </p>
-                        <v-row
-                          class="d-flex justify-space-between ma-0 text--secondary"
-                        >
-                          {{
-                            $t('publication.publishedBy', {
-                              author: publication.author.displayname,
-                              date: timestampToText(publication.timestamp)
-                            })
-                          }}
+                        <v-row class="d-flex justify-space-between ma-0 text--secondary" style="font-size: 12px">
+                          {{ $t('publication.publishedBy', { author: publication.author.displayname, date: timestampToText(publication.timestamp) }) }}
                           <router-link
                             v-if="category(publication.category)"
                             v-ripple
-                            :to="{ name: 'blog', params: { query: category(publication.category).id } }"
+                            :to="{ name: 'blog', query: { category: category(publication.category).id } }"
                             class="overline text--text"
+                            style="line-height: 0"
                           >
                             <v-icon>{{ category(publication.category).icon }}</v-icon>
                             {{ $t(`categories.${category(publication.category).id}`) }}

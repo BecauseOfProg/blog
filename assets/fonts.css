@@ -1,3 +1,9 @@
+.nuxt-content hr {
+  margin-bottom: 14px;
+  border-color: rgba(0, 0, 0, 0.12);
+  border-width: thin 0 0 0;
+}
+
 .nuxt-content img {
   max-width: min(100%, 400px);
   height: auto;
@@ -12,7 +18,7 @@
 .nuxt-content h6 {
   color: var(--v-text-base);
   padding-top: 5px;
-  line-height: 2.2rem !important;
+  line-height: 2.5rem !important;
 }
 
 .lecture-title.display-3,

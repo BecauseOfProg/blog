@@ -25,8 +25,8 @@
                 target="_blank"
                 text
               >
-                <v-icon left>
-                  {{ mdiTwitter }}
+                <v-icon left size="20">
+                  {{ mdiX }}
                 </v-icon>
                 {{ $t('devblog.followUs') }}
               </v-btn>
@@ -79,7 +79,8 @@
 </template>
 
 <script>
-import { mdiCodeBracesBox, mdiTwitter } from '@mdi/js'
+import { mdiCodeBracesBox } from '@mdi/js'
+import { mdiX } from '~/utils/icons'
 import ScrollToTop from '~/components/ScrollToTop.vue'
 
 export default {
@@ -90,7 +91,7 @@ export default {
       devblogs: [],
       page: 0,
       pages: 0,
-      mdiTwitter,
+      mdiX,
       mdiCodeBracesBox
     }
   },

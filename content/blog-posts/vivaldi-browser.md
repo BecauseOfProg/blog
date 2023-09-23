@@ -10,7 +10,7 @@ timestamp: 1495366599
 ---
 
 Des **navigateurs** Internet, il en existe une multitude.  
- Dans mon article sur **[Brave](https://becauseofprog.fr/blog/brave-open-source-27) *(voir l'article)***, je vous parlais de la communauté **Mastodon** qui m'avait conseillé ce navigateur.  
+ Dans mon article sur **[Brave](/article/brave-open-source) *(voir l'article)***, je vous parlais de la communauté **Mastodon** qui m'avait conseillé ce navigateur.  
  Je vous avais promis de parler d'un autre navigateur *(plus connu)* qui m'a été présenté *(je le connaissais déjà avant, à l'époque où celui-ci buggait pas mal)*...
 
 ### **VIVALDI** ![](/img/articles/vivaldi-browser/logo.webp)
@@ -99,7 +99,7 @@ Des **navigateurs** Internet, il en existe une multitude.
  **Son histoire:**
 
  En janvier 2015, **Vivaldi** est créé par l'ex-PDG de Opera : Jon Stephenson von Tetzchner.  
- Disponible sous Windows, Linux et MacOS.
+ Disponible sous Windows, Linux et macOS.
 
  **Vivaldi** a commencé en tant que site web communautaire pour remplacer ***My Opera***, arrêté par Opera en mars 2014. Le créateur de Vivaldi, a été mécontent de cette décision, et lance donc Vivaldi Community à la place de ***My Opera***, Vivaldi Community fournissant des forums de discussion, ainsi qu'un blog.
 
@@ -113,7 +113,7 @@ Des **navigateurs** Internet, il en existe une multitude.
  Aussi simple d'utilisation, **Vivaldi** se démarque par ses options originales et intéressantes.  
  Les mises-à-jour sont fréquentes, mais pas excessives, et apportent toujours quelque chose de bon.
 
- Dans son premier article, [**mentor6561**](https://becauseofprog.fr/members/?view=15) parlait de **Ecosia**: <https://becauseofprog.fr/blog/ecosia-le-moteur-de-demain-31>  
+ Dans son premier article, [**mentor6561**](https://becauseofprog.fr/members/?view=15) parlait de **Ecosia**: [ecosia-le-moteur-de-demain](/article/ecosia-le-moteur-de-demain)  
  et dernièrement, Vivaldi a ajouté Ecosia dans sa liste de moteurs de recherche *(article anglais)* :  
    
  Autre (grand) **avantage** de Vivaldi (*non disponible directement sous Opera*) :  
@@ -126,7 +126,5 @@ Des **navigateurs** Internet, il en existe une multitude.
 >  *Essayez Vivaldi, vous mettrez peut être plus de temps à vous y habituer, mais vous ne pourrez plus vous en passer !  
 >  <https://vivaldi.com/download/>*
 > 
->   C'est déjà la fin de cet article, merci de l'avoir lu jusqu'au bout :)  
- C'était OrNicarZ, over !
-
+>   C'est déjà la fin de cet article, merci de l'avoir lu jusqu'au bout :)
  

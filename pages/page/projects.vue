@@ -14,8 +14,6 @@
             <v-col
               v-if="devblog.length !== 0"
               cols="12"
-              md="8"
-              offset-md="2"
             >
               <router-link :to="{ name: 'devblog-id', params: { id: devblog.id }}">
                 <v-img
@@ -72,7 +70,10 @@
                 </h3>
                 <v-chip
                   :color="languages[project.language].color"
+                  small
+                  pill
                   outlined
+                  style="border: 0; margin-left: -5px"
                 >
                   <v-icon left>
                     {{ languages[project.language].icon }}
@@ -130,25 +131,24 @@
                 {{ $t('projects.description') }}
               </p>
               <template #actions>
+                <v-spacer />
                 <v-btn
                   color="white"
+                  icon
                   href="https://github.com/BecauseOfProg"
-                  text
                 >
-                  <v-icon left>
+                  <v-icon>
                     {{ icons['github'] }}
                   </v-icon>
-                  GitHub
                 </v-btn>
                 <v-btn
                   color="white"
+                  icon
                   href="https://twitter.com/BecauseOfProg"
-                  text
                 >
-                  <v-icon left>
+                  <v-icon size="20">
                     {{ icons['twitter'] }}
                   </v-icon>
-                  Twitter
                 </v-btn>
               </template>
             </b-card>
@@ -183,9 +183,9 @@
 </template>
 
 <script>
-import { mdiTwitter, mdiGithub, mdiWeb, mdiXml, mdiTextBoxMultipleOutline } from '@mdi/js'
+import { mdiGithub, mdiWeb, mdiXml, mdiTextBoxMultipleOutline } from '@mdi/js'
 import { languages, projects } from '@/utils/data'
-import { mdiDiscord } from '~/utils/icons'
+import { mdiDiscord, mdiX } from '~/utils/icons'
 
 export default {
   name: 'Projects',
@@ -197,7 +197,7 @@ export default {
         discord: mdiDiscord,
         website: mdiWeb,
         github: mdiGithub,
-        twitter: mdiTwitter
+        twitter: mdiX
       },
       devblog: {},
       projects,

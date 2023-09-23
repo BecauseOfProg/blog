@@ -12,7 +12,7 @@ timestamp: 1496493369
 Vous le savez, j'apprécie tout ce qui est **open source**, dont vous avez le "*code source ouvert*".  
 *Si vous utilisez un appareil Apple, je ne peux rien pour vous :)))*  
 Vous le savez aussi, j'utilise **F-Droid
-** [(voir l'article en question)](https://becauseofprog.fr/blog/f-droid-open-source-23).
+** [(voir l'article en question)](/article/f-droid-open-source-23).
 
 **Mais est-ce possible d'avoir sous les mains un smartphone 100% open source ?**
 
@@ -73,7 +73,7 @@ que j'en ai testé une bonne dizaine, elle n'est pas parfaite, mais elle fait bi
 YouTube ne possède pas !
 
 
-> Voir l'article pour plus de renseignements: <https://becauseofprog.fr/blog/f-droid-open-source-23>
+> Voir l'article pour plus de renseignements : [f-droid-open-source](/article/f-droid-open-source)
 >
 >
 
@@ -201,6 +201,6 @@ Il existe bien d'autres applications open source, je vous ai présenté ici les 
 À vous de choisir si vous souhaitez rester **closed source**, ou passer du côté obscur de l'**open source** :)))
 
 Merci d'avoir lu cet article :)  
-Cordialement, ornicarz.
+Cordialement, kernoeb.
 
  

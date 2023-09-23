@@ -65,7 +65,7 @@ Nous avons présenté dans un article hier la nouvelle version du site mobile d�
  6) NewPipe (YouTube)
 --------------------
 
- Cette application qu’ornicarz vous avait présenté il y a quelques semaines est, elle aussi, une version Lite. Cette application officieuse vous permet de télécharger, regarder en arrière-plan ou d’afficher la vidéo en popup.
+ Cette application que kernoeb vous avait présentée il y a quelques semaines est, elle aussi, une version Lite. Cette application officieuse vous permet de télécharger, regarder en arrière-plan ou d’afficher la vidéo en popup.
 
  Site officiel : <https://newpipe.schabi.org/>
 

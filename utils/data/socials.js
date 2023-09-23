@@ -1,9 +1,9 @@
-import { mdiWeb, mdiTwitter, mdiMastodon, mdiGithub, mdiInstagram, mdiReddit } from '@mdi/js'
-import { mdiDiscord } from '../icons'
+import { mdiWeb, mdiMastodon, mdiGithub, mdiInstagram, mdiReddit } from '@mdi/js'
+import { mdiDiscord, mdiX } from '../icons'
 
 const socials = [
   { id: 'website', name: 'Site web', icon: mdiWeb, color: 'darker', link: '' },
-  { id: 'twitter', name: 'Twitter', icon: mdiTwitter, color: 'light-blue', link: 'https://twitter.com/' },
+  { id: 'twitter', name: 'X (Twitter)', icon: mdiX, color: '#000000', link: 'https://twitter.com/', size: 20, sizeNormal: 26, sizeBig: 52, marginLeftNormal: '3px', marginTopNormal: '3px', marginLeftBig: '6px', marginTopBig: '6px' },
   { id: 'discord', name: 'Discord', icon: mdiDiscord, color: '#7289DA', link: '' },
   { id: 'mastodon', name: 'Mastodon', icon: mdiMastodon, color: 'blue', link: '' },
   { id: 'github', name: 'GitHub', icon: mdiGithub, color: '#24292e', link: 'https://github.com/' },
@@ -12,8 +12,8 @@ const socials = [
 ]
 
 const bopSocials = [
-  { ...getSocial('twitter'), value: 'BecauseOfProg' },
   { ...getSocial('discord'), value: 'https://discord.becauseofprog.fr' },
+  { ...getSocial('twitter'), value: 'BecauseOfProg' },
   { ...getSocial('mastodon'), value: 'https://mamot.fr/@becauseofprog' },
   { ...getSocial('github'), value: 'BecauseOfProg' },
   { ...getSocial('instagram'), value: 'BecauseOfProg' }

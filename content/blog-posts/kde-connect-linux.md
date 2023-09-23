@@ -48,7 +48,7 @@ Dans le cas **contraire**, saisissez une à une ces 3 commandes:
  Google Play Store : [https://play.google.com/store/apps/details?id=org.kde.kdeconnect\_tp](https://play.google.com/store/apps/details?id=org.kde.kdeconnect_tp)  
  F-Droid : [https://f-droid.org/packages/org.kde.kdeconnect\_tp/](https://f-droid.org/packages/org.kde.kdeconnect_tp/) ou <https://fossdroid.com/a/kde-connect.html>
 
- *Note: Si vous ne savez pas ce qu'est **F-Droid**, vous pouvez consulter mon article qui en parle, ici: <https://becauseofprog.fr/blog/f-droid-open-source-23> ;)*
+ *Note: Si vous ne savez pas ce qu'est **F-Droid**, vous pouvez consulter mon article qui en parle, ici: [f-droid-open-source-23](/article/f-droid-open-source) ;)*
 
   
 
@@ -83,6 +83,6 @@ Dans le cas **contraire**, saisissez une à une ces 3 commandes:
   
 
  Merci d'avoir lu l'article,  
- Cordialement, ornicarz :)
+ Cordialement, kernoeb :)
 
  

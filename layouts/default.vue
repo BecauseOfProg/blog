@@ -34,6 +34,7 @@
               :placeholder="$t('topBar.searchField')"
               color="darker"
               hide-details
+              autofocus
               single-line
               @keydown.enter="makeSearch"
             />

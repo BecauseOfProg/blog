@@ -3,11 +3,12 @@
     <v-row class="mx-0">
       <a
         v-for="social in socials"
-        :key="social.name + social.value"
+        :key="`${social.name}_${social.value}`"
         :href="social.link + social.value"
       >
         <v-icon
-          :size="big ? 64 : 32"
+          :style="{marginTop: big ? social.marginTopBig : social.marginTopNormal, marginLeft: big ? social.marginLeftBig : social.marginLeftNormal}"
+          :size="big ? (social.sizeBig || 64) : (social.sizeNormal || 32)"
           :color="big ? social.color : 'darker'"
           class="social-icon"
         >

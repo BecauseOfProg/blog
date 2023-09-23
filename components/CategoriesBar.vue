@@ -55,6 +55,7 @@
             >
               <router-link :to="{ name: 'article-id', params: { id: publication.id }}">
                 <v-img
+                  style="border-top-left-radius: 20px; border-top-right-radius: 20px;"
                   :src="publication.banner"
                   :alt="publication.title"
                   :aspect-ratio="16/9"
@@ -62,10 +63,20 @@
                 <h5 class="text-h5 my-2 text--text lecture-title">
                   {{ publication.title }}
                 </h5>
-                <p class="text--primary lecture-text">
+                <p class="text--secondary lecture-text">
                   {{ publication.description }}
                 </p>
+                <v-divider class="mb-4" />
                 <span class="font-weight-light blue-grey--text">
+                  <v-avatar
+                    class="mr-1"
+                    size="20"
+                  >
+                    <v-img
+                      :src="publication.author.picture"
+                      :alt="`img_${publication.author.displayname}`"
+                    />
+                  </v-avatar>
                   {{ publication.author.displayname }}
                   &mdash;
                   {{ timestampToText(publication.timestamp) }}
@@ -80,6 +91,7 @@
                 v-if="categoryPublications[category.id].length === 3"
                 :to="{ name: 'blog', query: { category: category.id }}"
                 color="darker white--text"
+                elevation="0"
               >
                 {{ $t('list.loadMore') }}
                 <v-icon right>

@@ -5,7 +5,7 @@ banner: /img/articles/any-desk-pc/anydesk-compressor.webp
 type: article
 authorId: kernoeb
 category: software
-labels: ["Linux", "Windows", "MacOS", "Logiciel", "AnyDesk"]
+labels: ["Linux", "Windows", "macOS", "Logiciel", "AnyDesk"]
 timestamp: 1512236019
 ---
 
@@ -39,8 +39,8 @@ Bonjour à tous et à toutes,
  **Google Play Store**: <https://play.google.com/store/apps/details?id=com.anydesk.anydeskandroid>  
  **AppStore**: <https://itunes.apple.com/us/app/anydesk/id1176131273&mt=8>
 
- Page de **téléchargement** générale (Windows, MacOS, Linux) :  
+ Page de **téléchargement** générale (Windows, macOS, Linux) :  
  <https://anydesk.fr/plate-formes>  
  <https://anydesk.fr/download>
 
- Merci d'avoir lu cet article ;)
+ Merci d'avoir lu cet article :)

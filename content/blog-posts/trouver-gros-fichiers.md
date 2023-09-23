@@ -1,6 +1,6 @@
 ---
-title: "Trouver rapidement ce qui prend de la place sur votre ordinateur ! [Windows/Linux]"
-description: "Trier ses fichiers volumineux efficacement!"
+title: "Trouvez rapidement ce qui prend de la place sur votre ordinateur (Windows, Linux) !"
+description: "Trier ses fichiers volumineux efficacement !"
 banner: /img/articles/trouver-gros-fichiers/trierfichiers.webp
 type: article
 authorId: kernoeb

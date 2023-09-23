@@ -37,7 +37,7 @@
                   <v-col cols="6">
                     <v-tooltip
                       v-for="share in shares"
-                      :key="share.name + 'badge'"
+                      :key="`share_${share.name}_badge`"
                       bottom
                     >
                       <template #activator="{ on }">
@@ -48,7 +48,9 @@
                           icon
                           v-on="on"
                         >
-                          <v-icon>{{ share.icon }}</v-icon>
+                          <v-icon :size="share.size || 24">
+                            {{ share.icon }}
+                          </v-icon>
                         </v-btn>
                       </template>
                       <span>{{ share.name }}</span>
@@ -98,14 +100,16 @@
                 </h3>
                 <v-btn
                   v-for="share in shares"
-                  :key="share.name"
+                  :key="`share_${share.name}`"
+                  rounded
                   :color="share.color"
                   :href="share.link"
                   target="_blank"
                   class="ma-1"
                   outlined
+                  style="border: 0"
                 >
-                  <v-icon left>
+                  <v-icon left :size="share.size || 24">
                     {{ share.icon }}
                   </v-icon>
                   {{ share.name }}
@@ -139,8 +143,7 @@
             <v-row>
               <v-col
                 cols="12"
-                lg="7"
-                offset-lg="1"
+                lg="8"
               >
                 <v-row>
                   <v-col
@@ -149,11 +152,22 @@
                   >
                     <member-card :member="publication.author" />
                   </v-col>
+                  <v-col
+                    cols="12"
+                    class="pt-0"
+                  >
+                    <b-card>
+                      <h3 class="headline darker--text">
+                        {{ $t('publication.categories') }}
+                      </h3>
+                      <categories-chips />
+                    </b-card>
+                  </v-col>
                 </v-row>
               </v-col>
               <v-col
                 cols="12"
-                lg="3"
+                lg="4"
               >
                 <v-row>
                   <v-col
@@ -164,21 +178,10 @@
                       <h3 class="headline darker--text">
                         {{ $t('global.socialNetworks') }}
                       </h3>
-                      <p class="mb-3">
+                      <p class="mb-5">
                         {{ $t('global.socialNetworksMessage') }}
                       </p>
-                      <social-icons big />
-                    </b-card>
-                  </v-col>
-                  <v-col
-                    cols="12"
-                    class="pt-0"
-                  >
-                    <b-card>
-                      <h3 class="headline darker--text">
-                        {{ $t('global.about') }}
-                      </h3>
-                      <p>{{ $t('global.aboutMessage') }}</p>
+                      <social-icons />
                     </b-card>
                   </v-col>
                   <v-col
@@ -196,10 +199,10 @@
                           color="white"
                           href="https://twitter.com/BecauseOfProg"
                         >
-                          <v-icon left>
-                            {{ mdiTwitter }}
+                          <v-icon left size="20">
+                            {{ mdiX }}
                           </v-icon>
-                          Twitter
+                          X (Twitter)
                         </v-btn>
                         <v-btn
                           text
@@ -214,17 +217,6 @@
                       </template>
                     </b-card>
                   </v-col>
-                  <v-col
-                    cols="12"
-                    class="pt-0"
-                  >
-                    <b-card>
-                      <h3 class="headline darker--text">
-                        {{ $t('publication.categories') }}
-                      </h3>
-                      <categories-chips />
-                    </b-card>
-                  </v-col>
                 </v-row>
               </v-col>
             </v-row>
@@ -237,8 +229,9 @@
 </template>
 
 <script>
-import { mdiTwitter, mdiRss, mdiClockOutline, mdiFacebook, mdiAsterisk, mdiMastodon, mdiEmailOutline } from '@mdi/js'
+import { mdiRss, mdiClockOutline, mdiFacebook, mdiAsterisk, mdiMastodon, mdiEmailOutline } from '@mdi/js'
 import { mapActions } from 'vuex'
+import { mdiX } from '~/utils/icons'
 import { categories, types, getCategory, getType } from '@/utils/data'
 
 export default {
@@ -250,7 +243,7 @@ export default {
       categories,
       types,
       mdiClockOutline,
-      mdiTwitter,
+      mdiX,
       mdiRss
     }
   },
@@ -307,34 +300,35 @@ export default {
       if (this.loaded) {
         return [
           {
-            name: 'Twitter',
-            icon: mdiTwitter,
-            color: 'blue lighten-2',
-            link: `https://twitter.com/intent/tweet?url=https://becauseofprog.fr/article/${this.publication.id}&text=${this.publication.title} (via @BecauseOfProg)`
+            name: 'X (Twitter)',
+            icon: mdiX,
+            color: '#000000',
+            link: `https://twitter.com/intent/tweet?url=https://becauseofprog.fr/article/${encodeURIComponent(this.publication.id)}&text=${encodeURIComponent(this.publication.title + ' (via @BecauseOfProg)')}`,
+            size: 20
           },
           {
             name: 'Facebook',
             icon: mdiFacebook,
             color: 'blue darken-4',
-            link: `https://www.facebook.com/sharer/sharer.php?u=https://becauseofprog.fr/article/${this.publication.id}`
+            link: `https://www.facebook.com/sharer/sharer.php?u=https://becauseofprog.fr/article/${encodeURIComponent(this.publication.id)}`
           },
           {
             name: 'Diaspora',
             icon: mdiAsterisk,
             color: 'purple darken-2',
-            link: `https://share.diasporafoundation.org/?title=${this.publication.title}&url=https://becauseofprog.fr/article/${this.publication.id}`
+            link: `https://share.diasporafoundation.org/?title=${this.publication.title}&url=https://becauseofprog.fr/article/${encodeURIComponent(this.publication.id)}`
           },
           {
             name: 'Mastodon',
             icon: mdiMastodon,
             color: 'blue darken-2',
-            link: `web+mastodon://share?text=${this.publication.title}%20-%20https://becauseofprog.fr/article/${this.publication.id}`
+            link: `web+mastodon://share?text=${this.publication.title}%20-%20https://becauseofprog.fr/article/${encodeURIComponent(this.publication.id)}`
           },
           {
             name: 'Mail',
             icon: mdiEmailOutline,
             color: 'dark',
-            link: `mailto:?subject=${this.publication.title}&body=${this.publication.description} Via BecauseOfProg : https://becauseofprog.fr/article/${this.publication.id}`
+            link: `mailto:?subject=${this.publication.title}&body=${this.publication.description} Via BecauseOfProg : https://becauseofprog.fr/article/${encodeURIComponent(this.publication.id)}`
           }
         ]
       } else { return [] }

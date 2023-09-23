@@ -58,6 +58,4 @@ C'est mon navigateur **par défaut**. Il ressemble comme deux gouttes d'eau à C
 
 > *Tout simplement.*
 
-Voilà, c'est la fin de cet article, je vous conseille de l'essayer si ça vous intéresse !  
-Merci d'avoir lu :)  
-**Cordialement**, OrNicarZ.
+Voilà, c'est la fin de cet article, je vous conseille de l'essayer si ça vous intéresse !
