@@ -5,6 +5,7 @@
   >
     <template #image>
       <v-img
+        aspect-ratio="2"
         :alt="publication.title"
         :src="publication.banner"
       />

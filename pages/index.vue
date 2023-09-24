@@ -57,6 +57,7 @@
               >
                 <v-img
                   id="first-publication"
+                  aspect-ratio="2"
                   :src="lastPublications[0].banner"
                 />
               </v-col>
