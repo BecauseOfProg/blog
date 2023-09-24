@@ -4,6 +4,7 @@
       <v-tooltip bottom>
         <template #activator="{ on: tooltip }">
           <v-btn
+            alt="Switch theme"
             v-bind="attrs"
             color="darker"
             icon

@@ -39,6 +39,7 @@
               @keydown.enter="makeSearch"
             />
             <v-btn
+              alt="Close search field"
               color="darker"
               icon
               @click="showSearchField = false"
@@ -48,6 +49,7 @@
           </template>
           <template v-else>
             <v-btn
+              alt="Blog"
               color="darker"
               text
               to="/blog"
@@ -58,6 +60,7 @@
               {{ $t('topBar.publications') }}
             </v-btn>
             <v-btn
+              alt="Projects"
               color="darker"
               text
               to="/page/projects"
@@ -70,6 +73,7 @@
             <v-tooltip bottom>
               <template #activator="{ on }">
                 <v-btn
+                  alt="Search"
                   color="darker"
                   icon
                   v-on="on"

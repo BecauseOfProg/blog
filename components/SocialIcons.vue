@@ -4,6 +4,7 @@
       <a
         v-for="social in socials"
         :key="`${social.name}_${social.value}`"
+        :title="social.name"
         :href="social.link + social.value"
       >
         <v-icon
