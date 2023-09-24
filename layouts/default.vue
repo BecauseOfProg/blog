@@ -50,6 +50,7 @@
           <template v-else>
             <v-btn
               alt="Blog"
+              aria-label="Blog"
               color="darker"
               text
               to="/blog"
@@ -61,6 +62,7 @@
             </v-btn>
             <v-btn
               alt="Projects"
+              aria-label="Projects"
               color="darker"
               text
               to="/page/projects"
@@ -74,6 +76,7 @@
               <template #activator="{ on }">
                 <v-btn
                   alt="Search"
+                  aria-label="Search"
                   color="darker"
                   icon
                   v-on="on"

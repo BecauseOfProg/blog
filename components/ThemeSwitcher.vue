@@ -5,6 +5,7 @@
         <template #activator="{ on: tooltip }">
           <v-btn
             alt="Switch theme"
+            aria-label="Switch theme"
             v-bind="attrs"
             color="darker"
             icon
