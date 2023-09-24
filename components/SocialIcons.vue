@@ -10,7 +10,7 @@
         <v-icon
           :style="{marginTop: big ? social.marginTopBig : social.marginTopNormal, marginLeft: big ? social.marginLeftBig : social.marginLeftNormal}"
           :size="big ? (social.sizeBig || 64) : (social.sizeNormal || 32)"
-          :color="big ? social.color : 'darker'"
+          :color="big ? ($vuetify.theme.dark ? (social.darkColor || social.color) : (social.lightColor || social.color)) : 'darker'"
           class="social-icon"
         >
           {{ social.icon }}

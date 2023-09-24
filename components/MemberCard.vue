@@ -26,7 +26,7 @@
             <template #activator="{ on }">
               <v-btn
                 icon
-                :color="social.color"
+                :color="($vuetify.theme.dark ? (social.darkColor || social.color) : (social.lightColor || social.color))"
                 :href="social.link + social.value"
                 v-on="on"
               >

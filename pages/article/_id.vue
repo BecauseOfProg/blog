@@ -305,7 +305,7 @@ export default {
           {
             name: 'X (Twitter)',
             icon: mdiX,
-            color: '#000000',
+            color: this.$vuetify.theme.dark ? '#bdbdbd' : '#000000',
             link: `https://twitter.com/intent/tweet?url=https://becauseofprog.fr/article/${encodeURIComponent(this.publication.id)}&text=${encodeURIComponent(this.publication.title + ' (via @BecauseOfProg)')}`,
             size: 20
           },
