@@ -1,7 +1,7 @@
 ---
 title: "Transformez une chaine YouTube en podcast"
 description: "Je vous présente comment transformer simplement une chaine YouTube en podcast audio ou vidéo dans ce nouveau billet."
-banner: /img/articles/transformer-chaine-youtube-podcast/rssfg-youtube-350-1.webp
+banner: /img/articles/transformer-chaine-youtube-podcast/youtube-rss.webp
 type: article
 authorId: gildasgh
 category: software

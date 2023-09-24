@@ -45,6 +45,7 @@
                         <router-link :to="{ name: 'article-id', params: { id: publication.id }}">
                           <v-img
                             v-ripple
+                            aspect-ratio="2"
                             style="border-radius: 20px"
                             :alt="publication.title"
                             :src="publication.banner"
