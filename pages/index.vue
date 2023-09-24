@@ -151,43 +151,34 @@ import { categories, types } from '@/utils/data'
 
 export default {
   name: 'Home',
-  data () {
-    return {
-      carousel: [
-        {
-          title: 'BecauseOfProg',
-          subtitle: 'Blog autour de la programmation créé par des passionnés'
-        },
-        {
-          background: '/img/others/blurry-code.webp',
-          title: 'Nos projets',
-          subtitle: 'Nous mettons à disposition des outils et services open-sources',
-          button: {
-            label: 'En savoir plus',
-            link: '/page/projects'
-          }
-        }
-      ],
-      lastPublications: null,
-      categories,
-      types,
-      mdiClockOutline
-    }
-  },
-  async fetch () {
+  async asyncData ({ $content }) {
     // Get 3 last publications, sorted by timestamp
-    const lastPublications = await this.$content('blog-posts').without(['body']).sortBy('timestamp', 'desc').limit(3).fetch()
+    const lastPublications = await $content('blog-posts').without(['body']).sortBy('timestamp', 'desc').limit(3).fetch()
     const authorIds = [...new Set(lastPublications.map(v => v.authorId))]
-    const authors = await this.$content('members').where({ username: { $in: authorIds } }).fetch()
+    const authors = await $content('members').where({ username: { $in: authorIds } }).fetch()
     lastPublications.forEach((v) => {
       v.id = v.slug
       v.author = authors.find(a => a.slug === v.authorId) || {}
     })
-    this.lastPublications = lastPublications
 
-    const lastDevBlog = (await this.$content('devblogs').without(['body']).sortBy('timestamp', 'desc').limit(1).fetch())?.[0]
+    const carousel = [
+      {
+        title: 'BecauseOfProg',
+        subtitle: 'Blog autour de la programmation créé par des passionnés'
+      },
+      {
+        background: '/img/others/blurry-code.webp',
+        title: 'Nos projets',
+        subtitle: 'Nous mettons à disposition des outils et services open-sources',
+        button: {
+          label: 'En savoir plus',
+          link: '/page/projects'
+        }
+      }
+    ]
+    const lastDevBlog = (await $content('devblogs').without(['body']).sortBy('timestamp', 'desc').limit(1).fetch())?.[0]
     if (lastDevBlog) {
-      this.carousel.push({
+      carousel.push({
         background: lastDevBlog.banner,
         title: 'Sur notre devblog...',
         subtitle: `${lastDevBlog.title} (${lastDevBlog.category})`,
@@ -197,6 +188,20 @@ export default {
         },
         classes: ['darker-bg']
       })
+    }
+
+    return {
+      lastPublications,
+      carousel
+    }
+  },
+  data () {
+    return {
+      lastPublications: [],
+      carousel: [],
+      categories,
+      types,
+      mdiClockOutline
     }
   },
   head () {
