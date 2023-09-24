@@ -2,7 +2,7 @@
 username: davall
 displayname: Alan
 timestamp: 1493589600
-picture: /img/members/davall.png
+picture: /img/members/davall.webp
 description: "wow"
 biography: "Suivez-moi sur Instagram car je poste de jolies photos : @davall51. On se retrouve au Supermarché Coco ?"
 location : "France"

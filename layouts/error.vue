@@ -1,10 +1,10 @@
 <template>
-  <v-app dark>
+  <v-app>
     <v-container class="pa-6">
       <v-row justify="center" align-content="center">
-        <b-card>
+        <b-card class="error-layout">
           <template #image>
-            <v-img width="500" src="/img/others/pablo.jpg" />
+            <v-img width="500" src="/img/others/pablo.webp" />
           </template>
 
           <h1 v-if="error.statusCode === 404">
@@ -13,6 +13,9 @@
           <h1 v-else>
             {{ otherError }}
           </h1>
+          <div>
+            {{ $t('errors.redirectionIn2seconds') }}
+          </div>
         </b-card>
       </v-row>
     </v-container>
@@ -21,12 +24,10 @@
 
 <script>
 export default {
-  name: 'EmptyLayout',
-  layout: 'empty',
   props: {
     error: {
       type: Object,
-      default: null
+      default: () => ({})
     }
   },
   data () {
@@ -42,12 +43,17 @@ export default {
     return {
       title
     }
+  },
+  mounted () {
+    setTimeout(() => {
+      this.$router.push('/')
+    }, 2000)
   }
 }
 </script>
 
 <style scoped>
-h1 {
+.error-layout h1 {
   font-size: 20px;
 }
 </style>

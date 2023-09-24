@@ -249,6 +249,9 @@ export default {
   },
   async fetch () {
     const id = this.$route.params.id
+    if (!id) {
+      return
+    }
     const publication = await this.$content('blog-posts', id).fetch()
     publication.id = id
     publication.author = await this.$content('members', publication.authorId).fetch()
@@ -335,6 +338,9 @@ export default {
     }
   },
   mounted () {
+    if (!this.$route.params.id) {
+      return this.$router.push('/404')
+    }
     this.addReadPublication(this.publication.id)
   },
   methods: {

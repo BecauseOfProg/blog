@@ -24,7 +24,8 @@
     "invalidPage": "The page you tried to access in invalid.",
     "invalidCredentials": "Invalid email address and/or password",
     "alreadyExists": "The resource already exists. Try changing the identifier.",
-    "internalError": "The server encountered an unknown error. Our teams are currently trying to overcome this problem."
+    "internalError": "The server encountered an unknown error. Our teams are currently trying to overcome this problem.",
+    "redirectionIn2seconds": "You will be redirected in 2 seconds."
   },
   "topBar": {
     "publications": "Publications",

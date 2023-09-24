@@ -24,7 +24,8 @@
     "invalidPage": "La page que vous essayez de consulter est invalide.",
     "invalidCredentials": "Adresse e-mail et/ou mot de passe erronés.",
     "alreadyExists": "La ressource existe déjà. Essayez de changer l'identifieur.",
-    "internalError": "Le serveur a rencontré une erreur inconnue. Nos équipes essayent activement de résoudre le problème."
+    "internalError": "Le serveur a rencontré une erreur inconnue. Nos équipes essayent activement de résoudre le problème.",
+    "redirectionIn2seconds": "Vous allez être redirigé dans 2 secondes."
   },
   "topBar": {
     "publications": "Publications",

@@ -34,6 +34,10 @@ export default {
     ]
   },
 
+  generate: {
+    fallback: '404.html'
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '~/assets/colors',

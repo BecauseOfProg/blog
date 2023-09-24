@@ -1,7 +1,7 @@
 ---
 title: À la Vue de tous!
 category: Mise à jour
-banner: /img/devblogs/Vue.gif
+banner: /img/devblogs/Vue-animated.webp
 timestamp: 1616015643
 authorId: theovld
 ---

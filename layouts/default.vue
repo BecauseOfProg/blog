@@ -93,14 +93,14 @@
 
     <client-only v-if="isMobile">
       <v-bottom-navigation
-        v-model="bottomNavigation"
+        :value="bottomNavigation"
         app
         color="darker"
         fixed
       >
         <v-btn
           v-for="item in mobileMenu"
-          :key="item.name"
+          :key="`mobileMenu_${item.name}`"
           exact
           :to="{ name: item.route }"
         >
@@ -150,8 +150,6 @@ export default {
   middleware: 'vuetify-theme',
   data () {
     return {
-      bottomNavigation: '',
-
       showSearchField: false,
       search: '',
 
@@ -191,7 +189,7 @@ export default {
     isDesktop () {
       return !this.isMobile
     },
-    mobileMenu: function () {
+    mobileMenu () {
       return [
         {
           name: 'mobileMenu.home',
@@ -201,7 +199,8 @@ export default {
         {
           name: 'mobileMenu.publications',
           icon: mdiTextBoxMultipleOutline,
-          route: 'blog'
+          route: 'blog',
+          subRoutes: ['article-id']
         },
         {
           name: 'mobileMenu.search',
@@ -211,9 +210,13 @@ export default {
         {
           name: 'mobileMenu.projects',
           icon: mdiPackageVariant,
-          route: 'page-projects'
+          route: 'page-projects',
+          subRoutes: ['devblog', 'devblog-id']
         }
       ]
+    },
+    bottomNavigation () {
+      return this.mobileMenu.findIndex(item => this.$route.name === item.route || (item.subRoutes && item.subRoutes.includes(this.$route.name)))
     }
   },
   mounted () {

@@ -2,7 +2,7 @@
 username: rondouflex
 displayname: Malo
 timestamp: 1493330400
-picture: /img/members/rondouflex.png
+picture: /img/members/rondouflex.webp
 description: "Je suis un génie incompris !"
 biography: ""
 location : "France"

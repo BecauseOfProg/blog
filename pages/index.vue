@@ -158,7 +158,7 @@ export default {
           subtitle: 'Blog autour de la programmation créé par des passionnés'
         },
         {
-          background: '/img/others/blurry-code.png',
+          background: '/img/others/blurry-code.webp',
           title: 'Nos projets',
           subtitle: 'Nous mettons à disposition des outils et services open-sources',
           button: {
