@@ -18,7 +18,7 @@
           alt="BecauseOfProg Logo"
           class="shrink mr-2"
           contain
-          src="/img/bop.min.svg"
+          src="/img/bop.min.webp"
           width="40"
         />
         <v-toolbar-title class="font-weight-medium">
