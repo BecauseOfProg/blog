@@ -13,10 +13,6 @@ timestamp: 1491413339
  Chacun des deux présentent ses avantages et inconvénients qui peuvent plaire ou non à certains types d'usagers.  
  Nous allons donc étudier ensemble ces deux navigateurs assez intéressants.
 
- ![KRAUME VErSSUSSE FAÏREFAUXE](/img/articles/chrome-ou-firefox/chrome-vs-firefox-2016-994x400.webp?187d39)
-
- [*(voir source image)*](http://www.makeuseof.com/tag/chrome-vs-firefox-in-2016-which-browser-is-right-for-you/)
-
 ### Performances
 
  Chrome est plus rapide que son concurrent, ce qui est un bon point pour les personnes qui veulent aller très vite dans leurs déplacements.  
