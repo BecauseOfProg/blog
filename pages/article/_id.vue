@@ -84,6 +84,7 @@
         <v-row justify="center">
           <v-col
             cols="12"
+            xl="8"
           >
             <b-card
               id="publication-content"
