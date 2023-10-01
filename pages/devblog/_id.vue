@@ -113,25 +113,34 @@ export default {
   data () {
     return {
       devblog: null,
+      error404: false,
       otherDevblogs: [],
       mdiGithub
     }
   },
   async fetch () {
-    const id = this.$route.params.id
-    const devblog = await this.$content('devblogs', id).fetch()
-    devblog.id = id
-    devblog.author = await this.$content('members', devblog.authorId).fetch()
-    this.devblog = devblog
+    try {
+      const id = this.$route.params.id
+      const devblog = await this.$content('devblogs', id).fetch()
+      devblog.id = id
+      devblog.author = await this.$content('members', devblog.authorId).fetch()
+      this.devblog = devblog
 
-    const devblogs = await this.$content('devblogs').without(['body']).where({ slug: { $ne: id } }).sortBy('timestamp', 'desc').limit(3).fetch()
-    const authorIds = [...new Set(devblogs.map(v => v.authorId))]
-    const authors = await this.$content('members').where({ username: { $in: authorIds } }).fetch()
-    devblogs.forEach((v) => {
-      v.id = v.slug
-      v.author = authors.find(a => a.slug === v.authorId)
-    })
-    this.otherDevblogs = devblogs
+      const devblogs = await this.$content('devblogs').without(['body']).where({ slug: { $ne: id } }).sortBy('timestamp', 'desc').limit(3).fetch()
+      const authorIds = [...new Set(devblogs.map(v => v.authorId))]
+      const authors = await this.$content('members').where({ username: { $in: authorIds } }).fetch()
+      devblogs.forEach((v) => {
+        v.id = v.slug
+        v.author = authors.find(a => a.slug === v.authorId)
+      })
+      this.otherDevblogs = devblogs
+    } catch (e) {
+      if (e.message && e.message.includes('not found')) {
+        this.error404 = true
+      } else {
+        console.error(e)
+      }
+    }
   },
   head () {
     if (!this.devblog) {
@@ -150,6 +159,13 @@ export default {
           content: this.$t('devblog.title', { category: this.devblog.category })
         }
       ]
+    }
+  },
+  watch: {
+    error404 (val) {
+      if (val) {
+        this.$router.push('/404')
+      }
     }
   }
 }
