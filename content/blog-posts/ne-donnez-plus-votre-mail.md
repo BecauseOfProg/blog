@@ -36,7 +36,7 @@ Liste des meilleurs services web :
 - **Rapidité** de création et d'ouverture
 - Interface **simple**
 - Pas de **limites**
-- **Gratuit***
+- **Gratuit**
 
 https://inboxes.com/
 
