@@ -9,41 +9,40 @@ labels: [ "spam", "mail", "sms" ]
 timestamp: 1530694885
 ---
 
-**Premier cas de figure:**  
+**Premier cas de figure :**  
 Vous surfez sur un site de "*jeux-concours*".  
 L'inscription sur le site est obligatoire. Vous donnez votre vraie adresse e-mail.  
 Et là, c'est le drame. Pas plus tard que le lendemain, une dizaine de mails type spam reçus dans la boîte de réception
 et le dossier "*Courriers Indésirables*" est plein à craquer.
 
-**Deuxième cas de figure:**  
+**Deuxième cas de figure :**  
 Vous êtes sur le site de Mark Zuckerberg, **Facebook**.  
 Et là, Facebook vous demande votre "*numéro de téléphone*" pour améliorer la sécurité de votre compte...  
-Mais vous n'avez pas envie de le donner, surtout à Facebook.  
-Surtout que vos **contacts** (*amis, famille, collègues, patron*) pourraient vous retrouver avec votre numéro de
+Mais vous n'avez pas envie de le donner, surtout à Facebook, surtout que vos **contacts** (*amis, famille, collègues, patron*) pourraient vous retrouver avec votre numéro de
 téléphone, alors pas question de le donner !
 
 #### 1) MAILS
 
-Plusieurs sites permettent de créer des adresse e-mail "**jetables**" ou "**temporaires**".  
+Plusieurs sites permettent de créer des adresses e-mail "**jetables**" ou "**temporaires**".  
 Le problème, c'est que la plupart des sites ont bloqué ce genre de noms de domaines mails.  
 Heureusement, il y a des **survivants**.
 
-Liste des meilleurs services web:
+Liste des meilleurs services web :
 
-##### GetNada
+##### Inboxes (ex-GetNada)
 
-![](/img/articles/ne-donnez-plus-votre-mail/temporary-email.webp)
+![Inboxes](/img/articles/ne-donnez-plus-votre-mail/inboxes.webp)
 
 - **Rapidité** de création et d'ouverture
 - Interface **simple**
 - Pas de **limites**
 - **Gratuit***
 
-https://getnada.com
+https://inboxes.com/
 
 ##### Anonbox
 
-![](/img/articles/ne-donnez-plus-votre-mail/anonbox.webp)
+![Anonbox](/img/articles/ne-donnez-plus-votre-mail/anonbox.webp)
 
 - Disponible avec le proxy **Tor**
 - Très **rapide**
@@ -53,7 +52,7 @@ https://www.anonbox.net/fr/
 
 ##### Temp-Mail
 
-![](/img/articles/ne-donnez-plus-votre-mail/tempmail.webp)
+![Temp mail](/img/articles/ne-donnez-plus-votre-mail/tempmail.webp)
 
 https://temp-mail.org/fr/
 
