@@ -140,7 +140,7 @@
               </div>
             </b-card>
           </v-col>
-          <v-col cols="12">
+          <v-col cols="12" xl="8">
             <v-row>
               <v-col
                 cols="12"
