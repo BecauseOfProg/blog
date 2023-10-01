@@ -240,6 +240,7 @@ export default {
     return {
       publication: {},
       loaded: false,
+      error404: false,
       categories,
       types,
       mdiClockOutline,
@@ -252,11 +253,20 @@ export default {
     if (!id) {
       return
     }
-    const publication = await this.$content('blog-posts', id).fetch()
-    publication.id = id
-    publication.author = await this.$content('members', publication.authorId).fetch()
-    this.publication = publication
-    this.loaded = true
+
+    try {
+      const publication = await this.$content('blog-posts', id).fetch()
+      publication.id = id
+      publication.author = await this.$content('members', publication.authorId).fetch()
+      this.publication = publication
+      this.loaded = true
+    } catch (e) {
+      if (e.message && e.message.includes('not found')) {
+        this.error404 = true
+      } else {
+        console.error(e)
+      }
+    }
   },
   head () {
     if (this.loaded) {
@@ -335,6 +345,13 @@ export default {
           }
         ]
       } else { return [] }
+    }
+  },
+  watch: {
+    error404 (val) {
+      if (val) {
+        this.$router.push('/404')
+      }
     }
   },
   mounted () {
