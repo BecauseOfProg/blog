@@ -1,3 +1,20 @@
+.theme--light .nuxt-content blockquote {
+  color: #555555;
+  padding-left: 0.6rem;
+  border-left: 3px solid #E33734;
+  line-height: 1.6;
+  position: relative;
+  background: #fafafa;
+}
+
+.theme--dark .nuxt-content blockquote {
+  padding-left: 0.6rem;
+  border-left: 3px solid #E33734;
+  line-height: 1.6;
+  position: relative;
+  background: #292323;
+}
+
 .nuxt-content hr {
   margin-bottom: 14px;
   border-color: rgba(0, 0, 0, 0.12);
