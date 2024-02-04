@@ -52,3 +52,4 @@ Appuyez sur Entrée, puis fermez la fenêtre de débogage.
 
 Si votre organisation le permet, vous serez redirigé vers la nouvelle version de Microsoft Teams.
 
+N'oubliez pas de remercier [IsmaelMartinez](https://github.com/IsmaelMartinez/) en lui donnant une étoile sur GitHub !
