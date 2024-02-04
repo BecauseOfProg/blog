@@ -9,13 +9,13 @@ labels: ["linux", "astuce"]
 timestamp: 1707079124
 ---
 
-La version officielle de Microsoft Teams sur Linux est un véritable cauchemar. Elle est lente, buguée, et ne propose pas toutes les fonctionnalités de la version Windows.
+La version officielle de **Microsoft Teams** sur Linux est un véritable cauchemar. Elle est lente, buguée, et ne propose pas toutes les fonctionnalités de la version Windows.
 
 Heureusement, il est désormais possible d'installer la version 2.0 de Microsoft Teams sur Linux. Cette version est basée sur la version web de Teams, et est donc beaucoup plus rapide et stable.
 
 ## Installation
 
-Installez d'abord [TeamsForLinux](https://github.com/IsmaelMartinez/teams-for-linux) :
+Installez d'abord [Teams For Linux](https://github.com/IsmaelMartinez/teams-for-linux) :
 
 Sur Linux :
 

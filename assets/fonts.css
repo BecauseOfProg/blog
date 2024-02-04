@@ -15,6 +15,10 @@
   background: #292323;
 }
 
+.theme--dark .token.operator {
+  background: none;
+}
+
 .nuxt-content hr {
   margin-bottom: 14px;
   border-color: rgba(0, 0, 0, 0.12);
