@@ -295,6 +295,11 @@ export default {
             hid: 'og:image'
           },
           {
+            property: 'twitter:image',
+            content: this.publication.banner,
+            hid: 'twitter:image'
+          },
+          {
             name: 'author',
             content: `${this.publication.author.displayname} (@${this.publication.author.username})`,
             hid: 'author'
