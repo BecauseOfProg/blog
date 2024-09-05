@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 import readPublications from './modules/read-publications'
 import settings from './modules/settings'
 import user from './modules/user'
+import users from './modules/users'
 
 Vue.use(Vuex)
 
@@ -29,5 +30,5 @@ const actions = {}
 
 export default new Vuex.Store({
   state, getters, mutations, actions,
-  modules: { readPublications, settings, user }
+  modules: { readPublications, settings, user, users }
 })

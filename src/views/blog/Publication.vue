@@ -320,7 +320,7 @@ import MemberCard from '@/components/MemberCard'
 import CategoriesChips from '@/components/CategoriesChips'
 
 import { categories, types, getCategory, getType } from '@/utils/data'
-import { comments, publications, users } from '@/utils/api'
+import { comments, publications } from '@/utils/api'
 import MarkdownItVueLight from 'markdown-it-vue/dist/markdown-it-vue-light.umd.min.js'
 import 'markdown-it-vue/dist/markdown-it-vue.css'
 
@@ -366,10 +366,8 @@ export default {
       this.publication = response.body
       this.addReadPublication(this.publication.slug)
 
-      users.get({ username: this.publication.author }).then(response => {
-        this.author = response.body
-        this.loaded = true
-      })
+      this.author = this.getUser(this.publication.author)
+      this.loaded = true
     }, () => {
       this.SHOW_SNACKBAR({
         error: true,
@@ -415,14 +413,16 @@ export default {
   },
   methods: {
     ...mapMutations(['SHOW_SNACKBAR']),
-    ...mapActions(['addReadPublication']),
+    ...mapActions(['addReadPublication', 'getUser']),
     fetchComments() {
       this.commentsLoading = true
       comments.get({ post_type: 'publication', post_slug: this.$route.params.slug, skip: this.comments.length }).then(response => {
-        this.comments = [
-          ...this.comments,
-          ...response.body
-        ]
+        if (response.body !== null) {
+          this.comments = [
+            ...this.comments,
+            ...response.body
+          ]
+        }
         this.commentsCount = parseInt(response.headers.get('Count'))
         this.commentsLoading = false
       })
