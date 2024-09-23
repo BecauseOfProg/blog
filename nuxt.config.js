@@ -42,9 +42,10 @@ export default {
   css: [
     '~/assets/colors',
     '~/assets/elements',
-    '~/assets/fonts',
+    '~/assets/text',
     '~/assets/safe_areas',
-    '~/assets/theme'
+    '~/assets/theme',
+    'katex/dist/katex.min.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -115,7 +116,14 @@ export default {
   content: {
     markdown: {
       remarkPlugins: [
-        'remark-breaks'
+        'remark-breaks',
+        'remark-math',
+        'remark-rehype',
+        'remark-gfm'
+      ],
+      rehypePlugins: [
+             // this next line here
+	      ['rehype-katex', { output: 'html' }]
       ]
     }
   },
