@@ -17,6 +17,7 @@
       <template #activator="{ on, attrs, value }">
         <v-btn
           text
+          color="text"
           v-bind="attrs"
           v-on="on"
         >
@@ -146,5 +147,9 @@ export default {
 .v-menu__content {
   width: 69% !important;
   max-width: 69% !important;
+}
+
+* {
+  color: black;
 }
 </style>

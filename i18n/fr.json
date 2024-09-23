@@ -7,6 +7,7 @@
     "socialNetworks": "Nos réseaux sociaux",
     "socialNetworksMessage": "Nous postons régulièrement des nouvelles, des tips et des astuces. Suivez-nous!",
     "allPublications": "Toutes les publications",
+    "allCategories": "Toutes les catégories",
     "aboutMessage": "La BecauseOfProg réunit plusieurs développeurs autour de projets communs, comme le blog!",
     "shortDescription": "Blog de programmation et actualités technologiques créé par des passionnés",
     "more": "En savoir plus",
@@ -172,7 +173,8 @@
     "android": "Android",
     "linux": "Linux",
     "windows": "Windows",
-    "apple": "Apple"
+    "apple": "Apple",
+    "ml": "Apprentissage"
   },
   "types": {
     "article": "Article",

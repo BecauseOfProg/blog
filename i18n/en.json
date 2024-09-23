@@ -175,7 +175,8 @@
     "android": "Android",
     "linux": "Linux",
     "windows": "Windows",
-    "apple": "Apple"
+    "apple": "Apple",
+    "ml": "ML"
   },
   "types": {
     "article": "Article",

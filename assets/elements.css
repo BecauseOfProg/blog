@@ -34,3 +34,38 @@ a {
   justify-content: center;
   align-items: center;
 }
+
+.nuxt-content hr {
+  margin-bottom: 14px;
+  border-color: rgba(0, 0, 0, .12);
+  border-width: thin 0 0
+}
+
+.nuxt-content img {
+  max-width: min(100%, 400px);
+  height: auto
+}
+
+@media screen and (min-width: 800px) {
+  .nuxt-content img {
+    max-width: 65%;
+  }
+}
+
+table, tr, td, th {
+  border: gray 1px solid;
+}
+
+th {
+  background-color: lightgray;
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+tr, td, th {
+  padding: 4px;
+  font-size: 15px;
+}

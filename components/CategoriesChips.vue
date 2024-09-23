@@ -1,43 +1,55 @@
 <template>
-  <v-col>
-    <v-chip
-      v-if="includeAll"
-      :to="{ name: 'blog' }"
-      exact
-      active-class="darker white--text"
-    >
-      <v-icon left>
-        {{ mdiTextBoxMultipleOutline }}
-      </v-icon>
-      {{ $t('global.allPublications') }}
-    </v-chip>
-    <v-chip
-      v-for="category in categories"
-      :key="category.id"
-      :to="{ name: 'blog', query: { category: category.id }}"
-      exact
-      active-class="darker white--text"
-    >
-      <v-icon left>
-        {{ category.icon }}
-      </v-icon>
-      {{ $t(`categories.${category.id}`) }}
-    </v-chip>
-    <template v-if="!excludeTypes">
+  <v-row>
+    <v-col
+      class="text-center"
+      cols="12">
       <v-chip
-        v-for="type in types"
-        :key="type.id"
-        :to="{ name: 'blog', query: { type: type.id }}"
+        v-if="includeAll"
+        :to="{ name: 'blog' }"
         exact
         active-class="darker white--text"
       >
         <v-icon left>
-          {{ type.icon }}
+          {{ mdiTextBoxMultipleOutline }}
         </v-icon>
-        {{ $t(`types.${type.id}`) }}
+        {{ $t('global.allCategories') }}
       </v-chip>
+    </v-col>
+    <v-col
+      class="text-center"
+      cols="12">
+      <v-chip
+        v-for="category in categories"
+        :key="category.id"
+        :to="{ name: 'blog', query: { category: category.id }}"
+        exact
+        active-class="darker white--text"
+      >
+        <v-icon left>
+          {{ category.icon }}
+        </v-icon>
+        {{ $t(`categories.${category.id}`) }}
+      </v-chip>
+    </v-col>
+    <template v-if="!excludeTypes">
+      <v-col
+        class="text-center"
+        cols="12">
+        <v-chip
+          v-for="type in types"
+          :key="type.id"
+          :to="{ name: 'blog', query: { type: type.id }}"
+          exact
+          active-class="darker white--text"
+        >
+          <v-icon left>
+            {{ type.icon }}
+          </v-icon>
+          {{ $t(`types.${type.id}`) }}
+        </v-chip>
+      </v-col>
     </template>
-  </v-col>
+  </v-row>
 </template>
 
 <script>

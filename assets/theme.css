@@ -7,8 +7,8 @@
 }
 
 .translucent {
-  -webkit-backdrop-filter: saturate(50%) blur(30px);
-  backdrop-filter: saturate(50%) blur(30px);
+  -webkit-backdrop-filter: saturate(50%) blur(8px);
+  backdrop-filter: saturate(50%) blur(8px);
 }
 
 .blurred {

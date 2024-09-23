@@ -1,8 +1,13 @@
 <template>
   <main>
+    <client-only>
+      <v-fade-transition>
+        <lazy-categories-bar />
+      </v-fade-transition>
+    </client-only>
     <template v-if="loaded">
       <v-parallax
-        :height="$vuetify.breakpoint.smAndDown ? 650 : 500"
+        :height="64 + $vuetify.breakpoint.smAndDown ? 650 : 500"
         :src="publication.banner"
         dark
       >
@@ -12,7 +17,7 @@
           class="darker-bg"
         >
           <v-col
-            class="text-center"
+            class="text-center pt-10 pb-0"
             cols="12"
           >
             <span
@@ -23,7 +28,7 @@
             </span>
           </v-col>
           <v-col
-            class="pl-10 pr-10 mt-n16"
+            class="pl-10 pr-10 mt-n16 pt-0"
             cols="12"
             lg="8"
           >
@@ -93,6 +98,7 @@
               <nuxt-content
                 class="pb-2"
                 :document="publication"
+                ref="content"
               />
               <v-divider />
               <div class="text-center">
@@ -377,5 +383,21 @@ export default {
   #title {
     font-size: 40px !important;
   }
+}
+
+p:has(img) {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cap {
+  font-size: 14px !important;
+  text-align: center !important;
+  font-style: italic;
 }
 </style>

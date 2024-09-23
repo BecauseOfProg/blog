@@ -1,4 +1,4 @@
-import { mdiWeb, mdiLockOutline, mdiEarth, mdiSim, mdiCodeTags, mdiAndroid, mdiLinux, mdiMicrosoftWindows } from '@mdi/js'
+import { mdiWeb, mdiLockOutline, mdiEarth, mdiSim, mdiCodeTags, mdiAndroid, mdiLinux, mdiApple, mdiMicrosoftWindows, mdiHeadCogOutline } from '@mdi/js'
 
 const categories = [
   { id: 'software', icon: mdiWeb },
@@ -8,8 +8,9 @@ const categories = [
   { id: 'programming', icon: mdiCodeTags },
   { id: 'android', icon: mdiAndroid },
   { id: 'linux', icon: mdiLinux },
-  { id: 'windows', icon: mdiMicrosoftWindows }
-  // { id: 'apple', icon: mdiApple }
+  { id: 'windows', icon: mdiMicrosoftWindows },
+  { id: 'ml', icon: mdiHeadCogOutline },
+  { id: 'apple', icon: mdiApple }
 ]
 
 function getCategory (id) {
