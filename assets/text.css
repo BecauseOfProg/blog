@@ -18,16 +18,7 @@
   background: 0 0
 }
 
-.nuxt-content hr {
-  margin-bottom: 14px;
-  border-color: rgba(0, 0, 0, .12);
-  border-width: thin 0 0
-}
 
-.nuxt-content img {
-  max-width: min(100%, 400px);
-  height: auto
-}
 
 .lecture-title, .nuxt-content h1, .nuxt-content h2, .nuxt-content h3, .nuxt-content h4, .nuxt-content h5, .nuxt-content h6 {
   color: var(--v-text-base);
