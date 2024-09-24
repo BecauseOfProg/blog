@@ -125,13 +125,17 @@
                 <h2 class="headline mb-2 text--text">
                   {{ $t('publication.published') }}
                 </h2>
-                <v-chip v-if="type">
+                <v-chip
+                  v-if="type"
+                  outlined>
                   <v-icon left>
                     {{ type.icon }}
                   </v-icon>
                   {{ $t(`types.${type.id}`) }}
                 </v-chip>
-                <v-chip v-if="category">
+                <v-chip
+                  v-if="category"
+                  outlined>
                   <v-icon left>
                     {{ category.icon }}
                   </v-icon>
@@ -140,6 +144,7 @@
                 <v-chip
                   v-for="label in publication.labels"
                   :key="label"
+                  outlined
                 >
                   {{ label }}
                 </v-chip>
@@ -167,7 +172,7 @@
                       <h3 class="headline darker--text">
                         {{ $t('publication.categories') }}
                       </h3>
-                      <categories-chips />
+                      <category-chips />
                     </b-card>
                   </v-col>
                 </v-row>

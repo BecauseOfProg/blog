@@ -8,7 +8,7 @@
     <b-top-banner
       :icon="head.icon"
       :src="head.image"
-      :title="head.title"
+      :title="computedTitle"
       tall
     />
     <v-container class="page-body">
@@ -27,7 +27,7 @@
             :prepend-inner-icon="mdiMagnify"
             type="search"
           />
-          <categories-chips
+          <filters-search
             show-all-button
             :authors="authors"
             class="pb-10"
@@ -215,6 +215,23 @@ export default {
         if (this.search && !v.title.toLowerCase().includes(this.search.toLowerCase())) { return false }
         return true
       })
+    },
+    computedTitle () {
+      if (this.params.category) {
+        const title = `categories.${this.params.category}`
+        return `Catégorie ‒ ${this.$t(title)}`
+      }
+
+      if (this.params.type) {
+        const title = `types.${this.params.type}`
+        return `Type ‒ ${this.$t(title)}`
+      }
+
+      if (this.params.author) {
+        const author = this.authors.find(a => a.slug === this.params.author)
+        return `Auteur ‒ ${author.displayname}`
+      }
+      return 'Toutes les publications'
     }
   },
   watch: {
@@ -258,6 +275,11 @@ export default {
     const typeId = this.$route.query.type
     if (typeId) {
       params = { ...params, type: typeId }
+    }
+
+    const authorId = this.$route.query.author
+    if (authorId) {
+      params = { ...params, author: authorId }
     }
 
     this.params = params
