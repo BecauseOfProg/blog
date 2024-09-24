@@ -18,7 +18,6 @@
           md="10"
           offset-md="1"
         >
-          <categories-chips include-all />
           <v-text-field
             v-model="search"
             autofocus
@@ -28,6 +27,11 @@
             :prepend-inner-icon="mdiMagnify"
             type="search"
           />
+          <categories-chips
+            show-all-button
+            :authors="authors"
+            class="pb-10"
+            show-types />
           <template v-if="publications.length">
             <v-scale-transition>
               <v-row>
@@ -158,6 +162,7 @@ export default {
       params: {},
       search: '',
       publications: [],
+      authors: [],
       empty: false,
 
       categories,
@@ -176,11 +181,11 @@ export default {
       .fetch()
 
     const authorIds = [...new Set(publications.map(v => v.authorId))]
-    const authors = await this.$content('members').where({ username: { $in: authorIds } }).fetch()
+    this.authors = await this.$content('members').where({ username: { $in: authorIds } }).fetch()
 
     publications.forEach((v) => {
       v.id = v.slug
-      v.author = authors.find(a => a.slug === v.authorId) || {}
+      v.author = this.authors.find(a => a.slug === v.authorId) || {}
     })
     this.publications = publications
   },
@@ -206,6 +211,7 @@ export default {
       return this.publications.filter((v) => {
         if (this.params.category && v.category !== this.params.category) { return false }
         if (this.params.type && v.type !== this.params.type) { return false }
+        if (this.params.author && v.authorId !== this.params.author) { return false }
         if (this.search && !v.title.toLowerCase().includes(this.search.toLowerCase())) { return false }
         return true
       })
@@ -230,6 +236,9 @@ export default {
         }
         if (val.type) {
           this.params = { ...this.params, type: val.type }
+        }
+        if (val.author) {
+          this.params = { ...this.params, author: val.author }
         }
         if (val.search) {
           this.search = val.search

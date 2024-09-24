@@ -106,6 +106,19 @@
             </v-col>
           </v-row>
         </v-col>
+        <v-col
+          cols="12"
+          class="text-center">
+          <v-btn
+            color="dark"
+            class="white--text"
+            to="/blog">
+            Voir tout
+            <v-icon right>
+              {{ mdiChevronRight }}
+            </v-icon>
+          </v-btn>
+        </v-col>
       </v-row>
     </v-container>
     <gradient-rule />
@@ -146,7 +159,7 @@
 </template>
 
 <script>
-import { mdiClockOutline } from '@mdi/js'
+import { mdiClockOutline, mdiChevronRight } from '@mdi/js'
 import { categories, types } from '@/utils/data'
 
 export default {
@@ -201,7 +214,8 @@ export default {
       carousel: [],
       categories,
       types,
-      mdiClockOutline
+      mdiClockOutline,
+      mdiChevronRight
     }
   },
   head () {
