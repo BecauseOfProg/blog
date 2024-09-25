@@ -1,14 +1,13 @@
 {
   "name": "blog",
-  "version": "4.2.1",
+  "version": "4.2.3",
   "private": true,
   "description": "💻 The BecauseOfProg's tech blog.",
   "author": "BecauseOfProg",
   "contributors": [
     {
       "name": "Théo Vidal",
-      "email": "theo@becauseofprog.fr",
-      "url": "https://github.com/theovidal"
+      "url": "https://theovld.fr"
     },
     {
       "name": "Noéwen (kernoeb)",
