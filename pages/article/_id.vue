@@ -233,6 +233,10 @@
               </v-col>
             </v-row>
           </v-col>
+          <v-col cols="12">
+            <p class="text-h2 text-center darker--text">Nos dernières publications</p>
+            <last-publications :exclude="$route.params.id"/>
+          </v-col>
         </v-row>
       </v-container>
     </template>

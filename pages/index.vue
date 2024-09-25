@@ -37,89 +37,9 @@
         </v-row>
       </v-carousel-item>
     </v-carousel>
-    <v-container v-if="lastPublications" class="page-body">
-      <v-row>
-        <v-col
-          cols="12"
-          md="10"
-          offset-md="1"
-        >
-          <b-card
-            v-if="lastPublications.length"
-            :to="{ name: 'article-id', params: { id: lastPublications[0].id }}"
-            fluid
-          >
-            <v-row class="ma-0">
-              <v-col
-                class="d-flex pa-0"
-                cols="12"
-                md="6"
-              >
-                <v-img
-                  id="first-publication"
-                  aspect-ratio="2"
-                  :src="lastPublications[0].banner"
-                />
-              </v-col>
-              <v-col
-                cols="12"
-                md="6"
-              >
-                <v-btn
-                  class="mb-3"
-                  color="darker"
-                  text
-                >
-                  <v-icon left>
-                    {{ mdiClockOutline }}
-                  </v-icon>
-                  {{ $t('home.new') }}
-                </v-btn>
-                <h2 class="text-h4 text--text lecture-title mb-3">
-                  {{ lastPublications[0].title }}
-                </h2>
-                <p class="lecture-text text--secondary">
-                  {{ lastPublications[0].description }}
-                </p>
-              </v-col>
-            </v-row>
-          </b-card>
-          <v-skeleton-loader
-            v-else
-            style="width: 100%"
-            type="image, card-heading, actions"
-          />
-        </v-col>
-        <v-col
-          cols="12"
-          md="10"
-          offset-md="1"
-        >
-          <v-row>
-            <v-col
-              v-for="lastPublication in lastPublications.slice(1, 3)"
-              :key="`publication-${lastPublication.id}`"
-              cols="12"
-              md="6"
-            >
-              <b-publication-card :publication="lastPublication" />
-            </v-col>
-          </v-row>
-        </v-col>
-        <v-col
-          cols="12"
-          class="text-center">
-          <v-btn
-            color="dark"
-            class="white--text"
-            to="/blog">
-            Voir tout
-            <v-icon right>
-              {{ mdiChevronRight }}
-            </v-icon>
-          </v-btn>
-        </v-col>
-      </v-row>
+    <v-container class="page-body">
+      <last-publications
+        show-new/>
     </v-container>
     <gradient-rule />
     <v-container class="page-body">
@@ -159,21 +79,9 @@
 </template>
 
 <script>
-import { mdiClockOutline, mdiChevronRight } from '@mdi/js'
-import { categories, types } from '@/utils/data'
-
 export default {
   name: 'Home',
   async asyncData ({ $content }) {
-    // Get 3 last publications, sorted by timestamp
-    const lastPublications = await $content('blog-posts').without(['body']).sortBy('timestamp', 'desc').limit(3).fetch()
-    const authorIds = [...new Set(lastPublications.map(v => v.authorId))]
-    const authors = await $content('members').where({ username: { $in: authorIds } }).fetch()
-    lastPublications.forEach((v) => {
-      v.id = v.slug
-      v.author = authors.find(a => a.slug === v.authorId) || {}
-    })
-
     const carousel = [
       {
         title: 'BecauseOfProg',
@@ -204,18 +112,12 @@ export default {
     }
 
     return {
-      lastPublications,
       carousel
     }
   },
   data () {
     return {
-      lastPublications: [],
-      carousel: [],
-      categories,
-      types,
-      mdiClockOutline,
-      mdiChevronRight
+      carousel: []
     }
   },
   head () {

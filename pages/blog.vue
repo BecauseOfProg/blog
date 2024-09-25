@@ -41,53 +41,7 @@
                     :key="publication.id"
                     cols="12"
                   >
-                    <v-row>
-                      <v-col
-                        cols="12"
-                        md="6"
-                      >
-                        <router-link :to="{ name: 'article-id', params: { id: publication.id }}">
-                          <v-img
-                            v-ripple
-                            aspect-ratio="2"
-                            style="border-radius: 20px"
-                            :alt="publication.title"
-                            :src="publication.banner"
-                          />
-                        </router-link>
-                      </v-col>
-                      <v-col
-                        class="d-flex flex-column justify-center"
-                        cols="12"
-                        md="6"
-                      >
-                        <router-link
-                          :to="{ name: 'article-id', params: { id: publication.id }}"
-                          class="text--text"
-                        >
-                          <h3 class="text-h3 mb-5">
-                            <b-read-indicator :publication="publication.id" />
-                            {{ publication.title }}
-                          </h3>
-                        </router-link>
-                        <p class="lecture-text text--secondary">
-                          {{ publication.description }}
-                        </p>
-                        <v-row class="d-flex justify-space-between ma-0 text--secondary" style="font-size: 12px">
-                          {{ $t('publication.publishedBy', { author: publication.author.displayname, date: timestampToText(publication.timestamp) }) }}
-                          <router-link
-                            v-if="category(publication.category)"
-                            v-ripple
-                            :to="{ name: 'blog', query: { category: category(publication.category).id } }"
-                            class="overline text--text"
-                            style="line-height: 0"
-                          >
-                            <v-icon>{{ category(publication.category).icon }}</v-icon>
-                            {{ $t(`categories.${category(publication.category).id}`) }}
-                          </router-link>
-                        </v-row>
-                      </v-col>
-                    </v-row>
+                    <b-publication-banner :publication="publication" />
                   </v-col>
                   <v-col
                     v-else
@@ -147,7 +101,7 @@
 
 <script>
 import { mdiMagnify, mdiTextBoxMultipleOutline } from '@mdi/js'
-import { categories, getCategory, types } from '@/utils/data'
+import { categories, types } from '@/utils/data'
 
 export default {
   name: 'List',
@@ -287,11 +241,6 @@ export default {
     const search = this.$route.query.search
     if (search) {
       this.search = search
-    }
-  },
-  methods: {
-    category (id) {
-      return getCategory(id)
     }
   }
 }
